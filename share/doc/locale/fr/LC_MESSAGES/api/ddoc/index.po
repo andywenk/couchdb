@@ -1,0 +1,33 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/ddoc/index.rst:18
+msgid "Design Documents"
+msgstr ""
+
+#: ../../src/api/ddoc/index.rst:20
+msgid ""
+"In CouchDB, design documents provide the main interface for building a "
+"CouchDB application. The design document defines the views used to extract "
+"information from CouchDB through one or more views. Design documents are "
+"created within your CouchDB instance in the same way as you create database "
+"documents, but the content and definition of the documents is different. "
+"Design Documents are named using an ID defined with the design document URL "
+"path, and this URL can then be used to access the database contents."
+msgstr ""
+
+#: ../../src/api/ddoc/index.rst:29
+msgid ""
+"Views and lists operate together to provide automated (and formatted) output"
+" from your database."
+msgstr ""

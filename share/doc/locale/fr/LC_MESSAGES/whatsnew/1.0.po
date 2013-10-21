@@ -1,0 +1,457 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/whatsnew/1.0.rst:18
+msgid "1.0.x Branch"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:28
+msgid "Upgrade Notes"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:30
+msgid ""
+"Note, to replicate with a 1.0 CouchDB instance you must first upgrade in-"
+"place your current CouchDB to 1.0 or 0.11.1 -- backporting so that 0.10.x "
+"can replicate to 1.0 wouldn't be that hard. All that is required is patching"
+" the replicator to use the ``application/json`` content type."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:35
+msgid "``_log`` and ``_temp_views`` are now admin-only resources."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:36
+msgid ""
+"``_bulk_docs`` now requires a valid `Content-Type` header of "
+"``application/json``."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:38
+msgid ""
+"`JSONP` is disabled by default. An .ini option was added to selectively "
+"enable it."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:40
+msgid ""
+"The ``key``, ``startkey`` and ``endkey`` properties of the request object "
+"passed to :ref:`list <listfun>` and :ref:`show <showfun>` functions now "
+"contain JSON objects representing the URL encoded string values in the query"
+" string. Previously, these properties contained strings which needed to be "
+"converted to JSON before using."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:48
+msgid ""
+":ref:`release/1.0.4` contains important security fixes. Previous `1.0.x` "
+"releases are not recommended for regular usage."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:55
+msgid "Version 1.0.4"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:58 ../../src/whatsnew/1.0.rst:108
+#: ../../src/whatsnew/1.0.rst:157 ../../src/whatsnew/1.0.rst:233
+msgid "HTTP Interface"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:60
+msgid "Fix missing revisions in ``_changes?style=all_docs``."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:61
+msgid "Fix validation of attachment names."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:64 ../../src/whatsnew/1.0.rst:165
+msgid "Log System"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:66
+msgid "Fix file descriptor leak in ``_log``."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:69 ../../src/whatsnew/1.0.rst:116
+#: ../../src/whatsnew/1.0.rst:171 ../../src/whatsnew/1.0.rst:240
+msgid "Replicator"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:71
+msgid "Fix a race condition where replications can go stale"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:74 ../../src/whatsnew/1.0.rst:125
+#: ../../src/whatsnew/1.0.rst:259
+msgid "Security"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:76
+msgid "Fixed :ref:`cve/2012-5641`"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:77
+msgid "Fixed :ref:`cve/2012-5649`"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:78
+msgid "Fixed :ref:`cve/2012-5650`"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:81
+msgid "View System"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:83
+msgid "Avoid invalidating view indexes when running out of file descriptors."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:89
+msgid "Version 1.0.3"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:92
+msgid "General"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:94
+msgid "Fixed compatibility issues with Erlang R14B02."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:97
+msgid "Etap Test Suite"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:99
+msgid ""
+"Etap tests no longer require use of port 5984. They now use a randomly "
+"selected port so they won't clash with a running CouchDB."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:103 ../../src/whatsnew/1.0.rst:149
+#: ../../src/whatsnew/1.0.rst:228
+msgid "Futon"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:105
+msgid "Made compatible with jQuery 1.5.x."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:110
+msgid "Fix bug that allows invalid UTF-8 after valid escapes."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:111
+msgid ""
+"The query parameter `include_docs` now honors the parameter `conflicts`. "
+"This applies to queries against map views, _all_docs and _changes."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:113
+msgid "Added support for inclusive_end with reduce views."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:118
+msgid "Enabled replication over IPv6."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:119
+msgid "Fixed for crashes in continuous and filtered changes feeds."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:120
+msgid "Fixed error when restarting replications in OTP R14B02."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:121
+msgid "Upgrade ibrowse to version 2.2.0."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:122
+msgid "Fixed bug when using a filter and a limit of 1."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:127
+msgid "Fixed OAuth signature computation in OTP R14B02."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:128
+msgid "Handle passwords with : in them."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:131 ../../src/whatsnew/1.0.rst:181
+#: ../../src/whatsnew/1.0.rst:247 ../../src/whatsnew/1.0.rst:265
+msgid "Storage System"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:133
+msgid ""
+"More performant queries against _changes and _all_docs when using the "
+"`include_docs` parameter."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:137
+msgid "Windows"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:139
+msgid ""
+"Windows builds now require ICU >= 4.4.0 and Erlang >= R14B03. See "
+":issue:`1152`, and :issue:`963` + OTP-9139 for more information."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:146
+msgid "Version 1.0.2"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:151
+msgid "Make test suite work with Safari and Chrome."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:152
+msgid "Fixed animated progress spinner."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:153
+msgid "Fix raw view document link due to overzealous URI encoding."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:154
+msgid "Spell javascript correctly in loadScript(uri)."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:159
+msgid "Allow reduce=false parameter in map-only views."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:160
+msgid "Fix parsing of Accept headers."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:161
+msgid ""
+"Fix for multipart GET APIs when an attachment was created during a local-"
+"local replication. See :issue:`1022` for details."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:167
+msgid "Reduce lengthy stack traces."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:168
+msgid "Allow logging of native <xml> types."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:173
+msgid "Updated ibrowse library to 2.1.2 fixing numerous replication issues."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:174
+msgid ""
+"Make sure that the replicator respects HTTP settings defined in the config."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:175
+msgid "Fix error when the ibrowse connection closes unexpectedly."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:176
+msgid ""
+"Fix authenticated replication (with HTTP basic auth) of design documents "
+"with attachments."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:178
+msgid "Various fixes to make replication more resilient for edge-cases."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:183
+msgid "Fix leaking file handles after compacting databases and views."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:184
+msgid "Fix databases forgetting their validation function after compaction."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:185
+msgid ""
+"Fix occasional timeout errors after successfully compacting large databases."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:186
+msgid ""
+"Fix ocassional error when writing to a database that has just been "
+"compacted."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:187
+msgid ""
+"Fix occasional timeout errors on systems with slow or heavily loaded IO."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:188
+msgid "Fix for OOME when compactions include documents with many conflicts."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:189
+msgid ""
+"Fix for missing attachment compression when MIME types included parameters."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:190
+msgid ""
+"Preserve purge metadata during compaction to avoid spurious view rebuilds."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:191
+msgid ""
+"Fix spurious conflicts introduced when uploading an attachment after a doc "
+"has been in a conflict. See :issue:`902` for details."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:193
+msgid ""
+"Fix for frequently edited documents in multi-master deployments being "
+"duplicated in _changes and _all_docs.  See :issue:`968` for details on how "
+"to repair."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:196
+msgid ""
+"Significantly higher read and write throughput against database and view "
+"index files."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:200 ../../src/whatsnew/1.0.rst:274
+msgid "View Server"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:202
+msgid "Don't trigger view updates when requesting `_design/doc/_info`."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:203
+msgid "Fix for circular references in CommonJS requires."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:204
+msgid ""
+"Made isArray() function available to functions executed in the query server."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:205
+msgid "Documents are now sealed before being passed to map functions."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:206
+msgid ""
+"Force view compaction failure when duplicated document data exists. When "
+"this error is seen in the logs users should rebuild their views from scratch"
+" to fix the issue. See :issue:`999` for details."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:214
+msgid "Version 1.0.1"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:217
+msgid "Authentication"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:220
+msgid "Enable basic-auth popup when required to access the server, to prevent"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:220
+msgid "people from getting locked out."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:223
+msgid "Build and System Integration"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:225
+msgid "Included additional source files for distribution."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:230
+msgid "User interface element for querying stale (cached) views."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:235
+msgid "Expose `committed_update_seq` for monitoring purposes."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:236
+msgid ""
+"Show fields saved along with _deleted=true. Allows for auditing of deletes."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:237
+msgid "More robust Accept-header detection."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:242
+msgid "Added support for replication via an HTTP/HTTPS proxy."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:243
+msgid "Fix pull replication of attachments from 0.11 to 1.0.x."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:244
+msgid "Make the _changes feed work with non-integer seqnums."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:249
+msgid ""
+"Fix data corruption bug :issue:`844`. Please see "
+"http://couchdb.apache.org/notice/1.0.1.html for details."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:256
+msgid "Version 1.0.0"
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:261
+msgid ""
+"Added authentication caching, to avoid repeated opening and closing of the "
+"users database for each request requiring authentication."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:267
+msgid "Small optimization for reordering result lists."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:268
+msgid "More efficient header commits."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:269
+msgid "Use O_APPEND to save lseeks."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:270
+msgid ""
+"Faster implementation of pread_iolist(). Further improves performance on "
+"concurrent reads."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:276
+msgid "Faster default view collation."
+msgstr ""
+
+#: ../../src/whatsnew/1.0.rst:277
+msgid "Added option to include update_seq in view responses."
+msgstr ""

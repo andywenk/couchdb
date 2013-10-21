@@ -1,0 +1,488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/http.rst:19
+# 1fb378b9180248a483d0023fc588682f
+msgid "CouchDB HTTP Server"
+msgstr ""
+
+#: ../../src/config/http.rst:24
+# c0118889669c47f6866f220f31139bd6
+msgid "HTTP Server Options"
+msgstr ""
+
+#: ../../src/config/http.rst:30
+# 83b52bab662a4a4488cb3e041e7f792b
+msgid "The ``true`` value of this option enables `JSONP`_ support (it's ``false`` by default)::"
+msgstr ""
+
+#: ../../src/config/http.rst:41
+# e622cf1ae6e74776852e6520c24f0fe4
+msgid "List of used authentication handlers that used by CouchDB. You may extend them via third-party plugins or remove some of them if you won't let users to use one of provided methods::"
+msgstr ""
+
+#: ../../src/config/http.rst:48
+# b36eeeaca53842eaad4deb6e724e5681
+msgid "``{couch_httpd_oauth, oauth_authentication_handler}``: handles OAuth;"
+msgstr ""
+
+#: ../../src/config/http.rst:49
+# 67466ef1020045b5b03124e0037cbb2a
+msgid "``{couch_httpd_auth, cookie_authentication_handler}``: used for Cookie auth;"
+msgstr ""
+
+#: ../../src/config/http.rst:50
+# be7d5deec66a498898d6554d94d93a7c
+msgid "``{couch_httpd_auth, proxy_authentication_handler}``: used for Proxy auth;"
+msgstr ""
+
+#: ../../src/config/http.rst:51
+# eb18a383334c4e5b9c4bc47310ba70e2
+msgid "``{couch_httpd_auth, default_authentication_handler}``: used for Basic auth;"
+msgstr ""
+
+#: ../../src/config/http.rst:52
+# 879cfd02db274f96ba7ea7d0be24c243
+msgid "``{couch_httpd_auth, null_authentication_handler}``: disables auth. Everlasting `Admin Party`!"
+msgstr ""
+
+#: ../../src/config/http.rst:58
+# 82394fd7661f494dac7bea84751fb132
+msgid "Defines the IP address by which CouchDB will be accessible::"
+msgstr ""
+
+#: ../../src/config/http.rst:63
+# 242dc220a78c4354a697028279eebcca
+msgid "To let CouchDB listen any available IP address, just setup ``0.0.0.0`` value::"
+msgstr ""
+
+#: ../../src/config/http.rst:69
+# 2fe7e463684c44cab7dda73799f10651
+msgid "For IPv6 support you need to set ``::1`` if you want to let CouchDB listen local address::"
+msgstr ""
+
+#: ../../src/config/http.rst:75
+# 89b111219a3f45d2bc7113c4e64b40d8
+msgid "or ``::`` for any available::"
+msgstr ""
+
+#: ../../src/config/http.rst:83
+# f50e569504c54876afded0c117b7a09c
+msgid "Specifies default `timeout` value for :ref:`Changes Feed <changes>` in milliseconds (60000 by default)::"
+msgstr ""
+
+#: ../../src/config/http.rst:92
+# d898253056444869ba33c900f7ae8a98
+msgid "Sets the configuration modification whitelist. Only whitelisted values may be changed via the :ref:`config API <api/config>`. To allow the admin to change this value over HTTP, remember to include ``{httpd,config_whitelist}`` itself. Excluding it from the list would require editing this file to update the whitelist::"
+msgstr ""
+
+#: ../../src/config/http.rst:104
+# 0468d80c3e344ac5ac075576f13d7462
+msgid "Specifies default HTTP requests handler::"
+msgstr ""
+
+#: ../../src/config/http.rst:114
+# 0751942662e34f32b3aedbe4456fe4da
+msgid "Controls :ref:`CORS <config/cors>` feature::"
+msgstr ""
+
+#: ../../src/config/http.rst:122
+# b17fde26af874a35a28f085c2663f2d5
+msgid "Defines maximum chunk size in bytes for :ref:`_log <api/server/log>` resource::"
+msgstr ""
+
+#: ../../src/config/http.rst:131
+# 744d87308a354a79a6be29e37a68a6a1
+msgid "Defined the port number to listen::"
+msgstr ""
+
+#: ../../src/config/http.rst:136
+# 4f7284e1b7ad43d29b8fc8759026e716
+msgid "To let CouchDB handle any free port, set this option to ``0``::"
+msgstr ""
+
+#: ../../src/config/http.rst:141
+# 5b8448cbca5549dab44e34343495bf4b
+msgid "After that, CouchDB URI could be located within the URI file."
+msgstr ""
+
+#: ../../src/config/http.rst:146
+# a9d59248782144c4a87b98ac96596330
+msgid "This option customizes the default function that handles requests to :section:`virtual hosts <vhosts>`::"
+msgstr ""
+
+#: ../../src/config/http.rst:152
+# 655210b932754bf19e6bdac1ecfb6c8c
+msgid "The specified function take 2 arguments: the Mochiweb request object and the target path."
+msgstr ""
+
+#: ../../src/config/http.rst:158
+# d69f3694cbdc4dccafa2a68f04e9c2f4
+msgid "Server options for the `MochiWeb`_ component of CouchDB can be added to the configuration files::"
+msgstr ""
+
+#: ../../src/config/http.rst:169
+# 8c5a6989a9d54b67bfb2d0a786a7fcc6
+msgid "This option allow to isolate databases via subdomains::"
+msgstr ""
+
+#: ../../src/config/http.rst:177
+# c48db25a1d5d46338b9656299e5bd117
+msgid "The socket options for the listening socket in CouchDB can be specified as a list of tuples. For example::"
+msgstr ""
+
+#: ../../src/config/http.rst:183
+# 0110d7b5589340a29ef1d4bb7d33ccc1
+msgid "The options supported are a subset of full options supported by the TCP/IP stack. A list of the supported options are provided in the `Erlang inet`_ documentation."
+msgstr ""
+
+#: ../../src/config/http.rst:192
+# d1495f37a8a6441da545ac321aedc7d8
+msgid "List of global handlers that are available for :section:`virtual hosts <vhosts>`::"
+msgstr ""
+
+#: ../../src/config/http.rst:201
+# 3ed945dd24af47a08e435c747930e76b
+msgid "The `x_forwarded_host` header (``X-Forwarded-Host`` by default) is used to forward the original value of the ``Host`` header field in case, for example, if a reverse proxy is rewriting the \"Host\" header field to some internal host name before forward the request to CouchDB::"
+msgstr ""
+
+#: ../../src/config/http.rst:209
+# eb458913c5ad40e697dd45997d6d7ed3
+msgid "This header has higher priority above ``Host`` one, if only it exists in the request."
+msgstr ""
+
+#: ../../src/config/http.rst:215
+# 22964dcad461455893a86f94167fa33f
+msgid "`x_forwarded_proto` header (``X-Forwarder-Proto`` by default) is used for identifying the originating protocol of an HTTP request, since a reverse proxy may communicate with CouchDB instance using HTTP even if the request to the reverse proxy is HTTPS::"
+msgstr ""
+
+#: ../../src/config/http.rst:226
+# 64ca8a489438468988333b4c808fb9dd
+msgid "The `x_forwarded_ssl` header (``X-Forwarded-Ssl`` by default) tells CouchDB that it should use the `https` scheme instead of the `http`. Actually, it's a synonym for ``X-Forwarded-Proto: https`` header, but used by some reverse proxies::"
+msgstr ""
+
+#: ../../src/config/http.rst:237
+# a33b9a72b09547b8b50860cf3f00a28e
+msgid "Set this option to trigger basic-auth popup on unauthorized requests::"
+msgstr ""
+
+#: ../../src/config/http.rst:246
+# 9e669c2d694b49fba394cec5b19f485f
+msgid "Secure Socket Level Options"
+msgstr ""
+
+#: ../../src/config/http.rst:250
+# c3de3efc22de40fa9cb029b5b3ac8476
+msgid "CouchDB supports SSL natively. All your secure connection needs can now be served without needing to setup and maintain a separate proxy server that handles SSL."
+msgstr ""
+
+#: ../../src/config/http.rst:254
+# 180285ca547a402b820f912499f5e02d
+msgid "SSL setup can be tricky, but the configuration in CouchDB was designed to be as easy as possible. All you need is two files; a certificate and a private key. If you bought an official SSL certificate from a certificate authority, both should be in your possession already."
+msgstr ""
+
+#: ../../src/config/http.rst:259
+# 9c711931656a4081a0a54f90aaecd3c2
+msgid "If you just want to try this out and don't want to pay anything upfront, you can create a self-signed certificate. Everything will work the same, but clients will get a warning about an insecure certificate."
+msgstr ""
+
+#: ../../src/config/http.rst:263
+# f7063b1f3dd44089ab92c05dddb31d16
+msgid "You will need the `OpenSSL`_ command line tool installed. It probably already is."
+msgstr ""
+
+#: ../../src/config/http.rst:275
+# 80409001f38c4f35a88533d8bbab3ae8
+msgid "Now, you need to edit CouchDB's configuration, either by editing your ``local.ini`` file or using the ``/_config`` API calls or the configuration screen in Futon. Here is what you need to do in ``local.ini``, you can infer what needs doing in the other places."
+msgstr ""
+
+#: ../../src/config/http.rst:280
+# b418a45a23c94df0b2ab6ae20f2a56d9
+msgid "At first, :option:`enable the HTTPS daemon <daemons/httpsd>`::"
+msgstr ""
+
+#: ../../src/config/http.rst:285
+# 8bcb7c5c158748328f931b3e02759731
+msgid "Next, under ``[ssl]`` section setup newly generated certificates::"
+msgstr ""
+
+#: ../../src/config/http.rst:291
+# ff0126dd82074abeaf17d2739f01ec07
+msgid "For more information please read `certificates HOWTO`_."
+msgstr ""
+
+#: ../../src/config/http.rst:293
+# bc5e2aedc411466fb315556d117045b9
+msgid "Now start (or restart) CouchDB. You should be able to connect to it using HTTPS on port 6984:"
+msgstr ""
+
+#: ../../src/config/http.rst:314
+# d8ebe556bc9a4c248edeff1e9add2c2c
+msgid "Oh no! What happened?! Remember, clients will notify their users that your certificate is self signed. ``curl`` is the client in this case and it notifies you. Luckily you trust yourself (don't you?) and you can specify the ``-k`` option as the message reads:"
+msgstr ""
+
+#: ../../src/config/http.rst:324
+# bcd8b6e22c11495880916c137963d2e5
+msgid "All done."
+msgstr ""
+
+#: ../../src/config/http.rst:332
+# 76b2dd9f9eae4dd5af219010f789265c
+msgid "Path to file containing PEM encoded CA certificates (trusted certificates used for verifying a peer certificate). May be omitted if you do not want to verify the peer::"
+msgstr ""
+
+#: ../../src/config/http.rst:342
+# dc06a99f4bfc459abbdc78dd559c81f7
+msgid "Path to a file containing the user's certificate::"
+msgstr ""
+
+#: ../../src/config/http.rst:350
+# 47aeebf8498e41e892d26e44c1f8a5d9
+msgid "Path to file containing user's private PEM encoded key::"
+msgstr ""
+
+#: ../../src/config/http.rst:358
+# 1dbaa68f846a4fcbb620bc6dfe5e210b
+msgid "String containing the user's password. Only used if the private keyfile is password protected::"
+msgstr ""
+
+#: ../../src/config/http.rst:367
+# 141be447262c43b28c8f603cf79dbc88
+msgid "Maximum peer certificate depth (must be set even if certificate validation is off)::"
+msgstr ""
+
+#: ../../src/config/http.rst:376
+# 2c58831d8f304fec80413b99717502b1
+msgid "The verification fun (optional) if not specified, the default verification fun will be used::"
+msgstr ""
+
+#: ../../src/config/http.rst:385
+# b80734a6f34f4ca5878125ef00f7b35b
+msgid "Set to `true` to validate peer certificates::"
+msgstr ""
+
+#: ../../src/config/http.rst:395
+# 3e48a9f659c047b09ececc32d5211147
+msgid "Cross-Origin Resource Sharing"
+msgstr ""
+
+#: ../../src/config/http.rst:401
+# 66613cd164784c7dbe37c1093b99795b
+msgid "`CORS`, or \"Cross-Origin Resource Sharing\", allows a resource such as a web page running JavaScript inside a browser, to make AJAX requests (XMLHttpRequests) to a different domain, without compromising the security of either party."
+msgstr ""
+
+#: ../../src/config/http.rst:406
+# 0ed9115e5cea43be832a46b92bb86baa
+msgid "A typical use case is to have a static website hosted on a CDN make requests to another resource, such as a hosted CouchDB instance. This avoids needing an intermediary proxy, using `JSONP` or similar workarounds to retrieve and host content."
+msgstr ""
+
+#: ../../src/config/http.rst:411
+# fef9915cf4f84406898ad03aebf8d568
+msgid "While CouchDB's integrated HTTP server has support for document attachments makes this less of a constraint for pure CouchDB projects, there are many cases where separating the static content from the database access is desirable, and CORS makes this very straightforward."
+msgstr ""
+
+#: ../../src/config/http.rst:416
+# 2d851120c425443d871c30fcfbbcef65
+msgid "By supporting CORS functionality, a CouchDB instance can accept direct connections to protected databases and instances, without the browser functionality being blocked due to same-origin constraints. CORS is supported today on over 90% of recent browsers."
+msgstr ""
+
+#: ../../src/config/http.rst:421
+# 082949dfdf804400ad870a4a62ea07fe
+msgid "CORS support is provided as experimental functionality in 1.3, and as such will need to be enabled specifically in CouchDB's configuration. While all origins are forbidden from making requests by default, support is available for simple requests, preflight requests and per-vhost configuration."
+msgstr ""
+
+#: ../../src/config/http.rst:426
+# 6ab6448b497248b9b3031d7b2e7d5639
+msgid "This section requires :option:`httpd/enable_cors` option have ``true`` value::"
+msgstr ""
+
+#: ../../src/config/http.rst:435
+# 3a10f637062b4bf8a04ecdde1df342ea
+msgid "By default, neither authentication headers nor cookies are included in requests and responses. To do so requires both setting ``XmlHttpRequest.withCredentials = true`` on the request object in the browser and enabling credentials support in CouchDB."
+msgstr ""
+
+#: ../../src/config/http.rst:445
+# ded5595cd27e4499b2cd96241e7b6d75
+msgid "CouchDB will respond to a credentials-enabled CORS request with an additional header, ``Access-Control-Allow-Credentials=true``."
+msgstr ""
+
+#: ../../src/config/http.rst:451
+# e3c47b9d01384816a33bb3ffbff32743
+msgid "List of origins separated by a comma, ``*`` means accept all. You can’t set ``origins = *`` and ``credentials = true`` option at the same time::"
+msgstr ""
+
+#: ../../src/config/http.rst:458
+# 8865b46a43a94898a88548f398e85746
+msgid "Access can be restricted by protocol, host and optionally by port. Origins must follow the scheme: http://example.com:80::"
+msgstr ""
+
+#: ../../src/config/http.rst:464
+# f6629203e16e4d02a98a146328d87c7c
+msgid "Note that by default, no origins are accepted. You must define them explicitly."
+msgstr ""
+
+#: ../../src/config/http.rst:470
+# 2b26144798c2437d8c2fdc48ee543b4b
+msgid "List of accepted headers separated by a comma::"
+msgstr ""
+
+#: ../../src/config/http.rst:478
+# 6e03fe8c2ce1427e93f14a9c5deeda2c
+msgid "List of accepted methods::"
+msgstr ""
+
+#: ../../src/config/http.rst:485
+# 46794b277d29485eab57cce04e16609e
+msgid "Original JIRA `implementation ticket <https://issues.apache.org/jira/browse/COUCHDB-431>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:487
+# 85cd7d45670b4482a37194328216b0a0
+msgid "Standards and References:"
+msgstr ""
+
+#: ../../src/config/http.rst:489
+# 19ff48bfe8f84003acc79eff812c2457
+msgid "IETF RFCs relating to methods: :rfc:`2618`, :rfc:`2817`, :rfc:`5789`"
+msgstr ""
+
+#: ../../src/config/http.rst:490
+# 1890fda112294da193ddd21b54c15db2
+msgid "IETF RFC for Web Origins: :rfc:`6454`"
+msgstr ""
+
+#: ../../src/config/http.rst:491
+# e53b3b14d9cf41e5bbfe064c1466d9cd
+msgid "W3C `CORS standard <http://www.w3.org/TR/cors>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:493
+# eff862d8494b4ad3afb0d03941ab29a3
+msgid "Mozilla Developer Network Resources:"
+msgstr ""
+
+#: ../../src/config/http.rst:495
+# 6dc189f44f4f4a7a90b4c5e2b93331cd
+msgid "`Same origin policy for URIs <https://developer.mozilla.org/en-US/docs/Same-origin_policy_for_file:_URIs>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:496
+# a7b34648f9e74bb2b184a5b2ab024f37
+msgid "`HTTP Access Control <https://developer.mozilla.org/En/HTTP_access_control>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:497
+# 4ffd2d8e03ca41d98010119fca3f49e6
+msgid "`Server-side Access Control <https://developer.mozilla.org/En/Server-Side_Access_Control>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:498
+# ed734a012cca4edcb56f012d0d055368
+msgid "`Javascript same origin policy <https://developer.mozilla.org/en-US/docs/Same_origin_policy_for_JavaScript>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:500
+# 4f5c08869b074db1b9b580774e3e7585
+msgid "Client-side CORS support and usage:"
+msgstr ""
+
+#: ../../src/config/http.rst:502
+# fa2836ff7305485caf6af2b7ee47d156
+msgid "`CORS browser support matrix <http://caniuse.com/cors>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:503
+# 678f32454f924c988b9d24292682c39d
+msgid "`COS tutorial <http://www.html5rocks.com/en/tutorials/cors/>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:504
+# ed53e6c4ad2541b4a3e67e51def6a474
+msgid "`XHR with CORS <http://hacks.mozilla.org/2009/07/cross-site-xmlhttprequest-with-cors/>`_"
+msgstr ""
+
+#: ../../src/config/http.rst:508
+# 859a1e6db8fc47618d6b565b5b993e01
+msgid "Per Virtual Host Configuration"
+msgstr ""
+
+#: ../../src/config/http.rst:510
+# ea8bee124ede4b72af12d6bd1deedf1d
+msgid "To set the options for a :section:`vhosts`, you will need to create a section with the vhost name prefixed by ``cors:``. Example case for the vhost `example.com`::"
+msgstr ""
+
+#: ../../src/config/http.rst:528
+# 9706b833f0cd4b0b85271b0c997d7e37
+msgid "Virtual Hosts"
+msgstr ""
+
+#: ../../src/config/http.rst:532
+# f7da4ab48e6d490987d31d101e215cdd
+msgid "CouchDB can map requests to different locations based on the ``Host`` header, even if they arrive on the some inbound IP address."
+msgstr ""
+
+#: ../../src/config/http.rst:535
+# 4cbb98b4bd224c119e977b5455c6893b
+msgid "This allows different virtual hosts on the same machine to map to different databases or design documents, etc. The most common use case is to map a virtual host to a :ref:`Rewrite Handler <api/ddoc/rewrite>`, to provide full control over the application's URIs."
+msgstr ""
+
+#: ../../src/config/http.rst:540
+# c69893a3ed2947f5a1fefe219ad207db
+msgid "To add a virtual host, add a `CNAME` pointer to the DNS for your domain name. For development and testing, it is sufficient to add an entry in the hosts file, typically `/etc/hosts`` on Unix-like operating systems:"
+msgstr ""
+
+#: ../../src/config/http.rst:549
+# 9ef995db8c1643ada8e24ff37442a9cc
+msgid "Test that this is working:"
+msgstr ""
+
+#: ../../src/config/http.rst:558
+# e7b7a33809814ac18f6d70fd97bd5730
+msgid "Finally, add an entry to your :ref:`configuration file <config>` in the ``[vhosts]`` section::"
+msgstr ""
+
+#: ../../src/config/http.rst:565
+# e95f67767d5843f990272d41c835a841
+msgid "If your CouchDB is listening on the the default HTTP port (80), or is sitting behind a proxy, then you don't need to specify a port number in the `vhost` key."
+msgstr ""
+
+#: ../../src/config/http.rst:569
+# 8764a23c862548449447486cd695528c
+msgid "The first line will rewrite the request to display the content of the `example` database. This rule works only if the ``Host`` header is ``couchdb.local`` and won't work for `CNAMEs`. The second rule, on the other hand, matches all `CNAMEs` to `example` db, so that both `www.couchdb.local` and `db.couchdb.local` will work."
+msgstr ""
+
+#: ../../src/config/http.rst:577
+# 978bae1fd8864ffaae345f8bb84724a0
+msgid "Rewriting Hosts to a Path"
+msgstr ""
+
+#: ../../src/config/http.rst:579
+# df05f8527082497995815a0b1e9f5099
+msgid "Like in the :ref:`_rewrite <api/ddoc/rewrite>` handler you can match some variable and use them to create the target path. Some examples::"
+msgstr ""
+
+#: ../../src/config/http.rst:588
+# e0d2425c0b2243e0863412fe5ed6310a
+msgid "The first rule passes the wildcard as `dbname`. The second one does the same, but uses a variable name. And the third one allows you to use any URL with `ddocname` in any database with `dbname`."
+msgstr ""
+
+#: ../../src/config/http.rst:592
+# 00fa6c99313a4410a8886a7f00a28235
+msgid "You could also change the default function to handle request by changing the setting :option:`httpd/redirect_vhost_handler`."
+msgstr ""
+

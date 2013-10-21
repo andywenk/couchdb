@@ -1,0 +1,207 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/couchapp/views/collation.rst:18
+msgid "Views Collation"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:21
+msgid "Basics"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:23
+msgid ""
+"View functions specify a key and a value to be returned for each row. "
+"CouchDB collates the view rows by this key. In the following example, the "
+"``LastName`` property serves as the key, thus the result will be sorted by "
+"``LastName``:"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:35
+msgid ""
+"CouchDB allows arbitrary JSON structures to be used as keys. You can use "
+"complex keys for fine-grained control over sorting and grouping."
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:39
+msgid "Examples"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:41
+msgid ""
+"The following clever trick would return both customer and order documents. "
+"The key is composed of a customer ``_id`` and a sorting token. Because the "
+"key for order documents begins with the ``_id`` of a customer document, all "
+"the orders will be sorted by customer. Because the sorting token for "
+"customers is lower than the token for orders, the customer document will "
+"come before the associated orders. The values 0 and 1 for the sorting token "
+"are arbitrary."
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:60
+msgid "Sorting by Dates"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:62
+msgid ""
+"It maybe be convenient to store date attributes in a human readable format "
+"(i.e. as a `string`), but still sort by date. This can be done by converting"
+" the date to a `number` in the :js:func:`emit` function. For example, given "
+"a document with a created_at attribute of ``'Wed Jul 23 16:29:21 +0100 "
+"2013'``, the following emit function would sort by date:"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:72
+msgid ""
+"Alternatively, if you use a date format which sorts lexicographically, such "
+"as ``\"2013/06/09 13:52:11 +0000\"`` you can just"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:79
+msgid ""
+"and avoid the conversion. As a bonus, this date format is compatible with "
+"the JavaScript date parser, so you can use ``new Date(doc.created_at)`` in "
+"your client side JavaScript to make date sorting easy in the browser."
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:84
+msgid "String Ranges"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:86
+msgid ""
+"If you need start and end keys that encompass every string with a given "
+"prefix, it is better to use a high value unicode character, than to use a "
+"``'ZZZZ'`` suffix."
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:90
+msgid "That is, rather than::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:94
+msgid "You should use::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:99
+msgid "Collation Specification"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:101
+msgid ""
+"This section is based on the view_collation function in "
+"`view_collation.js`_:"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:149
+msgid ""
+"Comparison of strings is done using `ICU`_ which implements the `Unicode "
+"Collation Algorithm`_, giving a dictionary sorting of keys. This can give "
+"surprising results if you were expecting ASCII ordering. Note that:"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:154
+msgid ""
+"All symbols sort before numbers and letters (even the \"high\" symbols like "
+"tilde, ``0x7e``)"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:157
+msgid ""
+"Differing sequences of letters are compared without regard to case, so ``a <"
+" aa`` but also ``A < aa`` and ``a < AA``"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:160
+msgid ""
+"Identical sequences of letters are compared with regard to case, with "
+"lowercase before uppercase, so ``a < A``"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:166
+msgid ""
+"You can demonstrate the collation sequence for 7-bit ASCII characters like "
+"this:"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:195
+msgid "This shows the collation sequence to be::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:201
+msgid "Key ranges"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:203
+msgid "Take special care when querying key ranges. For example: the query::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:207
+msgid "will match \"ABC\" and \"abc1\", but not \"abc\". This is because UCA sorts as::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:211
+msgid ""
+"For most applications, to avoid problems you should lowercase the "
+"`startkey`::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:215
+msgid "will match all keys starting with ``[aA][bB][cC]``"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:218
+msgid "Complex keys"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:220
+msgid ""
+"The query ``startkey=[\"foo\"]&endkey=[\"foo\",{}]`` will match most array "
+"keys with \"foo\" in the first element, such as ``[\"foo\",\"bar\"]`` and "
+"``[\"foo\",[\"bar\",\"baz\"]]``. However it will not match "
+"``[\"foo\",{\"an\":\"object\"}]``"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:225
+msgid "_all_docs"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:227
+msgid ""
+"The :ref:`_all_docs <api/db/all_docs>`  view is a special case because it "
+"uses ASCII collation for doc ids, not UCA::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:232
+msgid ""
+"will not find ``_design/abc`` because `'Z'` comes before `'a'` in the ASCII "
+"sequence. A better solution is::"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:238
+msgid "Raw collation"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:240
+msgid ""
+"To squeeze a little more performance out of views, you can specify "
+"``\"options\":{\"collation\":\"raw\"}``  within the view definition for "
+"native Erlang collation, especially if you don't require UCA. This gives a "
+"different collation sequence:"
+msgstr ""
+
+#: ../../src/couchapp/views/collation.rst:255
+msgid ""
+"Beware that ``{}`` is no longer a suitable \"high\" key sentinel value. Use "
+"a string like ``\"\\ufff0\"`` instead."
+msgstr ""

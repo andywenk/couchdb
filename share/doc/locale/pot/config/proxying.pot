@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/proxying.rst:19
+# 1289703109b148abb6ecfce3d92ec6d8
+msgid "Proxying Configuration"
+msgstr ""
+
+#: ../../src/config/proxying.rst:25
+# baf3aa35f2ca4b90afb67d8bc958d8be
+msgid "CouchDB As Proxy"
+msgstr ""
+
+#: ../../src/config/proxying.rst:27
+# 87d770b87b074245ba11a3149fd974ed
+msgid "The HTTP proxy feature makes it easy to map and redirect different content through your CouchDB URL. The proxy works by mapping a pathname and passing all content after that prefix through to the configured proxy address."
+msgstr ""
+
+#: ../../src/config/proxying.rst:32
+# cbf6fdc765fe4da38c0ca88472cc1c92
+msgid "Configuration of the proxy redirect is handled through the ``[httpd_global_handlers]`` section of the CouchDB configuration file (typically ``local.ini``). The format is::"
+msgstr ""
+
+#: ../../src/config/proxying.rst:40
+# e6e034b180ee4299aefd4773eb394523
+msgid "Where:"
+msgstr ""
+
+#: ../../src/config/proxying.rst:42
+# 7ef4d47fc1c6457a919df5fdc8932d76
+msgid "``PREFIX``"
+msgstr ""
+
+#: ../../src/config/proxying.rst:44
+# 749e4bdc1e994721896a8a4d4e4f3dda
+msgid "Is the string that will be matched. The string can be any valid qualifier, although to ensure that existing database names are not overridden by a proxy configuration, you can use an underscore prefix."
+msgstr ""
+
+#: ../../src/config/proxying.rst:49
+# 915151985ab2494a9b2ccbb1466e6910
+msgid "``DESTINATION``"
+msgstr ""
+
+#: ../../src/config/proxying.rst:51
+# 661230a185ae402d92d8cda5f43cb62a
+msgid "The fully-qualified URL to which the request should be sent. The destination must include the ``http`` prefix. The content is used verbatim in the original request, so you can also forward to servers on different ports and to specific paths on the target host."
+msgstr ""
+
+#: ../../src/config/proxying.rst:56
+# 2d69829f1b9444f9a06ff517e417a6ff
+msgid "The proxy process then translates requests of the form:"
+msgstr ""
+
+#: ../../src/config/proxying.rst:62
+# 4d3196408da74a7f8cd0777f71d9e6d8
+msgid "To:"
+msgstr ""
+
+#: ../../src/config/proxying.rst:69
+# af5dc62132b94bf2869d641160f6d2dd
+msgid "Everything after ``PREFIX`` including the required forward slash will be appended to the ``DESTINATION``."
+msgstr ""
+
+#: ../../src/config/proxying.rst:72
+# 43a9954a3e3d418691b8e22192505f83
+msgid "The response is then communicated back to the original client."
+msgstr ""
+
+#: ../../src/config/proxying.rst:74
+# 2596b89221214b4eb2b8d0dedd70a4fe
+msgid "For example, the following configuration::"
+msgstr ""
+
+#: ../../src/config/proxying.rst:79
+# 39bba46ede7649fe9dec9aa87f1cb6d1
+msgid "Would forward all requests for ``http://couchdb:5984/_google`` to the Google website."
+msgstr ""
+
+#: ../../src/config/proxying.rst:82
+# 0ee3b168d6324201a90d45bebe2ddb3a
+msgid "The service can also be used to forward to related CouchDB services, such as `Lucene`::"
+msgstr ""
+
+#: ../../src/config/proxying.rst:89
+# ebf2b80063b54c9b9cc2317a2a091109
+msgid "The proxy service is basic. If the request is not identified by the ``DESTINATION``, or the remainder of the ``PATH`` specification is incomplete, the original request URL is interpreted as if the ``PREFIX`` component of that URL does not exist."
+msgstr ""
+
+#: ../../src/config/proxying.rst:94
+# c66de5595acb448bb902290aa8fae86d
+msgid "For example, requesting ``http://couchdb:5984/_intranet/media`` when ``/media`` on the proxy destination does not exist, will cause the request URL to be interpreted as ``http://couchdb:5984/media``. Care should be taken to ensure that both requested URLs and destination URLs are able to cope."
+msgstr ""
+

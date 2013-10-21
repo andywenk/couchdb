@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/security.rst:17
+# a3cb696f9a6e47f095e962cc19dfb686
+msgid "``/db/_security``"
+msgstr ""
+
+#: ../../src/api/database/security.rst:21
+# 71a37bfeb2e94203be1d83111760f8d5
+msgid "Returns the current security object from the specified database."
+msgstr ""
+
+#: ../../src/api/database/security.rst:23
+# 9b77b7722fe94f90ba788f980a49b37e
+msgid "The security object consists of two compulsory elements, ``admins`` and ``members``, which are used to specify the list of users and/or roles that have admin and members rights to the database respectively:"
+msgstr ""
+
+#: ../../src/api/database/security.rst:27
+# a95f7655c67f4889a22ab8bccba4cc8f
+msgid "``members``: they can read all types of documents from the DB, and they can write (and edit) documents to the DB except for design documents."
+msgstr ""
+
+#: ../../src/api/database/security.rst:30
+# 3ca8195cf052469f85a458869faee614
+msgid "``admins``: they have all the privileges of ``members`` plus the privileges: write (and edit) design documents, add/remove database admins and members, set the :ref:`database revisions limit <api/db/revs_limit>` and execute :ref:`temporary views <api/db/temp_view>` against the database. They can not create a database nor delete a database."
+msgstr ""
+
+#: ../../src/api/database/security.rst:36
+# ea5cd5d83f284cceb4e74daefdc77133
+msgid "Both ``members`` and ``admins`` objects are contains two array-typed fields:"
+msgstr ""
+
+#: ../../src/api/database/security.rst:38
+# c38b5321b7cb4612b4e5d28cc92c7e99
+msgid "``users``: List of CouchDB user names"
+msgstr ""
+
+#: ../../src/api/database/security.rst:39
+# 21de96f843de4800b9a6f1b85c0ed62b
+msgid "``roles``: List of users roles"
+msgstr ""
+
+#: ../../src/api/database/security.rst:41
+# 5383431130a64e77925a172905069429
+msgid "Any other additional fields in the security object are optional. The entire security object is made available to validation and other internal functions so that the database can control and limit functionality."
+msgstr ""
+
+#: ../../src/api/database/security.rst:45
+# b5e8c93b3af94c19bbeb7f2e454b6a4d
+msgid "If both the names and roles fields of either the admins or members properties are empty arrays, it means the database has no admins or members."
+msgstr ""
+
+#: ../../src/api/database/security.rst:48
+# 439b71ad7f0c40b9912702b9d8fb9a68
+msgid "Having no admins, only server admins (with the reserved ``_admin`` role) are able to update design document and make other admin level changes."
+msgstr ""
+
+#: ../../src/api/database/security.rst:51
+# f339893113f1415492362e8aee9f0f26
+msgid "Having no members, any user can write regular documents (any non-design document) and read documents from the database."
+msgstr ""
+
+#: ../../src/api/database/security.rst:54
+# d7a388ae352d41e4ba5f8e137f2e0d1d
+msgid "If there are any member names or roles defined for a database, then only authenticated users having a matching name or role are allowed to read documents from the database (or do a :get:`/{db}` call)."
+msgstr ""
+
+#: ../../src/api/database/security.rst:60
+# 4a6fbff2aa26426aa409994d4f579fad
+msgid "If the security object for a database has never been set, then the value returned will be empty."
+msgstr ""
+
+#: ../../src/api/database/security.rst:63
+# b6566f8d44684b30af140ddd544bdfc8
+msgid "Also note, that security objects are not regular versioned documents (that is, they are not under MVCC rules). This is a design choice to speedup authorization checks (avoids traversing a database`s documents B-Tree)."
+msgstr ""
+
+#: ../../src/api/database/security.rst:69
+#: ../../src/api/database/security.rst:71
+#: ../../src/api/database/security.rst:124
+#: ../../src/api/database/security.rst:131
+# f9c75fd76c884fa3b5c50c3d0a1867ab
+# 2a8d39d65f4c4eab807e74093a0f443c
+# 024e7bc56fe04009b7d9fa6c9606ca48
+# 0b79bb2d3e144cc7b267ca0e9a6fefa0
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/database/security.rst:70
+#: ../../src/api/database/security.rst:125
+# 1401685b105e44f0912fd2687b5c982a
+# 788c1083b0f94a01906341ef6291e5a5
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/database/security.rst:72
+#: ../../src/api/database/security.rst:132
+# bba2936b28b4480db3548667f8d15515
+# b57bb7b106c14d40b23b0119ba966144
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/database/security.rst:79
+#: ../../src/api/database/security.rst:137
+# b1aec8a3e29c422a8a70724091510995
+# d818d24a33f14be08f616309a516d0b7
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/database/security.rst:87
+#: ../../src/api/database/security.rst:167
+# 75ab92bb91934108973d7f36e0d0b045
+# f076a874bd204e9f83ce42ba6c9bcdba
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/database/security.rst:121
+# b70be1158a5245318d20030b0da0646a
+msgid "Sets the security object for the given database."
+msgstr ""
+

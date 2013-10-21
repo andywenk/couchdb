@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/auth.rst:19
+# dceb38438a074e14a1714c6bae72cfdc
+msgid "Authentication and Authorization"
+msgstr ""
+
+#: ../../src/config/auth.rst:24
+# c1f7e9516bf1404f817d8e2accb8a9d7
+msgid "Server Administrators"
+msgstr ""
+
+#: ../../src/config/auth.rst:28
+# 5ee25af8053748d6aeccc8a4989cfe35
+msgid "A default CouchDB install provides admin-level access to all connecting users. This configuration is known as `Admin Party`, and is not recommended for in-production usage. You can crash the party simply by creating the first admin account. CouchDB server administrators and passwords are not stored in the ``_users`` database, but in the ``local.ini`` file, which should be appropriately secured and readable only by system administrators::"
+msgstr ""
+
+#: ../../src/config/auth.rst:40
+# b65b3155a3f24305be9699f1d410cb5f
+msgid "Administrators can be added directly to the ``[admins]`` section, and when CouchDB is restarted, the passwords will be salted and encrypted. You may also use the HTTP interface to create administrator accounts; this way, you don't need to restart CouchDB, and there's no need to temporarily store or transmit passwords in plaintext. The HTTP ``_config/admins`` endpoint supports querying, deleting or creating new admin accounts:"
+msgstr ""
+
+#: ../../src/config/auth.rst:69
+# e24398e4343743fbbab6f2986c9b2861
+msgid "If you already have a salted, encrypted password string (for example, from an old ``local.ini`` file, or from a different CouchDB server), then you can store the \"raw\" encrypted string, without having CouchDB doubly encrypt it."
+msgstr ""
+
+#: ../../src/config/auth.rst:95
+# 32fb082568f64738989e41632531164d
+msgid "Further details are available in `security`, including configuring the work factor for ``PBKDF2``, and the algorithm itself at `PBKDF2 (RFC-2898) <http://tools.ietf.org/html/rfc2898>`_."
+msgstr ""
+
+#: ../../src/config/auth.rst:106
+# b73de44eaaf9495e9e6050bc92cd9458
+msgid "Authentication Configuration"
+msgstr ""
+
+#: ../../src/config/auth.rst:113
+# caa18cb1d45747bb9d9994d743c71fc4
+msgid "Makes cookies persistent if ``true``."
+msgstr ""
+
+#: ../../src/config/auth.rst:123
+# d100533e4ae34ae6abd4def2b3526d3f
+msgid "Number of :ref:`userctx_object` to cache in memory, to reduce disk lookups."
+msgstr ""
+
+#: ../../src/config/auth.rst:133
+# 134ed16307be4d93a240e05b00e5859a
+msgid "Specifies the name of the system database for storing CouchDB users."
+msgstr ""
+
+#: ../../src/config/auth.rst:141
+# 9157d5c6bcea4de1bdb8689066238f91
+msgid "If you change the database name, do not forget to remove or clean up the old database, since it will no longer be protected by CouchDB."
+msgstr ""
+
+#: ../../src/config/auth.rst:147
+# fe8758fd908f4bf5b0740026be29440d
+msgid "Specifies the location for redirection on successful authentication if a ``text/html`` response is accepted by the client (via an ``Accept`` header)."
+msgstr ""
+
+#: ../../src/config/auth.rst:160
+# 10598f64e53343bc938179d1f630a1c3
+msgid "The number of iterations for password hashing by the PBKDF2 algorithm. A higher  number provides better hash durability, but comes at a cost in performance for each request that requires authentication."
+msgstr ""
+
+#: ../../src/config/auth.rst:172
+# aa2f65747c824b15a8d20b7945bc6660
+msgid "When this option is set to ``true``,  the :option:`couch_httpd_auth/secret` option is required for :ref:`api/auth/proxy`."
+msgstr ""
+
+#: ../../src/config/auth.rst:185
+# 903d2f5afffa4b6a967166a0d85a0597
+msgid "A comma-separated list of field names in user documents (in :option:`couch_httpd_auth/authentication_db`) that can be read by any user. If unset or not specified, authenticated users can only retrieve their own document."
+msgstr ""
+
+#: ../../src/config/auth.rst:196
+# 58d376a5f6f74a2bad893f61fe960194
+msgid "Using the ``public_fields`` whitelist for user document properties requires setting the :option:`couch_httpd_auth/users_db_public` option to ``true`` (the latter option has no other purpose)::"
+msgstr ""
+
+#: ../../src/config/auth.rst:206
+# 3a77863fd76e4a97a2b41c4f8ae52589
+msgid "When this option is set to ``true``, no requests are allowed from anonymous users. Everyone must be authenticated."
+msgstr ""
+
+#: ../../src/config/auth.rst:217
+# ece8f0e27b55435c80bc4689ac41c51c
+msgid "The secret token used for :ref:`api/auth/proxy` method."
+msgstr ""
+
+#: ../../src/config/auth.rst:227
+# 8821fed2ee4e4b09b65f7f139cfb4ed5
+msgid "Number of seconds since the last request before sessions will be expired."
+msgstr ""
+
+#: ../../src/config/auth.rst:239
+# 5583fda874fd45808074052ab76e922f
+msgid "Allow all users to view user documents. By default, only admins may browse all users documents, while users may browse only their own document."
+msgstr ""
+
+#: ../../src/config/auth.rst:250
+# 804daf2d7f974373a1dbbd1ec996e71d
+msgid "The HTTP header name (``X-Auth-CouchDB-Roles`` by default) that contains the list of a user's roles, separated by a comma. Used for :ref:`api/auth/proxy`."
+msgstr ""
+
+#: ../../src/config/auth.rst:262
+# a5c03cef405c484ab20ee0bb5355c4ba
+msgid "The HTTP header name (``X-Auth-CouchDB-Token`` by default) containing the token used to authenticate the authorization. This token is an `HMAC-SHA1` created from the :option:`couch_httpd_auth/secret` and :option:`couch_httpd_auth/x_auth_username`. The secret key should be the same on the client and the CouchDB node. This token is optional if the value of the :option:`couch_httpd_auth/proxy_use_secret` option is not ``true``. Used for :ref:`api/auth/proxy`."
+msgstr ""
+
+#: ../../src/config/auth.rst:278
+# 7bdab9eedb714d4fb887b9118e5e0bd0
+msgid "The HTTP header name (``X-Auth-CouchDB-UserName`` by default) containing the username. Used for :ref:`api/auth/proxy`."
+msgstr ""
+
+#: ../../src/config/auth.rst:290
+# fd8aae738c804713a92ef78c72f0f1cd
+msgid "HTTP OAuth Configuration"
+msgstr ""
+
+#: ../../src/config/auth.rst:298
+# 5b5bc65637a04ec79b9a1cd1c7ac165d
+msgid "CouchDB is able to store OAuth credentials within user documents instead of config file by using this option::"
+msgstr ""
+
+#: ../../src/config/auth.rst:304
+# b95900c1cc704ffcb4cb5c71af8abd8d
+msgid "If set to ``true``, OAuth token and consumer secrets will be looked up in the :option:`authentication database <couch_httpd_auth/authentication_db>`. These secrets are stored in a top level field named ``\"oauth\"`` in user documents, as below."
+msgstr ""
+
+#: ../../src/config/auth.rst:334
+# 7018f3878beb47bd9b48e65eb103b65b
+msgid "OAuth Configuration"
+msgstr ""
+
+#: ../../src/config/auth.rst:338
+# 037e7b3e2d534165ae2ad0f2c5e11ace
+msgid "To let users be authenticated by :ref:`api/auth/oauth` (:rfc:`5849`), three special sections must be set up in the :ref:`configuration <config>` file:"
+msgstr ""
+
+#: ../../src/config/auth.rst:341
+# ac3bebdb04f04803b384cc731f3c35b4
+msgid "The Consumer secret:"
+msgstr ""
+
+#: ../../src/config/auth.rst:348
+# 90dc5150b1c14c138638d48bf4129ce6
+msgid "Token secrets:"
+msgstr ""
+
+#: ../../src/config/auth.rst:355
+# 77a861d7146a46b882f4bdb12e09d2ce
+msgid "A mapping from tokens to users:"
+msgstr ""
+

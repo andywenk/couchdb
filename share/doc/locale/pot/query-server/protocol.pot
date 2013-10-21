@@ -1,0 +1,767 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/query-server/protocol.rst:18
+# cf828b4f8a4d465d80bd20fd8bd46899
+msgid "Query Server Protocol"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:20
+# fb3b49003d97436f85f5eae203c4626e
+msgid "The `Query Server` is an external process that communicates with CouchDB via a JSON protocol over stdio  and processes all design functions calls: `views`, `shows`, `lists`, `filters`, `updates` and `validate_doc_update`."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:24
+# 85ec16e6129e473b9fedfdf05ef26025
+msgid "CouchDB communicates with the Query Server process though stdio interface by JSON messages that terminated by newline character. Messages that are sent to the Query Server are always `array`-typed that could be matched by the pattern ``[<command>, <*arguments>]\\n``."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:30
+# 4282d8457bdb487faacd791581ca36d6
+msgid "To simplify examples reading we omitted trailing ``\\n`` character to let Sphinx highlight them well. Also, all examples contain formatted JSON values while real data transfers in compact mode without formatting spaces."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:37
+#: ../../src/query-server/protocol.rst:39
+# 88773084426a41bcab43dae9c18722c2
+# a0401b434b9945a6855cd010fb856eb5
+msgid "``reset``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:40
+# 21bfe5cfa6cd4911b97fc31fafd666c1
+msgid ":ref:`Query server state <config/query_server_config>` (optional)"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:41
+#: ../../src/query-server/protocol.rst:73
+#: ../../src/query-server/protocol.rst:106
+#: ../../src/query-server/protocol.rst:698
+#: ../../src/query-server/protocol.rst:810
+# 4eb25b9499734c8996f96ab69c038d2a
+# bd96e7b9c4144c39a3154bcd42c41b88
+# 1b4e0fbdc5c3455899f2f94e50439ef5
+# df3fc6b7c7064f45a51d99af54036bae
+# 48b23bb792f4463db60979a8c6094b1c
+msgid "``true``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:43
+# 06a6e8fa452144c9ad8d98697cdb16ee
+msgid "This resets the state of the Query Server and makes it forget all previous input. If applicable, this is the point to run garbage collection."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:46
+#: ../../src/query-server/protocol.rst:57
+#: ../../src/query-server/protocol.rst:78
+#: ../../src/query-server/protocol.rst:114
+#: ../../src/query-server/protocol.rst:141
+#: ../../src/query-server/protocol.rst:165
+#: ../../src/query-server/protocol.rst:198
+#: ../../src/query-server/protocol.rst:238
+#: ../../src/query-server/protocol.rst:598
+#: ../../src/query-server/protocol.rst:703
+# 834c1c473f03455e975578572b93dca4
+# 2fc0bde1c2fc44c49e068ba1eae78934
+# 838c1f2c78204b78b82fbf57e0c7ef41
+# 7a4cc0db593f4d6aab90cdd2b35772c6
+# 867f150a73ee41d4a70b56f1dd19e52c
+# 137a0220901d41878a224be08efd2a97
+# 66a0f5ad66b648b59653c1d91df524da
+# 0511b2a5c4ed451f9f9e545389e664f6
+# 4900dc4ecbdb451389501209bf8b1818
+# 8517ce9c6fed49db84aa492205ca4551
+msgid "CouchDB sends::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:50
+#: ../../src/query-server/protocol.rst:61
+#: ../../src/query-server/protocol.rst:87
+#: ../../src/query-server/protocol.rst:121
+#: ../../src/query-server/protocol.rst:177
+#: ../../src/query-server/protocol.rst:212
+#: ../../src/query-server/protocol.rst:252
+#: ../../src/query-server/protocol.rst:311
+#: ../../src/query-server/protocol.rst:664
+#: ../../src/query-server/protocol.rst:788
+#: ../../src/query-server/protocol.rst:865
+# 8a7f86c1a12847be9207a219da5c6730
+# 6edc17c439ab4e77bd0d98847d34ef83
+# 37ce94d99bb845bb8a49cb38a6659013
+# bcf14e41174346f2b9e92a3ffc709e21
+# f56718de1b4b47daabe217e33b9e333f
+# 82faf903d6e543f4bb0c7c483f5a6630
+# db68f9c369ad4b72bc4d81f0b1dbbc91
+# e78c4fc07c20408695d2be2830a2a55c
+# 87b546f231fc4e63ac709870cb3e1fe6
+# f040e97275ef46abab185478dbe9e465
+# 08843955e6a544479d5f2309e58766c9
+msgid "The Query Server answers::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:54
+# bcccbcee6fca4c669608ced6896ceb6d
+msgid "To set up new Query Server state the second argument is used with object data. This argument is used"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:69
+#: ../../src/query-server/protocol.rst:71
+# e84d89d3b087469eb0e51f5112d8b306
+# 6947d249a19c450da363f182e50a8734
+msgid "``add_lib``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:72
+# d127226cf7934a80951521d7463a8486
+msgid "CommonJS library object by ``views/lib`` path"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:75
+# c7862dbc42a34c3eb900282cc51e5d55
+msgid "Adds :ref:`CommonJS <commonjs>` library to Query Server state for further usage in `map` functions."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:94
+# cc7ab18ac08c44f1aee8377a4b6aad23
+msgid "This library shouldn't have any side effects nor track its own state or you'll have a lot of happy debugging time if something went wrong. Remember that a complete index rebuild is a heavy operation and this is the only way to fix your mistakes with shared state."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:102
+#: ../../src/query-server/protocol.rst:104
+# 03cb68d3338e4361ada70f1dd5031eef
+# 39720416653f480ca0db2a836ad93736
+msgid "``add_fun``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:105
+# 0e37a0a5b1b34254bef68652d2783b56
+msgid "Map function source code."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:108
+# 34ca50d5107b47b2881441a75b582295
+msgid "When creating or updating a view the Query Server gets sent the view function for evaluation. The Query Server should parse, compile and evaluate the function it receives to make it callable later. If this fails, the Query Server returns an error. CouchDB might store several functions before sending in any actual documents."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:129
+#: ../../src/query-server/protocol.rst:131
+# c29d39e35e084e1d84115352f652f54e
+# 1cfbac996f0644138c5ab8e49239bfcb
+msgid "``map_doc``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:132
+# 70cc76b863fa427ea97762fff55a807e
+msgid "Document object"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:133
+# 906c3f779b4e4b8a94b82e08216c7d97
+msgid "Array of key-value pairs per applied :ref:`function <qs/add_fun>`"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:135
+# 0ffc5321451c4528b49a28fc0af6dd07
+msgid "When the view function is stored in the Query Server, CouchDB starts sending in all the documents in the database, one at a time. The Query Server calls the previously stored functions one after another with a document and stores its result. When all functions have been called, the result is returned as a JSON string."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:153
+# 9cdea5fdfe4a4837b8a2eb2b1ebd3d9c
+msgid "If the function above is the only function stored, the Query Server answers::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:161
+# 54d0cb48de3b420f967cb7695d5dc869
+msgid "That is, an array with the result for every function for the given document."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:163
+# 8b44beed1193479c9b9ed89391ef168c
+msgid "If a document is to be excluded from the view, the array should be empty."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:185
+#: ../../src/query-server/protocol.rst:187
+# eeb9b1d6bc55418daf4d7c9daa2f0683
+# 9d1836083c07411ab8b36e50d8be5cf6
+msgid "``reduce``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:189
+# 9fdffc6f4e4b4f0ea4785d8a0f0f8157
+msgid "Reduce function source"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:190
+# 270db08debf64a6a9e52b4cc6fe94055
+msgid "Array of :ref:`map function <mapfun>` results where each item represented in format ``[[key, id-of-doc], value]``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:192
+# db38632d38e943fe8481c2b1cd8b2e35
+msgid "Array with pair values: ``true`` and another array with reduced result"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:194
+# a2d2b5532ce64fc28fa79c2823699be6
+msgid "If the view has a reduce function defined, CouchDB will enter into the reduce phase. The view server will receive a list of reduce functions and some map results on which it can apply them."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:219
+# b5500f95b28043b4b8fb9c96217d7f57
+msgid "Note that even though the view server receives the map results in the form ``[[key, id-of-doc], value]``, the function may receive them in a different form. For example, the JavaScript Query Server applies functions on the list of keys and the list of values."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:227
+#: ../../src/query-server/protocol.rst:229
+# 3cbdd039443b491fbf347aef617f35e6
+# 59cd7a4285ef419d9ea3926c6f219d3b
+msgid "``rereduce``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:230
+# 1e38af2fdb8e418b97177b4e73ce1144
+msgid "List of values."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:232
+# c6d27911f49e4da0aa90e1808773b6e0
+msgid "When building a view, CouchDB will apply the reduce step directly to the output of the map step and the rereduce step to the output of a previous reduce step."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:235
+# 07a47318574f4979b64ff936bc62dc49
+msgid "CouchDB will send a list of values, with no keys or document ids, to the rereduce step."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:263
+#: ../../src/query-server/protocol.rst:265
+#: ../../src/query-server/protocol.rst:335
+#: ../../src/query-server/protocol.rst:429
+#: ../../src/query-server/protocol.rst:583
+#: ../../src/query-server/protocol.rst:689
+#: ../../src/query-server/protocol.rst:805
+#: ../../src/query-server/protocol.rst:824
+# 2dfad44904fb48ffb4f4f47eb9dcd5fe
+# 6ad4ded7c3a74a30a0ef78b541c20619
+# 5044c7d00c5343539c94b170ada00c16
+# 6321b76f2ce94f6db8e21b419f87d466
+# 30c44fd2a66e4668a55186873cc9fcba
+# 5c398ab26ab7413c95e4b3a0919d767b
+# 2e8eeb541117453da1eef1bd69f18250
+# 1377d94ed285433d8d7c4635b5823af9
+msgid "``ddoc``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:266
+# 22f98b51f05a42b7a8afde97fcd99fda
+msgid "Array of objects."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:268
+# 3c81e6f983264d0ebf3c70d3d34c7949
+msgid "First phase (ddoc initialization):"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:270
+# 46998db1936f4f6bab047ec927d3066a
+msgid "``\"new\"``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:271
+#: ../../src/query-server/protocol.rst:276
+# a9f83054d5094de68060653b1365d856
+# c657b30a34e3428982debdcb174426aa
+msgid "Design document ``_id``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:272
+# 719a83cdb5be4fd48d7ccccb7d31b58e
+msgid "Design document object"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:274
+# dcee7e102a8544a2973e3478d17515ee
+msgid "Second phase (design function execution):"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:277
+# f8b7355babcb4f49bfbde1b6d8d9d514
+msgid "Function path as an array of object keys"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:278
+# a0e13c8cb2604b7a80b4f6f1f6040354
+msgid "Array of function arguments"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:282
+# 880e615e11f74f109ce25c39c9e4b880
+msgid "First phase (ddoc initialization): ``true``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:283
+# d914314ab4a144d9b8049016eeca98b3
+msgid "Second phase (design function execution): custom object depending on executed function"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:288
+# 2387a4082396408fab6252d50e851294
+msgid "This command acts in two phases: `ddoc` registration and `design function` execution."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:291
+# 348eeb03a4db42659d44fed8932da317
+msgid "In the first phase CouchDB sends a full design document content to the Query Server to let it cache it by ``_id`` value for further function execution."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:294
+# f172f3bb65dc4180b93daf859232a25d
+msgid "To do this, CouchDB sends::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:316
+# b466e2d72c804cfbb9fa0aad8b3799dc
+msgid "After than this design document is ready to serve next subcommands - that's the second phase."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:321
+# 5d1fd3ad8186443b94d450e789f533df
+msgid "Each ``ddoc`` subcommand is the root design document key, so they are not actually subcommands, but first elements of the JSON path that may be handled and processed."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:325
+# fe4184be8bee4acb873c3a6fc84eda04
+msgid "The pattern for subcommand execution is common:"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:327
+# 4ede8de0d87e4aaf80e7cb30b8225ebe
+msgid "``[\"ddoc\", <design_doc_id>, [<subcommand>, <funcname>], [<argument1>, <argument2>, ...]]``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:333
+#: ../../src/query-server/protocol.rst:336
+# 00e6cdc748b4473dba10a61ca4f22c95
+# 9246691407744e8c93e34dafda5b1e26
+msgid "``shows``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:339
+#: ../../src/query-server/protocol.rst:587
+# 7bea03e8433041ca8bab9d60b31900b2
+# d28547de88dd4d969703d43a414bd296
+msgid "Document object or ``null`` if document `id` wasn't specified in request"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:340
+#: ../../src/query-server/protocol.rst:434
+#: ../../src/query-server/protocol.rst:588
+#: ../../src/query-server/protocol.rst:694
+# 0dcdac8f30f04d6388719efbd5411bf1
+# 204c13ab2b0e40a1b53f17a703d01e4b
+# 795b3f6c303d450884cedf868c63457e
+# 72da6371b3a646d1838cdb9b3dcc4ff0
+msgid ":ref:`request_object`"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:342
+# 40e44d8365664190b39525e28d9dee99
+msgid "Array with two elements:"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:344
+# 43bc2eff56574431894bcd35afd7736a
+msgid "``\"resp\"``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:345
+#: ../../src/query-server/protocol.rst:594
+# bef47dec15cb4bb39609106d42889192
+# c1be331484b046009a08c5af41a25ea6
+msgid ":ref:`response_object`"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:347
+# e6262a1de8e44303aaaa2e53ec715a0e
+msgid "Executes :ref:`show function <showfun>`."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:349
+# 591d04b3a82c41abaa51d6999630c277
+msgid "Couchdb sends::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:414
+# ab791580c66843138adc52d6840d7f25
+msgid "The Query Server sends::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:427
+#: ../../src/query-server/protocol.rst:430
+# e8a8af6926d64f9a838fa13c9d99de5e
+# ecb6f1dc52614f78aab3916dfd609a4d
+msgid "``lists``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:433
+# 398953a8c9544c18b37a85c5be7d9d3e
+msgid ":ref:`view_head_info_object`:"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:436
+# 4f03520759274c29b55de57cc99ff571
+msgid "Array. See below for details."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:438
+# 012b7038e96945d3b8095c4aafdb357d
+msgid "Executes :ref:`list function <listfun>`."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:440
+# 869a79bf4eea4dfb924064100f773f20
+msgid "The communication protocol for `list` functions is a bit complex so let's use an example for illustration."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:443
+# 846dfbf8d3b349ef9335e929c3061212
+msgid "Let's assume that we have view a function that emits `id-rev` pairs::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:449
+# cb04e59945744816b7d473055ed372f7
+msgid "And we'd like to emulate ``_all_docs`` JSON response with list function. Our *first* version of the list functions looks like this::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:463
+# 5091ca9302c248679fdeffce4fbf48b7
+msgid "The whole communication session during list function execution could be divided on three parts:"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:466
+# 644f6d32d4d14512b1ee5770984651ae
+msgid "Initialization"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:468
+# c7249fded3464d96ba3aae9ea7f745a1
+msgid "The first returned object from list function is an array of next structure::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:472
+# 8b24b0d88e9b478a936aa0492ba20cb4
+msgid "Where ``<chunks>`` is an array of text chunks that will be sent to client and ``<headers>`` is an object with response HTTP headers."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:475
+# 525bc004554149e594da21dfe1e1edf3
+msgid "This message is sent from the Query Server to CouchDB on the :js:func:`start` call which initialize HTTP response to the client::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:488
+# be7d86327ac44467846e666226530fa5
+msgid "After this, the list function may start to process view rows."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:490
+# 070b3a18205349109bca7b864f7509d2
+msgid "View Processing"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:492
+# c82497a60f144c8196a7184aad6531af
+msgid "Since view results can be extremely large, it is not wise to pass all its rows in a single command. Instead, CouchDB can send view rows one by one to the Query Server allowing processing view and output generation in a streaming way."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:497
+# 74310ae5b31b41da8b933d39d4a32c6d
+msgid "CouchDB sends a special array that carries view row data::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:508
+# 1f6db784789246b395cdfe6e5ce31195
+msgid "If Query Server has something to return on this, it returns an array with a ``\"chunks\"`` item in the head and an array of data in the tail. Now, for our case it has nothing to return, so the response will be::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:517
+# a7cb40279c06457d945f2f106e997bca
+msgid "When there is no more view rows to process, CouchDB sends special message, that signs about that there is no more data to send from his side::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:523
+# e6cd16d68d614b7d864e2c4d7f19ed9b
+msgid "Finalization"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:525
+# 640999ac0f7a4abc9db45fef4f7943e2
+msgid "The last stage of the communication process is the returning *list tail*: the last data chunk. After this, processing list function will be completed and client will receive complete response."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:529
+# 5c3d2c8fcc02404d819f6069188a8996
+msgid "For our example the last message will be the next::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:538
+# 6f1bd64d57a54c3483db894fb8fa939c
+msgid "There, we had made a big mistake: we had returned out result in a single message from the Query Server. That's ok when there are only a few rows in the view result, but it's not acceptable for millions documents and millions view rows"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:543
+# fbf9b8dfb49941b1aa5b8775c30775f8
+msgid "Let's fix our list function and see the changes in communication::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:561
+# 4c38d9af459d495a9177ba7e87516128
+msgid "\"Wait, what?\" - you'd like to ask. Yes, we'd build JSON response manually by string chunks, but let's take a look on logs::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:573
+# 06b92dc2a6d44c73afbd15bd50f70404
+msgid "Note, that now the Query Server sends response by lightweight chunks and if our communication process was extremely slow, the client will see how response data appears on their screen. Chunk by chunk, without waiting for the complete result, like he have for our previous list function."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:581
+#: ../../src/query-server/protocol.rst:584
+# 89c06c92373a410083a0bc778de0fc67
+# bc624b55632e4a558437211766706b00
+msgid "``updates``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:590
+# fe1f4541368a4c2d95347198f5a29781
+msgid "Array with there elements:"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:592
+# 65daf1c91c43411fac11caa570ad786b
+msgid "``\"up\"``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:593
+# cd4333b78b8c4e03b18625b24dd61541
+msgid "Document object or ``null`` if nothing should be stored"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:596
+# 7ea045e595254fafa2696e25d05ed419
+msgid "Executes :ref:`update function <updatefun>`."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:672
+# b1d5e482a9ce42fb96887016597cb153
+msgid "or in case of successful update::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:687
+#: ../../src/query-server/protocol.rst:690
+# 7023e9c04df74bfba8b958b9c2348814
+# 8334def7bc1b4d0081905c79229b8c73
+msgid "``filters``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:693
+#: ../../src/query-server/protocol.rst:807
+# b7ed5580c96d44b9a6218b0b491613b8
+# ad03916e8d1d4a7491ec679af437a06d
+msgid "Array of document objects"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:696
+#: ../../src/query-server/protocol.rst:808
+# 63aae2b37b5d455889f38f92fe7e5cf2
+# ddc50392598e48579743f17b47bc9260
+msgid "Array of two elements:"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:699
+#: ../../src/query-server/protocol.rst:811
+# 6be960be4f9642559654cdebcc55d88a
+# af577eb726d14968a227b2be6c7195d5
+msgid "Array of booleans in the same order of input documents."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:701
+# 801f81bd06c04fafa2b0d7810826b2ee
+msgid "Executes :ref:`filter function <filterfun>`."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:803
+#: ../../src/query-server/protocol.rst:806
+# a2c72297bd1340fbaf48df04fff0a9a0
+# 1f954d86a80841f5a5f30b25e8a970ca
+msgid "``views``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:815
+# bf4f518286204a8c9ec7622c933ad1cb
+msgid "Executes :ref:`view function <viewfilter>` in place of the filter."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:817
+# b2870054f1f94dffa187da8d732af795
+msgid "Acts in the same way as :ref:`qs/ddoc/filters` command."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:822
+#: ../../src/query-server/protocol.rst:825
+# 91a0afaf73b7418f8d390b20d9a2dd83
+# afd17e0f7ff34fc48ca6aa1a988170ff
+msgid "``validate_doc_update``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:828
+# f4c75e68526241e980a3d6e77cd34663
+msgid "Document object that will be stored"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:829
+# de70edae0f7b4a8f8f5b6517d5d24024
+msgid "Document object that will be replaced"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:830
+# 61df9888de8448af894c3cc8dcf7a5af
+msgid ":ref:`userctx_object`"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:831
+# 6f2092da1fbd428183fe267c473f790b
+msgid ":ref:`security_object`"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:833
+# 3e01bf3b53fd48c7a9fdfa58b6cefc71
+msgid "``1``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:835
+# 0958d55335a840d0be6daa4d96040dd8
+msgid "Executes :ref:`validation function <vdufun>`."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:837
+# 990964e3887149b2bfc587db9b00e7f0
+msgid "CouchDB send::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:871
+# 1fee80eb1d1c42cd8f6f9712d8aa71b8
+msgid "While the only valid response for this command is ``true`` to prevent document save the Query Server need to raise an error: ``forbidden`` or ``unauthorized`` - these errors will be turned into correct ``HTTP 403`` and ``HTTP 401`` responses respectively."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:880
+# 583954d8bcf743648a12e670b1ef17cf
+msgid "Raising errors"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:882
+# 856ed7f08bc44d9f929534aa1a6cfc48
+msgid "When something went wrong the Query Server is able to inform CouchDB about such a situation by sending special message in response of received command."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:885
+# e9a9051c89a94ff99e2779f299f2d9ed
+msgid "Error messages prevent further command execution and return an error description to CouchDB. All errors are logically divided into two groups:"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:888
+# 54e76397768041fb93fd2f7fbd7eb21b
+msgid "`Common errors`. These errors only break the current Query Server command and return the error info to the CouchDB instance *without* terminating the Query Server  process."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:891
+# d9c1e4d814f7439f95f93d0b57d839d8
+msgid "`Fatal errors`. The fatal errors signal about something really bad that hurts the overall Query Server process stability and productivity. For instance, if you're using Python Query Server and some design function is unable to import some third party module, it's better to count such error as fatal and terminate whole process or you still have to do the same after import fixing, but manually."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:901
+# 801b084a8ae54f36b492cf0c50c7b830
+msgid "``error``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:903
+# b3f9e9c7c0994c2dab0cf6b18a3c7f98
+msgid "To raise an error, the Query Server have to answer::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:907
+# ac430deddb144e7e848d028ae0c27bed
+msgid "The ``\"error_name\"`` helps to classify problems by their type e.g. if it's ``\"value_error\"`` so probably user have entered wrong data, ``\"not_found\"`` notifies about missed resource and ``\"type_error\"`` definitely says about invalid and non expected input from user."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:912
+# fb9ce5f1ade44413b433813792d5c1c8
+msgid "The ``\"reason why\"`` is the error message that explains why it raised and, if possible, what is needed to do to fix it."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:915
+# 1c7802752874431c8cef4372b4337595
+msgid "For example, calling :ref:`updatefun` against non existent document could produce next error message::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:924
+# c650a1b808aa463b86ec6b367b6f43d3
+msgid "``forbidden``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:926
+# dcb31f323aba445ab5e969c48b3e5cd5
+msgid "The `forbidden` error is widely used by :ref:`vdufun` to stop further function processing and prevent on disk store of the new document version. Since this error actually is not an error, but an assertion against user actions, CouchDB doesn't log it at `\"error\"` level, but returns `HTTP 403 Forbidden` response with error information object."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:932
+#: ../../src/query-server/protocol.rst:948
+# c258e84b48b94f1ba6f31ea1446baeee
+# 6a357df45b2747ec866f4834de479291
+msgid "To raise this error, the Query Server have to answer::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:940
+# f3f01d1251464755b5a4ba07bc168ade
+msgid "``unauthorized``"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:942
+# 2c6662eee5564e0db8026d4765994ccb
+msgid "The `unauthorized` error mostly acts like `forbidden` one, but with the meaning of *please authorize first*. This small difference helps end users to understand what they can do to solve the problem. CouchDB doesn't log it at `\"error\"` level, but returns `HTTP 401 Unauthorized` response with error information object."
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:955
+# df7bd1d45ea540efb7179c846fd9a2bb
+msgid "Logging"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:957
+# 47fd587164284d37879e59811e57dd8d
+msgid "At any time, the Query Server may send some information that will be saved in CouchDB's log file. This is done by sending a special object with just one field, log, on a separate line::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:963
+# 258ea8df66454a268ded1da7f9f5967c
+msgid "CouchDB responds nothing, but writes received message into log file::"
+msgstr ""
+
+#: ../../src/query-server/protocol.rst:967
+# 63b80955228449eb956c973cc7a68e01
+msgid "These messages are only logged at :config:option:`info level <log/level>`."
+msgstr ""
+

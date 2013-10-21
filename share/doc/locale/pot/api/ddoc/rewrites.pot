@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/ddoc/rewrites.rst:17
+# d81b93e310a14e2e9d7b0f6743ce1bd5
+msgid "``/db/_design/design-doc/_rewrite/path``"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:21
+# bafc7ef9077e45308fceebb56cdff575
+msgid "Rewrites the specified path by rules defined in the specified design document."
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:23
+# 00553e291063455196888babae4b7f2b
+msgid "The rewrite rules are defined in *array* field of the design document called ``rewrites``. Each rule is an *object* with next structure:"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:26
+# 99f7fa723b0a4bedbcd1b17f77bf4d3a
+msgid "**from** (*string*): The path rule used to bind current uri to the rule. It use pattern matching for that"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:28
+# 8f9bea2dc99748eaa973c7627a184ebf
+msgid "**to** (*string*): Rule to rewrite an url. It can contain variables depending on  binding variables discovered during pattern matching and query args (url args and from the query member)"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:31
+# d271bf72c34e416ebdc60d91c1495eed
+msgid "**method** (*string*): HTTP request method to bind the request method to the rule. Default is ``\"*\"``"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:33
+# 6f64967b5d6543e7bf177a0e299093a5
+msgid "**query** (*object*): Query args you want to define they can contain dynamic variable by binding the key"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:36
+# e0b0ceb68ced42ef830c927af897cb95
+msgid "The ``to``and ``from`` paths may contains string patterns with leading ``:`` or ``*`` characters."
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:39
+# 3cd76813bc3d4d2cb39c35b6be5007d0
+msgid "For example: ``/somepath/:var/*``"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:41
+# 0527f50ed1344418a5f1b6974b7becef
+msgid "This path is converted in Erlang list by splitting ``/``"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:42
+# 4b2f0ec6a77b4aeba37684f8788efad5
+msgid "Each ``var`` are converted in atom"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:43
+# d5990e92af8742ed811130b0a1bda34f
+msgid "``\"\"`` are converted to ``''`` atom"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:44
+# 52d1d04f4e4e4003a82ac3cd65781da1
+msgid "The pattern matching is done by splitting ``/`` in request url in a list of token"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:46
+# 3f82f19c6f194241855b7cc166e03f14
+msgid "A string pattern will match equal token"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:47
+# 2032b2e6d3754828a9b6fecbe6e97fae
+msgid "The star atom (``'*'`` in single quotes) will match any number of tokens, but may only be present as the last `pathterm` in a `pathspec`"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:49
+# 2ec3b14a37134770a441a74dc86cbf3b
+msgid "If all tokens are matched and all `pathterms` are used, then the `pathspec` matches"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:52
+# 6215195b06b44165a692ea16cd6a089a
+msgid "The pattern matching is done by first matching the HTTP request method to a rule. ``method`` is equal to ``\"*\"`` by default, and will match any HTTP method. It will then try to match the path to one rule. If no rule matches, then a :statuscode:`404` response returned."
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:57
+# 562a3ce437be478989c966b3f4be1993
+msgid "Once a rule is found we rewrite the request url using the ``to`` and ``query`` fields. The identified token are matched to the rule and will replace var. If ``'*'`` is found in the rule it will contain the remaining part if it exists."
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:62
+# c3aaaaeb30424add82e52f6dbb82b069
+msgid "Examples:"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:65
+# bbfc4bfaa3f348998e2b942f1a81a3a9
+msgid "Rule"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:65
+# 3e71635d4bc544b98894f838b047b3e5
+msgid "Url"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:65
+# e4bf53cfdaf944bdb235b343a5ea1a24
+msgid "Rewrite to"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:65
+# ef236003d0d043d8a360783f2fbc450c
+msgid "Tokens"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:67
+# 3f28e937c4bf4af9af99ba1271a13d60
+msgid "{\"from\": \"/a\", \"to\": \"/some\"}"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:67
+# 212f7b23eb2b42b0b439db1c62c76832
+msgid "/a"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:67
+# 472668a3d9374587a191b20d6ed39afd
+msgid "/some"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:69
+# a0b503a02b08463f92c8b1294f5e7fc8
+msgid "{\"from\": \"/a/\\*\", \"to\": \"/some/\\*}"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:69
+#: ../../src/api/ddoc/rewrites.rst:75
+# 51935224485a42a797af2c3349cea01b
+# c0732ef6580542ea892d209c1e9c91ba
+msgid "/a/b/c"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:69
+# 631dcfe6c703461e9ab56f0af90713d7
+msgid "/some/b/c"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:71
+# 651b55e9823e450c9f6e8b74bd784045
+msgid "{\"from\": \"/a/b\", \"to\": \"/some\"}"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:71
+# 7e1f8a79dca64fd985c7c3b3c83599a0
+msgid "/a/b?k=v"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:71
+# 4d60b1ccaa1246169c2e6863c888ada6
+msgid "/some?k=v"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:71
+# fabd851cbe044bafba40347e74bb23b9
+msgid "k=v"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:73
+# 8a2ff7a5f113417a9f9dbe37dd791b37
+msgid "{\"from\": \"/a/b\", \"to\": \"/some/:var\"}"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:73
+#: ../../src/api/ddoc/rewrites.rst:78
+# d42731aec1a244498a43be6e081645bc
+# 93a7a9bb830148bc854bdee2bb48147a
+msgid "/a/b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:73
+# 430327e33657474898d8fb5bef23f2b6
+msgid "/some/b?var=b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:73
+# 5869a5542f5e4f7f86f775587862f802
+msgid "var=b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:75
+# f67aeee50a76468d857cbbefb0fbe9db
+msgid "{\"from\": \"/a/:foo/\", \"to\": \"/some/:foo/\"}"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:75
+# 0e2f8a6eeb7a42e89038244b19c920c1
+msgid "/some/b/c?foo=b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:75
+#: ../../src/api/ddoc/rewrites.rst:78
+#: ../../src/api/ddoc/rewrites.rst:81
+# e2ce77ee8d094a8a9d6d7ed12bcbbd32
+# 1a9852b888b44638a2061c7e4c95393c
+# 08269e6c1eda46c79c69eefa7d38ed1f
+msgid "foo=b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:78
+# b3ffd40e17b641958e3c25de97ee9635
+msgid "{\"from\": \"/a/:foo\", \"to\": \"/some\", \"query\": { \"k\": \":foo\" }}"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:78
+# 6d62e56dbcd447adbbd362588ce8b8de
+msgid "/some/?k=b&foo=b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:81
+# be0cc8cb19954471a2b4e5f0f68e139d
+msgid "{\"from\": \"/a\", \"to\": \"/some/:foo\"}"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:81
+# 712e784a387548c8813123166c69d75c
+msgid "/a?foo=b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:81
+# 126e0c1520ba491e867c5e425273bcc3
+msgid "/some/?b&foo=b"
+msgstr ""
+
+#: ../../src/api/ddoc/rewrites.rst:84
+# 8543756819974ec9aa54b59561714281
+msgid "Request method, header, query parameters, request payload and response body are depended on endpoint to which url will be rewrited."
+msgstr ""
+

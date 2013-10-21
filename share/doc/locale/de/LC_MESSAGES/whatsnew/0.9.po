@@ -1,0 +1,475 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/whatsnew/0.9.rst:18
+msgid "0.9.x Branch"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:28
+msgid "Upgrade Notes"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:31
+msgid "Response to Bulk Creation/Updates"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:33
+msgid "The response to a bulk creation / update now looks like this"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:44
+msgid "Database File Format"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:46
+msgid ""
+"The database file format has changed. CouchDB itself does yet not provide "
+"any tools for migrating your data. In the meantime, you can use third-party "
+"scripts to deal with the migration, such as the dump/load tools that come "
+"with the development version (trunk) of `couchdb-python`_."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:54
+msgid "Renamed \"count\" to \"limit\""
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:56
+msgid ""
+"The view query API has been changed: ``count`` has become ``limit``. This is"
+" a better description of what the parameter does, and should be a simple "
+"update in any client code."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:61
+msgid "Moved View URLs"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:63
+msgid ""
+"The view URLs have been moved to design document resources. This means that "
+"paths that used to be like "
+"http://hostname:5984/mydb/_view/designname/viewname?limit=10 will now look "
+"like http://hostname:5984/mydb/_design/designname/_view/viewname?limit=10. "
+"See the `REST, Hypermedia, and CouchApps`_  thread on dev for details."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:71
+msgid "Attachments"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:73
+msgid ""
+"Names of attachments are no longer allowed to start with an underscore."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:76
+msgid "Error Codes"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:78
+msgid ""
+"Some refinements have been made to error handling. CouchDB will send 400 "
+"instead of 500 on invalid query parameters. Most notably, document update "
+"conflicts now respond with `409 Conflict` instead of `412 Precondition "
+"Failed`. The error code for when attempting to create a database that "
+"already exists is now 412 instead of 409."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:85
+msgid "ini file format"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:87
+msgid ""
+"CouchDB 0.9 changes sections and configuration variable names in "
+"configuration files. Old .ini files won't work. Also note that CouchDB now "
+"ships with two .ini files where 0.8 used couch.ini there are now "
+"`default.ini` and `local.ini`. `default.ini` contains CouchDB's standard "
+"configuration values. local.ini is meant for local changes. `local.ini` is "
+"not overwritten on CouchDB updates, so your edits are safe. In addition, the"
+" new runtime configuration system persists changes to the configuration in "
+"`local.ini`."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:99
+msgid "Version 0.9.2"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:102 ../../src/whatsnew/0.9.rst:119
+#: ../../src/whatsnew/0.9.rst:177
+msgid "Build and System Integration"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:104
+msgid ""
+"Remove branch callbacks to allow building couchjs against newer versions of "
+"Spidermonkey."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:108 ../../src/whatsnew/0.9.rst:161
+#: ../../src/whatsnew/0.9.rst:257
+msgid "Replication"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:110
+msgid ""
+"Fix replication with 0.10 servers initiated by an 0.9 server (:issue:`559`)."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:116
+msgid "Version 0.9.1"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:121
+msgid "PID file directory is now created by the SysV/BSD daemon scripts."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:122
+msgid "Fixed the environment variables shown by the configure script."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:123
+msgid "Fixed the build instructions shown by the configure script."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:124
+msgid ""
+"Updated ownership and permission advice in `README` for better security."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:127 ../../src/whatsnew/0.9.rst:191
+msgid "Configuration and stats system"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:129
+msgid "Corrected missing configuration file error message."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:130
+msgid "Fixed incorrect recording of request time."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:133 ../../src/whatsnew/0.9.rst:198
+msgid "Database Core"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:135
+msgid "Document validation for underscore prefixed variables."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:136
+msgid "Made attachment storage less sparse."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:137
+msgid ""
+"Fixed problems when a database with delayed commits pending is considered "
+"idle, and subject to losing changes when shutdown. (:issue:`334`)"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:141
+msgid "External Handlers"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:143
+msgid "Fix POST requests."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:146
+msgid "Futon"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:148
+msgid "Redirect when loading a deleted view URI from the cookie."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:151 ../../src/whatsnew/0.9.rst:237
+msgid "HTTP Interface"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:153
+msgid "Attachment requests respect the \"rev\" query-string parameter."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:156
+msgid "JavaScript View Server"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:158
+msgid "Useful JavaScript Error messages."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:163
+msgid ""
+"Added support for Unicode characters transmitted as UTF-16 surrogate pairs."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:164
+msgid "URL-encode attachment names when necessary."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:165
+msgid ""
+"Pull specific revisions of an attachment, instead of just the latest one."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:166
+msgid "Work around a rare chunk-merging problem in ibrowse."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:167
+msgid ""
+"Work with documents containing Unicode characters outside the Basic "
+"Multilingual Plane."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:174
+msgid "Version 0.9.0"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:179
+msgid ""
+"The `couchdb` script now supports system chainable configuration files."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:180
+msgid ""
+"The Mac OS X daemon script now redirects STDOUT and STDERR like SysV/BSD."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:181
+msgid "The build and system integration have been improved for portability."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:182
+msgid "Added COUCHDB_OPTIONS to etc/default/couchdb file."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:183
+msgid ""
+"Remove COUCHDB_INI_FILE and COUCHDB_PID_FILE from etc/default/couchdb file."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:184
+msgid "Updated `configure.ac` to manually link `libm` for portability."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:185
+msgid "Updated `configure.ac` to extended default library paths."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:186
+msgid "Removed inets configuration files."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:187
+msgid "Added command line test runner."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:188
+msgid "Created dev target for make."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:193
+msgid "Separate default and local configuration files."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:194
+msgid "HTTP interface for configuration changes."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:195
+msgid "Statistics framework with HTTP query API."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:200
+msgid "Faster B-tree implementation."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:201
+msgid "Changed internal JSON term format."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:202
+msgid "Improvements to Erlang VM interactions under heavy load."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:203
+msgid "User context and administrator role."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:204
+msgid "Update validations with design document validation functions."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:205
+msgid "Document purge functionality."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:206
+msgid "Ref-counting for database file handles."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:209
+msgid "Design Document Resource Paths"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:211
+msgid "Added httpd_design_handlers config section."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:212
+msgid "Moved _view to httpd_design_handlers."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:213
+msgid ""
+"Added ability to render documents as non-JSON content-types with _show and "
+"_list functions, which are also httpd_design_handlers."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:217
+msgid "Futon Utility Client"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:219
+msgid "Added pagination to the database listing page."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:220
+msgid "Implemented attachment uploading from the document page."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:221
+msgid ""
+"Added page that shows the current configuration, and allows modification of "
+"option values."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:223
+msgid "Added a JSON \"source view\" for document display."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:224
+msgid "JSON data in view rows is now syntax highlighted."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:225
+msgid ""
+"Removed the use of an iframe for better integration with browser history and"
+" bookmarking."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:227
+msgid ""
+"Full database listing in the sidebar has been replaced by a short list of "
+"recent databases."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:229
+msgid ""
+"The view editor now allows selection of the view language if there is more "
+"than one configured."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:231
+msgid "Added links to go to the raw view or document URI."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:232
+msgid "Added status page to display currently running tasks in CouchDB."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:233
+msgid "JavaScript test suite split into multiple files."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:234
+msgid "Pagination for reduce views."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:239
+msgid "Added client side UUIDs for idempotent document creation"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:240
+msgid "HTTP COPY for documents"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:241
+msgid "Streaming of chunked attachment PUTs to disk"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:242
+msgid "Remove negative count feature"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:243
+msgid "Add include_docs option for view queries"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:244
+msgid "Add multi-key view post for views"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:245
+msgid "Query parameter validation"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:246
+msgid "Use stale=ok to request potentially cached view index"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:247
+msgid "External query handler module for full-text or other indexers."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:248
+msgid "Etags for attachments, views, shows and lists"
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:249
+msgid ""
+"Show and list functions for rendering documents and views as developer "
+"controlled content-types."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:251
+msgid ""
+"Attachment names may use slashes to allow uploading of nested directories "
+"(useful for static web hosting)."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:253
+msgid "Option for a view to run over design documents."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:254
+msgid "Added newline to JSON responses. Closes bike-shed."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:259
+msgid "Using ibrowse."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:260
+msgid "Checkpoint replications so failures are less expensive."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:261
+msgid "Automatically retry of failed replications."
+msgstr ""
+
+#: ../../src/whatsnew/0.9.rst:262
+msgid "Stream attachments in pull-replication."
+msgstr ""

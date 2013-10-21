@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/cve/2012-5650.rst:18
+# c6dcbff5fe424ebda36ec54573d87949
+msgid "CVE-2012-5650: DOM based Cross-Site Scripting via Futon UI"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:20
+# 2627a1d894ae414fac580afd4add63ea
+msgid "14.01.2013"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:22
+# a5dea4ef94d0449abfd2a8d8b96aadc9
+msgid "Apache CouchDB releases up to and including 1.0.3, 1.1.1, and 1.2.0 are vulnerable."
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:25
+# 162b8a8ad4c44e54908e7ba47e4fb1ac
+msgid "Moderate"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:27
+# e95c186bacba499d85d3b63a6db4a8a9
+msgid "The Apache Software Foundation"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:30
+# 4ff46c68ff52468da2b15fc4e31d53fb
+msgid "Description"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:32
+# 9a5df0f23fb44d4482b6457ce1155e75
+msgid "Query parameters passed into the browser-based test suite are not sanitised, and can be used to load external resources. An attacker may execute JavaScript code in the browser, using the context of the remote user."
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:37
+# 97525ae19e964f90b5d30ceb3f4504eb
+msgid "Mitigation"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:39
+# 73c47de4caf6468abd5d2917c4740133
+msgid "Upgrade to a supported CouchDB release that includes this fix, such as:"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:41
+# 466a456055cb4d9fa8d9e36820a82478
+msgid ":ref:`1.0.4 <release/1.0.4>`"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:42
+# 93b4650a93444c61a4e8311b06360e6f
+msgid ":ref:`1.1.2 <release/1.1.2>`"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:43
+# 13bd5559ccea4ec4bfca5626cad310c7
+msgid ":ref:`1.2.1 <release/1.2.1>`"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:44
+# 597a1da29a12498ab16cc331b1005518
+msgid ":ref:`1.3.x <release/1.3.x>`"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:46
+# 00da6cde80384e3d925b96d651af800a
+msgid "All listed releases have included a specific fix."
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:49
+# e0e93b2c450f40bfa0b45d4396f6a9ba
+msgid "Work-Around"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:51
+# ede38cb54a3e4cf997379184c5e1cce7
+msgid "Disable the Futon user interface completely, by adapting `local.ini` and restarting CouchDB::"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:57
+# 00b5268b09ee4eecafc53a259b3976bd
+msgid "Or by removing the UI test suite components:"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:59
+# 2fcfc5722503414c9ba9f5088222585e
+msgid "share/www/verify_install.html"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:60
+# 88a041de77524b0fa0574af74a129cfb
+msgid "share/www/couch_tests.html"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:61
+# c0ebe9498cd741d7bf2e2abaf86d40bd
+msgid "share/www/custom_test.html"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:64
+# af0f6262260b4d7897523381c7396c7f
+msgid "Acknowledgement"
+msgstr ""
+
+#: ../../src/cve/2012-5650.rst:66
+# e2d8e580c5f446b4bc5da8e1e69980e2
+msgid "This vulnerability was discovered & reported to the Apache Software Foundation by `Frederik Braun`_."
+msgstr ""
+

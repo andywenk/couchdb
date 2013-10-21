@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/common.rst:16
+# 9dc0778721b349fba44287f1a753ebff
+msgid "``/db``"
+msgstr ""
+
+#: ../../src/api/database/common.rst:20
+# 732e07f84b9842f4a3aa63b7e6c2d59e
+msgid "Returns the HTTP Headers containing a minimal amount of information about the specified database. Since the response body is empty, using the HEAD method is a lightweight way to check if the database exists already or not."
+msgstr ""
+
+#: ../../src/api/database/common.rst:29
+#: ../../src/api/database/common.rst:73
+#: ../../src/api/database/common.rst:138
+#: ../../src/api/database/common.rst:165
+#: ../../src/api/database/common.rst:191
+#: ../../src/api/database/common.rst:199
+#: ../../src/api/database/common.rst:232
+#: ../../src/api/database/common.rst:290
+#: ../../src/api/database/common.rst:332
+#: ../../src/api/database/common.rst:391
+# 99518642facb40fca9c0c082d0ecd0d9
+# 53d43692207c470b9ac9beae18dc1c1d
+# 7cefb36fc30f4edb98c959817390c7d5
+# 266a21402de74ab29341d79a9b0ab5d3
+# 26449ddc61544e939ade75afd4669f1b
+# 7c44b1ab0deb41199fd19964c25bef99
+# ada247002a634742b47e41cf747eb90e
+# e88bf8153b41420a97326166cc5fbee6
+# 7838cf02fbc34f03ad8e900c93609bb9
+# 656ad58a6d36461c9f91824ef6604c55
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/database/common.rst:36
+#: ../../src/api/database/common.rst:81
+#: ../../src/api/database/common.rst:146
+#: ../../src/api/database/common.rst:173
+#: ../../src/api/database/common.rst:240
+#: ../../src/api/database/common.rst:305
+#: ../../src/api/database/common.rst:348
+#: ../../src/api/database/common.rst:407
+# 85463ee3da474e12bfdacbcb02f8c35a
+# cbbfec66139947f5b2f280abc31758dd
+# cecdaa24f82c4c5b8f38a1c73bdf7d99
+# 0b8505dcead342549028c0c2794d2620
+# cdec4e83480e4e399bd6b685ee6add39
+# d965ca206f014a2d84ce0817820ab544
+# 8b6ddc80fed7419785fc98a9bc7bbb85
+# 1d4c05dda14748d99fbf07365cd3a315
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/database/common.rst:49
+# af23a3adfe35442ba442b442fd7d6d33
+msgid "Gets information about the specified database."
+msgstr ""
+
+#: ../../src/api/database/common.rst:52
+#: ../../src/api/database/common.rst:54
+#: ../../src/api/database/common.rst:125
+#: ../../src/api/database/common.rst:127
+#: ../../src/api/database/common.rst:222
+#: ../../src/api/database/common.rst:224
+#: ../../src/api/database/common.rst:268
+#: ../../src/api/database/common.rst:276
+# 97338ed9a3614a95b6ff3aa05d4b4802
+# 105d891bccf9461cb7c2ff851171adb8
+# f98def19661c481082ee8b903fbf3e63
+# 2c9793d16c0647098dc43473d5459087
+# 61b5416194064453940d27d984652bb3
+# d5412f4f8f2f4463816d2c3f98690a22
+# 68fd5087c67a4324b1cef75c6a3d821e
+# 72ecc6442fc4485fb9dfbf30c7606b11
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/database/common.rst:53
+#: ../../src/api/database/common.rst:126
+#: ../../src/api/database/common.rst:223
+#: ../../src/api/database/common.rst:269
+# 9a83f69b40994bfd8c645be32bcbfa25
+# bd7bccd6e68547a39aae99b782111637
+# 894e45b3614f4c3f87f34e3a45625af5
+# 89a46aec9f2246268b5a2e9a20a65011
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/database/common.rst:55
+#: ../../src/api/database/common.rst:128
+#: ../../src/api/database/common.rst:225
+#: ../../src/api/database/common.rst:277
+# 47b7ef66c833489cbb6ad1a385a8c727
+# 4695f3e529b74e45b7e482848bb87809
+# 74c85ad34a6c45e98380965525aab213
+# 90a8ee25b2004e1387b4a8b282413771
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/database/common.rst:109
+# d5c1879b97064902a88844beb65acb12
+msgid "Creates a new database. The database name ``{db}`` must be composed by following next rules:"
+msgstr ""
+
+#: ../../src/api/database/common.rst:112
+# 79cac6b61c4a419aa56875af5ee02eee
+msgid "Name must begin with a lowercase letter (``a-z``)"
+msgstr ""
+
+#: ../../src/api/database/common.rst:114
+# 3fef3b40f86a417bada0b3ee796f0b3b
+msgid "Lowercase characters (``a-z``)"
+msgstr ""
+
+#: ../../src/api/database/common.rst:116
+# fb405f4383eb4297bde5344253b73834
+msgid "Digits (``0-9``)"
+msgstr ""
+
+#: ../../src/api/database/common.rst:118
+# 1a47e48b06404c2a996baa2b058f1948
+msgid "Any of the characters ``_``, ``$``, ``(``, ``)``, ``+``, ``-``, and ``/``."
+msgstr ""
+
+#: ../../src/api/database/common.rst:121
+# 8dd06b447517449fb26aff1e4b3f6e38
+msgid "If you're familiar with `Regular Expressions`_, the rules above could be written as ``^[a-z][a-z0-9_$()+/-]*$``."
+msgstr ""
+
+#: ../../src/api/database/common.rst:162
+# 5f9d5138f0554235b67e826cb590e77f
+msgid "If we repeat the same request to CouchDB, it will response with :code:`412` since the database already exists:"
+msgstr ""
+
+#: ../../src/api/database/common.rst:189
+# 30d0266e750347cf841b9c3c31f81551
+msgid "If an invalid database name is supplied, CouchDB returns response with :code:`400`:"
+msgstr ""
+
+#: ../../src/api/database/common.rst:218
+# f54c7a368e4340b7a8a2661368626f0f
+msgid "Deletes the specified database, and all the documents and attachments contained within it."
+msgstr ""
+
+#: ../../src/api/database/common.rst:258
+# bf549287248e486ca155f57d2be121af
+msgid "Creates a new document in the specified database, using the supplied JSON document structure."
+msgstr ""
+
+#: ../../src/api/database/common.rst:261
+# ec8d5104d2744f70878ab87cc0c6dd8b
+msgid "If the JSON structure includes the ``_id`` field, then the document will be created with the specified document ID."
+msgstr ""
+
+#: ../../src/api/database/common.rst:264
+# 05bd3a5d805941d9a0e5701c6d8019e9
+msgid "If the ``_id`` field is not specified, a new unique ID will be generated, following whatever UUID algorithm is configured for that server."
+msgstr ""
+
+#: ../../src/api/database/common.rst:326
+# 29f7db1f5b1446dc816fe98985012b24
+msgid "Specifying the Document ID"
+msgstr ""
+
+#: ../../src/api/database/common.rst:328
+# 468104071db24c2e943ae83f0f65078c
+msgid "The document ID can be specified by including the ``_id`` field in the JSON of the submitted record. The following request will create the same document with the ID ``FishStew``."
+msgstr ""
+
+#: ../../src/api/database/common.rst:371
+# eef82872a4a44fdb9b2d565ad427dd89
+msgid "Batch Mode Writes"
+msgstr ""
+
+#: ../../src/api/database/common.rst:373
+# 493512544dac48bbb39417502cb50338
+msgid "You can write documents to the database at a higher rate by using the batch option. This collects document writes together in memory (on a user-by-user basis) before they are committed to disk. This increases the risk of the documents not being stored in the event of a failure, since the documents are not written to disk immediately."
+msgstr ""
+
+#: ../../src/api/database/common.rst:379
+# 46648483625743bb98c7ddca41ebcc3e
+msgid "To use the batched mode, append the ``batch=ok`` query argument to the URL of the ``PUT`` or :post:`/{db}` request. The CouchDB server will respond with a HTTP :statuscode:`202` response code immediately."
+msgstr ""
+
+#: ../../src/api/database/common.rst:385
+# ae2be99943894fda8c10dd775ff8838d
+msgid "Creating or updating documents with batch mode doesn't guarantee that all documents will be successfully stored on disk. For example, individual documents may not be saved due to conflicts, rejection by :ref:`validation function <vdufun>` or by other reasons, even if overall the batch was sucessfully submitted."
+msgstr ""
+

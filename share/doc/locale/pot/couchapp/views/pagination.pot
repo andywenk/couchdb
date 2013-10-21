@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/couchapp/views/pagination.rst:18
+# 29938bc7d6ca4d448e0d8c0b3cac6949
+msgid "Pagination Recipe"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:20
+# e2220dd6e2e1463a8f84732a55a9ec7b
+msgid "This recipe explains how to paginate over view results. Pagination is a user interface (UI) pattern that allows the display of a large number of rows (`the result set`) without loading all the rows into the UI at once. A fixed-size subset, the `page`, is displayed along with next and previous links or buttons that can move the `viewport` over the result set to an adjacent page."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:27
+# 515dfdeed4954846ac0e1ebf90869a60
+msgid "We assume you’re familiar with creating and querying documents and views as well as the multiple view query options."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:31
+# f0c6a10fc38d46648255ea7b6dadd031
+msgid "Example Data"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:33
+# b47a93a225d64212886214c92544ca80
+msgid "To have some data to work with, we’ll create a list of bands, one document per band::"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:59
+# bb61ce8f2cdd46a4b4e98ad036972b1c
+msgid "A View"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:61
+# 832b3aaf162b4711860b6ce39427cf68
+msgid "We need a simple map function that gives us an alphabetical list of band names. This should be easy, but we’re adding extra smarts to filter out “The” and “A” in front of band names to put them into the right position:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:74
+# 0824e2512bf44135948f521b929e6667
+msgid "The views result is an alphabetical list of band names. Now say we want to display band names five at a time and have a link pointing to the next five names that make up one page, and a link for the previous five, if we’re not on the first page."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:79
+# 1991b04ddbf54c7bab098481556f9955
+msgid "We learned how to use the ``startkey``, ``limit``, and ``skip`` parameters in earlier chapters. We’ll use these again here. First, let’s have a look at the full result set:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:100
+# a20d2ee0e40542ada7eb04464cceeddc
+msgid "Setup"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:102
+# 4c4d6383877848099a55a6f310481074
+msgid "The mechanics of paging are very simple:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:104
+# 60f80b7ba53e4f5fb5c38b1e2ffe9513
+msgid "Display first page"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:105
+#: ../../src/couchapp/views/pagination.rst:108
+# c4cceab2a5c54f83b8c5d353a5601303
+# 7fcf1e8e43b844e1b40a04e32c360d5e
+msgid "If there are more rows to show, show next link"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:106
+# 6d8c49a810b346e48a6e07240ec8b58a
+msgid "Draw subsequent page"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:107
+# 76b3bf727ca84a00b28273eef790d614
+msgid "If this is not the first page, show a previous link"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:110
+# 74f04959efab481eaafe7085d8941d0f
+msgid "Or in a pseudo-JavaScript snippet:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:129
+# 3426c0391ced437d826952c09bb9c273
+msgid "Slow Paging (Do Not Use)"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:131
+# e2b19061ea274ad7b3d693c9b9503f0c
+msgid "**Don’t use this method!** We just show it because it might seem natural to use, and you need to know why it is a bad idea. To get the first five rows from the view result, you use the ``?limit=5`` query parameter::"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:137
+#: ../../src/couchapp/views/pagination.rst:167
+# 4fb53c1e3c46419f9166cad224f41bac
+# 6c2f1544250641a59c153a99b64b3f79
+msgid "The result:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:149
+# e449c1f56d3a43d586abb8f30e7cf172
+msgid "By comparing the ``total_rows`` value to our ``limit`` value, we can determine if there are more pages to display. We also know by the `offset` member that we are on the first page. We can calculate the value for ``skip=`` to get the results for the next page:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:160
+# 7537610480784328980e55f1d07a9889
+msgid "So we query CouchDB with::"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:164
+# 6df03bb0aeb34c3f964d6f30703beab5
+msgid "Note we have to use ``'`` (single quotes) to escape the ``&`` character that is special to the shell we execute curl in."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:180
+# 03ae3906f0cd407394c76dda90e5b6aa
+msgid "Implementing the ``hasPrev()`` and ``hasNext()`` method is pretty straightforward:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:198
+# 1f9649cc44e54d21ba94f06fdf0b4291
+msgid "The dealbreaker"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:200
+# 544798fe21684c60bfa472d755ac3fce
+msgid "This all looks easy and straightforward, but it has one fatal flaw. Remember how view results are generated from the underlying B-tree index: CouchDB jumps to the first row (or the first row that matches ``startkey``, if provided) and reads one row after the other from the index until there are no more rows (or ``limit`` or ``endkey`` match, if provided)."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:206
+# a58d9468b5b84125bd3d00db5c3aa35b
+msgid "The ``skip`` argument works like this: in addition to going to the first row and starting to read, skip will skip as many rows as specified, but CouchDB will still read from the first row; it just won’t return any values for the skipped rows. If you specify ``skip=100``, CouchDB will read 100 rows and not create output for them. This doesn’t sound too bad, but it is very bad, when you use 1000 or even 10000 as skip values. CouchDB will have to look at a lot of rows unnecessarily."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:214
+# 0affba0e45b244a78689f0b568fba010
+msgid "As a rule of thumb, skip should be used only with single digit values. While it’s possible that there are legitimate use cases where you specify a larger value, they are a good indicator for potential problems with your solution. Finally, for the calculations to work, you need to add a reduce function and make two calls to the view per page to get all the numbering right, and there’s still a potential for error."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:222
+# 1f87358eca244186ade758f3ff069c03
+msgid "Fast Paging (Do Use)"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:224
+# 96e2c00aaeee4cd69e5a847bf4b60599
+msgid "The correct solution is not much harder. Instead of slicing the result set into equally sized pages, we look at 10 rows at a time and use ``startkey`` to jump to the next 10 rows. We even use skip, but only with the value 1."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:228
+# 700d045dfe5b40f3a116e11307e39244
+msgid "Here is how it works:"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:230
+# 36ac84d2357c4cbda7c1409f4aafdab6
+msgid "Request `rows_per_page + 1` rows from the view"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:231
+# 61ef18a48260449fb73ba1d1693015db
+msgid "Display `rows_per_page` rows, `store + 1` row as `next_startkey` and `next_startkey_docid`"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:233
+# c049202470b44ceaacf65f927498b7d5
+msgid "As page information, keep ``startkey`` and `next_startkey`"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:234
+# ebc0b3dd73554c38838e1135aea04e99
+msgid "Use the `next_*` values to create the next link, and use the others to create the previous link"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:237
+# e4b3d76170d14351ad9f6ce4dc9e8ab3
+msgid "The trick to finding the next page is pretty simple. Instead of requesting 10 rows for a page, you request 11 rows, but display only 10 and use the values in the 11th row as the ``startkey`` for the next page. Populating the link to the previous page is as simple as carrying the current ``startkey`` over to the next page. If there’s no previous ``startkey``, we are on the first page. We stop displaying the link to the next page if we get `rows_per_page` or less rows back. This is called linked list pagination, as we go from page to page, or list item to list item, instead of jumping directly to a pre-computed page. There is one caveat, though. Can you spot it?"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:247
+# 1d4878a1f0344bc58e0a54a61069a41f
+msgid "CouchDB view keys do not have to be unique; you can have multiple index entries read. What if you have more index entries for a key than rows that should be on a page? ``startkey`` jumps to the first row, and you’d be screwed if CouchDB didn’t have an additional parameter for you to use. All view keys with the same value are internally sorted by `docid`, that is, the ID of the document that created that view row. You can use the ``startkey_docid`` and ``endkey_docid`` parameters to get subsets of these rows. For pagination, we still don’t need ``endkey_docid``, but ``startkey_docid`` is very handy. In addition to ``startkey`` and ``limit``, you also use ``startkey_docid`` for pagination if, and only if, the extra row you fetch to find the next page has the same key as the current ``startkey``."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:259
+# 7dae620fe2e54b91a9945d619e35e516
+msgid "It is important to note that the `*_docid` parameters only work in addition to the `*key` parameters and are only useful to further narrow down the result set of a view for a single key. They do not work on their own (the one exception being the built-in :ref:`_all_docs view <api/db/all_docs>`  that already sorts by document ID)."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:265
+# b3af67041d76414abea1be65e4dffb22
+msgid "The advantage of this approach is that all the key operations can be performed on the super-fast B-tree index behind the view. Looking up a page doesn’t include scanning through hundreds and thousands of rows unnecessarily."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:270
+# 8ebc3eedfe3946e3ba140a3a00234e02
+msgid "Jump to Page"
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:272
+# 012906440b94405db629853302f56507
+msgid "One drawback of the linked list style pagination is that you can’t pre-compute the rows for a particular page from the page number and the rows per page. Jumping to a specific page doesn’t really work. Our gut reaction, if that concern is raised, is, “Not even Google is doing that!” and we tend to get away with it. Google always pretends on the first page to find 10 more pages of results. Only if you click on the second page (something very few people actually do) might Google display a reduced set of pages. If you page through the results, you get links for the previous and next 10 pages, but no more. Pre-computing the necessary ``startkey`` and ``startkey_docid`` for 20 pages is a feasible operation and a pragmatic optimization to know the rows for every page in a result set that is potentially tens of thousands of rows long, or more."
+msgstr ""
+
+#: ../../src/couchapp/views/pagination.rst:285
+# 5702166f979a43aa9612e794987755ce
+msgid "If you really do need to jump to a page over the full range of documents (we have seen applications that require that), you can still maintain an integer value index as the view index and take a hybrid approach at solving pagination."
+msgstr ""
+

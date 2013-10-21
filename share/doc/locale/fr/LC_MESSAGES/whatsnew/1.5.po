@@ -1,0 +1,71 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/whatsnew/1.5.rst:18
+msgid "1.5.x Branch"
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:27
+msgid "Version 1.5.0"
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:31
+msgid "This version is not released yet."
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:33
+msgid ""
+":issue:`1781`: The official documentation has been overhauled. A lot of "
+"content from other sources have been merged, and the index page has been "
+"rebuilt to make the docs much more accessible. :commit:`54813a7`"
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:37
+msgid ""
+"A new administration UI, codenamed Fauxton, has been included as an "
+"experimental preview. It can be accessed at ``/_utils/fauxton/``. There are "
+"too many improvements here to list them all. We are looking for feedback "
+"from the community on this preview release."
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:41
+msgid ""
+":issue:`1888`: Fixed an issue where admin users would be restricted by the "
+"``public_fields`` feature."
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:43
+msgid ""
+"Fixed an issue with the JavaScript CLI test runner. :commit:`be76882`, "
+":commit:`54813a7`"
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:45
+msgid ""
+":issue:`1867`: An experimental plugin feature has been added. See "
+"``src/couch_plugin/README.md`` for details. We invite the community to test "
+"and report any findings."
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:48
+msgid ""
+":issue:`1894`: An experimental Node.js-based query server runtime has been "
+"added. See :ref:`experimental` for details. We invite the community to test "
+"and report any findings."
+msgstr ""
+
+#: ../../src/whatsnew/1.5.rst:51
+msgid ""
+":issue:`1901`: Better retry mechanism for transferring attachments during "
+"replication. :commit:`4ca2cec`"
+msgstr ""

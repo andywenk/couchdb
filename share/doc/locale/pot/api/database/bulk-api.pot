@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/bulk-api.rst:17
+# c0ea8a7173c54243991524d3c47ab917
+msgid "``/db/_all_docs``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:21
+# 21f1f183e61f4d22a99b906e5def3574
+msgid "Returns a JSON structure of all of the documents in a given database. The information is returned as a JSON structure containing meta information about the return structure, including a list of all documents and basic contents, consisting the ID, revision and key. The key is the from the document's ``_id``."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:28
+#: ../../src/api/database/bulk-api.rst:62
+#: ../../src/api/database/bulk-api.rst:209
+#: ../../src/api/database/bulk-api.rst:220
+# 75372c1d4cbb4bbc83712e5b169eec22
+# d2b1ae72ec524285a080e0299a7215ed
+# 2b549ce2c59a42a5acc593e63d20a2c9
+# 9b8bd7126e2b49d6b2925e274d8a66cb
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:29
+#: ../../src/api/database/bulk-api.rst:210
+# 7a1610596a98482290d086a9140905fe
+# bdee56f94a1e46d3a69cfec89a1e9d8f
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:63
+#: ../../src/api/database/bulk-api.rst:221
+# 0dc87c58f77a48be8173a86d48ee4e22
+# a5f794b1eeec40f4bc2b6a5fb223db12
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:73
+#: ../../src/api/database/bulk-api.rst:234
+# e1092ae690fa49abb0e06d1ad4d45cf3
+# 2c79db44e45042c98fc8c39f526d2439
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:81
+#: ../../src/api/database/bulk-api.rst:257
+# b554f66772154436ac62d2a070045307
+# f64b50f3eafc4fb0a84b3e43b529f7ba
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:138
+# 99688aafbf6641b79ca8f3c9709902f0
+msgid "The ``POST`` to ``_all_docs`` allows to specify multiple keys to be selected from the database. This enables you to request multiple documents in a single request, in place of multiple :get:`/{db}/{docid}` requests."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:143
+# 0ae56de1b9194382bbd08965a12f5a26
+msgid "The request body should contain a list of the keys to be returned as an array to a ``keys`` object. For example:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:161
+# fd806febb925484cabddb611b62012ce
+msgid "The returned JSON is the all documents structure, but with only the selected keys in the output:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:191
+# c8b4809d986d474caf8440bc26d042b6
+msgid "``/db/_bulk_docs``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:195
+# 77b062bbe0a54d219a397bed6fa25b46
+msgid "The bulk document API allows you to create and update multiple documents at the same time within a single request. The basic operation is similar to creating or updating a single document, except that you batch the document structure and information."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:200
+# 1357e606cec64310961de5265aec6697
+msgid "When creating new documents the document ID (``_id``) is optional."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:202
+# 8a2b217e399645238a3f4ae381b2d25b
+msgid "For updating existing documents, you must provide the document ID, revision information (``_rev``), and new document values."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:205
+# b06d63cda9ab485db5e49ff0e4b1b7d6
+msgid "In case of batch deleting documents all fields as document ID, revision information and deletion status (``_deleted``) are required."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:286
+# 772c4c6fb64f466faae8a9fada6238b0
+msgid "Inserting Documents in Bulk"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:288
+# 762f04741e1644f1a461e090bde5a179
+msgid "Each time a document is stored or updated in CouchDB, the internal B-tree is updated. Bulk insertion provides efficiency gains in both storage space, and time, by consolidating many of the updates to intermediate B-tree nodes."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:292
+# 4680f13714354e8d970047a7c7b68e78
+msgid "It is not intended as a way to perform ``ACID``-like transactions in CouchDB, the only transaction boundary within CouchDB is a single update to a single database. The constraints are detailed in :ref:`api/db/bulk_docs/semantics`."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:296
+# 97dd4d9a9efd40f3a7766c00d9382c80
+msgid "To insert documents in bulk into a database you need to supply a JSON structure with the array of documents that you want to add to the database. You can either include a document ID, or allow the document ID to be automatically generated."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:301
+# e52a602afe064403b3d54cf6d2c09a88
+msgid "For example, the following update inserts three new documents, two with the supplied document IDs, and one which will have a document ID generated:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:329
+# 606a98047a5f4a078f978ad9b27cb6aa
+msgid "The return type from a bulk insertion will be 201, with the content of the returned structure indicating specific success or otherwise messages on a per-document basis."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:333
+# 140f210eba52496aa3b3f5f138d76958
+msgid "The return structure from the example above contains a list of the documents created, here with the combination and their revision IDs:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:357
+#: ../../src/api/database/bulk-api.rst:430
+# 4044328fa11a448a97bce723921feef2
+# 830534dcfce2439e8f857fee15e40071
+msgid "The content and structure of the returned JSON will depend on the transaction semantics being used for the bulk update; see :ref:`api/db/bulk_docs/semantics` for more information. Conflicts and validation errors when updating documents in bulk must be handled separately; see :ref:`api/db/bulk_docs/validation`."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:363
+# 93a3f1077a624b2997b085a9e6704a4a
+msgid "Updating Documents in Bulk"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:365
+# 427a92f1eb69432986c8ef887bfa279d
+msgid "The bulk document update procedure is similar to the insertion procedure, except that you must specify the document ID and current revision for every document in the bulk update JSON string."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:369
+# 097d41bcb1554bb19b863abcefc7e21c
+msgid "For example, you could send the following request:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:402
+# ba01ba2de46049f1a50c202af70cb1a8
+msgid "The return structure is the JSON of the updated documents, with the new revision and ID information:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:422
+# 65430823ee504a279dd355a17636e888
+msgid "You can optionally delete documents during a bulk update by adding the ``_deleted`` field with a value of ``true`` to each document ID/revision combination within the submitted JSON structure."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:426
+# b1d04305d518408390ec9d7911e46c84
+msgid "The return type from a bulk insertion will be :code:`201`, with the content of the returned structure indicating specific success or otherwise messages on a per-document basis."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:438
+# 8d075ebcdfd24970b98fb311bf4fd952
+msgid "Bulk Documents Transaction Semantics"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:440
+# a75f70e14737468bb2e43fa2f1d36ee0
+msgid "CouchDB supports two different modes for updating (or inserting) documents using the bulk documentation system. Each mode affects both the state of the documents in the event of system failure, and the level of conflict checking performed on each document. The two modes are:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:445
+# e9343a6733f5494d92d2be8bfccd00c2
+msgid "``non-atomic``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:447
+# 578565c07a1346d68036a04038cb64fb
+msgid "The default mode is non-atomic, that is, CouchDB will only guarantee that some of the documents will be saved when you send the request. The response will contain the list of documents successfully inserted or updated during the process. In the event of a crash, some of the documents may have been successfully saved, and some will have been lost."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:454
+# 98abb8818edd49f9b677bfa7833e26a1
+msgid "In this mode, the response structure will indicate whether the document was updated by supplying the new ``_rev`` parameter indicating a new document revision was created. If the update failed, then you will get an ``error`` of type ``conflict``. For example:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:480
+# d3f530f352494fa9994e967260762440
+msgid "In this case no new revision has been created and you will need to submit the document update, with the correct revision tag, to update the document."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:484
+# 60cea9ecfb4d403496e9152cea296224
+msgid "``all-or-nothing``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:486
+# 4a0c84212b084c5d8a77556a0d4b20b9
+msgid "In all-or-nothing mode, either all documents are written to the database, or no documents are written to the database, in the event of a system failure during commit."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:490
+# 193d0f3432f44afe85fe548d65efc78b
+msgid "In addition, the per-document conflict checking is not performed. Instead a new revision of the document is created, even if the new revision is in conflict with the current revision in the database. The returned structure contains the list of documents with new revisions:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:513
+# 67225a61268f4c3d9fb7e0fa738513ec
+msgid "When updating documents using this mode the revision of a document included in views will be arbitrary. You can check the conflict status for a document by using the ``conflicts=true`` query argument when accessing the view. Conflicts should be handled individually to ensure the consistency of your database."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:519
+# 89f0828a745347598e8c5b31125ca090
+msgid "To use this mode, you must include the ``all_or_nothing`` field (set to true) within the main body of the JSON of the request."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:522
+# 7c2c4fa0436f44b28adf50b4729e6ee9
+msgid "The effects of different database operations on the different modes are summarized below:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:525
+# b7a40903b8d14396801dcad166951579
+msgid "**Transaction Mode**: ``Non-atomic``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:527
+# d99e82a87bd04c3f84a359614eea2990
+msgid "**Transaction**: ``Insert``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:529
+# 811f619f2e42401a8f7514ee32cbb21c
+msgid "**Cause**: Requested document ID already exists"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:530
+# 9991df8614264e4c8c85bc5e64a4dded
+msgid "**Resolution**: Resubmit with different document ID, or update the existing document"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:533
+# d4ea9bfcdabc4d61981c71fd02a3d1ac
+msgid "**Transaction**: ``Update``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:535
+# 58fd2baa9039499181e6881400e4b898
+msgid "**Cause**: Revision missing or incorrect"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:536
+# 0cb609de997c4bd2a012d59ba0bb025a
+msgid "**Resolution**: Resubmit with correct revision"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:538
+# 29162ab774d54cb48609c0ee9f18f704
+msgid "**Transaction Mode**: ``All-or-nothing``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:540
+# 0561d6cb6cc446358850aa7746e322d8
+msgid "**Transaction**: ``Insert`` / ``Update``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:542
+# 9e41ada387f24b86a28c9b7ee9c81ada
+msgid "**Cause**: Additional revision inserted"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:543
+# 3d9e40d35c6541d2b671bbd47f19a962
+msgid "**Resolution**: Resolve conflicted revisions"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:545
+# db30ca673bf7432e98592aed5fa08915
+msgid "Replication of documents is independent of the type of insert or update. The documents and revisions created during a bulk insert or update are replicated in the same way as any other document. This can mean that if you make use of the all-or-nothing mode the exact list of documents, revisions (and their conflict state) may or may not be replicated to other databases correctly."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:555
+# 2ac87d707c1249768a8c82e4ab056d20
+msgid "Bulk Document Validation and Conflict Errors"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:557
+# 8bfb0582cd2f418d9ca6540f8c4bf8ce
+msgid "The JSON returned by the ``_bulk_docs`` operation consists of an array of JSON structures, one for each document in the original submission. The returned JSON structure should be examined to ensure that all of the documents submitted in the original request were successfully added to the database."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:563
+# 481f6b4f14b9410984e553acdd8038e2
+msgid "When a document (or document revision) is not correctly committed to the database because of an error, you should check the ``error`` field to determine error type and course of action. Errors will be one of the following type:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:568
+# afd6cabdbe0a4cfdbefb97160cd52bdf
+msgid "``conflict``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:570
+# bd636f14ba52456cb11b8fb8f8ebbf58
+msgid "The document as submitted is in conflict. If you used the default bulk transaction mode then the new revision will not have been created and you will need to re-submit the document to the database. If you used ``all-or-nothing`` mode then you will need to manually resolve the conflicted revisions of the document."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:576
+# 14b02e0d0f0044ed960596e3258b6901
+msgid "Conflict resolution of documents added using the bulk docs interface is identical to the resolution procedures used when resolving conflict errors during replication."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:580
+# 7e9b13eafec5498c9be2b95844ab2c04
+msgid "``forbidden``"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:582
+# 69bcdcd1b52c4b91a14c586e2697c4ec
+msgid "Entries with this error type indicate that the validation routine applied to the document during submission has returned an error."
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:585
+# 0ecd7720ab3a4ab397736a6c5ecebbe5
+msgid "For example, if your validation routine includes the following:"
+msgstr ""
+
+#: ../../src/api/database/bulk-api.rst:591
+# 85e95902b4084275b74f539523562bfc
+msgid "The error returned will be:"
+msgstr ""
+

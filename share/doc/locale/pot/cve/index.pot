@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/cve/index.rst:17
+# a048da07952f42b083ed96ca0d45ba78
+msgid "Security Issues Information"
+msgstr ""
+
+#: ../../src/cve/index.rst:28
+# b7c495d7df3147f48f14349c1767eec6
+msgid "Reporting New Security Problems with Apache CouchDB"
+msgstr ""
+
+#: ../../src/cve/index.rst:30
+# 5fa30c5c1cf84d418fc99f28ed309cad
+msgid "The Apache Software Foundation takes a very active stance in eliminating security problems and denial of service attacks against Apache CouchDB."
+msgstr ""
+
+#: ../../src/cve/index.rst:33
+# 2166d81a410441a3b7d26f793e1e8ca2
+msgid "We strongly encourage folks to report such problems to our private security mailing list first, before disclosing them in a public forum."
+msgstr ""
+
+#: ../../src/cve/index.rst:36
+# e1f84db88f234203a6648b10078457fc
+msgid "Please note that the security mailing list should only be used for reporting undisclosed security vulnerabilities in Apache CouchDB and managing the process of fixing such vulnerabilities. We cannot accept regular bug reports or other queries at this address. All mail sent to this address that does not relate to an undisclosed security problem in the Apache CouchDB source code will be ignored."
+msgstr ""
+
+#: ../../src/cve/index.rst:43
+# a39872c2e2314789bf64ac3620c86c4a
+msgid "If you need to report a bug that isn't an undisclosed security vulnerability, please use the `bug reporting page`_."
+msgstr ""
+
+#: ../../src/cve/index.rst:46
+# 8ae4526bf21c4ec58f6c9283b1a25c36
+msgid "Questions about:"
+msgstr ""
+
+#: ../../src/cve/index.rst:48
+# 1e3469cdbe674da98abac03143f42c55
+msgid "How to configure CouchDB securely"
+msgstr ""
+
+#: ../../src/cve/index.rst:49
+# 2100aa7c1b714a89b09b16e85d37b3b4
+msgid "If a vulnerability applies to your particular application"
+msgstr ""
+
+#: ../../src/cve/index.rst:50
+# 28aee9d86c184b9ba44bdf0965621263
+msgid "Obtaining further information on a published vulnerability"
+msgstr ""
+
+#: ../../src/cve/index.rst:51
+# 19ceb7d5281643febb773d2589d1f862
+msgid "Availability of patches and/or new releases"
+msgstr ""
+
+#: ../../src/cve/index.rst:53
+# ef63a61197f34be2b13a79c47b8bef4f
+msgid "should be address to the `users mailing list`_. Please see the `mailing lists page`_ for details of how to subscribe."
+msgstr ""
+
+#: ../../src/cve/index.rst:56
+# bda022aa004944ac8e0e14c8045d6def
+msgid "The private security mailing address is: `security@couchdb.apache.org`_"
+msgstr ""
+
+#: ../../src/cve/index.rst:58
+# cb8a74baa9d842119b8a7bd8abea8b4a
+msgid "Please read `how the Apache Software Foundation handles security`_ reports to know what to expect."
+msgstr ""
+
+#: ../../src/cve/index.rst:61
+# 501c82fab8d24833965177246045fbf9
+msgid "Note that all networked servers are subject to denial of service attacks, and we cannot promise magic workarounds to generic problems (such as a client streaming lots of data to your server, or re-requesting the same URL repeatedly). In general our philosophy is to avoid any attacks which can cause the server to consume resources in a non-linear relationship to the size of inputs."
+msgstr ""
+

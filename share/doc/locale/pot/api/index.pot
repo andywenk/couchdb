@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/index.rst:17
+# 0555cd98da7c4d5dbeb11e88e14ca61f
+msgid "API Reference"
+msgstr ""
+
+#: ../../src/api/index.rst:19
+# 8d5666e920334ef1abb53ddfdac7ea45
+msgid "The components of the API URL path help determine the part of the CouchDB server that is being accessed. The result is the structure of the URL request both identifies and effectively describes the area of the database you are accessing."
+msgstr ""
+
+#: ../../src/api/index.rst:24
+# 141f958107994555a6646d1053fea037
+msgid "As with all URLs, the individual components are separated by a forward slash."
+msgstr ""
+
+#: ../../src/api/index.rst:27
+# bbd1b9597b6d43a290e3075c4b83e0d6
+msgid "As a general rule, URL components and JSON fields starting with the ``_`` (underscore) character represent a special component or entity within the server or returned object. For example, the URL fragment ``/_all_dbs`` gets a list of all of the databases in a CouchDB instance."
+msgstr ""
+
+#: ../../src/api/index.rst:32
+# 00b380f75fd249a98c45c7ba99667cf2
+msgid "This reference is structured according to the URL structure, as below."
+msgstr ""
+

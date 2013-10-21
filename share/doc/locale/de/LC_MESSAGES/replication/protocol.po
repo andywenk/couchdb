@@ -1,0 +1,350 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/replication/protocol.rst:17
+msgid "CouchDB Replication Protocol"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:19
+msgid ""
+"The **CouchDB Replication protocol** is a protocol for synchronizing "
+"documents between 2 peers over HTTP/1.1."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:23
+msgid "Language"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:25
+msgid ""
+"The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL "
+"NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and "
+"\"OPTIONAL\" in this document are to be interpreted as described in "
+":rfc:`2119`."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:31
+msgid "Goals"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:33
+msgid ""
+"The CouchDB Replication protocol is a synchronization protocol for "
+"synchronizing documents between 2 peers over HTTP/1.1."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:36
+msgid ""
+"In theory the CouchDB protocol can be used between products that implement "
+"it. However the reference implementation, written in Erlang_, is provided by"
+" the couch_replicator_ module available in Apache CouchDB."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:41
+msgid ""
+"The CouchDB_ replication protocol is using the `CouchDB REST API "
+"<http://wiki.apache.org/couchdb/Reference>`_ and so is based on HTTP and the"
+" Apache CouchDB MVC Data model. The primary goal of this specification is to"
+" describe the CouchDB replication algorithm."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:48
+msgid "Definitions"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:51
+msgid "ID:"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:51
+msgid "An identifier (could be an UUID) as described in :rfc:`4122`"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:55
+msgid "Sequence:"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:54
+msgid ""
+"An ID provided by the changes feed. It can be numeric but not necessarily."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:58
+msgid "Revision:"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:58
+msgid "(to define)"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:61
+msgid "Document"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:61
+msgid "A document is JSON entity with a unique ID and revision."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:64
+msgid "Database"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:64
+msgid "A collection of documents with a unique URI"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:68
+msgid "URI"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:67
+msgid ""
+"An uri is defined by the :rfc:`2396` . It can be an URL as defined in "
+":rfc:`1738`."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:71
+msgid "Source"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:71
+msgid "Database from where the Documents are replicated"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:74
+msgid "Target"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:74
+msgid "Database where the Document are replicated"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:78
+msgid "Checkpoint"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:77
+msgid "Last source sequence ID"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:81
+msgid "Algorithm"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:83
+msgid ""
+"Get unique identifiers for the Source and Target based on their URI if "
+"replication task ID is not available."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:86
+msgid ""
+"Save this identifier in a special Document named `_local/<uniqueid>` on the "
+"Target database. This document isn't replicated. It will collect the last "
+"Source sequence ID, the Checkpoint, from the previous replication process."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:91
+msgid ""
+"Get the Source changes feed by passing it the Checkpoint using the `since` "
+"parameter by calling the `/<source>/_changes` URL. The changes feed only "
+"return a list of current revisions."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:98
+msgid ""
+"This step can be done continuously using the `feed=longpoll` or "
+"`feed=continuous` parameters. Then the feed will continuously get the "
+"changes."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:103
+msgid ""
+"Collect a group of Document/Revisions ID pairs from the **changes feed** and"
+" send them to the target databases on the `/<target>/_revs_diffs` URL. The "
+"result will contain the list of revisions **NOT** in the Target."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:108
+msgid ""
+"GET each revisions from the source Database by calling the URL "
+"`/<source>/<docid>?revs=true&open_revs`=<revision>` . This will get the "
+"document with teh parent revisions. Also don't forget to get attachments "
+"that aren't already stored at the target. As an optimisation you can use the"
+" HTTP multipart api to get all."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:114
+msgid ""
+"Collect a group of revisions fetched at previous step and store them on the "
+"target database using the `Bulk Docs "
+"<http://wiki.apache.org/couchdb/HTTP_Document_API#Bulk_Docs>`_ API with the "
+"`new_edit: false` JSON property to preserve their revisions ID."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:120
+msgid ""
+"After the group of revision is stored on the Target, save the new Checkpoint"
+" on the Source."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:126
+msgid ""
+"Even if some revisions have been ignored the sequence should be take in "
+"consideration for the Checkpoint."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:129
+msgid ""
+"To compare non numeric sequence ordering, you will have to keep an ordered "
+"list of the sequences IDS as they appear in the _changes feed and compare "
+"their indices."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:134
+msgid "Filter replication"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:136
+msgid ""
+"The replication can be filtered by passing the `filter` parameter to the "
+"changes feeds with a function name. This will call a function on each "
+"changes. If this function return True, the document will be added to the "
+"feed."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:143
+msgid "Optimisations"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:145
+msgid "The system should run each steps in parallel to reduce the latency."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:147
+msgid ""
+"The number of revisions passed to the step 3 and 6 should be large enough to"
+" reduce the bandwidth and make sure to reduce the latency."
+msgstr ""
+
+#: ../../src/replication/protocol.rst:152
+msgid "API Reference"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:154
+msgid ":head:`/{db}` -- Check Database existence"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:155
+msgid ""
+":post:`/{db}/_ensure_full_commit` -- Ensure that all changes are stored on "
+"disk"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:157
+msgid ":get:`/{db}/_local/{id}` -- Read the last Checkpoint"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:158
+msgid ":put:`/{db}/_local/{id}` -- Save a new Checkpoint"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:161
+msgid "Push Only"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:163
+msgid ":put:`/{db}` -- Create Target if it not exists and option was provided"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:164
+msgid ""
+":post:`/{db}/_revs_diff` -- Locate Revisions that are not known to the "
+"Target"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:166
+msgid ":post:`/{db}/_bulk_docs` -- Upload Revisions to the Target"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:167
+msgid ""
+":put:`/{db}/{docid}`?new_edits=false -- Upload a single Document with "
+"attachments to the Target"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:171
+msgid "Pull Only"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:173
+msgid ""
+":get:`/{db}/_changes` -- Locate changes since on Source the last pull. The "
+"request uses next query parameters:"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:176
+msgid "``style=all_docs``"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:177
+msgid ""
+"``feed=feed`` , where feed is :ref:`normal <changes/normal>` or "
+":ref:`longpoll <changes/longpoll>`"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:179
+msgid "``limit=limit``"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:180
+msgid "``heartbeat=heartbeat``"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:182
+msgid ""
+":get:`/{db}/{docid}` -- Retrieve a single Document from Source with "
+"attachments. The request uses next query parameters:"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:185
+msgid ""
+"``open_revs=revid`` - where ``revid`` is the actual Document Revision at the"
+" moment of the pull request"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:187
+msgid "``revs=true``"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:188
+msgid "``atts_since=lastrev``"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:191
+msgid "Reference"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:193
+msgid ""
+"`TouchDB Ios wiki <https://github.com/couchbaselabs/TouchDB-iOS/wiki"
+"/Replication-Algorithm>`_"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:194
+msgid "`CouchDB documentation <http://wiki.apache.org/couchdb/Replication>`_"
+msgstr ""
+
+#: ../../src/replication/protocol.rst:196
+msgid "CouchDB `change notifications`_"
+msgstr ""

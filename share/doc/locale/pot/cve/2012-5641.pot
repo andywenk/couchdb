@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/cve/2012-5641.rst:18
+# 6441383823a048748a73dbd33cdf8375
+msgid "CVE-2012-5641: Information disclosure via unescaped backslashes in URLs on Windows"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:20
+# f0f8dc5d60c14d8c9f0857d32207562a
+msgid "14.01.2013"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:22
+# 87bbddf354764027802531845703e98e
+msgid "All Windows-based releases of Apache CouchDB, up to and including 1.0.3, 1.1.1, and 1.2.0 are vulnerable."
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:25
+# 65749f33b8a34c9db665306d4fad74e4
+msgid "Moderate"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:27
+# 28c373c77bd6489b8ec775ab67285f6f
+msgid "The Apache Software Foundation"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:30
+# b2e59adce0314121ab4becb187a61cdc
+msgid "Description"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:32
+# 782a160947984cf99022bfae38f27a11
+msgid "A specially crafted request could be used to access content directly that would otherwise be protected by inbuilt CouchDB security mechanisms. This request could retrieve in binary form any CouchDB database, including the `_users` or `_replication` databases, or any other file that the user account used to run CouchDB might have read access to on the local filesystem. This exploit is due to a vulnerability in the included MochiWeb HTTP library."
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:40
+# dfebf2c9a3e5432793993af63bd1bfa3
+msgid "Mitigation"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:42
+# c27b75a3df8b46439c950de790eca9bf
+msgid "Upgrade to a supported CouchDB release that includes this fix, such as:"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:44
+# 3a14442e94ae44f2b3028d557840e116
+msgid ":ref:`1.0.4 <release/1.0.4>`"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:45
+# 2c8e83342d56456cb26481cd6b808e5c
+msgid ":ref:`1.1.2 <release/1.1.2>`"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:46
+# 34bc7236ba9341c486dbdd1e94a7e0c2
+msgid ":ref:`1.2.1 <release/1.2.1>`"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:47
+# d932ae5d614e471b92ac0485709a9094
+msgid ":ref:`1.3.x <release/1.3.x>`"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:49
+# 5490701d56d6470f8c068c587dbd03e2
+msgid "All listed releases have included a specific fix for the MochiWeb component."
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:52
+# d4f6c26bcfef4c5f823bc7c2cfa7cef8
+msgid "Work-Around"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:54
+# be97092f0dee493d9598412a2626d96a
+msgid "Users may simply exclude any file-based web serving components directly within their configuration file, typically in `local.ini`. On a default CouchDB installation, this requires amending the :config:option:`httpd_global_handlers/favicon.ico` and :config:option:`httpd_global_handlers/_utils` lines within :config:section:`httpd_global_handlers`::"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:65
+# 0d394a63f343460b83f2877691acb328
+msgid "If additional handlers have been added, such as to support Adobe's Flash `crossdomain.xml` files, these would also need to be excluded."
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:69
+# a023800ef321465ea3ed7e9d24e9b2d3
+msgid "Acknowledgement"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:71
+# bf5826af27924962af87378829f6cb01
+msgid "The issue was found and reported by Sriram Melkote to the upstream MochiWeb project."
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:75
+# 65d3825b7ba44ba38c30224b4f3ee2fb
+msgid "References"
+msgstr ""
+
+#: ../../src/cve/2012-5641.rst:77
+# 47bae1aa5ebd417ba66f5e86ada20b09
+msgid "https://github.com/melkote/mochiweb/commit/ac2bf"
+msgstr ""
+

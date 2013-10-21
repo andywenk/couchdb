@@ -1,0 +1,50 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/temp-views.rst:17
+msgid "``/db/_temp_view``"
+msgstr ""
+
+#: ../../src/api/database/temp-views.rst:21
+msgid ""
+"Creates (and executes) a temporary view based on the view function supplied "
+"in the JSON request."
+msgstr ""
+
+#: ../../src/api/database/temp-views.rst:24
+msgid ""
+"The arguments also available to standard view requests also apply to "
+"temporary views, but the execution of the view may take some time as it "
+"relies on being executed at the time of the request. This means that for "
+"every temporary view you create, the entire database will be read one doc at"
+" a time and passed through the view function."
+msgstr ""
+
+#: ../../src/api/database/temp-views.rst:30
+msgid ""
+"This should not be used on production CouchDB instances, and is purely a "
+"convenience function for quick development testing. You should use a defined"
+" view if you want to achieve the best performance."
+msgstr ""
+
+#: ../../src/api/database/temp-views.rst:34
+msgid "See :ref:`api/ddoc/view` for more info."
+msgstr ""
+
+#: ../../src/api/database/temp-views.rst:36
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/database/temp-views.rst:51
+msgid "**Response**:"
+msgstr ""

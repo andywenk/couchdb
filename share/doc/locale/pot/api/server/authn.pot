@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/server/authn.rst:17
+# ca6e0c9c074149328f9e012099d114ac
+msgid "Authentication"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:19
+# 382cd4acd8cc4c1b996e4e30946518a3
+msgid "Interfaces for obtaining session and authorization data."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:21
+# 05894bc0b6574a9c82eb3b63858d0c40
+msgid "We're also strongly recommend you to :ref:`setup SSL <config/ssl>` to improve all authentication methods security."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:28
+# 17b0e5945e7e48e8959c13df019d6f7c
+msgid "Basic Authentication"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:30
+# 2d5705f41d094554baa2fc435f426458
+msgid "`Basic authentication`_ (:rfc:`2617`) is a quick and simple way to authenticate with CouchDB. The main drawback is the need to send user credentials with each request which may be insecure and could hurt operation performance (since CouchDB must compute password hash with every request):"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:35
+#: ../../src/api/server/authn.rst:109
+#: ../../src/api/server/authn.rst:153
+#: ../../src/api/server/authn.rst:191
+#: ../../src/api/server/authn.rst:239
+#: ../../src/api/server/authn.rst:298
+# 0510b4fac5cf4b52a34f7add29f4d2c6
+# 0b71838ab3484c9b978b069e3509c094
+# d3e816eed551482fb728b3e3e23a0944
+# 30002abbe2074803b5446174e1955e41
+# 2b8f1f2464e0492d86d408fc7c16158a
+# aed745993a8f44adafedbcb122feb677
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:44
+#: ../../src/api/server/authn.rst:136
+#: ../../src/api/server/authn.rst:164
+#: ../../src/api/server/authn.rst:200
+#: ../../src/api/server/authn.rst:248
+#: ../../src/api/server/authn.rst:309
+# 6e0122ec894440e984ca9eb9f98a9b6b
+# 2cf1d9d471e9421eb11f7306bebc8776
+# 0aaa937a047b43669320cdd8a3a33fbd
+# 6de5ea66dd314e10a15d47980af5e192
+# b776ed5002c24e309fc6618e4e9a8727
+# 30e5045d313f4437abe479828713ab57
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:71
+# 527d3ef66d4f4b4b815b9f6a94b77c61
+msgid "Cookie Authentication"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:73
+# 045acd36777d4739a808fa1cb27e9025
+msgid "For cookie authentication (:rfc:`2109`) CouchDB generates a token that the client can use for the next few requests to CouchDB. Tokens are valid until a timeout. When CouchDB sees a valid token in a subsequent request, it will authenticate user by this token without requesting the password again. By default, cookies are valid for 10 minutes, but it's :config:option:`adjustable <couch_httpd_auth/timeout>`. Also it's possible to make cookies :config:option:`persistent <couch_httpd_auth/allow_persistent_cookies>`"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:81
+# 0c4667d943034b519703c1dcde36d430
+msgid "To obtain the first token and thus authenticate a user for the first time, the `username` and `password` must be sent to the :ref:`_session API <api/auth/session>`."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:88
+# 7822c720912340bcba1666d2e3c74fc3
+msgid "``/_session``"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:92
+# a6df9ba87c7342a58fa4c5c2a7edf7b8
+msgid "Initiates new session for specified user credentials by providing `Cookie` value."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:95
+# 3dcc216980c54fdba6f244203780b206
+msgid ":mimetype:`application/x-www-form-urlencoded`"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:96
+# 3cf0824c38d941449f4083fcb36dddb6
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:121
+# 708e3823e2f14bbd9438b4e6e5fcac9e
+msgid "It's also possible to send data as JSON:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:150
+# 32d100dcb3c643bbad6fa60f7727a23b
+msgid "If ``next`` query parameter was provided the response will trigger redirection to the specified location in case of successful authentication:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:182
+# fa2721a1333848088dad763758f782c0
+msgid "Returns complete information about authenticated user. This information contains :ref:`userctx_object`, authentication method and available ones and authentication database."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:234
+# 10103cfd12d9485d8acc17805b4e139e
+msgid "Closes user's session."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:268
+# a962ee45a65d49de8eeec9fe05f8b83b
+msgid "Proxy Authentication"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:271
+# 2398fa99cef94191992f71383d06a14f
+msgid "To use this authentication method make sure that the ``{couch_httpd_auth, proxy_authentication_handler}`` value in added to the list of the active :config:option:`httpd/authentication_handlers`:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:281
+# 7f496d9203f24ebb8a93941104282eb5
+msgid "`Proxy authentication` is very useful in case your application already uses some external authentication service and you don't want to duplicate users and their roles in CouchDB."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:285
+# 32316d1477c4470cab8249eb189cf0c7
+msgid "This authentication method allows creation of a :ref:`userctx_object` for remotely authenticated user. By default, the client just need to pass specific headers to CouchDB with related request:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:289
+# 2c8f37165a504fa3ba84e156b99a1190
+msgid ":config:option:`X-Auth-CouchDB-UserName <couch_httpd_auth/x_auth_username>`: username;"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:291
+# 9e5e07b82cd64755877dd73a5b1552af
+msgid ":config:option:`X-Auth-CouchDB-Roles <couch_httpd_auth/x_auth_roles>`: list of user roles separated by a comma (``,``);"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:293
+# 051fc5a58cab4ce399e7c1fb70f74d5b
+msgid ":config:option:`X-Auth-CouchDB-Token <couch_httpd_auth/x_auth_token>`: authentication token. Optional, but strongly recommended to :config:option:`force token be required <couch_httpd_auth/proxy_use_secret>` to prevent requests from untrusted sources."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:342
+# c7cf1a8ded344a128f0dd12dbe2327b0
+msgid "Note that you don't need to request :ref:`session <api/auth/session>` to be authenticated by this method if all required HTTP headers are provided."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:349
+# 50cf6d9dd92c4a3dadc622286c43439e
+msgid "OAuth Authentication"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:351
+# ef22e98cea7e4c9bad4423703201d0bf
+msgid "CouchDB supports OAuth 1.0 authentication (:rfc:`5849`). OAuth provides a method for clients to access server resources  without sharing real credentials (username and password)."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:355
+# 399ccf9de1434d0184366854dc851d5b
+msgid "First, :ref:`configure oauth <config/oauth>`, by setting consumer and token with their secrets and binding token to real CouchDB username."
+msgstr ""
+
+#: ../../src/api/server/authn.rst:358
+# d837304ad72e49259a1611c147d49b13
+msgid "Probably, it's not good idea to work with plain curl, let use some scripting language like Python:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:392
+# 29281462b77c4ec398bba34534b67c04
+msgid "or Ruby:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:415
+# f34f6491b4104778a332d35511697fac
+msgid "Both snippets produces similar request and response pair:"
+msgstr ""
+
+#: ../../src/api/server/authn.rst:447
+# 1ffb7fd002c849bbb121bd5f60e08b8f
+msgid "There we request the :ref:`_session <api/auth/session>` resource to ensure that authentication was successful and the target CouchDB username is correct. Change the target URL to request required resource."
+msgstr ""
+

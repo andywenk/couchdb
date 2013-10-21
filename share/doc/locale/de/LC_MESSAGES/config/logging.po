@@ -1,0 +1,90 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/logging.rst:19
+msgid "Logging"
+msgstr ""
+
+#: ../../src/config/logging.rst:24
+msgid "Logging options"
+msgstr ""
+
+#: ../../src/config/logging.rst:28
+msgid "CouchDB logging configuration."
+msgstr ""
+
+#: ../../src/config/logging.rst:32
+msgid "Specifies the location of file for logging output::"
+msgstr ""
+
+#: ../../src/config/logging.rst:37
+msgid ""
+"This path should be readable and writable for user that runs CouchDB service"
+" (`couchdb` by default)."
+msgstr ""
+
+#: ../../src/config/logging.rst:45
+msgid "Logging level defines how verbose and detailed logging will be::"
+msgstr ""
+
+#: ../../src/config/logging.rst:50
+msgid "Available levels:"
+msgstr ""
+
+#: ../../src/config/logging.rst:52
+msgid ""
+"``debug``: Very informative and detailed debug logging. Includes HTTP "
+"headers, external processes communications, authorization information and "
+"more;"
+msgstr ""
+
+#: ../../src/config/logging.rst:55
+msgid ""
+"``info``: Informative logging. Includes HTTP requests headlines, startup of "
+"an external processes etc."
+msgstr ""
+
+#: ../../src/config/logging.rst:57
+msgid ""
+"``warning``: Warning messages are alerts about edge situations that may lead"
+" to errors. For instance, compaction daemon alerts about low or insufficient"
+" disk space at this level."
+msgstr ""
+
+#: ../../src/config/logging.rst:60
+msgid ""
+"``error``: Error level includes only things that going wrong, crush reports "
+"and HTTP error responses (5xx codes)."
+msgstr ""
+
+#: ../../src/config/logging.rst:62
+msgid "``none``: Disables logging any messages."
+msgstr ""
+
+#: ../../src/config/logging.rst:67
+msgid "Includes `SASL`_ information in logs::"
+msgstr ""
+
+#: ../../src/config/logging.rst:78
+msgid "Per module logging"
+msgstr ""
+
+#: ../../src/config/logging.rst:84
+msgid ""
+"In this section you can specify :option:`log level <log/level>` on a per-"
+"module basis::"
+msgstr ""
+
+#: ../../src/config/logging.rst:92
+msgid "See `src/*/*.erl`_ for available modules."
+msgstr ""

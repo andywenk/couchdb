@@ -1,0 +1,405 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/whatsnew/1.2.rst:18
+# 91c646e4b5f945b1bae2af1b777cb5ba
+msgid "1.2.x Branch"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:28
+# 8fd187c0b4b34b0aadab0e9de56872c9
+msgid "Upgrade Notes"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:32
+# 1f0cfed46ef0406980886fb5bb39884f
+msgid "This version drops support for the database format that was introduced in version 0.9.0. Compact your older databases (that have not been compacted for a long time) before upgrading, or they will become inaccessible."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:38
+# ca4cb7a24d0146a9b1456b8918ad77a1
+msgid ":ref:`release/1.2.1` contains important security fixes. Previous `1.2.x` releases are not recommended for regular usage."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:42
+# a72caed781614baeb170275e5cf64d6d
+msgid "Security changes"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:44
+# 31a40b8eda054e518e363ac9aaf0a62f
+msgid "The interface to the ``_users`` and ``_replicator`` databases have been changed so that non-administrator users can see less information:"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:47
+# e103ac4b5d734fb0ba4498831a4c8e42
+msgid "In the ``_users`` database:"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:49
+# bbad3daebd4b418d8e64f4dd780e7e81
+msgid "User documents can now only be read by the respective users, as well as administrators. Other users cannot read these documents."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:51
+# ba6d38d2504c4dc382f121aa32b5f444
+msgid "Views can only be defined and queried by administrator users."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:52
+# 52f8cb51a7a6400f85c98aff58b08945
+msgid "The ``_changes`` feed can only be queried by administrator users."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:54
+# b0fea698128b4d19853a5e95afe7decb
+msgid "In the ``_replicator`` database:"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:56
+# 5883000423624d62b59b399991a2ea99
+msgid "Documents now have a forced ``owner`` field that corresponds to the authenticated user that created them."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:58
+# e037002f9bb944a8956a2e8286c2058a
+msgid "Non-owner users will not see confidential information like passwords or OAuth tokens in replication documents; they can still see the other contents of those documents. Administrators can see everything."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:61
+# a755aebd891a4675b17f0db284cb85ca
+msgid "Views can only be defined and queried by administrators."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:64
+# 45654911384c44b99672726182ce90f3
+msgid "Database Compression"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:66
+# 2bfd2836456f41dbabe46d82bb474295
+msgid "The new optional (but enabled by default) compression of disk files requires an upgrade of the on-disk format (5 -> 6) which occurs on creation for new databases and views, and on compaction for existing files. This format is not supported in previous releases, so rollback would require replication to the previous CouchDB release or restoring from backup."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:72
+# 6fbf0cff88fe4ad097631efd65891fc6
+msgid "Compression can be disabled by setting ``compression = none`` in your ``local.ini`` ``[couchdb]`` section, but the on-disk format will still be upgraded."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:80
+# a6bb15fff5bb4ea69f98d80442dad9c8
+msgid "Version 1.2.2"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:83
+#: ../../src/whatsnew/1.2.rst:101
+#: ../../src/whatsnew/1.2.rst:162
+# ad5170802b69462186748d71d2093ede
+# c4f0125a960348b3aede5f2719ad341e
+# 6f194ce5790a4562ba9737b7122404fa
+msgid "Build System"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:85
+# 4ad28ba035e249a5999efa226b50b1d3
+msgid "Fixed issue in `couchdb` script where stopped status returns before process exits."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:89
+#: ../../src/whatsnew/1.2.rst:112
+#: ../../src/whatsnew/1.2.rst:182
+# fea0ce3f93fe45caa3f787e8b9c1b95f
+# 0c06144f16a642e5a6c7155645e7a9d1
+# 754510a89ff5468280b707a7b3999679
+msgid "HTTP Interface"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:91
+# 73a84d7c6fad4da096bd1476f2e3677d
+msgid "Reset rewrite counter on new request, avoiding unnecessary request failures due to bogus rewrite limit reports."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:98
+# 3625e08fa62a4b2886bfe1a931ebd17c
+msgid "Version 1.2.1"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:103
+# 719b24eb740947efa4b7c64505543fc2
+msgid "Fix couchdb start script."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:104
+# 077cfaf404eb44ddabef0a1faf12c0d4
+msgid "Win: fix linker invocations."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:107
+#: ../../src/whatsnew/1.2.rst:174
+# 721d47b70f49483db63755a6addeef10
+# ce3d4e8ce5a64868872f31f625d52904
+msgid "Futon"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:109
+# ce1fe283648b41f3b2e8b321025eb012
+msgid "Disable buttons that aren't available for the logged-in user."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:114
+# f432506b272d48e3831d4cbd80ac4baf
+msgid "No longer rewrites the ``X-CouchDB-Requested-Path`` during recursive calls to the rewriter."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:116
+# 0b071e33fcc24032a9624154b8f64e2f
+msgid "Limit recursion depth in the URL rewriter. Defaults to a maximum of 100 invocations but is configurable."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:120
+# c974d34e71c84e4db4d01426271fc1c9
+msgid "Security"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:122
+# 623fe5bac9e94426b02826fb497f8169
+msgid "Fixed :ref:`cve/2012-5641`"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:123
+# bffeefb0fa1845139538275230bc7c7d
+msgid "Fixed :ref:`cve/2012-5649`"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:124
+# dad6d025a71840e4a91119159831c6b9
+msgid "Fixed :ref:`cve/2012-5650`"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:127
+# 81e3d3dd6d0f4c60850ed8061386b223
+msgid "Replication"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:129
+# bddcb269ccd14fa59abb0ecbd86b7fa1
+msgid "Fix potential timeouts."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:132
+#: ../../src/whatsnew/1.2.rst:234
+# c0e96fba832845c288cc631e486b47ab
+# b87cdcbd4a7f4699a75ce9c84f70af9d
+msgid "View Server"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:134
+# cf5634ae8f83465faa0ac2471b96fd6e
+msgid "Change use of signals to avoid broken view groups."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:140
+# dc7f542848a747c281a85c591b2e1011
+msgid "Version 1.2.0"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:143
+# d02b127e9ec64e4b9b3486130ef2b368
+msgid "Authentication"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:145
+# 187c69e7ce194ee0aeebb8f315db4ca9
+msgid "Fix use of OAuth with VHosts and URL rewriting."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:146
+# 9704f7e579b84298afe52cc113c59107
+msgid "OAuth secrets can now be stored in the users system database as an alternative to key value pairs in the .ini configuration. By default this is disabled (secrets are stored in the .ini) but can be enabled via the .ini configuration key `use_users_db` in the `couch_httpd_oauth` section."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:151
+# 6cba0b034307455d961f65b81f514d91
+msgid "Documents in the _users database are no longer publicly readable."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:153
+# fa0a63ba0f374a1e8c6479deb3beb409
+msgid "Confidential information in the _replication database is no longer publicly readable."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:155
+# 4d4e7d1baa8047a58d7eb7b9ff8cfa28
+msgid "Password hashes are now calculated by CouchDB. Clients are no longer required to do this manually."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:157
+# f31f8e9b6743471c9ce52eeaefe801ee
+msgid "Cookies used for authentication can be made persistent by enabling the .ini configuration key `allow_persistent_cookies` in the `couch_httpd_auth` section."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:164
+# 6d58ffe33ea14ac6b339481f2d96f008
+msgid "cURL is no longer required to build CouchDB as it is only used by the command line JS test runner. If cURL is available when building CouchJS you can enable the HTTP bindings by passing -H on the command line."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:168
+# 8757636c76884a5ebae9e66899c588ae
+msgid "Temporarily made `make check` pass with R15B. A more thorough fix is in the works (:issue:`1424`)."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:170
+# 92f380f959f94021b40eb0387d9517a7
+msgid "Fixed --with-js-include and --with-js-lib options."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:171
+# 8c542b41ebcf400b976d0cd74b25805b
+msgid "Added --with-js-lib-name option."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:176
+# e3af27e77f9d413882bfa9a55de09563
+msgid "The `Status` screen (active tasks) now displays two new task status fields: `Started on` and `Updated on`."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:178
+# a516d296e3fc4def98e08cf4f57de923
+msgid "Futon remembers view code every time it is saved, allowing to save an edit that amounts to a revert."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:184
+# 1fc0ad70652c419da5d525e8aa52ad0a
+msgid "Added a native JSON parser."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:185
+# 17fb6a4f63014a0394d883644b5dc0b6
+msgid "The _active_tasks API now offers more granular fields. Each task type is now able to expose different properties."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:187
+# 0519098f2b914bba8f2078f619129c1c
+msgid "Added built-in changes feed filter `_view`."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:188
+# 3b193ea87d0649138419b51673475fa1
+msgid "Fixes to the `_changes` feed heartbeat option which caused heartbeats to be missed when used with a filter. This caused timeouts of continuous pull replications with a filter."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:191
+# f03b564dbb944d4b8ba01286a7839efc
+msgid "Properly restart the SSL socket on configuration changes."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:194
+# 925945f2ba8b46648582738dce2624a7
+msgid "OAuth"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:196
+# ee83a3e2514845c594a8393ea2420920
+msgid "Updated bundled `erlang_oauth` library to the latest version."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:199
+# d17b55ef9ed84c0ba16bbd61ee9a7745
+msgid "Replicator"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:201
+# 44892c8250a14d61866d74df88ee4a97
+msgid "A new replicator implementation. It offers more performance and configuration options."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:203
+# dd3726b3669f4c258ae84a8d0ea3bea8
+msgid "Passing non-string values to query_params is now a 400 bad request. This is to reduce the surprise that all parameters are converted to strings internally."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:206
+# 62239c711d654574b9847a3c4e109c71
+msgid "Added optional field `since_seq` to replication objects/documents. It allows to bootstrap a replication from a specific source sequence number."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:209
+# 9343822056fe4dc1833a904635087895
+msgid "Simpler replication cancellation. In addition to the current method, replications can now be canceled by specifying the replication ID instead of the original replication object/document."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:214
+# bdc018557f1441829dc6d858e6ec55e1
+msgid "Storage System"
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:216
+# 950e34b541994892b28c50979c71541e
+msgid "Added optional database and view index file compression (using Google's snappy or zlib's deflate). This feature is enabled by default, but it can be disabled by adapting local.ini accordingly. The on-disk format is upgraded on compaction and new DB/view creation to support this."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:220
+# 04998f14417e4085805187e96d2f62f5
+msgid "Several performance improvements, most notably regarding database writes and view indexing."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:222
+# d89bcc8cb8ea492fba29993a745efd9e
+msgid "Computation of the size of the latest MVCC snapshot data and all its supporting metadata, both for database and view index files. This information is exposed as the `data_size` attribute in the database and view group information URIs."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:226
+# a2da4424669c4f978f325240d7c11298
+msgid "The size of the buffers used for database and view compaction is now configurable."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:228
+# 281ce6b7c2f54ee28978d4bd821ac01b
+msgid "Added support for automatic database and view compaction. This feature is disabled by default, but it can be enabled via the .ini configuration."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:230
+# 4db4edea11574454850677ab43d4415e
+msgid "Performance improvements for the built-in changes feed filters `_doc_ids` and `_design`."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:236
+# c1c0d6714712464eb22840d80166bf3c
+msgid "Add CoffeeScript (http://coffeescript.org/) as a first class view server language."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:238
+# 01a151d7badb41e68811290d3180012f
+msgid "Fixed old index file descriptor leaks after a view cleanup."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:239
+# 3f0dc77d4e3043b993442ef6a16659fe
+msgid "The requested_path property keeps the pre-rewrite path even when no VHost configuration is matched."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:241
+# 0ea90c9326c245aaa91b6f8a043b463b
+msgid "Fixed incorrect reduce query results when using pagination parameters."
+msgstr ""
+
+#: ../../src/whatsnew/1.2.rst:242
+# f72467eeb8c24f1198e9120b491b0d35
+msgid "Made icu_driver work with Erlang R15B and later."
+msgstr ""
+

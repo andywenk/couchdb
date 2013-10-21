@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/query-server/index.rst:17
+# 5ece60563e0941438e3c56d5abb167c9
+msgid "Query Server"
+msgstr ""
+
+#: ../../src/query-server/index.rst:19
+# d43095e27f4a4ba5b8c23dd9b14b14cb
+msgid "The `Query server` is an external process that communicates with CouchDB by JSON protocol through stdio interface and processed all :ref:`design functions <ddocs>` calls: :ref:`views <viewfun>`, :ref:`shows <showfun>`, :ref:`lists <listfun>` and more."
+msgstr ""
+
+#: ../../src/query-server/index.rst:24
+# 8d9030ad17f541eaa1370e2e3a9f87c1
+msgid "The default query server is written in :ref:`JavaScript <query-server/js>`, running via `Mozilla SpiderMonkey`_. You can use other languages by setting a Query server key in the ``language`` property of a design document or the `Content-Type` header of a `temporary view`. Design documents that do not specify a ``language`` property are assumed to be of type `javascript`, as are ad hoc queries that are POSTed to :ref:`_temp_view <api/db/temp_view>` without a `Content-Type` header."
+msgstr ""
+

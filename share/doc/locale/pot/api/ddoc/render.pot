@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/ddoc/render.rst:17
+# a6435aabd5fb495e8bfbb41ef0364b75
+msgid "``/db/_design/design-doc/_show/show-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:22
+# a8ae48f20d3f4052a9f7532e6f6c96d6
+msgid "Applies :ref:`show function <showfun>` for `null` document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:24
+#: ../../src/api/ddoc/render.rst:81
+#: ../../src/api/ddoc/render.rst:140
+#: ../../src/api/ddoc/render.rst:202
+# c58a174cfb00490488c8267fbaff57be
+# d04c031cc64b4ec39d272f420ae91e0f
+# ff7c4cfca7c94d8dbe6a8e62293be079
+# ff7abb929c7844f98e9fefb7666cf2af
+msgid "The request and response parameters are depended upon function implementation."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:36
+#: ../../src/api/ddoc/render.rst:94
+#: ../../src/api/ddoc/render.rst:153
+#: ../../src/api/ddoc/render.rst:216
+#: ../../src/api/ddoc/render.rst:273
+#: ../../src/api/ddoc/render.rst:338
+# d5e1dfc56dc040d09138386de4f291f3
+# 17f61403a04b4175b1db7064a0f35545
+# 67c0ba32f0ff45569f2ef1d37225fc09
+# 478e297b08c9486fb10d912ca8f62051
+# 9985beb366504ef08e0b4938e54df527
+# dbfd156485eb40bfadc85461834a8467
+msgid "**Function**:"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:48
+#: ../../src/api/ddoc/render.rst:106
+#: ../../src/api/ddoc/render.rst:168
+#: ../../src/api/ddoc/render.rst:231
+#: ../../src/api/ddoc/render.rst:288
+#: ../../src/api/ddoc/render.rst:353
+# 4e2f48252a874631ab25bcc8f4b30555
+# d75abb5a12274f2183ec1c84a07ba39b
+# 1de69573fcdb4792a4ac5c48f9bceb31
+# 33cad93534374b1da1198459240454d5
+# 0237ac008fd5485889bef5719b00c984
+# 702de53d166746c69f90abf0589e9111
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:56
+#: ../../src/api/ddoc/render.rst:114
+#: ../../src/api/ddoc/render.rst:176
+#: ../../src/api/ddoc/render.rst:239
+#: ../../src/api/ddoc/render.rst:300
+#: ../../src/api/ddoc/render.rst:365
+# b075ec88ef55466abe900769b07baa99
+# 369698fb99644747b37ac21109dd523c
+# e8f1e467980342d8ba7f3c9dd9c258c7
+# 77ac3c5b68074dbd90067b9b6a1dfa45
+# 68ded1749e2e4005a132adbc6c277568
+# 692e4ab0bc7c454dba86aeca3a815a03
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:74
+# c204d30600f64016ac30a3721ec72228
+msgid "``/db/_design/design-doc/_show/show-name/doc-id``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:79
+# b627dee0d996432d872df713cf807e42
+msgid "Applies :ref:`show function <showfun>` for the specified document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:132
+# 373c7c0c9ab44581b55b9b59bdcfe27d
+msgid "``/db/_design/design-doc/_list/list-name/view-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:137
+# 705c6fe95883462b96a48ab13b572743
+msgid "Applies :ref:`list function <listfun>` for the :ref:`view function <viewfun>` from the same design document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:194
+# 61bbf4a9ec7f4b638c4967a9e33bca10
+msgid "``/db/_design/design-doc/_list/list-name/other-ddoc/view-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:199
+# 9797aa35f0e74bc185fb76402e9528fb
+msgid "Applies :ref:`list function <listfun>` for the :ref:`view function <viewfun>` from the other design document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:257
+# 696155e3dc3e4d3ba921e4bf7a18267f
+msgid "``/db/_design/design-doc/_update/update-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:261
+# 03a8ee6b8efc45918260f9b4f67f696c
+msgid "Executes :ref:`update function <updatefun>` on server side for ``null`` document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:320
+# 1851ec94c2754e5cafb2840efc7a9378
+msgid "``/db/_design/design-doc/_update/update-name/doc-id``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:325
+# d8e2f72452df4d3f938780ed70b2fa10
+msgid "Executes :ref:`update function <updatefun>` on server side for the specified document."
+msgstr ""
+

@@ -1,0 +1,134 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/compact.rst:17
+msgid "``/db/_compact``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:21
+msgid ""
+"Request compaction of the specified database. Compaction compresses the disk"
+" database file by performing the following operations:"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:24
+msgid ""
+"Writes a new, optimised, version of the database file, removing any unused "
+"sections from the new version during write. Because a new file is "
+"temporarily created for this purpose, you may require up to twice the "
+"current storage space of the specified database in order for the compaction "
+"routine to complete."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:30
+msgid ""
+"Removes old revisions of documents from the database, up to the per-database"
+" limit specified by the ``_revs_limit`` database parameter."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:34
+msgid ""
+"Compaction can only be requested on an individual database; you cannot "
+"compact all the databases for a CouchDB instance. The compaction process "
+"runs as a background process."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:38
+msgid ""
+"You can determine if the compaction process is operating on a database by "
+"obtaining the database meta information, the ``compact_running`` value of "
+"the returned database structure will be set to true. See :get:`/{db}`."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:43
+msgid ""
+"You can also obtain a list of running processes to determine whether "
+"compaction is currently running. See :ref:`api/server/active_tasks`."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:47 ../../src/api/database/compact.rst:50
+#: ../../src/api/database/compact.rst:98
+#: ../../src/api/database/compact.rst:101
+#: ../../src/api/database/compact.rst:155
+#: ../../src/api/database/compact.rst:158
+#: ../../src/api/database/compact.rst:206
+#: ../../src/api/database/compact.rst:209
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:48 ../../src/api/database/compact.rst:99
+#: ../../src/api/database/compact.rst:156
+#: ../../src/api/database/compact.rst:207
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:51
+#: ../../src/api/database/compact.rst:102
+#: ../../src/api/database/compact.rst:159
+#: ../../src/api/database/compact.rst:210
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:58
+#: ../../src/api/database/compact.rst:110
+#: ../../src/api/database/compact.rst:167
+#: ../../src/api/database/compact.rst:217
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:67
+#: ../../src/api/database/compact.rst:119
+#: ../../src/api/database/compact.rst:176
+#: ../../src/api/database/compact.rst:226
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:86
+msgid "``/db/_compact/design-doc``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:90
+msgid ""
+"Compacts the view indexes associated with the specified design document. If "
+"may be that compacting a large view can return more storage than compacting "
+"the atual db. Thus, you can use this in place of the full database "
+"compaction if you know a specific set of view indexes have been affected by "
+"a recent database change."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:143
+msgid "``/db/_ensure_full_commit``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:147
+msgid ""
+"Commits any recent changes to the specified database to disk. You should "
+"call this if you want to ensure that recent changes have been flushed. This "
+"function is likely not required, assuming you have the recommended "
+"configuration setting of ``delayed_commits=false``, which requires CouchDB "
+"to ensure changes are written to disk before a 200 or similar result is "
+"returned."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:196
+msgid "``/db/_view_cleanup``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:200
+msgid ""
+"Removes view index files that are no longer required by CouchDB as a result "
+"of changed views within design documents. As the view filename is based on a"
+" hash of the view functions, over time old views will remain, consuming "
+"storage. This call cleans up the cached view output on disk for a given "
+"view."
+msgstr ""

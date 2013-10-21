@@ -1,0 +1,137 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/maintenance/compaction.rst:16
+msgid "Compaction"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:18
+msgid ""
+"The `compaction` operation is the way to reduce disk space usage by removing"
+" unused and old data from database or view index files. This operation is a "
+"very similar to the `vacuum` (`SQLite`_ ex.) available for other database "
+"management systems."
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:25
+msgid ""
+"During compaction of the `target` CouchDB creates new file with the "
+"``.compact`` extension and transfers only actual data into. Because of this,"
+" CouchDB checks first for the available disk space - it should be *twice "
+"greater* than the compacted file's data."
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:30
+msgid ""
+"When all actual data successful transferred to the `compacted` file CouchDB "
+"*removes* the `target` replacing him with it."
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:37
+msgid "Database Compaction"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:39
+msgid ""
+"Database compaction compresses the database file by removing unused file "
+"sections created during updates. Old documents revisions are replaced with "
+"small amount of metadata called `tombstone` which are used for conflicts "
+"resolution during replication. The number of stored revisions (and their "
+"`tombstones`) can be configured by using the :get:`_revs_limit "
+"</{db}/_revs_limit>` URL endpoint."
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:46
+msgid ""
+"Compaction is manually triggered operation per database and runs as a "
+"background task. To start it for specific database there is need to send "
+"HTTP :post:`/{db}/_compact` sub-resource of the target database::"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:52
+msgid "On success, HTTP status :statuscode:`202` is returned immediately:"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:67
+msgid ""
+"Although the request body is not used you must still specify :header"
+":`Content-Type` header with :mimetype:`application/json` value for the "
+"request. If you don't, you will be aware about with HTTP status "
+":statuscode:`415` response:"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:83
+msgid ""
+"When the compaction is successful started and running it is possible to get "
+"information about it via :ref:`database information resource <api/db>`::"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:112
+msgid ""
+"Note that ``compaction_running`` field is ``true`` indicating that "
+"compaction is actually running. To track the compaction progress you may "
+"query the :get:`_active_tasks </_active_tasks>` resource::"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:144
+msgid "Views Compaction"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:146
+msgid ""
+"`Views` are also need compaction like databases, unlike databases views are "
+"compacted by groups per `design document`. To start their compaction there "
+"is need to send HTTP :post:`/{db}/_compact/{ddoc}` request::"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:156
+msgid ""
+"This compacts the view index from the current version of the specified "
+"design document. The HTTP response code is :statuscode:`202` (like "
+":ref:`compaction for databases <compact/db>`) and a compaction background "
+"task will be created."
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:165
+msgid "Views cleanup"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:167
+msgid ""
+"View indexes on disk are named after their `MD5` hash of the view "
+"definition. When you change a view, old indexes remain on disk. To clean up "
+"all outdated view indexes (files named after the MD5 representation of "
+"views, that does not exist anymore) you can trigger a :ref:`view cleanup "
+"<api/db/view_cleanup>`::"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:182
+msgid "Automatic Compaction"
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:184
+msgid ""
+"While both :ref:`database <compact/db>` and :ref:`views <compact/views>` "
+"compactions are required be manually triggered, it is also possible to "
+"configure automatic compaction, so that compaction of databases and views is"
+" automatically triggered based on various criteria. Automatic compaction is "
+"configured in CouchDB's :ref:`configuration files <config/intro>`."
+msgstr ""
+
+#: ../../src/maintenance/compaction.rst:190
+msgid ""
+"The :config:option:`daemons/compaction_daemon` is responsible for triggering"
+" the compaction. It is automatically started, but disabled by default. The "
+"criteria for triggering the compactions is configured in the "
+":config:section:`compactions` section."
+msgstr ""

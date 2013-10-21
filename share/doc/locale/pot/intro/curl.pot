@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/intro/curl.rst:17
+# 24ccbcff65ac4ed499425cde9e7a612e
+msgid "cURL: Your Command Line Friend"
+msgstr ""
+
+#: ../../src/intro/curl.rst:19
+# fc69a64b21fd4444aee60f13c5117089
+msgid "The ``curl`` utility is a command line tool available on Unix, Linux, Mac OS X and Windows and many other platforms. ``curl`` provides easy access to the HTTP protocol (among others) directly from the command-line and is therefore an ideal way of interacting with CouchDB over the HTTP REST API."
+msgstr ""
+
+#: ../../src/intro/curl.rst:25
+# 5aeca3b07961451b81d2790648240ba9
+msgid "For simple ``GET`` requests you can supply the URL of the request. For example, to get the database information:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:32
+# c9b5d34c732e490588b77ce2f4758090
+msgid "This returns the database information (formatted in the output below for clarity):"
+msgstr ""
+
+#: ../../src/intro/curl.rst:48
+# 7b7456edc17547ca906a654bdd90b2ee
+msgid "For some URLs, especially those that include special characters such as ampersand, exclamation mark, or question mark, you should quote the URL you are specifying on the command line. For example:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:56
+# 60946ecd271244638b483b2d883e8805
+msgid "You can explicitly set the HTTP command using the ``-X`` command line option. For example, when creating a database, you set the name of the database in the URL you send using a PUT request:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:65
+# 7cfcb9f7a6254316a4513b13b3fea4d4
+msgid "But to obtain the database information you use a ``GET`` request (with the return information formatted for clarity):"
+msgstr ""
+
+#: ../../src/intro/curl.rst:84
+# ffcb1d271b114c3995f1e1543e4285a2
+msgid "For certain operations, you must specify the content type of request, which you do by specifying the ``Content-Type`` header using the ``-H`` command-line option:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:92
+# fca86b68624145a7afe82775265f4d9b
+msgid "You can also submit 'payload' data, that is, data in the body of the HTTP request using the ``-d`` option. This is useful if you need to submit JSON structures, for example document data, as part of the request. For example, to submit a simple document to the ``demo`` database:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:106
+# db7f7319701b41b497187c35e8fd9244
+msgid "In the above example, the argument after the ``-d`` option is the JSON of the document we want to submit."
+msgstr ""
+
+#: ../../src/intro/curl.rst:109
+# fb149621e59449ddbf0eb4392d176a4f
+msgid "The document can be accessed by using the automatically generated document ID that was returned:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:119
+# 57c4587f7d4a4929b82dba9ce3b75e91
+msgid "The API samples in the :ref:`api/basics` show the HTTP command, URL and any payload information that needs to be submitted (and the expected return value). All of these examples can be reproduced using ``curl`` with the command-line examples shown above."
+msgstr ""
+

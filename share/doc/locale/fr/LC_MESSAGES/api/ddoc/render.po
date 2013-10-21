@@ -1,0 +1,93 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/ddoc/render.rst:17
+msgid "``/db/_design/design-doc/_show/show-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:22
+msgid "Applies :ref:`show function <showfun>` for `null` document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:24 ../../src/api/ddoc/render.rst:81
+#: ../../src/api/ddoc/render.rst:140 ../../src/api/ddoc/render.rst:202
+msgid ""
+"The request and response parameters are depended upon function "
+"implementation."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:36 ../../src/api/ddoc/render.rst:94
+#: ../../src/api/ddoc/render.rst:153 ../../src/api/ddoc/render.rst:216
+#: ../../src/api/ddoc/render.rst:273 ../../src/api/ddoc/render.rst:338
+msgid "**Function**:"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:48 ../../src/api/ddoc/render.rst:106
+#: ../../src/api/ddoc/render.rst:168 ../../src/api/ddoc/render.rst:231
+#: ../../src/api/ddoc/render.rst:288 ../../src/api/ddoc/render.rst:353
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:56 ../../src/api/ddoc/render.rst:114
+#: ../../src/api/ddoc/render.rst:176 ../../src/api/ddoc/render.rst:239
+#: ../../src/api/ddoc/render.rst:300 ../../src/api/ddoc/render.rst:365
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:74
+msgid "``/db/_design/design-doc/_show/show-name/doc-id``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:79
+msgid "Applies :ref:`show function <showfun>` for the specified document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:132
+msgid "``/db/_design/design-doc/_list/list-name/view-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:137
+msgid ""
+"Applies :ref:`list function <listfun>` for the :ref:`view function "
+"<viewfun>` from the same design document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:194
+msgid "``/db/_design/design-doc/_list/list-name/other-ddoc/view-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:199
+msgid ""
+"Applies :ref:`list function <listfun>` for the :ref:`view function "
+"<viewfun>` from the other design document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:257
+msgid "``/db/_design/design-doc/_update/update-name``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:261
+msgid ""
+"Executes :ref:`update function <updatefun>` on server side for ``null`` "
+"document."
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:320
+msgid "``/db/_design/design-doc/_update/update-name/doc-id``"
+msgstr ""
+
+#: ../../src/api/ddoc/render.rst:325
+msgid ""
+"Executes :ref:`update function <updatefun>` on server side for the specified"
+" document."
+msgstr ""

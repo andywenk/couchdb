@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/cve/2012-5649.rst:18
+# d421cf0ff2db446796eab429689f43cc
+msgid "CVE-2012-5649: JSONP arbitrary code execution with Adobe Flash"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:20
+# 33f8236288ef44b1a702e5c016313cfa
+msgid "14.01.2013"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:22
+# 5deba43b40cc49eab65542ccd9c9b596
+msgid "Releases up to and including 1.0.3, 1.1.1, and 1.2.0 are vulnerable, if administrators have enabled JSONP."
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:25
+# 222494b612bf4c6d9b967ea419d850e4
+msgid "Moderate"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:27
+# 6e88860ada594243b26b03d9e092a05e
+msgid "The Apache Software Foundation"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:30
+# b55f0a3aa42b4b7dadf55e0007b3fb37
+msgid "Description"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:32
+# 91782eb78c9c4efd854c24b820e01306
+msgid "A hand-crafted JSONP callback and response can be used to run arbitrary code inside client-side browsers via Adobe Flash."
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:36
+# 9fff3bdf36c1488fa899376e4de1435c
+msgid "Mitigation"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:38
+# 7fe6f30cf2954abd8737a92c4bae1ec9
+msgid "Upgrade to a supported CouchDB release that includes this fix, such as:"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:40
+# 7130b4c118494a6687c0e6adabe4f271
+msgid ":ref:`1.0.4 <release/1.0.4>`"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:41
+# 5515319ebec248299a1764ff8e2e9008
+msgid ":ref:`1.1.2 <release/1.1.2>`"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:42
+# 8e7f0f6b8e6f4a17b44efe416fcba7e3
+msgid ":ref:`1.2.1 <release/1.2.1>`"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:43
+# 6991d7d6dedd4cdfa507a525657df1e1
+msgid ":ref:`1.3.x <release/1.3.x>`"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:45
+# 2f0a3e816f454cfdacdbf45ba1b1f54e
+msgid "All listed releases have included a specific fix."
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:48
+# 205ee5e111814b989a479e31fa449b8f
+msgid "Work-Around"
+msgstr ""
+
+#: ../../src/cve/2012-5649.rst:50
+# fcb22fc644e5441984472f5022bc2fcf
+msgid "Disable JSONP or don't enable it since it's disabled by default."
+msgstr ""
+

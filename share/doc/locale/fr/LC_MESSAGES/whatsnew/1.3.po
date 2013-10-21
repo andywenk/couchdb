@@ -1,0 +1,514 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/whatsnew/1.3.rst:18
+msgid "1.3.x Branch"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:28
+msgid "Upgrade Notes"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:30
+msgid ""
+"You can upgrade your existing CouchDB 1.0.x installation to 1.3.0 without "
+"any specific steps or migration. When you run CouchDB, the existing data and"
+" index files will be opened and used as normal."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:34
+msgid ""
+"The first time you run a compaction routine on your database within 1.3.0, "
+"the data structure and indexes will be updated to the new version of the "
+"CouchDB database format that can only be read by CouchDB 1.3.0 and later. "
+"This step is not reversible. Once the data files have been updated and "
+"migrated to the new version the data files will no longer work with a "
+"CouchDB 1.0.x release."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:42
+msgid ""
+"If you want to retain support for opening the data files in CouchDB 1.0.x "
+"you must back up your data files before performing the upgrade and "
+"compaction process."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:50
+msgid "Version 1.3.1"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:53 ../../src/whatsnew/1.3.rst:173
+msgid "Replicator"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:55
+msgid ""
+":issue:`1788`: Tolerate missing source and target fields in _replicator "
+"docs. :commit:`869f42e2`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:59 ../../src/whatsnew/1.3.rst:163
+msgid "Log System"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:61
+msgid ":issue:`1794`: Fix bug in WARN level logging from 1.3.0."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:62
+msgid "Don't log about missing .compact files. :commit:`06f1a8dc`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:65
+msgid "View Server"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:67
+msgid ""
+":issue:`1792`: Fix the -S option to couchjs to increase memory limits. "
+":commit:`cfaa66cd`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:71
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:73
+msgid ""
+":issue:`1784`: Improvements to test suite and VPATH build system. "
+":commit:`01afaa4f`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:75
+msgid ""
+"Improve documentation: better structure, improve language, less duplication."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:81
+msgid "Version 1.3.0"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:84
+msgid "Database core"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:86
+msgid ""
+":issue:`1512`: Validate bind address before assignment. :commit:`09ead8a0`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:87
+msgid "Restore ``max_document_size`` protection. :commit:`bf1eb135`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:90
+msgid "Documentation"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:92
+msgid ""
+":issue:`1523`: Import CouchBase documentation and convert them into `Sphinx "
+"docs <http://sphinx.pocoo.org/>`_"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:96
+msgid "Futon"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:98
+msgid ":issue:`509`: Added view request duration to Futon. :commit:`2d2c7d1e`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:99
+msgid ":issue:`627`: Support all timezones. :commit:`b1a049bb`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:100
+msgid ""
+":issue:`1383`: Futon view editor won't allow you to save original view after"
+" saving a revision. :commit:`ce48342`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:102
+msgid ""
+":issue:`1470`: Futon raises popup on attempt to navigate to missed/deleted "
+"document. :commit:`5da40eef`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:104
+msgid ""
+":issue:`1473`, :issue:`1472`: Disable buttons for actions that the user "
+"doesn't have permissions to. :commit:`7156254d`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:108
+msgid "HTTP Interface"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:110
+msgid ""
+":issue:`431`: Introduce experimental :ref:`CORS support <cors>`. "
+":commit:`b90e4021`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:112
+msgid ""
+":issue:`764`, :issue:`514`, :issue:`430`: Fix sending HTTP headers from "
+"``_list`` function, :commit:`2a74f88375`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:114
+msgid ""
+":issue:`887`: Fix ``bytes`` and ``offset`` parameters semantic for `_log` "
+"resource (`explanation <https://git-wip-"
+"us.apache.org/repos/asf?p=couchdb.git;a=blobdiff;f=src/couchdb/couch_log.erl;h=1b05f4db2;hp=0befe7aab;hb=ad700014;hpb=7809f3ca>`_)"
+" :commit:`ad700014`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:117
+msgid ""
+":issue:`986`: Added Server-Sent Events protocol to db changes API. See "
+"http://www.w3.org/TR/eventsource/ for details. :commit:`093d2aa6`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:119
+msgid ""
+":issue:`1026`: Database names are encoded with respect of special characters"
+" in the rewriter now. :commit:`272d6415`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:121
+msgid ""
+":issue:`1097`: Allow `OPTIONS` request to shows and lists functions. "
+":commit:`9f53704a`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:123
+msgid ""
+":issue:`1210`: Files starting with underscore can be attached and updated "
+"now. :commit:`05858792`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:125
+msgid ""
+":issue:`1277`: Better query parameter support and code clarity: "
+":commit:`7e3c69ba`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:128
+msgid ""
+"Responses to documents created/modified via form data `POST` to /db/doc or "
+"copied with `COPY` should now include `Location` header."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:130
+msgid "Form data POST to /db/doc now includes an `ETag` response header."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:131
+msgid "``?batch=ok`` is now supported for `COPY` and `POST` /db/doc updates."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:132
+msgid "``?new_edits=false`` is now supported for more operations."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:134
+msgid ""
+":issue:`1285`: Allow configuration of vendor and modules version in CouchDB "
+"welcome message. :commit:`3c24a94d`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:136
+msgid ""
+":issue:`1321`: Variables in rewrite rules breaks OAuth authentication. "
+":commit:`c307ba95`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:138
+msgid ""
+":issue:`1337`: Use MD5 for attachment ETag header value. :commit:`6d912c9f`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:139
+msgid ""
+":issue:`1381`: Add jquery.couch support for Windows 8 Metro apps. "
+":commit:`dfc5d37c`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:141
+msgid ""
+":issue:`1441`: Limit recursion depth in the URL rewriter. Defaults to a "
+"maximum of 100 invocations but is configurable. :commit:`d076976c`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:144
+msgid ""
+":issue:`1442`: No longer rewrites the `X-CouchDB-Requested-Path` during "
+"recursive calls to the rewriter. :commit:`56744f2f`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:146
+msgid ""
+":issue:`1501`: :ref:`Changes feed <changes>` now can take special parameter "
+"``since=now`` to emit changes since current point of time. "
+":commit:`3bbb2612`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:148
+msgid ""
+":issue:`1502`: Allow users to delete own _users doc. :commit:`f0d6f19bc8`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:149
+msgid ""
+":issue:`1511`: CouchDB checks `roles` field for `_users` database documents "
+"with more care. :commit:`41205000`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:151
+msgid ""
+":issue:`1537`: Include user name in show/list `ETags`. :commit:`ac320479`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:152
+msgid "Send a 202 response for `_restart`. :commit:`b213e16f`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:153
+msgid ""
+"Make password hashing synchronous when using the /_config/admins API. "
+":commit:`08071a80`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:155
+msgid "Add support to serve single file with CouchDB, :commit:`2774531ff2`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:156
+msgid "Allow any 2xx code to indicate success, :commit:`0d50103cfd`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:157
+msgid "Fix `_session` for IE7."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:158
+msgid "Restore 400 error for empty PUT, :commit:`2057b895`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:159
+msgid "Return ``X-Couch-Id`` header if doc is created, :commit:`98515bf0b9`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:160
+msgid "Support auth cookies with ``:`` characters, :commit:`d9566c831d`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:165
+msgid ":issue:`1380`: Minor fixes for logrotate support."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:166
+msgid "Improve file I/O error logging and handling, :commit:`4b6475da`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:167
+msgid "Module Level Logging, :commit:`b58f069167`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:168
+msgid "Log 5xx responses at error level, :commit:`e896b0b7`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:169
+msgid ""
+"Log problems opening database at ERROR level except for auto-created system "
+"dbs, :commit:`41667642f7`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:175
+msgid ""
+":issue:`1248`: `HTTP 500` error now doesn't occurs when replicating with "
+"``?doc_ids=null``. :commit:`bea76dbf`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:177
+msgid ":issue:`1259`: Stabilize replication id, :commit:`c6252d6d7f`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:178
+msgid ""
+":issue:`1323`: Replicator now acts as standalone application. "
+":commit:`f913ca6e`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:180
+msgid ""
+":issue:`1363`: Fix rarely occurred, but still race condition in changes feed"
+" if a quick burst of changes happens while replication is starting the "
+"replication can go stale. :commit:`573a7bb9`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:183
+msgid ""
+":issue:`1557`: Upgrade some code to use BIFs bring good improvements for "
+"replication."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:187
+msgid "Security"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:189
+msgid ""
+":issue:`1060`: Passwords are now hashed using the PBKDF2 algorithm with a "
+"configurable work factor. :commit:`7d418134`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:193
+msgid "Source Repository"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:195
+msgid "The source repository was migrated from `SVN`_ to `Git`_."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:201
+msgid "Storage System"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:203
+msgid ""
+"Fixed unnecessary conflict when deleting and creating a document in the same"
+" batch."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:207
+msgid "Test Suite"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:209
+msgid ":issue:`1321`: Moved the JS test suite to the CLI."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:210
+msgid ""
+":issue:`1338`: Start CouchDB with ``port=0``. While CouchDB might be already"
+" running on the default port 5984, port number 0 let the TCP stack figure "
+"out a free port to run. :commit:`127cbe3`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:213
+msgid ""
+":issue:`1339`: Use shell trap to catch dying beam processes during test "
+"runs. :commit:`2921c78`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:215
+msgid ":issue:`1389`: Improved tracebacks printed by the JS CLI tests."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:216
+msgid ""
+":issue:`1563`: Ensures urlPrefix is set in all ajax requests. "
+":commit:`07a6af222`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:218
+msgid "Fix race condition for test running on faster hardware."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:219
+msgid "Improved the reliability of a number of tests."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:223
+msgid "URL Rewriter & Vhosts"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:225
+msgid ""
+":issue:`1026`: Database name is encoded during rewriting (allowing embedded "
+"/'s, etc). :commit:`272d6415`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:229
+msgid "UUID Algorithms"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:231
+msgid ":issue:`1373`: Added the utc_id algorithm :commit:`5ab712a2`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:234
+msgid "Query and View Server"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:236
+msgid ""
+":issue:`111`: Improve the errors reported by the javascript view server to "
+"provide a more friendly error report when something goes wrong. "
+":commit:`0c619ed`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:239
+msgid ""
+":issue:`410`: More graceful error handling for JavaScript "
+"validate_doc_update functions."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:241
+msgid ""
+":issue:`1372`: `_stats` builtin reduce function no longer produces error for"
+" empty view result."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:243
+msgid ""
+":issue:`1444`: Fix missed_named_view error that occurs on existed design "
+"documents and views. :commit:`b59ac98b`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:245
+msgid ""
+":issue:`1445`: CouchDB tries no more to delete view file if it couldn't open"
+" it, even if the error is `emfile`."
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:247
+msgid ""
+":issue:`1483`: Update handlers requires valid doc ids. :commit:`72ea7e38`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:248
+msgid ":issue:`1491`: Clenaup view tables. :commit:`c37204b7`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:249
+msgid "Deprecate E4X support, :commit:`cdfdda2314`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:252
+msgid "Windows"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:254
+msgid ""
+":issue:`1482`: Use correct linker flag to build `snappy_nif.dll` on Windows."
+" :commit:`a6eaf9f1`"
+msgstr ""
+
+#: ../../src/whatsnew/1.3.rst:256
+msgid "Allows building cleanly on Windows without cURL, :commit:`fb670f5712`"
+msgstr ""

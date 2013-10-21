@@ -1,0 +1,902 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/server/common.rst:17
+# 244133dda12e4d45ac1ee01e41309120
+msgid "``/``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:21
+# 1f76bb91472a4346b83cf22d71de9220
+msgid "Accessing the root of a CouchDB instance returns meta information about the instance. The response is a JSON structure containing information about the server, including a welcome message and the version of the server."
+msgstr ""
+
+#: ../../src/api/server/common.rst:26
+#: ../../src/api/server/common.rst:28
+#: ../../src/api/server/common.rst:74
+#: ../../src/api/server/common.rst:76
+#: ../../src/api/server/common.rst:174
+#: ../../src/api/server/common.rst:176
+#: ../../src/api/server/common.rst:219
+#: ../../src/api/server/common.rst:230
+#: ../../src/api/server/common.rst:347
+#: ../../src/api/server/common.rst:359
+#: ../../src/api/server/common.rst:671
+#: ../../src/api/server/common.rst:674
+#: ../../src/api/server/common.rst:718
+#: ../../src/api/server/common.rst:720
+#: ../../src/api/server/common.rst:915
+#: ../../src/api/server/common.rst:918
+# 926529d9d687436db709b6cd06ae9df8
+# e88b77c87f7847c8a4923058809f25ca
+# 15d1aaf351fe4ee2b73cbd4cf2933034
+# 725b71abf9804724855ede950016e6a3
+# 602d8765ef6341daa3052ccaa7b83d15
+# 6ef8c98835104217be74abd92aa00c4e
+# 036d2f5758c9494a823c4a0eeeca21f9
+# db7450b4cca54764802973ce88241921
+# dcaabdae78d249379b1ef32854fc1717
+# cee51e55374e43a9b771f2f323379017
+# 895274137cf344fabb9f72d2ca7799df
+# cca2db80db30416287bfe8d3b74cab45
+# 76ef17d80ecd429885f76216707345a0
+# 7cdaa27716d648bda35339c60bef14ca
+# 4b75319acd054071baa3a24314ba7b46
+# baeabcf322984745a338d6c9d857fc6c
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/server/common.rst:27
+#: ../../src/api/server/common.rst:75
+#: ../../src/api/server/common.rst:175
+#: ../../src/api/server/common.rst:220
+#: ../../src/api/server/common.rst:276
+#: ../../src/api/server/common.rst:348
+#: ../../src/api/server/common.rst:672
+#: ../../src/api/server/common.rst:719
+#: ../../src/api/server/common.rst:916
+# 2dfec5393a8846959ae2b32b408058bf
+# 91e8b72ae90a4e319421ac37c45cd3cc
+# 6a73f118734a4e48a0ef22f6adfc5010
+# 7bf3462f1ce1468b9a0519e60d85ef9e
+# afae47cae5b54ed8bfe401a9f3a06809
+# fe1c8e9a66194563830e1cc2956ee403
+# 44e0b6cb044a47d9aaa5ab6082067f77
+# 36e9db8b26cf448b8986fd910bb9e9d2
+# 3418d58332ba4f92ae06a27e01f936f2
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/server/common.rst:29
+#: ../../src/api/server/common.rst:77
+#: ../../src/api/server/common.rst:177
+#: ../../src/api/server/common.rst:231
+#: ../../src/api/server/common.rst:360
+#: ../../src/api/server/common.rst:675
+#: ../../src/api/server/common.rst:721
+#: ../../src/api/server/common.rst:919
+# 605c258e682b4c0d935f8a0f85aac476
+# b9936f8108444a05883f9c8c7917d61d
+# 3b1c70f0969643c4ae9e9c98932012bc
+# d7dc06a8f86d435086fb378ddb158417
+# a148020172d440638588bc89a2c581b0
+# 503ce4510a224d93b506d7e7d64c8478
+# 188552ae84504916b96c438b088a3755
+# 77fbb5d3c33047fa88c2d4be9dd7e767
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/server/common.rst:32
+#: ../../src/api/server/common.rst:91
+#: ../../src/api/server/common.rst:180
+#: ../../src/api/server/common.rst:240
+#: ../../src/api/server/common.rst:285
+#: ../../src/api/server/common.rst:681
+#: ../../src/api/server/common.rst:724
+#: ../../src/api/server/common.rst:923
+# 76e68089c3a64ef3acfaefaf0a90a77c
+# 082837139bf0477d9b119587779c7a79
+# 0edf269cdc5f423c937a271855d82edd
+# 1b963f7897c049f8acb2cdfb644c0d0e
+# 9de1a2944d97455793bb0a1976b8e303
+# 6f1a682049724e6790323f5d3d777cbb
+# 0252c112088f4ce29571bea3daa91b58
+# af16906087004d4382a412415a9ffa0e
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:40
+#: ../../src/api/server/common.rst:99
+#: ../../src/api/server/common.rst:188
+#: ../../src/api/server/common.rst:248
+#: ../../src/api/server/common.rst:293
+#: ../../src/api/server/common.rst:689
+#: ../../src/api/server/common.rst:732
+#: ../../src/api/server/common.rst:931
+# cb729e6455dc4d6c8b8afa303ef216b4
+# ab333b11b45945608f4f0daf4b67495f
+# 4637ffd8b6034364bd0948bf3e246695
+# 316ace81b4b34de6ae50702b8814f576
+# 967f8a754d224476b1abbefa7c900071
+# 0c5a5f4de137485486d4232fe0d81af6
+# a67f08cfd17b439d80aafad99404192d
+# 895dd87d84c0429fae471b642a128c93
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:65
+# c7e215033da4445b978d8f791940ee96
+msgid "``/_active_tasks``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:69
+# 4859c95275c44ab98b54b26bbca91112
+msgid "List of running tasks, including the task type, name, status and process ID. The result is a JSON array of the currently running tasks, with each task being described with a single object. Depending on operation type set of response object fields might be different."
+msgstr ""
+
+#: ../../src/api/server/common.rst:168
+# 86a856915335419f95fd85b6ef5baf7e
+msgid "``/_all_dbs``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:172
+# 5f3621d6d7434b1aaec8c55655ccfa6a
+msgid "Returns a list of all the databases in the CouchDB instance."
+msgstr ""
+
+#: ../../src/api/server/common.rst:211
+# e316d923f0354614b45b9645661d6a9a
+msgid "``/_db_updates``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:217
+# 6e25736c32bb496887a37e2f868b8cf4
+msgid "Returns a list of all database events in the CouchDB instance."
+msgstr ""
+
+#: ../../src/api/server/common.rst:221
+# 7ba2f8c2d8414e838403f6e80aeab2de
+msgid "**longpoll**: Closes the connection after the first event."
+msgstr ""
+
+#: ../../src/api/server/common.rst:222
+# 640ed380da084ea8942f2572a3154af3
+msgid "**continuous**: Send a line of JSON per event. Keeps the socket open until ``timeout``."
+msgstr ""
+
+#: ../../src/api/server/common.rst:224
+# 575d6f3a59f54ca786b0d857b30b09ee
+msgid "**eventsource**: Like, ``continuous``, but sends the events in `EventSource <http://dev.w3.org/html5/eventsource/>`_ format."
+msgstr ""
+
+#: ../../src/api/server/common.rst:269
+# 2a9de1618aa14119ade4e4ea0b2248ff
+msgid "``/_log``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:273
+# 2c1365a18efd44ec872330ce5a9556be
+msgid "Gets the CouchDB log, equivalent to accessing the local log file of the corresponding CouchDB instance."
+msgstr ""
+
+#: ../../src/api/server/common.rst:303
+# 2c4656f8c670454bab9bca718d09d253
+msgid "If you want to pick out specific parts of the log information you can use the ``bytes`` argument, which specifies the number of bytes to be returned, and ``offset``, which specifies where the reading of the log should start, counted back from the end. For example, if you use the following request:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:313
+# 4f4b4dd65cec4b819520f68f283aece5
+msgid "Reading of the log will start at 2000 bytes from the end of the log, and 500 bytes will be shown."
+msgstr ""
+
+#: ../../src/api/server/common.rst:316
+# 14cdf802a16c4ab88b51c81c0bad9ce4
+msgid "**How bytes/offset works?**"
+msgstr ""
+
+#: ../../src/api/server/common.rst:318
+# c3d468716771489596789a08270b7614
+msgid "CouchDB reads specified amount of ``bytes`` from the end of log file, jumping to ``offset`` bytes towards the beginning of the file first:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:341
+# 1c1602c253a549c480b6b3b2f370819d
+msgid "``/_replicate``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:345
+# 2c2766eecfa346dca616dae4ceb1aa7d
+msgid "Request, configure, or stop, a replication operation."
+msgstr ""
+
+#: ../../src/api/server/common.rst:374
+# 25e5e7fc056c4c8992c9787cf7476a8b
+msgid "The specification of the replication request is controlled through the JSON content of the request. The JSON should be an object with the fields defining the source, target and other options."
+msgstr ""
+
+#: ../../src/api/server/common.rst:378
+# 12ae14b92cb840c780e336c05c20d96f
+msgid "The `Replication history` is an array of objects with following structure:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:394
+# 7dc9a271bcbd448a9e14fa3a5f01eccd
+msgid "**Request**"
+msgstr ""
+
+#: ../../src/api/server/common.rst:409
+# 5d9af6af7565427da966cf590abbcdcc
+msgid "**Response**"
+msgstr ""
+
+#: ../../src/api/server/common.rst:457
+# 37f281d7c36840508af93d9c071e42e2
+msgid "Replication Operation"
+msgstr ""
+
+#: ../../src/api/server/common.rst:459
+# 21a796a3530d4b579bb3b90b7c4f9c8b
+msgid "The aim of the replication is that at the end of the process, all active documents on the source database are also in the destination database and all documents that were deleted in the source databases are also deleted (if they exist) on the destination database."
+msgstr ""
+
+#: ../../src/api/server/common.rst:464
+# 48980e826d8e4714bddef3bb06e230a8
+msgid "Replication can be described as either push or pull replication:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:466
+# e8232296c6814fe6acc34986b6436705
+msgid "*Pull replication* is where the ``source`` is the remote CouchDB instance, and the ``target`` is the local database."
+msgstr ""
+
+#: ../../src/api/server/common.rst:469
+# c6e1e2eaf7bf4bb78cbf8b365c96d17c
+msgid "Pull replication is the most useful solution to use if your source database has a permanent IP address, and your destination (local) database may have a dynamically assigned IP address (for example, through DHCP). This is particularly important if you are replicating to a mobile or other device from a central server."
+msgstr ""
+
+#: ../../src/api/server/common.rst:475
+# 456f111db2e946ffb6cdce9c213f696b
+msgid "*Push replication* is where the ``source`` is a local database, and ``target`` is a remote database."
+msgstr ""
+
+#: ../../src/api/server/common.rst:479
+# 1da019269f4740e89ac320e564f3a35f
+msgid "Specifying the Source and Target Database"
+msgstr ""
+
+#: ../../src/api/server/common.rst:481
+# 7cc5e356e8b74c769d136e5c3d35f7a5
+msgid "You must use the URL specification of the CouchDB database if you want to perform replication in either of the following two situations:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:484
+# 1fa25c63bfe34803be9919a3b9669ea1
+msgid "Replication with a remote database (i.e. another instance of CouchDB on the same host, or a different host)"
+msgstr ""
+
+#: ../../src/api/server/common.rst:487
+# 9b27bd1768e74f009ac714d34baacfe0
+msgid "Replication with a database that requires authentication"
+msgstr ""
+
+#: ../../src/api/server/common.rst:489
+# e422939ea8e443a48bc408d26b48128e
+msgid "For example, to request replication between a database local to the CouchDB instance to which you send the request, and a remote database you might use the following request:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:505
+# 31fe71974a1b4f28a64abac603e183e6
+msgid "In all cases, the requested databases in the ``source`` and ``target`` specification must exist. If they do not, an error will be returned within the JSON object:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:516
+# 5b18b964ad0142f3add5eccd957d008a
+msgid "You can create the target database (providing your user credentials allow it) by adding the ``create_target`` field to the request object:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:531
+# b08c1932ae7a41e28c0718fbbb33afbd
+msgid "The ``create_target`` field is not destructive. If the database already exists, the replication proceeds as normal."
+msgstr ""
+
+#: ../../src/api/server/common.rst:535
+# 00d32d6025574767b1f9a6ddb6b3882a
+msgid "Single Replication"
+msgstr ""
+
+#: ../../src/api/server/common.rst:537
+# 4af3c846d4b242d7a49b27198eb0a5b2
+msgid "You can request replication of a database so that the two databases can be synchronized. By default, the replication process occurs one time and synchronizes the two databases together. For example, you can request a single synchronization between two databases by supplying the ``source`` and ``target`` fields within the request JSON content."
+msgstr ""
+
+#: ../../src/api/server/common.rst:554
+# 68b80e36537547d2af70e4ecd3e77e88
+msgid "In the above example, the databases ``recipes`` and ``recipes-snapshot`` will be synchronized. These databases are local to the CouchDB instance where the request was made. The response will be a JSON structure containing the success (or failure) of the synchronization process, and statistics about the process:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:584
+# 7bb2744ad4134808a25af89a770e5be5
+msgid "Continuous Replication"
+msgstr ""
+
+#: ../../src/api/server/common.rst:586
+# e4ce524dfbf24a45a4b172b381b6b638
+msgid "Synchronization of a database with the previously noted methods happens only once, at the time the replicate request is made. To have the target database permanently replicated from the source, you must set the ``continuous`` field of the JSON object within the request to true."
+msgstr ""
+
+#: ../../src/api/server/common.rst:591
+# f8caef2e95214c81b63c86c16c382d09
+msgid "With continuous replication changes in the source database are replicated to the target database in perpetuity until you specifically request that replication ceases."
+msgstr ""
+
+#: ../../src/api/server/common.rst:607
+# 0409edca3ab34c099ee095435449c52c
+msgid "Changes will be replicated between the two databases as long as a network connection is available between the two instances."
+msgstr ""
+
+#: ../../src/api/server/common.rst:611
+# d4cab183e2ea406db0eeb5b6cd01e2be
+msgid "Two keep two databases synchronized with each other, you need to set replication in both directions; that is, you must replicate from ``source`` to ``target``, and separately from ``target`` to ``source``."
+msgstr ""
+
+#: ../../src/api/server/common.rst:617
+# 7c72668ec5d846de95a818282a70cbb2
+msgid "Canceling Continuous Replication"
+msgstr ""
+
+#: ../../src/api/server/common.rst:619
+# 8ae4f3f9a9b84870be66f7f3a8b9a6f3
+msgid "You can cancel continuous replication by adding the ``cancel`` field to the JSON request object and setting the value to true. Note that the structure of the request must be identical to the original for the cancellation request to be honoured. For example, if you requested continuous replication, the cancellation request must also contain the ``continuous`` field."
+msgstr ""
+
+#: ../../src/api/server/common.rst:626
+# 733acda453e444c1a5845c1c2e58793c
+msgid "For example, the replication request:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:641
+# b57d25ceb7394680a60ba9da09b4ceaf
+msgid "Must be canceled using the request:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:657
+# 2729d629c61a45dab43bfe117b8f11f6
+msgid "Requesting cancellation of a replication that does not exist results in a 404 error."
+msgstr ""
+
+#: ../../src/api/server/common.rst:664
+# 04da18f333d14e02bf90e3eb97a3b256
+msgid "``/_restart``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:668
+# 9a3d489a8dd44f4caed0050a507348ec
+msgid "Restarts the CouchDB instance. You must be authenticated as a user with administration privileges for this to work."
+msgstr ""
+
+#: ../../src/api/server/common.rst:708
+# 2ccc078914a940869000f0e4aeaea333
+msgid "``/_stats``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:712
+# f6cd4caf3bb54d6699c095c32da7cb0c
+msgid "The ``_stats`` resource returns a JSON object containing the statistics for the running server. The object is structured with top-level sections collating the statistics for a range of entries, with each individual statistic being easily identified, and the content of each statistic is self-describing"
+msgstr ""
+
+#: ../../src/api/server/common.rst:758
+# 9e8a67b9afe94b79b32c6641bf0a170d
+msgid "The fields provide the current, minimum and maximum, and a collection of statistical means and quantities. The quantity in each case is not defined, but the descriptions below provide"
+msgstr ""
+
+#: ../../src/api/server/common.rst:762
+# b34c4857d4e84340998e69327392345d
+msgid "The statistics are divided into the following top-level sections:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:765
+# 61589d2e07c74f79b45ec23464f7f343
+msgid "``couchdb``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:767
+# 8b09ba80006d4c8bbb43c1e2a83fa8d4
+msgid "Describes statistics specific to the internals of CouchDB"
+msgstr ""
+
+#: ../../src/api/server/common.rst:770
+#: ../../src/api/server/common.rst:791
+#: ../../src/api/server/common.rst:810
+#: ../../src/api/server/common.rst:843
+# 6e1fd076257b48cb94d159102ff6feb8
+# 6666d2af987b4ac4b5e53d3018ede5b0
+# 788fb5ded6cc4ba28563e023b1093d3e
+# d200135d6fc845a49b5a1557960ce852
+msgid "Statistic ID"
+msgstr ""
+
+#: ../../src/api/server/common.rst:770
+#: ../../src/api/server/common.rst:791
+#: ../../src/api/server/common.rst:810
+#: ../../src/api/server/common.rst:843
+# b0400c96352b473db18cf21f59aed415
+# 2b314d73467c49a98c783a6673ea1bad
+# 80bd411865cc468cb08be13035c84379
+# 280b1830df3745cc8f6e49e8561eca4b
+msgid "Description"
+msgstr ""
+
+#: ../../src/api/server/common.rst:770
+#: ../../src/api/server/common.rst:791
+#: ../../src/api/server/common.rst:810
+#: ../../src/api/server/common.rst:843
+# fac5b5da04f6411097d6ccd854a33165
+# 8f177b5f77e0423eace5e40641d31a98
+# 400dc7d3298348a4bae83d614523f060
+# febe8847462d43fb98e8e6c94417ce5a
+msgid "Unit"
+msgstr ""
+
+#: ../../src/api/server/common.rst:772
+# 80f3ba3c6bdd427fb1466de9262dcef4
+msgid "``auth_cache_hits``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:772
+# c08c2aee7dfc4799ba0da6ed8b10028b
+msgid "Number of authentication cache hits"
+msgstr ""
+
+#: ../../src/api/server/common.rst:772
+#: ../../src/api/server/common.rst:774
+#: ../../src/api/server/common.rst:776
+#: ../../src/api/server/common.rst:778
+#: ../../src/api/server/common.rst:780
+#: ../../src/api/server/common.rst:782
+#: ../../src/api/server/common.rst:793
+#: ../../src/api/server/common.rst:795
+#: ../../src/api/server/common.rst:797
+#: ../../src/api/server/common.rst:799
+#: ../../src/api/server/common.rst:801
+#: ../../src/api/server/common.rst:803
+#: ../../src/api/server/common.rst:812
+#: ../../src/api/server/common.rst:814
+#: ../../src/api/server/common.rst:816
+#: ../../src/api/server/common.rst:818
+#: ../../src/api/server/common.rst:820
+#: ../../src/api/server/common.rst:822
+#: ../../src/api/server/common.rst:824
+#: ../../src/api/server/common.rst:826
+#: ../../src/api/server/common.rst:828
+#: ../../src/api/server/common.rst:830
+#: ../../src/api/server/common.rst:832
+#: ../../src/api/server/common.rst:834
+#: ../../src/api/server/common.rst:836
+#: ../../src/api/server/common.rst:845
+#: ../../src/api/server/common.rst:847
+#: ../../src/api/server/common.rst:849
+#: ../../src/api/server/common.rst:851
+#: ../../src/api/server/common.rst:853
+# 7a513fc2803c4b14bf18839c03dec8b5
+# a4574177a2d64937b6c0c47ab9480b9a
+# 07fd8fddb7dc486eb4f1584f43523e3c
+# 5eaa6bc2c7bd45f2a7c6cb22493450cd
+# 1166977c9d134ba78050ade2495fed6d
+# d05784c622c649e183325be92d9692c8
+# 622a5a59bd8a4dc1bf99034d608d2dcc
+# 23aaf5298578449887249830649f7943
+# dfddb17d29284c049da02ee9996faeec
+# e47918f12b854db5a51fb0f9b63213b8
+# 9670f670a5544cdbbce1438be7c4854f
+# b33f44c824494be6b2e6d3890d0ecda6
+# 9e31cb76466b4ad4b3a9d7e405f0813b
+# e74fb19b9e724d8aa78e245b332ba0f2
+# a4600de21df54392b2c00924a44e9358
+# 8de2ac5bd0f54de0bcc3906f923b192d
+# 6525754383c146eba36b202bf4a93a6f
+# a55400185e714b9e9578d58d52cdac9f
+# 37d4a52a714c4b0ba929e4ace2039c51
+# 28ac720282ee4d6aa33341842855ce4d
+# 69f6c78b7168455a8f3c8bd1009b951a
+# e3e7986a6fd0446b9d22973c991a2842
+# 14ad8b9dd62749598eec393a600a82ba
+# adb1b0cb525e4eb2abd2e10b097aa9c6
+# 6be63c4a98c843e9843792b778b60081
+# ca3486a2621b4a9088c47a97958c2cdb
+# 798216e12f9c482ea4fa084c8b75fc35
+# 71458e80ba614bfbabe4ea33db9f10ca
+# de1a6833dd6542b0a249e7a157d35543
+# 2174d0726bd9469f884c10faabd359cd
+msgid "number"
+msgstr ""
+
+#: ../../src/api/server/common.rst:774
+# fb1b97362cbc4ce9b26343557f9ee96e
+msgid "``auth_cache_misses``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:774
+# 136bb553665241df976b16c6663f0905
+msgid "Number of authentication cache misses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:776
+# bb90ee60b5be4d8691874d8bec8ca6f2
+msgid "``database_reads``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:776
+# e0de499d23c046aab14a305b9cbec372
+msgid "Number of times a document was read from a database"
+msgstr ""
+
+#: ../../src/api/server/common.rst:778
+# cb5b0b924a124d41872f275343f0acb8
+msgid "``database_writes``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:778
+# 62d4af4d8bb547b08ace5465e9258260
+msgid "Number of times a database was changed"
+msgstr ""
+
+#: ../../src/api/server/common.rst:780
+# 1ee1037c09b34e81a0cd80b1f2801db3
+msgid "``open_databases``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:780
+# 7d61787e478c4f628ebc2665eac01a96
+msgid "Number of open databases"
+msgstr ""
+
+#: ../../src/api/server/common.rst:782
+# 990d422dd4e649178e35f697c131ba64
+msgid "``open_os_files``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:782
+# 5b94abc7054444a3b721ef80f2424ee6
+msgid "Number of file descriptors CouchDB has open"
+msgstr ""
+
+#: ../../src/api/server/common.rst:784
+# e0201c6f96d6436985b525d02c5922e3
+msgid "``request_time``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:784
+# 1e50c7bf672940beb48da72f5ab70a2c
+msgid "Length of a request inside CouchDB without MochiWeb"
+msgstr ""
+
+#: ../../src/api/server/common.rst:784
+# 5bf461a1229841a1b37187d940316790
+msgid "milliseconds"
+msgstr ""
+
+#: ../../src/api/server/common.rst:788
+# 65e0d6f26dca4b4592ec904229ef7c08
+msgid "``httpd_request_methods``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:793
+# 431ca899bf3f4d7cabdbd51a13dd41ad
+msgid "``COPY``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:793
+# 8a545088078448a8bc9da2b7a891a5a4
+msgid "Number of HTTP COPY requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:795
+# c7b5dd9e12e145b28acdb7edec78931a
+msgid "``DELETE``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:795
+# 7b8909d5e1894007831124ad00911586
+msgid "Number of HTTP DELETE requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:797
+# 8d543610f52849b0be69a74ae1aa8119
+msgid "``GET``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:797
+# ed4891c00c4141839ad4d0c57cf5b72b
+msgid "Number of HTTP GET requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:799
+# 138bb42cf0bb4e27ac1281b38ef52463
+msgid "``HEAD``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:799
+# ae35e92d3378430d9f2658e511ce85df
+msgid "Number of HTTP HEAD requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:801
+# 59cbbe56579d412aa08d8410b2d2159e
+msgid "``POST``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:801
+# 415cf848f60f46b6a08f88dfb9a06d2f
+msgid "Number of HTTP POST requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:803
+# a963e428471740f7ad996e9e0778a9f0
+msgid "``PUT``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:803
+# 9c74ec743637459aaca471f2dff76484
+msgid "Number of HTTP PUT requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:807
+# 2c3be80b6e82467c8531b218d52f2e7a
+msgid "``httpd_status_codes``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:812
+# c9b907e0a9c54170bbb8adb5d461931c
+msgid "``200``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:812
+# 044b1f3a440a4cbf9b80462b36c7f2db
+msgid "Number of HTTP 200 OK responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:814
+# 062671ee08664c5291a601747e097454
+msgid "``201``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:814
+# 61154f72f2a74e41b82617bf3dd9fde2
+msgid "Number of HTTP 201 Created responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:816
+# de3f1b96f7d04962b8fd49a17bebe7c4
+msgid "``202``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:816
+# b8f8ffb662224399b65dd0c7c2b4018a
+msgid "Number of HTTP 202 Accepted responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:818
+# 00d49e80811e49239a65763c2fff9525
+msgid "``301``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:818
+# 3665a62810fd4276be281c1a2deea7ad
+msgid "Number of HTTP 301 Moved Permanently responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:820
+# 668b62f30fa04abea5db06ad1da5efda
+msgid "``304``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:820
+# 6588e0c97df240bbbb15bdf553395c67
+msgid "Number of HTTP 304 Not Modified responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:822
+# d598d3cfc64c4091b189d188b3effebd
+msgid "``400``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:822
+# 26917f8d0e394b8497d88c0456b2b007
+msgid "Number of HTTP 400 Bad Request responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:824
+# eb304c3ecab04b9bbbfcc29b9459e411
+msgid "``401``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:824
+# 65b5f31bdb9848388715c2332aeb94a6
+msgid "Number of HTTP 401 Unauthorized responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:826
+# 69d73b4ff1084586857b4fbe5c2498d0
+msgid "``403``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:826
+# 36b6dc50d3014a2e9533ba0cddc39047
+msgid "Number of HTTP 403 Forbidden responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:828
+# 7d776246fed341a49b53693d385bc8fd
+msgid "``404``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:828
+# a856310c67a74d0186386ea6d65cb34d
+msgid "Number of HTTP 404 Not Found responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:830
+# bef20f0e51f843b9869bed56e55430bc
+msgid "``405``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:830
+# 079ad8b3e3784d0e9cf4a3de1e4d9349
+msgid "Number of HTTP 405 Method Not Allowed responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:832
+# ff84ee33a37b4c12a7540e877f029c0d
+msgid "``409``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:832
+# 98e22e3c006e4ef2ba67cb1f27bb6dc7
+msgid "Number of HTTP 409 Conflict responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:834
+# c6dd7af1f7754ded8f71783b38d3955a
+msgid "``412``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:834
+# 9ed3e62f92504c999815b822ba6122f9
+msgid "Number of HTTP 412 Precondition Failed responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:836
+# a3a70975abc04e75b5a62183ece6e3cf
+msgid "``500``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:836
+# 2192d3f9084e4f4daa67b48b8a9101aa
+msgid "Number of HTTP 500 Internal Server Error responses"
+msgstr ""
+
+#: ../../src/api/server/common.rst:840
+# 628d2301dc2e4eae9fa0577d6d250d9a
+msgid "``httpd``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:845
+# 110898d572424958a0de973f076f2855
+msgid "``bulk_requests``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:845
+# 2950fce83f1f4c6e86cc344760ad10d5
+msgid "Number of bulk requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:847
+# 162ebac69b124a0fabd05c13910c950c
+msgid "``clients_requesting_changes``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:847
+# 4247cdce8a8b418aa3d5c22d50684e8a
+msgid "Number of clients for continuous _changes"
+msgstr ""
+
+#: ../../src/api/server/common.rst:849
+# c90f4df585124ef5aa53a54d042502d5
+msgid "``requests``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:849
+# 44e67d73201a47b0bd6ad4fa66ded4a1
+msgid "Number of HTTP requests"
+msgstr ""
+
+#: ../../src/api/server/common.rst:851
+# 89f65cdf02fa47bca2e0fa024a246259
+msgid "``temporary_view_reads``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:851
+# 20e715e6f29b40f39a938f00c5983dd6
+msgid "Number of temporary view reads"
+msgstr ""
+
+#: ../../src/api/server/common.rst:853
+# 628603853d1a49cc96cfa5a463f47a6f
+msgid "``view_reads``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:853
+# dc0acd1af0b44ec7a2e0c2eef34070fa
+msgid "Number of view reads"
+msgstr ""
+
+#: ../../src/api/server/common.rst:856
+# 52fc4a3756324d2088c7541d0968fe58
+msgid "You can also access individual statistics by quoting the statistics sections and statistic ID as part of the URL path. For example, to get the ``request_time`` statistics, you can use:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:864
+# cd3c0f918850463cb2f438f2c8607985
+msgid "This returns an entire statistics object, as with the full request, but containing only the request individual statistic. Hence, the returned structure is as follows:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:888
+# 18201fc007ed4b65906dbb042a2bd954
+msgid "``/_utils``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:892
+# 5581e8b6d5a242bca6b69bf2719f543f
+msgid "Accesses the built-in Futon administration interface for CouchDB."
+msgstr ""
+
+#: ../../src/api/server/common.rst:907
+# f1aa015f24774476a346673609684fe2
+msgid "``/_uuids``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:911
+# dff19397a9dd46fc8c0c19aed3febc16
+msgid "Requests one or more Universally Unique Identifiers (UUIDs) from the CouchDB instance. The response is a JSON object providing a list of UUIDs."
+msgstr ""
+
+#: ../../src/api/server/common.rst:959
+# 3acefa2f4b2f4cbfa1804ffe9b52356b
+msgid "The UUID type is determined by the :config:option:`UUID algorithm <uuids/algorithm>` setting in the CouchDB configuration."
+msgstr ""
+
+#: ../../src/api/server/common.rst:962
+# a688b0633d734c78aa19aa81bcd3130e
+msgid "The UUID type may be changed at any time through the :ref:`Configuration API <api/config/section/key>`. For example, the UUID type could be changed to ``random`` by sending this HTTP request:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:974
+# e485df3e986742539b74269ddff7953a
+msgid "You can verify the change by obtaining a list of UUIDs:"
+msgstr ""
+
+#: ../../src/api/server/common.rst:992
+# 7ef6d91133d243dda915d48a35d27b50
+msgid "``/favicon.ico``"
+msgstr ""
+
+#: ../../src/api/server/common.rst:996
+# dbc1e1c2f16a4c7c81b5b39abf41b279
+msgid "Binary content for the `favicon.ico` site icon."
+msgstr ""
+

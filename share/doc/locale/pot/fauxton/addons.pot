@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/fauxton/addons.rst:18
+# 4b688896419a43beaa2ed145c3469d5b
+msgid "Writting Addons"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:20
+# 6b8454b7db0640e7a7922499fe2bbf5a
+msgid "Addons allow you to extend Fauxton for a specific use case. Usually, they have the following structure::"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:35
+# 33904f0e189b4162af7c797b47a40ff0
+msgid "Generating an Addon"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:37
+# a19a6c80f803422f9acc2ce567f64ac3
+msgid "We have a `grunt-init` template that lets you create a skeleton addon, including all the boiler plate code. Run ``grunt-init tasks/addon`` and answer the questions it asks to create an addon::"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:55
+# f7032a612e8c4746a2cca03740019ee0
+msgid "Once the addon is created add the name to the settings.json file to get it compiled and added on the next install."
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:59
+# c7db6fb70ccf4963bba50f522d5161f4
+msgid "Routes and hooks"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:61
+# d18aab53ca714d8ab1e108dcb3dca1ae
+msgid "An addon can insert itself into Fauxton in two ways; via a route or via a hook."
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:64
+# 901b6a2784f24018a678caa40678a6fe
+msgid "Routes"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:66
+# 0cfd00e9d126459ba25c1c967a837261
+msgid "An addon will override an existing route should one exist, but in all other ways is just a normal backbone `route/view`. This is how you would add a whole new feature."
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:71
+# 69911b82d28147b7a84027ad642fbe7d
+msgid "Hooks"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:73
+# 7ca67be83cc14c02b30494daaf4c8767
+msgid "Hooks let you modify/extend an existing feature. They modify a DOM element by selector for a named set of routes, for example:"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:91
+# f4aaccad2a2b41b1ba4a3ff97caaed10
+msgid "adds the `searchSidebar` callback to `#sidebar-content` for three routes."
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:94
+# 4d49217d60a74147a4d47dfbc4135708
+msgid "Hello world Addon"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:96
+# a739ff9aa1ec4977857575612c03e6ad
+msgid "First create the addon skeleton::"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:111
+# 53e1ec36b794479fb543f6c920c1d3bc
+msgid "In `app/addons/hello/templates/hello.html` place:"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:117
+# ae03614f8b134bf2a3a05f52845b19c8
+msgid "Next, we'll defined a simple view in `resources.js` (for more complex addons you may want to have a views.js) that renders that template:"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:138
+# 1e18ebe48509427abea2d8fe0853c58d
+msgid "Then define a route in `routes.js` that the addon is accessible at:"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:171
+# cd8830ee0425445fa677a5446ddbf874
+msgid "Then wire it all together in base.js:"
+msgstr ""
+
+#: ../../src/fauxton/addons.rst:194
+# bee258d60b47413bbdf927464090acbf
+msgid "Once the code is in place include the add on in your `settings.json` so that it gets included by the `require` task. Your addon is included in one of three ways; a local path, a git URL or a name. Named plugins assume the plugin is in the Fauxton base directory, addons with a git URL will be cloned into the application, local paths will be copied. Addons included from a local path will be cleaned out by the clean task, others are left alone."
+msgstr ""
+

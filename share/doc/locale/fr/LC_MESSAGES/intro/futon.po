@@ -1,0 +1,263 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/intro/futon.rst:17
+msgid "Futon: Web GUI Administration Panel"
+msgstr ""
+
+#: ../../src/intro/futon.rst:19
+msgid ""
+"Futon is a native web-based interface built into CouchDB. It provides a "
+"basic interface to the majority of the functionality, including the ability "
+"to create, update, delete and view documents and views, provides access to "
+"the configuration parameters, and an interface for initiating replication."
+msgstr ""
+
+#: ../../src/intro/futon.rst:25
+msgid ""
+"The default view is the Overview page which provides you with a list of the "
+"databases. The basic structure of the page is consistent regardless of the "
+"section you are in. The main panel on the left provides the main interface "
+"to the databases, configuration or replication systems. The side panel on "
+"the right provides navigation to the main areas of Futon interface:"
+msgstr ""
+
+#: ../../src/intro/futon.rst:36
+msgid "Futon Overview"
+msgstr ""
+
+#: ../../src/intro/futon.rst:38
+msgid "The main sections are:"
+msgstr ""
+
+#: ../../src/intro/futon.rst:40
+msgid "Overview"
+msgstr ""
+
+#: ../../src/intro/futon.rst:42
+msgid ""
+"The main overview page, which provides a list of the databases and provides "
+"the interface for querying the database and creating and updating documents."
+" See :ref:`futon-management`."
+msgstr ""
+
+#: ../../src/intro/futon.rst:46
+msgid "Configuration"
+msgstr ""
+
+#: ../../src/intro/futon.rst:48
+msgid ""
+"An interface into the configuration of your CouchDB installation. The "
+"interface allows you to edit the different configurable parameters. For more"
+" details on configuration, see :ref:`config` section."
+msgstr ""
+
+#: ../../src/intro/futon.rst:52
+msgid "Replicator"
+msgstr ""
+
+#: ../../src/intro/futon.rst:54
+msgid ""
+"An interface to the replication system, enabling you to initiate replication"
+" between local and remote databases. See :ref:`futon-replication`."
+msgstr ""
+
+#: ../../src/intro/futon.rst:58
+msgid "Status"
+msgstr ""
+
+#: ../../src/intro/futon.rst:60
+msgid ""
+"Displays a list of the running background tasks on the server. Background "
+"tasks include view index building, compaction and replication. The Status "
+"page is an interface to the :ref:`Active Tasks <api/server/active_tasks>` "
+"API call."
+msgstr ""
+
+#: ../../src/intro/futon.rst:65
+msgid "Verify Installation"
+msgstr ""
+
+#: ../../src/intro/futon.rst:67
+msgid ""
+"The Verify Installation allows you to check whether all of the components of"
+" your CouchDB installation are correctly installed."
+msgstr ""
+
+#: ../../src/intro/futon.rst:70
+msgid "Test Suite"
+msgstr ""
+
+#: ../../src/intro/futon.rst:72
+msgid ""
+"The Test Suite section allows you to run the built-in test suite. This "
+"executes a number of test routines entirely within your browser to test the "
+"API and functionality of your CouchDB installation. If you select this page,"
+" you can run the tests by using the Run All button. This will execute all "
+"the tests, which may take some time."
+msgstr ""
+
+#: ../../src/intro/futon.rst:82
+msgid "Managing Databases and Documents"
+msgstr ""
+
+#: ../../src/intro/futon.rst:84
+msgid ""
+"You can manage databases and documents within Futon using the main Overview "
+"section of the Futon interface."
+msgstr ""
+
+#: ../../src/intro/futon.rst:87
+msgid ""
+"To create a new database, click the Create Database ELLIPSIS button. You "
+"will be prompted for the database name, as shown in the figure below."
+msgstr ""
+
+#: ../../src/intro/futon.rst:94
+msgid "Creating a Database"
+msgstr ""
+
+#: ../../src/intro/futon.rst:96
+msgid ""
+"Once you have created the database (or selected an existing one), you will "
+"be shown a list of the current documents. If you create a new document, or "
+"select an existing document, you will be presented with the edit document "
+"display."
+msgstr ""
+
+#: ../../src/intro/futon.rst:101
+msgid ""
+"Editing documents within Futon requires selecting the document and then "
+"editing (and setting) the fields for the document individually before saving"
+" the document back into the database."
+msgstr ""
+
+#: ../../src/intro/futon.rst:105
+msgid ""
+"For example, the figure below shows the editor for a single document, a "
+"newly created document with a single ID, the document ``_id`` field."
+msgstr ""
+
+#: ../../src/intro/futon.rst:112
+msgid "Editing a Document"
+msgstr ""
+
+#: ../../src/intro/futon.rst:114
+msgid "To add a field to the document:"
+msgstr ""
+
+#: ../../src/intro/futon.rst:116
+msgid "Click Add Field."
+msgstr ""
+
+#: ../../src/intro/futon.rst:118
+msgid ""
+"In the fieldname box, enter the name of the field you want to create. For "
+"example, “company”."
+msgstr ""
+
+#: ../../src/intro/futon.rst:121
+msgid ""
+"Click the green tick next to the field name to confirm the field name "
+"change."
+msgstr ""
+
+#: ../../src/intro/futon.rst:124
+msgid "Double-click the corresponding Value cell."
+msgstr ""
+
+#: ../../src/intro/futon.rst:126
+msgid "Enter a company name, for example “Example”."
+msgstr ""
+
+#: ../../src/intro/futon.rst:128
+msgid ""
+"Click the green tick next to the field value to confirm the field value."
+msgstr ""
+
+#: ../../src/intro/futon.rst:131
+msgid ""
+"The document is still not saved as this point. You must explicitly save the "
+"document by clicking the Save Document button at the top of the page. This "
+"will save the document, and then display the new document with the saved "
+"revision information (the ``_rev`` field)."
+msgstr ""
+
+#: ../../src/intro/futon.rst:140
+msgid "Edited Document"
+msgstr ""
+
+#: ../../src/intro/futon.rst:142
+msgid ""
+"The same basic interface is used for all editing operations within Futon. "
+"You *must* remember to save the individual element (fieldname, value) using "
+"the green tick button, before then saving the document."
+msgstr ""
+
+#: ../../src/intro/futon.rst:150
+msgid "Configuring Replication"
+msgstr ""
+
+#: ../../src/intro/futon.rst:152
+msgid ""
+"When you click the Replicator option within the Tools menu you are presented"
+" with the Replicator screen. This allows you to start replication between "
+"two databases by filling in or select the appropriate options within the "
+"form provided."
+msgstr ""
+
+#: ../../src/intro/futon.rst:161
+msgid "Replication Form"
+msgstr ""
+
+#: ../../src/intro/futon.rst:163
+msgid ""
+"To start a replication process, either the select the local database or "
+"enter a remote database name into the corresponding areas of the form. "
+"Replication occurs from the database on the left to the database on the "
+"right."
+msgstr ""
+
+#: ../../src/intro/futon.rst:168
+msgid ""
+"If you are specifying a remote database name, you must specify the full URL "
+"of the remote database (including the host, port number and database name). "
+"If the remote instance requires authentication, you can specify the username"
+" and password as part of the URL, for example "
+"``http://username:pass@remotehost:5984/demo``."
+msgstr ""
+
+#: ../../src/intro/futon.rst:174
+msgid "To enable continuous replication, click the Continuous checkbox."
+msgstr ""
+
+#: ../../src/intro/futon.rst:176
+msgid ""
+"To start the replication process, click the Replicate button. The "
+"replication process should start and will continue in the background. If the"
+" replication process will take a long time, you can monitor the status of "
+"the replication using the Status option under the Tools menu."
+msgstr ""
+
+#: ../../src/intro/futon.rst:181
+msgid ""
+"Once replication has been completed, the page will show the information "
+"returned when the replication process completes by the API."
+msgstr ""
+
+#: ../../src/intro/futon.rst:184
+msgid ""
+"The Replicator tool is an interface to the underlying replication API. For "
+"more information, see :ref:`api/server/replicate`. For more information on "
+"replication, see :ref:`replication`."
+msgstr ""

@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/couchapp/views/nosql.rst:18
+# 1c7aea4b4f2b4f92b928853545b23738
+msgid "View Cookbook for SQL Jockeys"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:20
+# c7f699601fc847cfaeb9a205803cf31e
+msgid "This is a collection of some common SQL queries and how to get the same result in CouchDB. The key to remember here is that CouchDB does not work like an SQL database at all and that best practices from the SQL world do not translate well or at all to CouchDB. This chapter’s “cookbook” assumes that you are familiar with the CouchDB basics such as creating and updating databases and documents."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:27
+# 25ec8b4202a746e8bdb9b497159fc986
+msgid "Using Views"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:29
+#: ../../src/couchapp/views/nosql.rst:161
+#: ../../src/couchapp/views/nosql.rst:224
+#: ../../src/couchapp/views/nosql.rst:273
+#: ../../src/couchapp/views/nosql.rst:377
+#: ../../src/couchapp/views/nosql.rst:513
+# c744b9f60ff841cda4243119fd7213a5
+# 43a3e704e0dc4ddc9a4926d81aab5bff
+# c1d682f9811e4f81873511bec6bb38ba
+# e9db32753c6b44f2b354b1bcc8d19520
+# e90d269b0daf4489ae17a84749f3796b
+# 89e7971da97a47d19f97bad86cc00886
+msgid "How you would do this in SQL::"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:33
+# 1676c891731945bd92938d899c5796b4
+msgid "or::"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:37
+#: ../../src/couchapp/views/nosql.rst:165
+#: ../../src/couchapp/views/nosql.rst:228
+#: ../../src/couchapp/views/nosql.rst:277
+#: ../../src/couchapp/views/nosql.rst:381
+#: ../../src/couchapp/views/nosql.rst:517
+# f54af7f8358c411c908f2fcbbeee1913
+# b10ebcbd2cd1430290db00ae05e65ac2
+# 25f62aa2c7f640a1bf566a27fecd9974
+# 31c74983a425434bb50b60aa85117d3e
+# c526f7f0d92f443ea9a9c99da3b6974c
+# 472f30105de64c708b940a8f7facefa1
+msgid "How you can do this in CouchDB?"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:39
+# afe3e461b70849f2a9932d16e969948b
+msgid "Using views is a two-step process. First you define a view; then you query it. This is analogous to defining a table structure (with indexes) using ``CREATE TABLE`` or ``ALTER TABLE`` and querying it using an SQL query."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:44
+# fb14f9de76464db6b0c32f5cc9034166
+msgid "Defining a View"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:46
+# d5a34d8128bd48b3be66c5fef9f5da04
+msgid "Defining a view is done by creating a special document in a CouchDB database. The only real specialness is the ``_id`` of the document, which starts with ``_design/`` — for example, _design/application. Other than that, it is just a regular CouchDB document. To make sure CouchDB understands that you are defining a view, you need to prepare the contents of that design document in a special format. Here is an example:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:66
+# cab3d707f36c4f3e91ddeaafe78f3a08
+msgid "We are defining a view `viewname`. The definition of the view consists of two functions: the map function and the reduce function. Specifying a reduce function is optional. We’ll look at the nature of the functions later. Note that `viewname` can be whatever you like: ``users``, ``by-name``, or ``by-date`` are just some examples."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:72
+# 44ea17ff8a0d4ce683dd5c839f3b551c
+msgid "A single design document can also include multiple view definitions, each identified by a unique name:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:93
+# 8ef6581bf9e04b0e8f8d3d7f7e32d6e6
+msgid "Querying a View"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:95
+# 6e56d19da56c4c0ba2fd466d16a5be09
+msgid "The name of the design document and the name of the view are significant for querying the view. To query the view `viewname`, you perform an HTTP ``GET`` request to the following URI::"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:101
+# 26a963cbd40e434b9c76cdf900186a6e
+msgid "database is the name of the database you created your design document in. Next up is the design document name, and then the view name prefixed with ``_view/``. To query `anotherview`, replace `viewname` in that URI with `anotherview`. If you want to query a view in a different design document, adjust the design document name."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:108
+# 95b4a4850acd494fa5aeb4f6b4b534c4
+msgid "MapReduce Functions"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:110
+# 77c16bf33a79459e98cdd0bd83a229bb
+msgid "MapReduce is a concept that solves problems by applying a two-step process, aptly named the map phase and the reduce phase. The map phase looks at all documents in CouchDB separately one after the other and creates a `map result`. The map result is an ordered list of key/value pairs. Both key and value can be specified by the user writing the map function. A map function may call the built-in ``emit(key, value)`` function 0 to N times per document, creating a row in the map result per invocation."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:118
+# 79105d4407404143b061690858afb99a
+msgid "CouchDB is smart enough to run a map function only once for every document, even on subsequent queries on a view. Only changes to documents or new documents need to be processed anew."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:123
+# cef23f683a3c47c19002a4ccb3e50b1d
+msgid "Map functions"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:125
+# 8a4a24527bb54285900b7f3d71e16e6b
+msgid "Map functions run in isolation for every document. They can’t modify the document, and they can’t talk to the outside world—they can’t have side effects. This is required so that CouchDB can guarantee correct results without having to recalculate a complete result when only one document gets changed."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:130
+# a481cae4f06344178ffcce9299c94033
+msgid "The map result looks like this:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:140
+# d151aaad516b4ac895bb18f2e4ba8f23
+msgid "It is a list of rows sorted by the value of key. The id is added automatically and refers back to the document that created this row. The value is the data you’re looking for. For example purposes, it’s the girl’s age."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:144
+# b4c4fa997bdf41b68b4f2919329fd03a
+msgid "The map function that produces this result is:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:154
+# 5a35f76a53ce4e40801efc5eb7c2afa0
+msgid "It includes the if statement as a sanity check to ensure that we’re operating on the right fields and calls the emit function with the name and age as the key and value."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:159
+# 92ace220e9d64497843d4e350069838a
+msgid "Look Up by Key"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:167
+# de971bf3b7bf4610b01bcebc0ddd0e6b
+msgid "Use case: get a result (which can be a record or set of records) associated with a key (\"searchterm\")."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:170
+# 5006605e21984049bdb93435d4040355
+msgid "To look something up quickly, regardless of the storage mechanism, an index is needed. An index is a data structure optimized for quick search and retrieval. CouchDB’s map result is stored in such an index, which happens to be a B+ tree."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:174
+# 91c1c91fcb674302ae888fa518ed178f
+msgid "To look up a value by \"searchterm\", we need to put all values into the key of a view. All we need is a simple map function:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:185
+# 1bdcbf5ea85c490d80fc0bceff1b7d53
+msgid "This creates a list of documents that have a value field sorted by the data in the value field. To find all the records that match \"searchterm\", we query the view and specify the search term as a query parameter::"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:191
+# 186d9f9b74e9411d96fb9a2e11438f76
+msgid "Consider the documents from the previous section, and say we’re indexing on the age field of the documents to find all the five-year-olds:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:202
+# 706873dbd2b646adab1700c9e170ad1f
+msgid "Query::"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:206
+# 078e5f625d23404cbaf7e477ca6a220a
+msgid "Result:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:214
+# 993a72d4d9a740e4881cf251811fd891
+msgid "Easy."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:216
+# f775c628cd234b2f933e3ab83112f708
+msgid "Note that you have to emit a value. The view result includes the associated document ID in every row. We can use it to look up more data from the document itself. We can also use the ``?include_docs=true`` parameter to have CouchDB fetch the documents individually for us."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:222
+# 79e4fe7cbe054c9f8a55a728ef188119
+msgid "Look Up by Prefix"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:230
+# 59cac30fb99446fa951b8088ee30c7a5
+msgid "Use case: find all documents that have a field value that starts with `searchterm`. For example, say you stored a MIME type (like `text/html` or `image/jpg`) for each document and now you want to find all documents that are images according to the MIME type."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:235
+# efa2b2cf1d5446e8b1b9329f1ed80e3e
+msgid "The solution is very similar to the previous example: all we need is a map function that is a little more clever than the first one. But first, an example document:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:248
+# 134e1a2ce177496c9c49e3688493eb7d
+msgid "The clue lies in extracting the prefix that we want to search for from our document and putting it into our view index. We use a regular expression to match our prefix:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:265
+# 7bab1177db4b494ca4e7272f4c8400c2
+msgid "We can now query this view with our desired MIME type prefix and not only find all images, but also text, video, and all other formats::"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:271
+# 915ac1ce1a9749a9b8e27a4a72a37d09
+msgid "Aggregate Functions"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:279
+# e770d9fbf2f245d499709a76d1241d5b
+msgid "Use case: calculate a derived value from your data."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:281
+# 334d0a62cb954d94b92e36251b1784f0
+msgid "We haven’t explained reduce functions yet. Reduce functions are similar to aggregate functions in SQL. They compute a value over multiple documents."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:284
+# e83f3853e5f64689808f32b18fa04947
+msgid "To explain the mechanics of reduce functions, we’ll create one that doesn’t make a whole lot of sense. But this example is easy to understand. We’ll explore more useful reductions later."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:288
+# 4dd41eeb08604f48a8d9193d2efbed7d
+msgid "Reduce functions operate on the output of the map function (also called the map result or intermediate result). The reduce function’s job, unsurprisingly, is to reduce the list that the map function produces."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:292
+# c1d0d26b33b048f5bfdbe3f217c75cdf
+msgid "Here’s what our summing reduce function looks like:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:304
+# 14b56b64bd354abe87da50fa8c4db75b
+msgid "Here’s an alternate, more idiomatic JavaScript version:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:318
+# 94c57eee3a5f41ef908e637bf260649d
+msgid "Don't miss effective builtin :ref:`reduce functions <reducefun>` like ``_sum`` and ``_count``"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:321
+# f9618483ca104cd1a5a7b132428dc6c9
+msgid "This reduce function takes two arguments: a list of keys and a list of values. For our summing purposes we can ignore the keys-list and consider only the value list. We’re looping over the list and add each item to a running total that we’re returning at the end of the function."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:326
+# b05682257e394c6cae826e44048aa412
+msgid "You’ll see one difference between the map and the reduce function. The map function uses ``emit()`` to create its result, whereas the reduce function returns a value."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:330
+# 850a93abee414bfea30db11122586afb
+msgid "For example, from a list of integer values that specify the age, calculate the sum of all years of life for the news headline, `“786 life years present at event.”` A little contrived, but very simple and thus good for demonstration purposes. Consider the documents and the map view we used earlier in this chapter."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:336
+# 5aac620c7bf3486a915f5d5468cc8623
+msgid "The reduce function to calculate the total age of all girls is:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:344
+# 354ac6c591184fc0a97d5e5ab120e50b
+msgid "Note that, instead of the two earlier versions, we use CouchDB’s predefined :js:func:`sum` function. It does the same thing as the other two, but it is such a common piece of code that CouchDB has it included."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:348
+# 93e7a719c36646339e3235cd51adea19
+msgid "The result for our reduce view now looks like this:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:356
+# cf105b5f1f53452ea82553c5c3af7e7d
+msgid "The total sum of all age fields in all our documents is 15. Just what we wanted. The key member of the result object is null, as we can’t know anymore which documents took part in the creation of the reduced result. We’ll cover more advanced reduce cases later on."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:361
+# abb74279a05a46d4949618f4bc7687f7
+msgid "As a rule of thumb, the reduce function should reduce to a single scalar value. That is, an integer; a string; or a small, fixed-size list or object that includes an aggregated value (or values) from the values argument. It should never just return values or similar. CouchDB will give you a warning if you try to use reduce “the wrong way”:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:375
+# 19f0d05af0794acdab03df459dd9b66a
+msgid "Get Unique Values"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:383
+# aaa53e40a1a647759f0d05d33aea2aa3
+msgid "Getting unique values is not as easy as adding a keyword. But a reduce view and a special query parameter give us the same result. Let’s say you want a list of tags that your users have tagged themselves with and no duplicates."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:387
+# 69a9efbd18f949c09075165856b17e62
+msgid "First, let’s look at the source documents. We punt on ``_id`` and ``_rev`` attributes here:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:411
+# 5eee269b50bc4945b4f46705b90b408a
+msgid "Next, we need a list of all tags. A map function will do the trick:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:423
+# e2dcc50c12c943ed997db651ab9c1628
+msgid "The result will look like this:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:439
+# 2e7bcb59027d4ca59cfdfb08da31a8fc
+msgid "As promised, these are all the tags, including duplicates. Since each document gets run through the map function in isolation, it cannot know if the same key has been emitted already. At this stage, we need to live with that. To achieve uniqueness, we need a reduce:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:450
+# c40fa556c630421f8034b5e06f3e83d0
+msgid "This reduce doesn’t do anything, but it allows us to specify a special query parameter when querying the view::"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:455
+# f10635f957604c7e8766121b5ba48e7d
+msgid "CouchDB replies:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:469
+# 2ac3578de6d342ad93d9dbd34ff74670
+msgid "In this case, we can ignore the value part because it is always true, but the result includes a list of all our tags and no duplicates!"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:472
+# 76764dbddb5f498d9530715c73ea1601
+msgid "With a small change we can put the reduce to good use, too. Let’s see how many of the non-unique tags are there for each tag. To calculate the tag frequency, we just use the summing up we already learned about. In the map function, we emit a 1 instead of null:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:487
+# 051ac0885e1c4c0c9f79f29db09aae3c
+msgid "In the reduce function, we return the sum of all values:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:495
+# 1278fc35a0ca4a069ecab9ec3eb5a5d8
+msgid "Now, if we query the view with the ``?group=true`` parameter, we get back the count for each tag:"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:511
+# 98bfc1301cfc4356aee6f82d9bfb90cd
+msgid "Enforcing Uniqueness"
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:519
+# b92ef1d37d244055b1f308ee4ebe204e
+msgid "Use case: your applications require that a certain value exists only once in a database."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:522
+# aacd2ebb1a2b4a8c8ce9bebb6f5c364d
+msgid "This is an easy one: within a CouchDB database, each document must have a unique ``_id`` field. If you require unique values in a database, just assign them to a document’s ``_id`` field and CouchDB will enforce uniqueness for you."
+msgstr ""
+
+#: ../../src/couchapp/views/nosql.rst:526
+# cd555106240242b7b370e8ffb9add0f5
+msgid "There’s one caveat, though: in the distributed case, when you are running more than one CouchDB node that accepts write requests, uniqueness can be guaranteed only per node or outside of CouchDB. CouchDB will allow two identical IDs to be written to two different nodes. On replication, CouchDB will detect a conflict and flag the document accordingly."
+msgstr ""
+

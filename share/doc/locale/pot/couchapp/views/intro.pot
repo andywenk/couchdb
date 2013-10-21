@@ -1,0 +1,581 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/couchapp/views/intro.rst:18
+# d8805de107f945fd8826efc909ad847b
+msgid "Introduction Into The Views"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:20
+# e9f99aff62244cd4a49a16195f1ff3e2
+msgid "Views are useful for many purposes:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:22
+# 9a46f2f88a404e6d959fde1178d9effb
+msgid "Filtering the documents in your database to find those relevant to a particular process."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:24
+# 9be259c3fb904bb3b26acbcf4ddf2b8f
+msgid "Extracting data from your documents and presenting it in a specific order."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:25
+# b97116dd68d34171aadcdee25248f716
+msgid "Building efficient indexes to find documents by any value or structure that resides in them."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:27
+# cdaa0eeebc984af5a29e2e73a13ae993
+msgid "Use these indexes to represent relationships among documents."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:28
+# 3341d3d8b4284fccb7e4ad080f26aa94
+msgid "Finally, with views you can make all sorts of calculations on the data in your documents. For example, if documents represent your company’s financial transactions, a view can answer the question of what the spending was in the last week, month, or year."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:34
+# d9ad8769a05b4701b592c2dfa23034a4
+msgid "What Is a View?"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:36
+# 65e26132e1a9489fab60defb4ba0ca2f
+msgid "Let’s go through the different use cases. First is extracting data that you might need for a special purpose in a specific order. For a front page, we want a list of blog post titles sorted by date. We’ll work with a set of example documents as we walk through how views work:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:74
+# 7dccd8dd4e82425c8e355c992d25046d
+msgid "Three will do for the example. Note that the documents are sorted by \"_id\", which is how they are stored in the database. Now we define a view. Bear with us without an explanation while we show you some code:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:86
+# 901fb6768b69442ca7b1760c020af889
+msgid "This is a `map function`, and it is written in JavaScript. If you are not familiar with JavaScript but have used C or any other C-like language such as Java, PHP, or C#, this should look familiar. It is a simple function definition."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:90
+# 8be3c249418c4fd9ab134d9a1d6dc5bf
+msgid "You provide CouchDB with view functions as strings stored inside the ``views`` field of a design document. You don’t run it yourself. Instead, when you `query your view`, CouchDB takes the source code and runs it for you on every document in the database your view was defined in. You `query your view` to retrieve the `view result`."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:96
+# 4370bddc33114805929e58b1ac7b747a
+msgid "All map functions have a single parameter doc. This is a single document in the database. Our map function checks whether our document has a ``date`` and a ``title`` attribute — luckily, all of our documents have them — and then calls the built-in :js:func:`emit` function with these two attributes as arguments."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:101
+# 7560d887163846ec9a510f9025ebfa1a
+msgid "The :js:func:`emit` function always takes two arguments: the first is ``key``, and the second is ``value``. The ``emit(key, value)`` function creates an entry in our `view result`. One more thing: the ``emit()`` function can be called multiple times in the map function to create multiple entries in the view results from a single document, but we are not doing that yet."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:107
+# 5988cb14ac0f402885eb21362897b577
+msgid "CouchDB takes whatever you pass into the emit() function and puts it into a list (see Table 1, “View results” below). Each row in that list includes the `key` and `value`. More importantly, the list is sorted by key (by ``doc.date`` in our case).  The most important feature of a view result is that it is sorted by `key`. We will come back to that over and over again to do neat things. Stay tuned."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:114
+# d8ae3908d3c842039844f8a48cb3b1d4
+msgid "Table 1. View results:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:117
+#: ../../src/couchapp/views/intro.rst:262
+#: ../../src/couchapp/views/intro.rst:335
+#: ../../src/couchapp/views/intro.rst:350
+#: ../../src/couchapp/views/intro.rst:362
+# a85bae9c5fcc48e69c56f7a0eca7413d
+# a9b32dc8d1d14e159e0c95ef1c6c7ded
+# 6bb1efacef99412fb2c83aa6867ff7d8
+# db54523ea2b94ba29bfa33aa059bf204
+# 1bd703ec36a24e1b92b01053c46aecf6
+msgid "Key"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:117
+#: ../../src/couchapp/views/intro.rst:262
+#: ../../src/couchapp/views/intro.rst:335
+#: ../../src/couchapp/views/intro.rst:350
+#: ../../src/couchapp/views/intro.rst:362
+# bbd0c16a82d340499cd8ebb93b3a6cdf
+# b7e31ad9a45540b1a42e812b2602d152
+# c9acb5994b6743ccb33354cfa79ac1e6
+# e900b08ed9164ffaa367e80322c3e4ae
+# 9406ef99139c496da67a8f729adbb012
+msgid "Value"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:119
+# e2489fdeebcf4f80a7d6720acdd1eafb
+msgid "\"2009/01/15 15:52:20\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:119
+#: ../../src/couchapp/views/intro.rst:264
+# f87ed7a8bf734d9fa3a7d94365ea5bd1
+# a5a753973fde4f7687b1bd8f75e10ab3
+msgid "\"Hello World\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:121
+# f1fbcd30034040058a84e1311bade8c1
+msgid "\"2009/01/30 18:04:11\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:121
+#: ../../src/couchapp/views/intro.rst:266
+# b791b5c5b33b4c07b0089d080e46795d
+# 5d0ac3eff9e94f7d8a3767e51e24b7f2
+msgid "\"Biking\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:123
+# 822027566f3f410ca8b78399f4c27b27
+msgid "\"2009/02/17 21:13:39\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:123
+#: ../../src/couchapp/views/intro.rst:268
+# 94f86c685ce74bafa526cebf94977a88
+# e0296e28deb54442a8589fd2ea3f8232
+msgid "\"Bought a Cat\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:127
+# 415c5f2eb0354feeb65e971fe7d2edb3
+msgid "When you query your view, CouchDB takes the source code and runs it for you on every document in the database. If you have a lot of documents, that takes quite a bit of time and you might wonder if it is not horribly inefficient to do this. Yes, it would be, but CouchDB is designed to avoid any extra costs: it only runs through all documents once, when you first query your view. If a document is changed, the map function is only run once, to recompute the keys and values for that single document."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:135
+# bc2dc5a41feb4714840196526d71fe99
+msgid "The view result is stored in a B-tree, just like the structure that is responsible for holding your documents. View B-trees are stored in their own file, so that for high-performance CouchDB usage, you can keep views on their own disk. The B-tree provides very fast lookups of rows by key, as well as efficient streaming of rows in a key range. In our example, a single view can answer all questions that involve time: “Give me all the blog posts from last week” or “last month” or “this year.” Pretty neat."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:143
+# 09949051256f4f1bba8f5cfa3a563fe2
+msgid "When we query our view, we get back a list of all documents sorted by date. Each row also includes the post title so we can construct links to posts. Table 1 is just a graphical representation of the view result. The actual result is JSON-encoded and contains a little more metadata:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:175
+# 7b7eb788c577432db4965718b41f2a57
+msgid "Now, the actual result is not as nicely formatted and doesn’t include any superfluous whitespace or newlines, but this is better for you (and us!) to read and understand. Where does that \"id\" member in the result rows come from? That wasn’t there before. That’s because we omitted it earlier to avoid confusion. CouchDB automatically includes the document ID of the document that created the entry in the view result. We’ll use this as well when constructing links to the blog post pages."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:184
+# 0cf40f70148a4ac1bb92c815a43c1a8d
+msgid "Efficient Lookups"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:186
+# ef2b3860471c4d4d98fa8b7ea0b90010
+msgid "Let’s move on to the second use case for views: “building efficient indexes to find documents by any value or structure that resides in them.” We already explained the efficient indexing, but we skipped a few details. This is a good time to finish this discussion as we are looking at map functions that are a little more complex."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:192
+# 5ee8eb020ef2404a9622182965aad795
+msgid "First, back to the B-trees! We explained that the B-tree that backs the key-sorted view result is built only once, when you first query a view, and all subsequent queries will just read the B-tree instead of executing the map function for all documents again. What happens, though, when you change a document, add a new one, or delete one? Easy: CouchDB is smart enough to find the rows in the view result that were created by a specific document. It marks them invalid so that they no longer show up in view results. If the document was deleted, we’re good — the resulting B-tree reflects the state of the database. If a document got updated, the new document is run through the map function and the resulting new lines are inserted into the B-tree at the correct spots. New documents are handled in the same way. The B-tree is a very efficient data structure for our needs, and the crash-only design of CouchDB databases is carried over to the view indexes as well."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:206
+# 9a2bf025c4bd45fcb015a2ee29336314
+msgid "To add one more point to the efficiency discussion: usually multiple documents are updated between view queries. The mechanism explained in the previous paragraph gets applied to all changes in the database since the last time the view was queried in a batch operation, which makes things even faster and is generally a better use of your resources."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:213
+# fe4c728cbfad4acb805946891d1bc3e4
+msgid "Find One"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:215
+# 2832107b704b407ba266b90f58e3f080
+msgid "On to more complex map functions. We said “find documents by any value or structure that resides in them.” We already explained how to extract a value by which to sort a list of views (our date field). The same mechanism is used for fast lookups. The URI to query to get a view’s result is ``/database/_design/designdocname/_view/viewname``. This gives you a list of all rows in the view. We have only three documents, so things are small, but with thousands of documents, this can get long. You can add view parameters to the URI to constrain the result set. Say we know the date of a blog post. To find a single document, we would use ``/blog/_design/docs/_view/by_date?key=\"2009/01/30 18:04:11\"`` to get the “Biking” blog post. Remember that you can place whatever you like in the key parameter to the emit() function. Whatever you put in there, we can now use to look up exactly — and fast."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:229
+# d78952a07616452fbb67e71497442bd6
+msgid "Note that in the case where multiple rows have the same key (perhaps we design a view where the key is the name of the post’s author), key queries can return more than one row."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:234
+# 31fbb45321f14cf987c48dd20690bdf5
+msgid "Find Many"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:236
+# cb01de5855324d10a94c44b23024108d
+msgid "We talked about “getting all posts for last month.” If it’s February now, this is as easy as ``/blog/_design/docs/_view/by_date?startkey=\"2010/01/01 00:00:00\"&endkey=\"2010/02/00 00:00:00\"``. The ``startkey`` and ``endkey`` parameters specify an inclusive range on which we can search."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:241
+# df43fb47beb2481e8f1fe31a9eb32b15
+msgid "To make things a little nicer and to prepare for a future example, we are going to change the format of our date field. Instead of a string, we are going to use an array, where individual members are part of a timestamp in decreasing significance. This sounds fancy, but it is rather easy. Instead of::"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:250
+# 26de32204893413daf61bfd30c248fef
+msgid "we use::"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:256
+# 709dbd3817984b1688edd13fbbb8a026
+msgid "Our map function does not have to change for this, but our view result looks a little different:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:259
+# 97eb450656b74ee7a3126f8b6f280c00
+msgid "Table 2. New view results:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:264
+# f179cdbc608243d79f597638e40b74ee
+msgid "[2009, 1, 15, 15, 52, 20]"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:266
+# 61798671908c4e1d876f1909b2084d4e
+msgid "[2009, 2, 17, 21, 13, 39]"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:268
+# 567291b4da1146d583c6c61ac814b1e5
+msgid "[2009, 1, 30, 18, 4, 11]"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:272
+# 92c87607be404dd1b05c701b43f5f93a
+msgid "And our queries change to ``/blog/_design/docs/_view/by_date?startkey=[2010, 1, 1, 0, 0, 0]&endkey=[2010, 2, 1, 0, 0, 0]``. For all you care, this is just a change in syntax, not meaning. But it shows you the power of views. Not only can you construct an index with scalar values like strings and integers, you can also use JSON structures as keys for your views. Say we tag our documents with a list of tags and want to see all tags, but we don’t care for documents that have not been tagged."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:306
+# 78365cde68e04e478307d3e27986b229
+msgid "This shows a few new things. You can have conditions on structure (``if(doc.tags.length > 0)``) instead of just values. This is also an example of how a map function calls :js:func:`emit` multiple times per document. And finally, you can pass null instead of a value to the value parameter. The same is true for the key parameter. We’ll see in a bit how that is useful."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:313
+# 1e63f565b87a4f7ba919a29041d824a2
+msgid "Reversed Results"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:315
+# 4282eb21d61f4b03b8711bb717bec768
+msgid "To retrieve view results in reverse order, use the ``descending=true`` query parameter. If you are using a ``startkey`` parameter, you will find that CouchDB returns different rows or no rows at all. What’s up with that?"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:319
+# eb7d6ae5f6834c57903548cae8506f15
+msgid "It’s pretty easy to understand when you see how view query options work under the hood. A view is stored in a tree structure for fast lookups. Whenever you query a view, this is how CouchDB operates:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:323
+# 798ad63b7584459993afa344f947ecc4
+msgid "Starts reading at the top, or at the position that ``startkey`` specifies, if present."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:325
+# 88114cff1bf34018aede44663236e585
+msgid "Returns one row at a time until the end or until it hits ``endkey``, if present."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:328
+# 6bc8551e95364347bf78967408e6d7e7
+msgid "If you specify ``descending=true``, the reading direction is reversed, not the sort  order of the rows in the view. In addition, the same two-step procedure is followed."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:332
+# 29476f725ff94f37922e3e173d3cc715
+msgid "Say you have a view result that looks like this:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:337
+#: ../../src/couchapp/views/intro.rst:354
+# 84be7655482f4c3194e5f4c784e6cff8
+# 0735b01b776848cba729b37b69be7c6d
+msgid "0"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:337
+#: ../../src/couchapp/views/intro.rst:354
+# 94b57c9a7a2a4858a08f51392247023f
+# f57b8fa273574ec8935b4f0b87d06d14
+msgid "\"foo\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:339
+#: ../../src/couchapp/views/intro.rst:352
+#: ../../src/couchapp/views/intro.rst:366
+# 669a0c58951a4d7a87f8dc4b6d763826
+# 93e062e6f5f74409825b1492b6ebbc08
+# 66239b5d370d4b44b7b60bc402809881
+msgid "1"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:339
+#: ../../src/couchapp/views/intro.rst:352
+#: ../../src/couchapp/views/intro.rst:366
+# f966374dea5849d0872c9ae6194ff82f
+# 8c3a783b7a034d26a28e7dfe4d66503e
+# 248732d80f52488dbb82bf70bccbb4db
+msgid "\"bar\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:341
+#: ../../src/couchapp/views/intro.rst:364
+# 66489b8fc4cc4fff84460f6115f739cc
+# be9a5c3fc3524f62b16f8b42204128d2
+msgid "2"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:341
+#: ../../src/couchapp/views/intro.rst:364
+# 88f27f0895bb49208c9f2c9a2a7c600d
+# 09e80fa79dfc45f986d28a81abfc4ec9
+msgid "\"baz\""
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:344
+# 4e96222c4f7c4b16bf89c7bc74ab5d97
+msgid "Here are potential query options: ``?startkey=1&descending=true``. What will CouchDB do? See #1 above: it jumps to ``startkey``, which is the row with the key ``1``, and starts reading backward until it hits the end of the view. So the particular result would be:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:357
+# af22b69e7f5a448a9bae1eb6af6cbed7
+msgid "This is very likely not what you want. To get the rows with the indexes ``1`` and ``2`` in reverse order, you need to switch the ``startkey`` to ``endkey``: ``endkey=1&descending=true``:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:369
+# 375cf89e35684e3880be6c7df9e88a5b
+msgid "Now that looks a lot better. CouchDB started reading at the bottom of the view and went backward until it hit ``endkey``."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:373
+# 51909ddde56e4bb0bc84cbe1b887684e
+msgid "The View to Get Comments for Posts"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:375
+# c4c6cf8edf5842dd892bb9236a32368f
+msgid "We use an array key here to support the ``group_level`` reduce query parameter. CouchDB’s views are stored in the B-tree file structure. Because of the way B-trees are structured, we can cache the intermediate reduce results in the non-leaf nodes of the tree, so reduce queries can be computed along arbitrary key ranges in logarithmic time. See Figure 1, “Comments map function”."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:381
+# e3c99ec0c19648049deb3c7b2adde9f9
+msgid "In the blog app, we use ``group_leve``l reduce queries to compute the count of comments both on a per-post and total basis, achieved by querying the same view index with different methods. With some array keys, and assuming each key has the value ``1``:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:394
+# 0a7e4ca691c2404ba748bf181a929560
+msgid "the reduce view:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:402
+# 4001558ea6684b268b61b6889bb2f83a
+msgid "returns the total number of rows between the start and end key. So with ``startkey=[\"a\",\"b\"]&endkey=[\"b\"]`` (which includes the first three of the above keys) the result would equal ``3``. The effect is to count rows. If you’d like to count rows without depending on the row value, you can switch on the ``rereduce`` parameter:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:420
+# d8e34e2cc40b469abb5db6e7850d47cf
+msgid "JavaScript function about could be effectively replaced by builtin ``_count`` one."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:428
+# ccd1b3383b0349e480116646b4381b76
+msgid "Figure 1. Comments map function"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:431
+# 988091638c534d299f8d332b15fb4e05
+msgid "This is the reduce view used by the example app to count comments, while utilizing the map to output the comments, which are more useful than just ``1`` over and over. It pays to spend some time playing around with map and reduce functions. Futon is OK for this, but it doesn’t give full access to all the query parameters. Writing your own test code for views in your language of choice is a great way to explore the nuances and capabilities of CouchDB’s incremental MapReduce system."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:439
+# 93d012d010f944c18bb5e4ab54b89e51
+msgid "Anyway, with a ``group_level`` query, you’re basically running a series of reduce range queries: one for each group that shows up at the level you query. Let’s reprint the key list from earlier, grouped at level ``1``:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:448
+# a116401d655143b89f844b5242139603
+msgid "And at ``group_level=2``:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:456
+# 1bc9b28d7cc14ff5bad00a2a99063c25
+msgid "Using the parameter ``group=true`` makes it behave as though it were ``group_level=exact``, so in the case of our current example, it would give the number ``1`` for each key, as there are no exactly duplicated keys."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:461
+# ef792abe5cd6405e825a127d660d19c7
+msgid "Reduce/Rereduce"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:463
+# c60ab616665249b0810eb5c4188eef52
+msgid "We briefly talked about the ``rereduce`` parameter to your reduce function. We’ll explain what’s up with it in this section. By now, you should have learned that your view result is stored in B-tree index structure for efficiency. The existence and use of the ``rereduce`` parameter is tightly coupled to how the B-tree index works."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:469
+# 68930d08db2347a999ba403e7f71dd55
+msgid "Consider the map result are:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:486
+# b11d24975a814f7ba1bad0067e3fadce
+msgid "Example 1. Example view result (mmm, food)"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:488
+# 5bbf340870d14c8489e61d242f698ba5
+msgid "When we want to find out how many dishes there are per origin, we can reuse the simple reduce function shown earlier:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:497
+# 5458af7f766149dc99319d4eb7887401
+msgid "Figure 2, “The B-tree index” shows a simplified version of what the B-tree index looks like. We abbreviated the key strings."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:504
+# 09f29e12cb0e452db1d64ce64a3db17a
+msgid "Figure 2. The B-tree index"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:506
+# 6009bf2cfa0a4e2c9abab1906a5e4c84
+msgid "The view result is what computer science grads call a “pre-order” walk through the tree. We look at each element in each node starting from the left. Whenever we see that there is a subnode to descend into, we descend and start reading the elements in that subnode. When we have walked through the entire tree, we’re done."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:512
+# 5eb8a1b387d842caa60ee568aa0b39d0
+msgid "You can see that CouchDB stores both keys and values inside each leaf node. In our case, it is simply always ``1``, but you might have a value where you count other results and then all rows have a different value. What’s important is that CouchDB runs all elements that are within a node into the reduce function (setting the ``rereduce`` parameter to false) and stores the result inside the parent node along with the edge to the subnode. In our case, each edge has a 3 representing the reduce value for the node it points to."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:522
+# 4b3fa3f56b8c4463a25de83b52479f47
+msgid "In reality, nodes have more than 1,600 elements in them. CouchDB computes the result for all the elements in multiple iterations over the elements in a single node, not all at once (which would be disastrous for memory consumption)."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:527
+# e0804b6744e1415a9b92c0e08d1d16d1
+msgid "Now let’s see what happens when we run a query. We want to know how many \"chinese\" entries we have. The query option is simple: ``?key=\"chinese\"``. See Figure 3, “The B-tree index reduce result”."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:535
+# 204d8bffa8c8430293fff4b3677abe63
+msgid "Figure 3. The B-tree index reduce result"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:537
+# cc4634543efa4e38b01959b3c9d5357c
+msgid "CouchDB detects that all values in the subnode include the \"chinese\" key. It concludes that it can take just the 3 values associated with that node to compute the final result. It then finds the node left to it and sees that it’s a node with keys outside the requested range (``key=`` requests a range where the beginning and the end are the same value). It concludes that it has to use the \"chinese\" element’s value and the other node’s value and run them through the reduce function with the ``rereduce`` parameter set to true."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:545
+# 11461f5af19440118dc482bae921b83a
+msgid "The reduce function effectively calculates 3 + 1 on query time and returns the desired result. The next example shows some pseudocode that shows the last invocation of the reduce function with actual values:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:556
+# 774eac31e715413c8d697eac7efa1d69
+msgid "Now, we said your reduce function must actually reduce your values. If you see the B-tree, it should become obvious what happens when you don’t reduce your values. Consider the following map result and reduce function. This time we want to get a list of all the unique labels in our view:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:576
+# c64fe16bc6944a4998f9359334b498df
+msgid "We don’t care for the key here and only list all the labels we have. Our reduce function removes duplicates:"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:593
+# a79b51e474c04d1392bb06180685e197
+msgid "This translates to Figure 4, “An overflowing reduce index”."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:595
+# 703eb0da647d4c07ab7fb4703ab5dcf6
+msgid "We hope you get the picture. The way the B-tree storage works means that if you don’t actually reduce your data in the reduce function, you end up having CouchDB copy huge amounts of data around that grow linearly, if not faster with the number of rows in your view."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:600
+# d0fb8f91ce6040c9851dffe25e4097cc
+msgid "CouchDB will be able to compute the final result, but only for views with a few rows. Anything larger will experience a ridiculously slow view build time. To help with that, CouchDB since version 0.10.0 will throw an error if your reduce function does not reduce its input values."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:609
+# b3dedb2b1c6e4a389d811d9ed0782b6d
+msgid "Figure 4. An overflowing reduce index"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:613
+# da4688162ce744ce8ffdb8dd62675f41
+msgid "Lessons Learned"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:615
+# 02af02bc87ea4830acda42b362918063
+msgid "If you don’t use the key field in the map function, you are probably doing it wrong."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:617
+# 71ea68eba0654d328bb03c993a09a547
+msgid "If you are trying to make a list of values unique in the reduce functions, you are probably doing it wrong."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:619
+# e9d7c41bc9244751bdc3565987dbca34
+msgid "If you don’t reduce your values to a single scalar value or a small fixed-sized object or array with a fixed number of scalar values of small sizes, you are probably doing it wrong."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:624
+# faaa9b3f88fd4ed2bb652f88d02f4794
+msgid "Wrapping Up"
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:626
+# f7c0a47052be49daabb51317197a2ea5
+msgid "Map functions are side effect–free functions that take a document as argument and `emit` key/value pairs. CouchDB stores the emitted rows by constructing a sorted B-tree index, so row lookups by key, as well as streaming operations across a range of rows, can be accomplished in a small memory and processing footprint, while writes avoid seeks. Generating a view takes ``O(N)``, where ``N`` is the total number of rows in the view. However, querying a view is very quick, as the B-tree remains shallow even when it contains many, many keys."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:634
+# 3b5b30da823a416993cac0874313d2c9
+msgid "Reduce functions operate on the sorted rows emitted by map view functions. CouchDB’s reduce functionality takes advantage of one of the fundamental properties of B-tree indexes: for every leaf node (a sorted row), there is a chain of internal nodes reaching back to the root. Each leaf node in the B-tree carries a few rows (on the order of tens, depending on row size), and each internal node may link to a few leaf nodes or other internal nodes."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:641
+# 3ce9d3224d6044f6937e1a864ad3a4a9
+msgid "The reduce function is run on every node in the tree in order to calculate the final reduce value. The end result is a reduce function that can be incrementally updated upon changes to the map function, while recalculating the reduction values for a minimum number of nodes. The initial reduction is calculated once per each node (inner and leaf) in the tree."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:647
+# ad60bf4bf65b400787b3fe27e023488f
+msgid "When run on leaf nodes (which contain actual map rows), the reduce function’s third parameter, ``rereduce``, is false. The arguments in this case are the keys and values as output by the map function. The function has a single returned reduction value, which is stored on the inner node that a working set of leaf nodes have in common, and is used as a cache in future reduce calculations."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:653
+# 95b95870e535499e8626a51dd54d3e83
+msgid "When the reduce function is run on inner nodes, the ``rereduce`` flag is ``true``. This allows the function to account for the fact that it will be receiving its own prior output. When ``rereduce`` is true, the values passed to the function are intermediate reduction values as cached from previous calculations. When the tree is more than two levels deep, the `rereduce` phase is repeated, consuming chunks of the previous level’s output until the final reduce value is calculated at the root node."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:661
+# 1c7c9318606d439a9fe53fd4a1423b51
+msgid "A common mistake new CouchDB users make is attempting to construct complex aggregate values with a reduce function. Full reductions should result in a scalar value, like 5, and not, for instance, a JSON hash with a set of unique keys and the count of each. The problem with this approach is that you’ll end up with a very large final value. The number of unique keys can be nearly as large as the number of total keys, even for a large set. It is fine to combine a few scalar calculations into one reduce function; for instance, to find the total, average, and standard deviation of a set of numbers in a single function."
+msgstr ""
+
+#: ../../src/couchapp/views/intro.rst:670
+# a070e0f41bfb497aa947dd392530b92e
+msgid "If you’re interested in pushing the edge of CouchDB’s incremental reduce functionality, have a look at `Google’s paper on Sawzall`_, which gives examples of some of the more exotic reductions that can be accomplished in a system with similar constraints."
+msgstr ""
+

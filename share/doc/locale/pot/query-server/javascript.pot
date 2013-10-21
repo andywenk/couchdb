@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/query-server/javascript.rst:18
+# e8a5f2a8d1634dccb88978d4e858607e
+msgid "JavaScript"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:20
+# 7536e7596a3a4370b0d7114cfb03f5f2
+msgid "While every design function has access to all JavaScript objects, the table below describes appropriate usage cases. For example, you may use :func:`emit` in :ref:`listfun`, but :func:`getRow` is not permitted during :ref:`mapfun`."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:25
+# ab69cc1c878f4fac86d19b6b3e8ca107
+msgid "JS Function"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:25
+# 9445c4a0c9a241a998846f90262d837d
+msgid "Reasonable to use in design doc functions"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:27
+# 4dfaa2a0fa3d40238051a6efcc26d05d
+msgid ":func:`emit`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:27
+# 91f4301798914a4984e7b321671e2211
+msgid ":ref:`mapfun`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:29
+# 32de6edc9dc241f38fa318695c69b410
+msgid ":func:`getRow`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:29
+#: ../../src/query-server/javascript.rst:43
+#: ../../src/query-server/javascript.rst:45
+# 97ddefa044724d6c96c8303313f896d8
+# 5b9e40555ba14bf29692342c34c78cf1
+# 1e7d3d28755849e5b4583e4baec5654a
+msgid ":ref:`listfun`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:31
+# 201d83b80467497a9d96ff9be4beccaf
+msgid ":data:`JSON`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:31
+#: ../../src/query-server/javascript.rst:33
+#: ../../src/query-server/javascript.rst:35
+#: ../../src/query-server/javascript.rst:47
+#: ../../src/query-server/javascript.rst:49
+# 012bf60cf6ad426b889f82f0f7b2bd6f
+# cb6f4ff7d5514cc39ea0d3b3c8bb4c3b
+# 59576cded9264ca19d05094f5f892b69
+# e261d5120b96485e86d26e6b0b7c04f3
+# 40bf0d4c9f0a4db49c3cb20129477b35
+msgid "any"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:33
+# 9d454fce30a0410cb144871e0e619750
+msgid ":func:`isArray`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:35
+# c0830d5234a846e594109cc5cc9556cf
+msgid ":func:`log`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:37
+# 16ba4ba778c5437b807049508ebd6227
+msgid ":func:`provides`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:37
+#: ../../src/query-server/javascript.rst:39
+# 2c1bcaae2a3840db9e89a921053417e4
+# 07e1fdd6a3cf41a79fae6d97ce1f5332
+msgid ":ref:`showfun`, :ref:`listfun`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:39
+# 6fa53ffd091945aea55bea37768dc229
+msgid ":func:`registerType`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:41
+# a7cf10aa034747b3b58870661913a474
+msgid ":func:`require`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:41
+# eca9cd99f47b424bbaca7bfefe4d6f97
+msgid "any, except :ref:`reducefun`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:43
+# e41795b069b44c5cba105b3b6330a86a
+msgid ":func:`send`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:45
+# 8a6e19c4f8c841de8a3da959355fa56b
+msgid ":func:`start`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:47
+# 8e5584b0eed04a14be69fb3a9b379424
+msgid ":func:`sum`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:49
+# f142e4cd8f0a40c29210480e7471f275
+msgid ":func:`toJSON`"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:53
+# 16f9988a67454fd6a847d89b93fe41f9
+msgid "Design functions context"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:55
+# 490ca8aedfa24d7da47db4c5e1098202
+msgid "Each design function executes in a special context of predefined objects, modules and functions:"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:61
+# ac4a001a3e1d4deb9395f6aad50f3beb
+msgid "Emits a `key`-`value` pair for further processing by CouchDB after the map function is done."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:76
+# b0c73dd215964892b1fa908c3ed07ebd
+msgid "Extracts the next row from a related view result."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:99
+# 1a27b357b04f4f468c661903ca27cb95
+msgid "`JSON2 <https://git-wip-us.apache.org/repos/asf?p=couchdb.git;a=blob;f=share/server/json2.js>`_ object."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:105
+# af472ab8048c493e81b082399934d98a
+msgid "A helper function to check if the provided value is an `Array`."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:114
+# 5d1356e5cdea4143b814cec701b0486a
+msgid "Log a message to the CouchDB log (at the `INFO` level)."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:125
+# 75c0870af8da4725a7afe9b04b5aff6b
+msgid "After the map function has run, the following line can be found in CouchDB logs (e.g. at `/var/log/couchdb/couch.log`):"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:135
+# 5bcf4dfca4e74a43b3cf4bd0f83fd029
+msgid "Registers callable handler for specified MIME key."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:143
+# 41a50ba50de540f3869d0b235598e996
+msgid "Registers list of MIME types by associated `key`."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:148
+# eae22bf95b3c497592672e2f307cd93b
+msgid "Predefined mappings (`key`-`array`):"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:150
+# dada0db423c646b3bd85c93c55dcd23d
+msgid "**all**: ``*/*``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:151
+# 9cfb1913fb454495b6753cce8db7d4ad
+msgid "**text**: ``text/plain; charset=utf-8``, ``txt``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:152
+# 4060633c69984ab19939c33a1a879d95
+msgid "**html**: ``text/html; charset=utf-8``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:153
+# 41777297b4dc4573a8c8fa609370f4e3
+msgid "**xhtml**: ``application/xhtml+xml``, ``xhtml``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:154
+# c703a8cde3464ab2a75ff051fb9062f8
+msgid "**xml**: ``application/xml``, ``text/xml``, ``application/x-xml``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:155
+# f2a753ea75bb49859fda13f7b2781b62
+msgid "**js**: ``text/javascript``, ``application/javascript``, ``application/x-javascript``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:157
+# 7d72089913f9452d86f54015ff0e6c69
+msgid "**css**: ``text/css``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:158
+# 398f67fbb0cb429aa296414d61052ed7
+msgid "**ics**: ``text/calendar``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:159
+# 8926886f39734ced9203336076a358f4
+msgid "**csv**: ``text/csv``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:160
+# 22da49fba13749269201faaa657f8598
+msgid "**rss**: ``application/rss+xml``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:161
+# 4564784f88f344d7a044265d5ae86e9f
+msgid "**atom**: ``application/atom+xml``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:162
+# 356d02ba90334924889878b8691fc829
+msgid "**yaml**: ``application/x-yaml``, ``text/yaml``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:163
+# c77d9b7977dc4af8afe179f792a3993a
+msgid "**multipart_form**: ``multipart/form-data``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:164
+# 868ed0ce803146229ef30661ef691f16
+msgid "**url_encoded_form**: ``application/x-www-form-urlencoded``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:165
+# 5f47812fcbda45c78436d6ec7e95a569
+msgid "**json**: ``application/json``, ``text/x-json``"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:170
+# 0cc7dcf8c2b747a8a3a104f0920cc31f
+msgid "Loads CommonJS module by a specified `path`. The path should not start with a slash."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:179
+# c6d34b15d3934a25b53b7f92de4b2249
+msgid "Sends a single string `chunk` in response."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:195
+# dddae0fe7bd6417b83007f3a43121cb2
+msgid "Initiates chunked response. As an option, a custom :ref:`response <response_object>` object may be sent at this point. For `list`-functions only!"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:201
+# 22a6d29110024f889910c30736c811ff
+msgid "list functions may set the `HTTP response code` and `headers` by calling this function. This function must be called before :func:`send`, :func:`getRow` or a `return` statement; otherwise, the query server will implicitly call this function with the empty object (``{}``)."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:221
+# c6e83bb999d944a9a3498fc7b90d4744
+msgid "Sum `arr`'s items."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:229
+# 655939c24c0249c3813d87ce0fb4b0e3
+msgid "Encodes `obj` to JSON string. This is an alias for the ``JSON.stringify`` method."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:238
+# a7f02c722dd6408999852acae72bc948
+msgid "CommonJS Modules"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:240
+# 50bfce7c95c9445ca4c7f3fa593e2eaa
+msgid "Support for `CommonJS Modules <http://wiki.commonjs.org/wiki/Modules/1.1.1>`_ (introduced in CouchDB 0.11.0) allows you to create modular design functions without the need for duplication of functionality."
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:244
+# 02321fd5b4014e4d969a189dc76a1462
+msgid "Here's a CommonJS module that checks user permissions:"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:257
+# b6b6741efcc34b28bcb16c2df3921bf0
+msgid "Each module has access to additional global variables:"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:259
+# 94b97a4505b74b51a49f49fb5ed1bf88
+msgid "**module** (`object`): Contains information about the stored module"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:261
+# 2f01a95a5be849f39f381e801fd6537b
+msgid "**id** (`string`): The module id; a JSON path in ddoc context"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:262
+# bc11aba857364cfa8208bafc847ae38e
+msgid "**current** (`code`): Compiled module code object"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:263
+# 416c1e8fe6e54f6bbf37e98a71a7f37c
+msgid "**parent** (`object`): Parent frame"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:264
+# ef4c1f11af2b4e5dbd6bee6774811b18
+msgid "**exports** (`object`): Export statements"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:266
+# 98d7c43e99d14d0eb6788defd271f50e
+msgid "**exports** (`object`): Shortcut to the ``module.exports`` object"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:268
+# a606e708dfde44cf86f8dc75f0a72d9f
+msgid "The CommonJS module can be added to a design document, like so:"
+msgstr ""
+
+#: ../../src/query-server/javascript.rst:285
+# 1e3dd41a12a64b89b9daac3fc1c22a15
+msgid "Modules paths are relative to the design document's ``views`` object, but modules can only be loaded from the object referenced via ``lib``. The ``lib`` structure can still be used for view functions as well, by simply storing view functions at e.g. ``views.lib.map``, ``views.lib.reduce``, etc."
+msgstr ""
+

@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/couchdb.rst:19
+# 1a88eee8e7b047ff95c14995befb2e17
+msgid "Base Configuration"
+msgstr ""
+
+#: ../../src/config/couchdb.rst:24
+# 6890fccaa049461da502d144bffd620d
+msgid "Base CouchDB Options"
+msgstr ""
+
+#: ../../src/config/couchdb.rst:31
+# d2f461513c8346a78f568464417be51a
+msgid "Higher values may result in better read performance due to fewer read operations and/or more OS page cache hits. However, they can also increase overall response time for writes when there are many attachment write requests in parallel."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:44
+# ec337eb6c9a1487f973ba3c117dbba49
+msgid "Specifies location of CouchDB database files (``*.couch`` named). This location should be writable and readable for the user the CouchDB service runs as (``couchdb`` by default)."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:56
+# 33d51c99e47941e8906f528e0f620c2a
+msgid "When this config value as ``false`` the CouchDB provides guaranty of `fsync` call before return :http:statuscode:`201` response on each document saving. Setting this config value as ``true`` may raise some overall performance with cost of losing durability - it's strongly not recommended to do such in production::"
+msgstr ""
+
+#: ../../src/config/couchdb.rst:67
+# c3d03cd930d143e1ad41384df7caf6ac
+msgid "Delayed commits are a feature of CouchDB that allows it to achieve better write performance for some workloads while sacrificing a small amount of durability. The setting causes CouchDB to wait up to a full second before committing new data after an update. If the server crashes before the header is written then any writes since the last commit are lost."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:78
+# 7e11566c639f42deb5d2db47c438209c
+msgid "Method used to compress everything that is appended to database and view index files, except for attachments (see the :section:`attachments` section). Available methods are:"
+msgstr ""
+
+#: ../../src/config/couchdb.rst:82
+# b6ca0368be154de9934cc8f5a6ce4c82
+msgid "``none``: no compression"
+msgstr ""
+
+#: ../../src/config/couchdb.rst:83
+# 449b4aa6b5444c008bed740e118fa420
+msgid "``snappy``: use Google Snappy, a very fast compressor/decompressor"
+msgstr ""
+
+#: ../../src/config/couchdb.rst:84
+# 9c6ea5ccc84a4828adf9160de57e44c4
+msgid "``deflate_N``: use zlib's deflate; ``N`` is the compression level which ranges from ``1`` (fastest, lowest compression ratio) to ``9`` (slowest, highest compression ratio)"
+msgstr ""
+
+#: ../../src/config/couchdb.rst:98
+# c7ddf2716d064477a6f596577d3fa8ff
+msgid "Specifies when to make `fsync` calls. `fsync` makes sure that the contents of any file system buffers kept by the operating system are flushed to disk. There is generally no need to modify this parameter."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:110
+# efe02b6a4325426a8842666f2118f011
+msgid "This option places an upper bound on the number of databases that can be open at once. CouchDB reference counts database accesses internally and will close idle databases as needed. Sometimes it is necessary to keep more than the default open at once, such as in deployments where many databases will be replicating continuously."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:126
+# c6ec9c604a5a48ea99892538936ae364
+msgid "Defines a maximum size for JSON documents, in bytes. This limit does not apply to attachments, since they are transferred as a stream of chunks. If you set this to a small value, you might be unable to modify configuration options, database security and other larger documents until a larger value is restored by editing the configuration file."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:140
+# 6089fc5cf5374c1fad446c7b24f69eae
+msgid "If an external process, such as a query server or external process, runs for this amount of microseconds without returning any results, it will be terminated. Keeping this value smaller ensures you get expedient errors, but you may want to tweak it for your specific needs."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:153
+# f3376048c26641b188750c7ce6881ff3
+msgid "This file contains the full `URI`_ that can be used to access this instance of CouchDB. It is used to help discover the port CouchDB is running on (if it was set to ``0`` (e.g. automatically assigned any free one). This file should be writable and readable for the user that runs the CouchDB service (``couchdb`` by default)."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:169
+# c20432c9250648a09e35553902613c07
+msgid "Specifies location of binary drivers (`icu`, `ejson`, etc.). This location and its contents should be readable for the user that runs the CouchDB service."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:183
+# b439bf0e27ca4b31bdc304b20acd8b43
+msgid "Unique identifier for this CouchDB server instance."
+msgstr ""
+
+#: ../../src/config/couchdb.rst:193
+# bc87fa0c36e048b0852a1429c4cb44af
+msgid "Specifies location of CouchDB view index files. This location should be writable and readable for the user that runs the CouchDB service (``couchdb`` by default)."
+msgstr ""
+

@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/compact.rst:17
+# 36a701cd437b42a892073ec9af82d446
+msgid "``/db/_compact``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:21
+# 0b0197a6048a44aeb9486445a61f140d
+msgid "Request compaction of the specified database. Compaction compresses the disk database file by performing the following operations:"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:24
+# 99c853cd92b54d4f9adb300579501cfa
+msgid "Writes a new, optimised, version of the database file, removing any unused sections from the new version during write. Because a new file is temporarily created for this purpose, you may require up to twice the current storage space of the specified database in order for the compaction routine to complete."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:30
+# be85ec20394b457ea7662f836936d5a4
+msgid "Removes old revisions of documents from the database, up to the per-database limit specified by the ``_revs_limit`` database parameter."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:34
+# dbf20faecf1b4f159e10a95e3c9efaff
+msgid "Compaction can only be requested on an individual database; you cannot compact all the databases for a CouchDB instance. The compaction process runs as a background process."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:38
+# 23542bef323e4dc0bbaa00e35d0486cc
+msgid "You can determine if the compaction process is operating on a database by obtaining the database meta information, the ``compact_running`` value of the returned database structure will be set to true. See :get:`/{db}`."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:43
+# d4b7b0a46ade463e92c09c5de3dacf83
+msgid "You can also obtain a list of running processes to determine whether compaction is currently running. See :ref:`api/server/active_tasks`."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:47
+#: ../../src/api/database/compact.rst:50
+#: ../../src/api/database/compact.rst:98
+#: ../../src/api/database/compact.rst:101
+#: ../../src/api/database/compact.rst:155
+#: ../../src/api/database/compact.rst:158
+#: ../../src/api/database/compact.rst:206
+#: ../../src/api/database/compact.rst:209
+# e9ab132741cf4f52a752574761022e3b
+# 8dc59fbe67394133b2ba86148310824a
+# 6950b850bd0c43a9b3ee61d5f8cd89a9
+# 77b50007f5f14b0e9d1361586b34d839
+# 5951e1a9f36941009453a6598103bedb
+# 79adc4cab386463fa6d2d0a81c07da0e
+# b8f44e98338c485997acee5e696c6301
+# e32f909364254d788f9740f549c23afc
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:48
+#: ../../src/api/database/compact.rst:99
+#: ../../src/api/database/compact.rst:156
+#: ../../src/api/database/compact.rst:207
+# d7a3cad326c54788ae68c4cd894408fe
+# 109a05770ea744a69636e2516a119f31
+# e066771bf02641959975e21073adf14b
+# 1f4f11578f9d480281b2c212f516fc4e
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:51
+#: ../../src/api/database/compact.rst:102
+#: ../../src/api/database/compact.rst:159
+#: ../../src/api/database/compact.rst:210
+# 9f993c3abb844ab087734862d38303be
+# 5086a5d007934f0cb13813e3c8e6bbb5
+# 26d2608e9f02436b8d8175c5277cbd8a
+# a48f499b3b804337b025194bb9e27ce8
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:58
+#: ../../src/api/database/compact.rst:110
+#: ../../src/api/database/compact.rst:167
+#: ../../src/api/database/compact.rst:217
+# a767d3f0ea4d4b2fa22e4c9801bd6c48
+# 8647bd2558bf401a8194422b8397925c
+# d2bbc6bdb3a94d299909bf765c86bbcb
+# ab363e6e56fc438dbc6cf08cb8c9cfab
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:67
+#: ../../src/api/database/compact.rst:119
+#: ../../src/api/database/compact.rst:176
+#: ../../src/api/database/compact.rst:226
+# 7e6bec931322409d861399e32b8a894c
+# 05c4f11f10054dbf913e5eb7ae09289b
+# b7e7bdc3796443e68297772009f09890
+# fb2b621deca443dfb8b7a55069143832
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:86
+# 6157f9f272554a47bfcb2dadb4721496
+msgid "``/db/_compact/design-doc``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:90
+# 3f78a740453d4ca89083884336ef0f53
+msgid "Compacts the view indexes associated with the specified design document. If may be that compacting a large view can return more storage than compacting the atual db. Thus, you can use this in place of the full database compaction if you know a specific set of view indexes have been affected by a recent database change."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:143
+# c016927436bb409bb47dc0978517d710
+msgid "``/db/_ensure_full_commit``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:147
+# 9ffeb70ac0b14c78a3bac93d51183293
+msgid "Commits any recent changes to the specified database to disk. You should call this if you want to ensure that recent changes have been flushed. This function is likely not required, assuming you have the recommended configuration setting of ``delayed_commits=false``, which requires CouchDB to ensure changes are written to disk before a 200 or similar result is returned."
+msgstr ""
+
+#: ../../src/api/database/compact.rst:196
+# 1a7d594a98e2471fb507e865e92e103b
+msgid "``/db/_view_cleanup``"
+msgstr ""
+
+#: ../../src/api/database/compact.rst:200
+# b0d771a25dd94e9eb032bad415871ca8
+msgid "Removes view index files that are no longer required by CouchDB as a result of changed views within design documents. As the view filename is based on a hash of the view functions, over time old views will remain, consuming storage. This call cleans up the cached view output on disk for a given view."
+msgstr ""
+

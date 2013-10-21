@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/document/attachments.rst:17
+# 1e9fe975daf34ac6bf2e1b1152a9630a
+msgid "``/db/doc/attachment``"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:21
+# d6aeb2a69a6a4bbb955c98359c44a23a
+msgid "Returns the HTTP headers containing a minimal amount of information about the specified attachment. The method supports the same query arguments as the :get:`/{db}/{docid}/{attname}` method, but only the header information (including attachment size, encoding and the MD5 hash as an :header:`ETag`), is returned."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:49
+#: ../../src/api/document/attachments.rst:146
+#: ../../src/api/document/attachments.rst:218
+# 4f83fbc343e446748271b4aa7d0dab64
+# b69c371a9392493abcaaeb92227f704d
+# 099251535bf54fd9aff3b5f6a17a4d44
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:56
+#: ../../src/api/document/attachments.rst:164
+#: ../../src/api/document/attachments.rst:236
+# 6ae0dcd8465f4c4985fa8c2fb7434cb4
+# 5b3877750dc2435896e3f110ae8d12f9
+# 942fdab7c0cd4d9db3ff9d9a3c6f5330
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:74
+# 67118231d5ea44bfa8db10c4c1897783
+msgid "Returns the file attachment associated with the document. The raw data of the associated attachment is returned (just as if you were accessing a static file. The returned :header:`Content-Type` will be the same as the content type set when the document attachment was submitted into the database."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:96
+# 94985bac93a04da9835dbef5e56d19f3
+msgid "Stored content"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:106
+# 1aca360b88b541d9be3e2b148fc0e4e3
+msgid "Uploads the supplied content as an attachment to the specified document. The attachment name provided must be a URL encoded string. You must also supply either the ``rev`` query argument or the :header:`If-Match` HTTP header for validation, and the HTTP headers (to set the attachment content type)."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:112
+# ab3ca9b00f654dd391c5d0475e791843
+msgid "If case when uploading an attachment using an existing attachment name, CouchDB will update the corresponding stored content of the database. Since you must supply the revision information to add an attachment to the document, this serves as validation to update the existing attachment."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:118
+# 23cf13816cce4509b4ba54b899738702
+msgid "Uploading an attachment updates the corresponding document revision. Revisions are tracked for the parent document, not individual attachments."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:186
+# 7a37a2c77d6f474fbb00dd2a285eeed3
+msgid "Deletes the attachment ``attachment`` of the specified ``doc``. You must supply the ``rev`` query parameter or :header:`If-Match` with the current revision to delete the attachment."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:191
+# 2e059bacc6b447aa95aaedbf4597a586
+msgid "Deleting an attachment updates the corresponding document revision. Revisions are tracked for the parent document, not individual attachments."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:196
+#: ../../src/api/document/attachments.rst:205
+# 9da4c10470a0418aa617c3896f137ef0
+# d71483094d794954b559a088c23ac614
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:197
+# 5eb112471a664c5c9ce99853cc9c4d4b
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:206
+# 39431359efc249418d023cae25e11205
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:226
+# 149bff3dbe45490f9b7ea9363652111c
+msgid "Alternatively, instead of ``rev`` query parameter you may use :header:`If-Match` header:"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:258
+# 282d0ed5b49c4a2195189aba76a626e6
+msgid "HTTP Range Requests"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:260
+# 57c3052342fe49a0ad75d233eadc4e23
+msgid "HTTP allows you to specify byte ranges for requests. This allows the implementation of resumable downloads and skippable audio and video streams alike. This is available for all attachments inside CouchDB."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:264
+# 1943324b2101420489feaf731013cfbf
+msgid "This is just a real quick run through how this looks under the hood. Usually, you will have larger binary files to serve from CouchDB, like MP3s and videos, but to make things a little more obvious, I use a text file here (Note that I use the :mimetype:`application/octet-stream` :header`Content-Type` instead of :mimetype:`text/plain`)."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:275
+# 099a6ab664bc47e2a146dd7439e3815d
+msgid "Now let's store this text file as an attachment in CouchDB. First, we create a database:"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:283
+# 03aae08813f6483ea3a90fd2f485cc3a
+msgid "Then we create a new document and the file attachment in one go:"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:291
+# 87bc717d19954f9ea24ac7b3265378bd
+msgid "Now we can request the whole file easily:"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:298
+# d3811c4d46b649079c1e22bd9db37ecb
+msgid "But say we only want the first 13 bytes:"
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:306
+# d7ecf601c7184b2eb3136d4617cb7671
+msgid "HTTP supports many ways to specify single and even multiple byte ranges. Read all about it in :rfc:`2616#section-14.27`."
+msgstr ""
+
+#: ../../src/api/document/attachments.rst:310
+# a8b20d5442244299b43ea83ea4e7581a
+msgid "Databases that have been created with CouchDB 1.0.2 or earlier will support range requests in |version|, but they are using a less-optimal algorithm. If you plan to make heavy use of this feature, make sure to compact your database with CouchDB |version| to take advantage of a better algorithm to find byte ranges."
+msgstr ""
+

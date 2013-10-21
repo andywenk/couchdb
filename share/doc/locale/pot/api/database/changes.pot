@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/changes.rst:18
+# 7eedfdbff9264cc297a7084d5b93ba8b
+msgid "``/db/_changes``"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:22
+# 02c2cbd99d13493598bbcbd4bcf6db78
+msgid "Returns a sorted list of changes made to documents in the database, in time order of application, can be obtained from the database's ``_changes`` resource. Only the most recent change for a given document is guaranteed to be provided, for example if a document has had fields added, and then deleted, an API client checking for changes will not necessarily receive the intermediate state of added documents."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:29
+# a0b18d1c328049d082265811618e2ab6
+msgid "This can be used to listen for update and modifications to the database for post processing or synchronization, and for practical purposes, a continuously connected ``_changes`` feed is a reasonable approach for generating a real-time log for most applications."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:35
+#: ../../src/api/database/changes.rst:81
+# c50116a6f6b14851819b9026093485b1
+# 46f3424939b04dafbbac95bdfc36bba6
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:36
+#: ../../src/api/database/changes.rst:82
+# fcf90aa359464f20bd0f0c95276e8b94
+# 1fa09e3aaad246a2bfb75cebdd88e78e
+msgid ":mimetype:`text/event-stream`"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:37
+# db14107fa4204e0893dc3459613179d4
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:83
+# d7858ff1926044ecb202e5c5c81fe0d6
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:91
+# 57bade00f1af451199079c15d2b7559f
+msgid "The ``result`` field of database changes"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:97
+#: ../../src/api/database/changes.rst:172
+#: ../../src/api/database/changes.rst:435
+#: ../../src/api/database/changes.rst:523
+# cb28703d963143feba3717a02d92194e
+# 46ca8b50e25e4713a1e317ca9738eaf6
+# d14e7c8936754e61a0bf91a54e311084
+# 52ffd27025014267a895315d7fd76753
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:105
+#: ../../src/api/database/changes.rst:188
+#: ../../src/api/database/changes.rst:443
+#: ../../src/api/database/changes.rst:531
+# 0e52ef7232c64840946f14b6250334cd
+# d6acc23d309a49999e4b77178c4bac2d
+# da2df8de77374931a73a0057f0c65936
+# c85848f30275449991879789c4a5af96
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:167
+# de846d0952554a94b8bb6efaced68b5a
+msgid "Requests the database changes feed in the same way as :get:`/{db}/_changes` does, but is widely used with ``?filter=_doc_ids`` query parameter and allows one to pass a larger list of document IDs to filter."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:219
+# 0ea0e748a7124541944b3830425f712b
+msgid "Changes Feeds"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:224
+# 32a7f56c1b43460eb94d2804ecd36cef
+msgid "Polling"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:226
+# 578e610e1a7841cca68514f9598c507a
+msgid "By default all changes are immediately returned within the JSON body::"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:239
+# 63c25d2c99bd4cdba8870dfa8d65ac4c
+msgid "``results`` is the list of changes in sequential order. New and changed documents only differ in the value of the rev; deleted documents include the ``\"deleted\": true`` attribute. (In the ``style=all_docs mode``, deleted applies only to the current/winning revision. The other revisions listed might be deleted even if there is no deleted property; you have to ``GET`` them individually to make sure.)"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:246
+# defcc9a6745d419db16a226f1124495c
+msgid "``last_seq`` is the sequence number of the last update returned. (Currently it will always be the same as the seq of the last item in results.)"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:249
+# 4535d7727ff54b40a20394ede62c4450
+msgid "Sending a ``since`` param in the query string skips all changes up to and including the given sequence number::"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:255
+# 2f7f013009f646a28c3e428f43f557c7
+msgid "The return structure for ``normal`` and ``longpoll`` modes is a JSON array of changes objects, and the last update sequence number."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:258
+# 73a46f132c9b4b0ebbb5ae9ba5481d58
+msgid "In the return format for ``continuous`` mode, the server sends a ``CRLF`` (carriage-return, linefeed) delimited line for each change. Each line contains the `JSON object` described above."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:262
+# 657e34723e7c49098aa2dbc61063797a
+msgid "You can also request the full contents of each document change (instead of just the change notification) by using the ``include_docs`` parameter."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:286
+# 1433720429db4bd2bdafea72fb57f4b0
+msgid "Long Polling"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:288
+# b7304b6b31d44e5bb4374e248d57df1d
+msgid "The `longpoll` feed, probably most applicable for a browser, is a more efficient form of polling that waits for a change to occur before the response is sent. `longpoll` avoids the need to frequently poll CouchDB to discover nothing has changed!"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:293
+# 7a7da9b9f57147cc982848b030f64420
+msgid "The request to the server will remain open until a change is made on the database and is subsequently transferred, and then the connection will close. This is low load for both server and client."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:297
+# 386e260573f1402abc01534f35bf3de4
+msgid "The response is basically the same JSON as is sent for the `normal` feed."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:299
+# 27d6f03290c644db9aa061ab8c8be60f
+msgid "Because the wait for a change can be significant you can set a timeout before the connection is automatically closed (the ``timeout`` argument). You can also set a heartbeat interval (using the ``heartbeat`` query argument), which sends a newline to keep the connection active."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:309
+# f24231c4f1db438cbe30a00831988ffd
+msgid "Continuous"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:311
+# 16a4dbaf1b824fb4a7feebb181283c2b
+msgid "Continually polling the CouchDB server is not ideal - setting up new HTTP connections just to tell the client that nothing happened puts unnecessary strain on CouchDB."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:315
+# dd9f974c76a44db39d13f8f9479c4a58
+msgid "A continuous feed stays open and connected to the database until explicitly closed and changes are sent to the client as they happen, i.e. in near real-time."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:319
+# c6e793fb274b49669d859ed415a5c052
+msgid "As with the `longpoll` feed type you can set both the timeout and heartbeat intervals to ensure that the connection is kept open for new changes and updates."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:323
+# 02ede336a92c4097b98170c6f85a6531
+msgid "The continuous feed's response is a little different than the other feed types to simplify the job of the client - each line of the response is either empty or a JSON object representing a single change, as found in the normal feed's results."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:340
+# 747fb90526304fac94f6a04fcf4cd84e
+msgid "Obviously, `... tum tee tum ...` does not appear in the actual response, but represents a long pause before the change with seq 6 occurred."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:348
+# e07309655bdf40dea7f0ea388df99c5d
+msgid "Event Source"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:350
+# 9ac61f04fd2248db8eb3b28a28e11838
+msgid "The `eventsource` feed provides push notifications that can be consumed in the form of DOM events in the browser. Refer to the `W3C eventsource specification`_ for further details. CouchDB also honours the ``Last-Event-ID`` parameter."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:385
+# 42b7038b9aa64da985a5eeeb6966ed0c
+msgid "EventSource connections are subject to cross-origin resource sharing restrictions. You might need to configure :ref:`CORS support <cors>` to get the EventSource to work in your application."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:395
+# 8d9ffc40ea6949d3980066911e7e1685
+msgid "Filtering"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:397
+# 4e4c62328032445d9a33e9efa81d31b6
+msgid "You can filter the contents of the changes feed in a number of ways. The most basic way is to specify one or more document IDs to the query. This causes the returned structure value to only contain changes for the specified IDs. Note that the value of this query argument should be a JSON formatted array."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:403
+# d4bec608896044c187910d4a9fe78c5c
+msgid "You can also filter the ``_changes`` feed by defining a filter function within a design document. The specification for the filter is the same as for replication filters. You specify the name of the filter function to the ``filter`` parameter, specifying the design document name and :ref:`filter name <filterfun>`. For example:"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:413
+# e5b2feb743164e5ba8d4c31c57894d83
+msgid "Additionally, there are couple of builtin filters are available and described below."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:420
+# fac1a5e94c68484baf8a4ac12e9fb5fa
+msgid "_doc_ids"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:422
+# 6316598623a54af4903440b3fa3bbca7
+msgid "This filter accepts only changes for documents which ID in specified in ``doc_ids`` query parameter or payload's object array. See :post:`/{db}/_changes` for an example."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:430
+# ed0fdfdcff414b42b75e3bac5adc0b38
+msgid "_design"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:432
+# dd080a91002f4848a308e7c5a7eedd1b
+msgid "The ``_design`` filter accepts only changes for any design document within the requested database."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:494
+# 1c3802afa3c04605b0ae92ccd03e8f9e
+msgid "_view"
+msgstr ""
+
+#: ../../src/api/database/changes.rst:498
+# bb9a469bbf1943bea75f3b6c9dfbad9e
+msgid "The special filter ``_view`` allows to use existed :ref:`map function <mapfun>` as the :ref:`filter <filterfun>`. If the map function emits anything for the processed document he counts as accepted and the changes event emits to the feed. For most use-practice cases `filter` functions are very similar to `map` ones, so this feature helps to reduce amount of duplicated code."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:506
+# f42155ac7bc344f59746b399a27601ac
+msgid "While :ref:`map functions <mapfun>` doesn't process the design documents, using ``_view`` filter forces them to do this. You need to be sure, that they are ready to handle documents with *alien* structure without panic crush."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:513
+# 26dd16bb1c614b24b138ad044964a812
+msgid "Using ``_view`` filter doesn't queries the view index files, so you cannot use common :ref:`view query parameters <api/ddoc/view>` to additionally filter the changes feed by index key. Also, CouchDB doesn't returns the result instantly as he does for views - it really uses the specified map function as filter."
+msgstr ""
+
+#: ../../src/api/database/changes.rst:519
+# 9a70c80d66544dc28d99880afdb98ec6
+msgid "Moreover, you cannot make such filters dynamic e.g. process the request query parameters or handle the :ref:`userctx_object` - the map function is only operates with the document."
+msgstr ""
+

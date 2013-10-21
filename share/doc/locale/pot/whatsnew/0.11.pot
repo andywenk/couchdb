@@ -1,0 +1,746 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/whatsnew/0.11.rst:18
+# 981f3b1f7c214a3295521033a41b041d
+msgid "0.11.x Branch"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:28
+# 9fb9c827f4b547479a7b0b1296dcbac7
+msgid "Upgrade Notes"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:32
+# c954964beb9c48b7860d75199ddb5f78
+msgid ":ref:`release/0.11.2` contains important security fixes. Previous `0.11.x` releases are not recommended for regular usage."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:36
+# c76a16436aa24756af224f1fe423d723
+msgid "Changes Between 0.11.0 and 0.11.1"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:38
+# 94a225418fa7493bbe338ea23b1e7d22
+msgid "``_log`` and ``_temp_views`` are now admin-only resources."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:39
+# 9a1e245a563f4fd5a2432d1b01c230d1
+msgid "``_bulk_docs`` now requires a valid `Content-Type` header of ``application/json``."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:41
+# 4569c0062f734116b1bffb2e78e54634
+msgid "`JSONP` is disabled by default. An .ini option was added to selectively enable it."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:43
+# 4fd4b90e3e2143278f4adf5ca07e5664
+msgid "The ``key``, ``startkey`` and ``endkey`` properties of the request object passed to :ref:`list <listfun>` and :ref:`show <showfun>` functions now contain JSON objects representing the URL encoded string values in the query string. Previously, these properties contained strings which needed to be converted to JSON before using."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:51
+# 04c41fe1cc8742429e027b73877cc799
+msgid "Changes Between 0.10.x and 0.11.0"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:54
+# 4de64dadd5a945759625bdea5f719a29
+msgid "show, list, update and validation functions"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:56
+# cfdd01c540844374920b60dc3b8f1a86
+msgid "The ``req`` argument to show, list, update and validation functions now contains the member method with the specified HTTP method of the current request. Previously, this member was called ``verb``. ``method`` is following :rfc:`2616` (HTTP 1.1) closer."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:62
+# 89e5bcfd37ab4ca680002c5d0d471635
+msgid "_admins -> _security"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:64
+# 974448ad9ddf4abea764d9471afafa9d
+msgid "The `/db/_admins` handler has been removed and replaced with a :ref:`/db/_security <api/db/security>` object. Any existing `_admins` will be dropped and need to be added to the security object again. The reason for this is that the old system made no distinction between names and roles, while the new one does, so there is no way to automatically upgrade the old admins list."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:70
+# ccbad4ad9f6c43d4a0e13cc78cd2e775
+msgid "The security object has 2 special fields, ``admins`` and ``readers``, which contain lists of names and roles which are admins or readers on that database. Anything else may be stored in other fields on the security object. The entire object is made available to validation functions."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:76
+# 7711d5d9b1194cdb9be8774e29199646
+msgid "json2.js"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:78
+# 106e5ba498794e6b9a46a481095318f9
+msgid "JSON handling in the query server has been upgraded to use `json2.js`_. This allows us to use faster native JSON serialization when it is available."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:81
+# 49b1e4c514854646b702f1f467a4d6a2
+msgid "In previous versions, attempts to serialize undefined would throw an exception, causing the doc that emitted undefined to be dropped from the view index. The new behavior is to serialize undefined as null. Applications depending on the old behavior will need to explicitly check for undefined."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:86
+# 5faf8440fa944f45a35a416d5bf0689a
+msgid "Another change is that E4X's XML objects will not automatically be stringified. XML users will need to call ``my_xml_object.toXMLString()`` to return a string value. :commit:`8d3b7ab3`"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:94
+# 4e252573b30a4cbbb0cc0203536b2878
+msgid "WWW-Authenticate"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:96
+# e66f32d1e80945cdb609580d2191e09d
+msgid "The default configuration has been changed to avoid causing basic-auth popups which result from sending the WWW-Authenticate header. To enable basic-auth popups, uncomment the :config:option:`httpd/WWW-Authenticate` line in `local.ini`."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:102
+# 5885916a49dd4624b39d7ac876947d57
+msgid "Query server line protocol"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:104
+# 8006672845d34962ad60416e508c1952
+msgid "The query server line protocol has changed for all functions except :ref:`map <qs/map_doc>`, :ref:`reduce <qs/reduce>`, and :ref:`rereduce <qs/rereduce>`. This allows us to cache the entire design document in the query server process, which results in faster performance for common operations. It also gives more flexibility to query server implementators and shouldn't require major changes in the future when adding new query server features."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:113
+# 5cb6e1c833eb4dcf924b77a31285df09
+msgid "UTF8 JSON"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:115
+# 9a741d66a4f547e38d4f173ae337ccc5
+msgid "JSON request bodies are validated for proper UTF-8 before saving, instead of waiting to fail on subsequent read requests."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:119
+# 47b0384c8c5f441386929579fd1ba84e
+msgid "_changes line format"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:121
+# 609261062f2140bd8df19b7d7c4119f8
+msgid "Continuous changes are now newline delimited, instead of having each line followed by a comma."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:128
+# 5d90aec2c2ff49cbb1e667802d15a509
+msgid "Version 0.11.2"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:131
+# ebaa5415f174439eb127588a3489f937
+msgid "Authentication"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:133
+# f8c381a8b221475b97bac105a35a6e40
+msgid "User documents can now be deleted by admins or the user."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:136
+#: ../../src/whatsnew/0.11.rst:181
+#: ../../src/whatsnew/0.11.rst:291
+# 9b00ccce791f4b84ad0760f0d6bc594c
+# 82ab62b4acb1410e8169592ba895707c
+# 1cc14687c1ec4a14a28ad1d8a6b823ac
+msgid "Futon"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:138
+# 9367f2b7214d42e6a3df93e8ac86c04a
+msgid "Add some Futon files that were missing from the Makefile."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:141
+#: ../../src/whatsnew/0.11.rst:192
+#: ../../src/whatsnew/0.11.rst:305
+# 5c44c677239b40e2af941dd00ced3b78
+# 5493a7592a5748c8a20aa8f6fb5ac6ee
+# 17121e4c5f2f445d8c173ec5cad783ae
+msgid "HTTP Interface"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:143
+# e6915323294b453cb80c6d7de22651c5
+msgid "Better error messages on invalid URL requests."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:146
+# dce23e5a22e34629a9d38d4def73590d
+msgid "Replicator"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:148
+# a19468dbd4f44041934589e1b8fd1646
+msgid "Fix bug when pushing design docs by non-admins, which was hanging the replicator for no good reason."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:150
+# 4a411e148dce4f019261c7860d24e498
+msgid "Fix bug when pulling design documents from a source that requires basic-auth."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:154
+#: ../../src/whatsnew/0.11.rst:231
+#: ../../src/whatsnew/0.11.rst:328
+# 4a327a3d6f654120b6e013a1fb00c193
+# c93311f969ca468e873c23ade80a8f3f
+# bb38cdfecc6547c39a55d2ce3d7687a6
+msgid "Security"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:156
+# 3e240b5514b442948ef074602696466c
+msgid "Avoid potential DOS attack by guarding all creation of atoms."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:157
+# dcf70088b9bb431ea10bab982572f0ff
+msgid "Fixed :ref:`cve/2010-2234`"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:163
+# fb966db5af974c4abadefc6130bbdca7
+msgid "Version 0.11.1"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:166
+#: ../../src/whatsnew/0.11.rst:279
+# efbebd66181544b28724571b4a3b2ac8
+# 71e328f261e7485eaa2fdf590eb6b6de
+msgid "Build and System Integration"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:168
+# 581368967fc746edac559bba21756f08
+msgid "Output of `couchdb --help` has been improved."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:169
+# 8d9a6f0a79904d50af6a1ab94a42dcc0
+msgid "Fixed compatibility with the Erlang R14 series."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:170
+# cef41e433f08478688f23a4fd1ac4b54
+msgid "Fixed warnings on Linux builds."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:171
+# 13cd1691ee934ca5be220bda3709fa72
+msgid "Fixed build error when aclocal needs to be called during the build."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:172
+# 96c7606992124bf0b58e6ce651db6a47
+msgid "Require ICU 4.3.1."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:173
+# 15bef9fbdde04d428d6f08b3995feb58
+msgid "Fixed compatibility with Solaris."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:176
+# 6cf29bbc7aaf472c8987c3714bcf953f
+msgid "Configuration System"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:178
+# 1fc2249bf4314fc1b7c54044352165f9
+msgid "Fixed timeout with large .ini files."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:183
+# 6a788d65e9c145ccbc0d37c28cef63d6
+msgid "Use \"expando links\" for over-long document values in Futon."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:184
+# 825d9fb50d4d4a968a0d46f201889fa7
+msgid "Added continuous replication option."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:185
+# cb5c4028de474e42ba58232043694549
+msgid "Added option to replicating test results anonymously to a community CouchDB instance."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:187
+# d8b8e31d0ee64cf496e36cea05deba40
+msgid "Allow creation and deletion of config entries."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:188
+# 89b09f13678145fa98f0cd0846b13cd6
+msgid "Fixed display issues with doc ids that have escaped characters."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:189
+# 6128af8d095f4c21898f757e8430f2e5
+msgid "Fixed various UI issues."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:194
+# 8cec8482b17844d89851455518b1ac7f
+msgid "Mask passwords in active tasks and logging."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:195
+# 512633368ec54fd6bf12bcab9910b737
+msgid "Update mochijson2 to allow output of BigNums not in float form."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:196
+# 8271755665bc4388bb7d4c9590237f27
+msgid "Added support for X-HTTP-METHOD-OVERRIDE."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:197
+# cb932adaff8b4edcbafb3d7ba2fffd30
+msgid "Better error message for database names."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:198
+# 9ccc17230c1c4de19a6f8298f96977d0
+msgid "Disable jsonp by default."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:199
+# bf2a43b0e4724a82a4764ae40ab3fe2c
+msgid "Accept gzip encoded standalone attachments."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:200
+# c23766fe7b6f46bb87997b0ec4b085e5
+msgid "Made max_concurrent_connections configurable."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:201
+# 6708d4d960824c59b17503da41e5baa8
+msgid "Made changes API more robust."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:202
+# 40751c5a83c54ec79a7524c83e2003f7
+msgid "Send newly generated document rev to callers of an update function."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:205
+# 51a1138092bf4efd97f7e56b19c47d7f
+msgid "JavaScript Clients"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:207
+# 89d13259889c4fc4880e1a1a2422fe4b
+msgid "Added tests for couch.js and jquery.couch.js"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:208
+# bfb07b9f52f143cfa2a2c78f675e2e02
+msgid "Added changes handler to jquery.couch.js."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:209
+# 299353a8cec442f4b648f7724fdf6042
+msgid "Added cache busting to jquery.couch.js if the user agent is msie."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:210
+# 51aefd261ea14045bf589a28f573dc9b
+msgid "Added support for multi-document-fetch (via _all_docs) to jquery.couch.js."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:211
+# b2819e0632924f31b5e2171206b2ae27
+msgid "Added attachment versioning to jquery.couch.js."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:212
+# c021703790b34e20a35b3bbf7b51435e
+msgid "Added option to control ensure_full_commit to jquery.couch.js."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:213
+# 493c6be0054d4f2881c9cc4605fc431c
+msgid "Added list functionality to jquery.couch.js."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:214
+# 1307822c784c4d3991635191fef9f449
+msgid "Fixed issues where bulkSave() wasn't sending a POST body."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:217
+# 8a8aa023c71e431da8c13955408db12d
+msgid "Log System"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:219
+# 80eba74788e1440195bbb0f2dc9a9600
+msgid "Log HEAD requests as HEAD, not GET."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:220
+# e153b66a57594fadae631a0b595737d1
+msgid "Keep massive JSON blobs out of the error log."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:221
+# f68416122ff9412ab1b82a85373d4e9b
+msgid "Fixed a timeout issue."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:224
+# 853bc0595063476e8474126894e4bd44
+msgid "Replication System"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:226
+# bf4b4f76366e46f0886e731936babaaf
+msgid "Refactored various internal APIs related to attachment streaming."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:227
+# 53b6f849972c418dbdb161f1d6606e6c
+msgid "Fixed hanging replication."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:228
+# eac4e0e59fb3459da72cae3f24068ff4
+msgid "Fixed keepalive issue."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:233
+# c82042b6763a460e88fd99f53a754628
+msgid "Added authentication redirect URL to log in clients."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:234
+# a61da65f29e1433abd05a62e15f9a001
+msgid "Fixed query parameter encoding issue in oauth.js."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:235
+# e69d8d6a6f1b4fa7a039ff57ba1129da
+msgid "Made authentication timeout configurable."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:236
+# 00439890936f4beba3ae6a705e62a03a
+msgid "Temporary views are now admin-only resources."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:239
+#: ../../src/whatsnew/0.11.rst:339
+# f4edcdc6ba1746b3a8cc0e173fb8b04c
+# 5e7f4ebfd7c14198872c4a4e83a38de7
+msgid "Storage System"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:241
+# 1d98679bb42f4a16a68aa7d379656f7e
+msgid "Don't require a revpos for attachment stubs."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:242
+# b86ddbfef8eb4292bde52c6f2c57cf69
+msgid "Added checking to ensure when a revpos is sent with an attachment stub, it's correct."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:244
+# 8e481c7e55cd4d9b8eaeeafc934bbe3e
+msgid "Make file deletions async to avoid pauses during compaction and db deletion."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:246
+# 24e2065f2cd54ee397beccfce77ce431
+msgid "Fixed for wrong offset when writing headers and converting them to blocks, only triggered when header is larger than 4k."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:248
+# c164e95a56934e7981d37c66a6d9b1e5
+msgid "Preserve _revs_limit and instance_start_time after compaction."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:251
+# 8aebdd61f613452fae0c1981c34b6e6d
+msgid "Test Suite"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:253
+# b7e56a7b81e3401ebd8c1342fb1892c7
+msgid "Made the test suite overall more reliable."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:256
+#: ../../src/whatsnew/0.11.rst:346
+# 99a63e73928f4d15a71e18ef0fe129ec
+# f3d779fb2b4f43bab998b070c61bd6ac
+msgid "View Server"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:258
+# 6010652a2ab346e4a83f1e978d973f9d
+msgid "Provide a UUID to update functions (and all other functions) that they can use to create new docs."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:260
+# 6f5b7ad5414c43dc895e763b62c789f2
+msgid "Upgrade CommonJS modules support to 1.1.1."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:261
+# 0b5c943275fc4ebe8badb4bb62e61db8
+msgid "Fixed erlang filter funs and normalize filter fun API."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:262
+# 0e27ceb4c1094ddeaaa15719843337f2
+msgid "Fixed hang in view shutdown."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:265
+# 4da16979b3e64dfd8d370e8b005caa14
+msgid "URL Rewriter & Vhosts"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:267
+# 662792a4aecf4ae392e4b1fedb826a5a
+msgid "Allow more complex keys in rewriter."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:268
+# 341ae63ab7c14e379c422f9076f919b3
+msgid "Allow global rewrites so system defaults are available in vhosts."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:269
+# b587d11053e349d195c6bffd3c0793d1
+msgid "Allow isolation of databases with vhosts."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:270
+# d9f8fe8b323e418885807bf91b8a24f4
+msgid "Fix issue with passing variables to query parameters."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:276
+# 320ac13489b94b418d0e2c52be0760dc
+msgid "Version 0.11.0"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:281
+# 76f12818f44545d89b581da241580209
+msgid "Updated and improved source documentation."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:282
+# f609671c8bae4fde8c650abe0af97e71
+msgid "Fixed distribution preparation for building on Mac OS X."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:283
+# 49e834135bb748fab4a3a9029469250e
+msgid "Added support for building a Windows installer as part of 'make dist'."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:284
+# 7a509d1707434d8185987849ea095b88
+msgid "Bug fix for building couch.app's module list."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:285
+# 14ad45fadd894db2b21a88352c2449e8
+msgid "ETap tests are now run during make distcheck. This included a number of updates to the build system to properly support VPATH builds."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:287
+# 1f7d5b306b1d424da440425b90933e6f
+msgid "Gavin McDonald setup a build-bot instance. More info can be found at http://ci.apache.org/buildbot.html"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:293
+# 6618259925b64293839d5dcd55e74a53
+msgid "Added a button for view compaction."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:294
+# 5f25111eb850400ba1bd4e5ab522c44e
+msgid "JSON strings are now displayed as-is in the document view, without the escaping of new-lines and quotes. That dramatically improves readability of multi-line strings."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:297
+# efda2932daa24d1a8a0db87d26951105
+msgid "Same goes for editing of JSON string values. When a change to a field value is submitted, and the value is not valid JSON it is assumed to be a string. This improves editing of multi-line strings a lot."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:300
+# 3a598c669c7b43c482d56f230df1de60
+msgid "Hitting tab in textareas no longer moves focus to the next form field, but simply inserts a tab character at the current caret position."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:302
+# a54e42a693b045cf8ba921e32745b836
+msgid "Fixed some font declarations."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:307
+# 0c0e45accdcf4bec8113a9942d575b5c
+msgid "Provide Content-MD5 header support for attachments."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:308
+# 1e2425dd7de847c491e72072fe159b5c
+msgid "Added URL Rewriter handler."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:309
+# 901c17960b734aba81c555e1ec649fde
+msgid "Added virtual host handling."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:312
+# 322c12071a9a4e25bf5726e0e0cc943e
+msgid "Replication"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:314
+# 1fbea3bcae484e1e9a44664123840175
+msgid "Added option to implicitly create replication target databases."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:315
+# 753b46f124424973aae8d3c44980da0e
+msgid "Avoid leaking file descriptors on automatic replication restarts."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:316
+# dc77fc024dbe48e7b2532e46a1f7b048
+msgid "Added option to replicate a list of documents by id."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:317
+# 956b38e3380940a4b3f51bf72e4185aa
+msgid "Allow continuous replication to be cancelled."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:320
+# cbc9a1522ca74a79abfba06be5bd5f52
+msgid "Runtime Statistics"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:322
+# 76540b61abcb416a87ef835d7a950918
+msgid "Statistics are now calculated for a moving window instead of non-overlapping timeframes."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:324
+# 637d2500d73f4b83b033edc9dbd3cbe7
+msgid "Fixed a problem with statistics timers and system sleep."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:325
+# 4f51c470f3bb45e2977c62748ecc1463
+msgid "Moved statistic names to a term file in the priv directory."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:330
+# 4eb58a81cc794716bda913fb949ac284
+msgid "Fixed CVE-2010-0009: Apache CouchDB Timing Attack Vulnerability."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:331
+# 920c7d49f6114a36920201580b701765
+msgid "Added default cookie-authentication and users database."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:332
+# 88194c1105f94c3bba701065f5470327
+msgid "Added Futon user interface for user signup and login."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:333
+# e6709940e03448bfb969e88dd8654de0
+msgid "Added per-database reader access control lists."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:334
+# 1d937dc4c9744dd4815934262a19f7aa
+msgid "Added per-database security object for configuration data in validation functions."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:336
+# 138f4f8c7090494dae7cc1fb042f477e
+msgid "Added proxy authentication handler"
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:341
+# 6c9f5564cfa840678ac62575541e4515
+msgid "Adds batching of multiple updating requests, to improve throughput with many writers. Removed the now redundant couch_batch_save module."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:343
+# 4db669a9591f42d7b1db6bc4944fa99d
+msgid "Adds configurable compression of attachments."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:348
+# 0ea2c6da8ded435b8d8c6a12aea2ea2f
+msgid "Added optional 'raw' binary collation for faster view builds where Unicode collation is not important."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:350
+# 4dda575b58604a2ba905a4f15760339d
+msgid "Improved view index build time by reducing ICU collation callouts."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:351
+# a59b1af2012f4d4da63332ada8ab2122
+msgid "Improved view information objects."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:352
+# 2116a6dde3a4460b8199743a53c34956
+msgid "Bug fix for partial updates during view builds."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:353
+# 0c276ca599da4231bd7e19fbf23f1fba
+msgid "Move query server to a design-doc based protocol."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:354
+# f952916e16ca4a4bbf8b58245a02f33b
+msgid "Use json2.js for JSON serialization for compatiblity with native JSON."
+msgstr ""
+
+#: ../../src/whatsnew/0.11.rst:355
+# 66db3e4502514009b18bbf8e3dc77911
+msgid "Major refactoring of couchjs to lay the groundwork for disabling cURL support. The new HTTP interaction acts like a synchronous XHR. Example usage of the new system is in the JavaScript CLI test runner."
+msgstr ""
+

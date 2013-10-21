@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/services.rst:17
+# f03686453d774f3ca2274e0a00ae35bd
+msgid "CouchDB Internal Services"
+msgstr ""
+
+#: ../../src/config/services.rst:23
+# 7f73262352134dc3a192f64b79867df0
+msgid "CouchDB Daemonized Mini Apps"
+msgstr ""
+
+#: ../../src/config/services.rst:30
+# 5107e5b641474bc8ba379c16f89b80d1
+msgid "This daemon provides authentication caching to avoid repeated opening and closing of the `_users` database for each request requiring authentication::"
+msgstr ""
+
+#: ../../src/config/services.rst:40
+# 815e48cba089492584e89b87eaca9e06
+msgid ":ref:`Automatic compaction <config/compactions>` daemon::"
+msgstr ""
+
+#: ../../src/config/services.rst:49
+# 8bad7b40bf1e40fb8f766fe056a51008
+msgid "`External` processes manager::"
+msgstr ""
+
+#: ../../src/config/services.rst:58
+# f8b1a669adc7439f93e9a38865e8b8db
+msgid "HTTP server daemon::"
+msgstr ""
+
+#: ../../src/config/services.rst:67
+# 8a0d8be63985459e86967ab209142166
+msgid "Provides :ref:`SSL support <config/ssl>`. The default ssl port CouchDB listens on is `6984`::"
+msgstr ""
+
+#: ../../src/config/services.rst:78
+# 3a7e90e0a9d5459e82e24cfd27ddabf4
+msgid "The `couch_index` application is responsible for managing all of the different types of indexers. This manages the process handling for keeping track of the index state as well as managing the updater and compactor handling::"
+msgstr ""
+
+#: ../../src/config/services.rst:90
+# 1ff5064c71044e96aed2f1b6673a1c23
+msgid ":ref:`OS Daemons <config/os_daemons>` manager::"
+msgstr ""
+
+#: ../../src/config/services.rst:99
+# 28bba1ad86f74c4a8511e0ea85a8a72f
+msgid ":ref:`Query servers <config/query_servers>` manager::"
+msgstr ""
+
+#: ../../src/config/services.rst:108
+# edd90e9a1e2d4cd1b0d91ad806f1aa65
+msgid "Replications manager::"
+msgstr ""
+
+#: ../../src/config/services.rst:117
+# 8157010f102d4a61ac2767458910c6d4
+msgid "Runtime statistics aggregator::"
+msgstr ""
+
+#: ../../src/config/services.rst:126
+# ed617c711f694d73ad3bc37b418d5a89
+msgid "Runtime statistics collector::"
+msgstr ""
+
+#: ../../src/config/services.rst:135
+# 33e9e48b212842bf99480dcda3921c44
+msgid ":ref:`UUIDs <config/uuids>` generator daemon::"
+msgstr ""
+
+#: ../../src/config/services.rst:144
+# 136a1c70cef743caadfdc320860ff9dc
+msgid ":ref:`Virtual hosts <config/vhosts>` manager. Provides dynamic add of vhosts without restart, wildcards support and dynamic routing via pattern matching ::"
+msgstr ""
+

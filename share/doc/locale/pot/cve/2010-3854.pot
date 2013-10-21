@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/cve/2010-3854.rst:18
+# 3ba4c6c0d1294087a799b57256958ff1
+msgid "CVE-2010-3854: Apache CouchDB Cross Site Scripting Issue"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:20
+# 30b631dc92b3475c988ab1363e3ee0ae
+msgid "28.01.2011"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:22
+# b3854b0bc6ac402bb1f79ed748cda1a1
+msgid "Apache CouchDB 0.8.0 to 1.0.1"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:24
+# ef48ed3fd84e48c8bc6305a55212630b
+msgid "Important"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:26
+# efb671c11c17480fbccd046a55a4e3f5
+msgid "The Apache Software Foundation"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:30
+# 272734f3e0ca4364b2bfdcad3410ad84
+msgid "Description"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:32
+# c26523a371094d8e84cbab76b202a65a
+msgid "Apache CouchDB versions prior to version :ref:`1.0.2 <release/1.0.2>` are vulnerable to `Cross Site Scripting`_ (XSS) attacks."
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:38
+# 369bd63776d24e57ab03857c423b3318
+msgid "Mitigation"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:40
+# b2f4b9d623a44a73a4d2cdad0740698f
+msgid "All users should upgrade to CouchDB :ref:`1.0.2 <release/1.0.2>`."
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:42
+# beffb54452e349c8bcd1732178c1e129
+msgid "Upgrades from the :ref:`0.11.x <release/0.11.x>` and :ref:`0.10.x <release/0.10.x>` series should be seamless."
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:45
+# fe2c52fb0f1c4d6986f746f0fba0bc09
+msgid "Users on earlier versions should consult with upgrade notes."
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:48
+# 2ca67d58d17648e098d2560addd264e8
+msgid "Example"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:50
+# 3f6e9878cd1348f1b8a299332be292d8
+msgid "Due to inadequate validation of request parameters and cookie data in Futon, CouchDB's web-based administration UI, a malicious site can execute arbitrary code in the context of a user's browsing session."
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:55
+# 7965d3bb1e0146399b4d7faf278a6725
+msgid "Credit"
+msgstr ""
+
+#: ../../src/cve/2010-3854.rst:57
+# b2d0b1d60fcc43ac9d05a12549b7392a
+msgid "This XSS issue was discovered by a source that wishes to stay anonymous."
+msgstr ""
+

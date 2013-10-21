@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/replicator.rst:17
+# de72a30d3a6443c5a94e0a10e41d3c6d
+msgid "Replicator"
+msgstr ""
+
+#: ../../src/config/replicator.rst:22
+# 0a98441af2a246d08d174b5386938a0c
+msgid "Replicator Database Configuration"
+msgstr ""
+
+#: ../../src/config/replicator.rst:31
+# d84ffa8205274c9ba7731c84e8ad318f
+msgid "Specifies replicator database name::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:40
+# 93e48e7c83874b2dab0471dffbf92863
+msgid "Maximum replication retry count can be a non-negative integer or \"infinity\" ::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:50
+# f2e0027a7f7b4ab0a46b1805558c37d9
+msgid "With lower batch sizes checkpoints are done more frequently. Lower batch sizes also reduce the total amount of used RAM memory::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:60
+# 6b55e7b64b10400084600062255537db
+msgid "More worker processes can give higher network throughput but can also imply more disk and network IO::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:70
+# 570d57859b8b4c24b035b6d198b7b123
+msgid "Maximum number of HTTP connections per replication::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:79
+# dc4520babffc452083064423f563bbbf
+msgid "HTTP connection timeout per replication. Even for very fast/reliable networks it might need to be increased if a remote database is too busy::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:90
+# 582af01e38664be39752533b2447fbf9
+msgid "If a request fails, the replicator will retry it up to N times::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:99
+# e70347e7b46644829a627d8858a0fe07
+msgid "Some socket options that might boost performance in some scenarios:"
+msgstr ""
+
+#: ../../src/config/replicator.rst:101
+# 2a1d2886629f4f17bc94e849a747af03
+msgid "``{nodelay, boolean()}``"
+msgstr ""
+
+#: ../../src/config/replicator.rst:102
+# 49c26b5731c141ca8902000ed6efa7ce
+msgid "``{sndbuf, integer()}``"
+msgstr ""
+
+#: ../../src/config/replicator.rst:103
+# c9a2c6e5b6214764b32d87eb7fd08c1f
+msgid "``{recbuf, integer()}``"
+msgstr ""
+
+#: ../../src/config/replicator.rst:104
+# 40b6d6caa7964fb4ba49d45eb964b9e2
+msgid "``{priority, integer()}``"
+msgstr ""
+
+#: ../../src/config/replicator.rst:106
+# 81854996a4154cee85ed4c4b3726ddca
+msgid "See the `inet`_ Erlang module's man page for the full list of options::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:117
+# 33f9e00c9d844c47bf54d89f92909422
+msgid "Path to a file containing the user's certificate::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:126
+# b9c44e287e564c84beb862ce8a52e8db
+msgid "Path to file containing user's private PEM encoded key::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:135
+# c381de9c2feb492f89730064f36d707d
+msgid "String containing the user's password. Only used if the private keyfile is password protected::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:145
+# 84b858812f154a85b98e915387bbd13f
+msgid "Set to true to validate peer certificates::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:154
+# a334e58965c04cb7b686a45213166536
+msgid "File containing a list of peer trusted certificates (in the PEM format)::"
+msgstr ""
+
+#: ../../src/config/replicator.rst:163
+# 4c9cc0c9456c432cbbb3f684c1987fca
+msgid "Maximum peer certificate depth (must be set even if certificate validation is off)::"
+msgstr ""
+

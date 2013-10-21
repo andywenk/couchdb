@@ -1,0 +1,91 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/intro/curl.rst:17
+msgid "cURL: Your Command Line Friend"
+msgstr ""
+
+#: ../../src/intro/curl.rst:19
+msgid ""
+"The ``curl`` utility is a command line tool available on Unix, Linux, Mac OS"
+" X and Windows and many other platforms. ``curl`` provides easy access to "
+"the HTTP protocol (among others) directly from the command-line and is "
+"therefore an ideal way of interacting with CouchDB over the HTTP REST API."
+msgstr ""
+
+#: ../../src/intro/curl.rst:25
+msgid ""
+"For simple ``GET`` requests you can supply the URL of the request. For "
+"example, to get the database information:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:32
+msgid ""
+"This returns the database information (formatted in the output below for "
+"clarity):"
+msgstr ""
+
+#: ../../src/intro/curl.rst:48
+msgid ""
+"For some URLs, especially those that include special characters such as "
+"ampersand, exclamation mark, or question mark, you should quote the URL you "
+"are specifying on the command line. For example:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:56
+msgid ""
+"You can explicitly set the HTTP command using the ``-X`` command line "
+"option. For example, when creating a database, you set the name of the "
+"database in the URL you send using a PUT request:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:65
+msgid ""
+"But to obtain the database information you use a ``GET`` request (with the "
+"return information formatted for clarity):"
+msgstr ""
+
+#: ../../src/intro/curl.rst:84
+msgid ""
+"For certain operations, you must specify the content type of request, which "
+"you do by specifying the ``Content-Type`` header using the ``-H`` command-"
+"line option:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:92
+msgid ""
+"You can also submit 'payload' data, that is, data in the body of the HTTP "
+"request using the ``-d`` option. This is useful if you need to submit JSON "
+"structures, for example document data, as part of the request. For example, "
+"to submit a simple document to the ``demo`` database:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:106
+msgid ""
+"In the above example, the argument after the ``-d`` option is the JSON of "
+"the document we want to submit."
+msgstr ""
+
+#: ../../src/intro/curl.rst:109
+msgid ""
+"The document can be accessed by using the automatically generated document "
+"ID that was returned:"
+msgstr ""
+
+#: ../../src/intro/curl.rst:119
+msgid ""
+"The API samples in the :ref:`api/basics` show the HTTP command, URL and any "
+"payload information that needs to be submitted (and the expected return "
+"value). All of these examples can be reproduced using ``curl`` with the "
+"command-line examples shown above."
+msgstr ""

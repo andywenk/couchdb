@@ -1,0 +1,1075 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/json-structure.rst:15
+msgid "JSON Structure Reference"
+msgstr ""
+
+#: ../../src/json-structure.rst:17
+msgid ""
+"The following appendix provides a quick reference to all the JSON structures"
+" that you can supply to CouchDB, or get in return to requests."
+msgstr ""
+
+#: ../../src/json-structure.rst:21
+msgid "All Database Documents"
+msgstr ""
+
+#: ../../src/json-structure.rst:24 ../../src/json-structure.rst:39
+#: ../../src/json-structure.rst:54 ../../src/json-structure.rst:73
+#: ../../src/json-structure.rst:91 ../../src/json-structure.rst:103
+#: ../../src/json-structure.rst:118 ../../src/json-structure.rst:153
+#: ../../src/json-structure.rst:172 ../../src/json-structure.rst:208
+#: ../../src/json-structure.rst:228 ../../src/json-structure.rst:247
+#: ../../src/json-structure.rst:281 ../../src/json-structure.rst:321
+#: ../../src/json-structure.rst:454 ../../src/json-structure.rst:494
+#: ../../src/json-structure.rst:512 ../../src/json-structure.rst:531
+#: ../../src/json-structure.rst:557 ../../src/json-structure.rst:597
+#: ../../src/json-structure.rst:624
+msgid "Field"
+msgstr ""
+
+#: ../../src/json-structure.rst:24 ../../src/json-structure.rst:39
+#: ../../src/json-structure.rst:54 ../../src/json-structure.rst:73
+#: ../../src/json-structure.rst:91 ../../src/json-structure.rst:103
+#: ../../src/json-structure.rst:118 ../../src/json-structure.rst:153
+#: ../../src/json-structure.rst:172 ../../src/json-structure.rst:208
+#: ../../src/json-structure.rst:228 ../../src/json-structure.rst:247
+#: ../../src/json-structure.rst:281 ../../src/json-structure.rst:321
+#: ../../src/json-structure.rst:454 ../../src/json-structure.rst:494
+#: ../../src/json-structure.rst:512 ../../src/json-structure.rst:531
+#: ../../src/json-structure.rst:557 ../../src/json-structure.rst:597
+#: ../../src/json-structure.rst:624
+msgid "Description"
+msgstr ""
+
+#: ../../src/json-structure.rst:26 ../../src/json-structure.rst:626
+msgid "total_rows"
+msgstr ""
+
+#: ../../src/json-structure.rst:26
+msgid "Number of documents in the database/view"
+msgstr ""
+
+#: ../../src/json-structure.rst:28 ../../src/json-structure.rst:628
+msgid "offset"
+msgstr ""
+
+#: ../../src/json-structure.rst:28 ../../src/json-structure.rst:628
+msgid "Offset where the document list started"
+msgstr ""
+
+#: ../../src/json-structure.rst:30
+msgid "update_seq (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:30
+msgid "Current update sequence for the database"
+msgstr ""
+
+#: ../../src/json-structure.rst:32
+msgid "rows [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:32
+msgid "Array of document object"
+msgstr ""
+
+#: ../../src/json-structure.rst:36
+msgid "Bulk Document Response"
+msgstr ""
+
+#: ../../src/json-structure.rst:41 ../../src/json-structure.rst:59
+msgid "docs [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:41
+msgid "Bulk Docs Returned Documents"
+msgstr ""
+
+#: ../../src/json-structure.rst:43 ../../src/json-structure.rst:81
+#: ../../src/json-structure.rst:105 ../../src/json-structure.rst:338
+msgid "id"
+msgstr ""
+
+#: ../../src/json-structure.rst:43 ../../src/json-structure.rst:61
+#: ../../src/json-structure.rst:81 ../../src/json-structure.rst:93
+#: ../../src/json-structure.rst:105 ../../src/json-structure.rst:210
+#: ../../src/json-structure.rst:496 ../../src/json-structure.rst:514
+#: ../../src/json-structure.rst:533
+msgid "Document ID"
+msgstr ""
+
+#: ../../src/json-structure.rst:45 ../../src/json-structure.rst:107
+msgid "error"
+msgstr ""
+
+#: ../../src/json-structure.rst:45 ../../src/json-structure.rst:107
+msgid "Error type"
+msgstr ""
+
+#: ../../src/json-structure.rst:47 ../../src/json-structure.rst:109
+msgid "reason"
+msgstr ""
+
+#: ../../src/json-structure.rst:47 ../../src/json-structure.rst:109
+msgid "Error string with extended reason"
+msgstr ""
+
+#: ../../src/json-structure.rst:51
+msgid "Bulk Documents"
+msgstr ""
+
+#: ../../src/json-structure.rst:56
+msgid "all_or_nothing (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:56
+msgid "Sets the database commit mode to use all-or-nothing semantics"
+msgstr ""
+
+#: ../../src/json-structure.rst:59
+msgid "Bulk Documents Document"
+msgstr ""
+
+#: ../../src/json-structure.rst:61 ../../src/json-structure.rst:93
+#: ../../src/json-structure.rst:210 ../../src/json-structure.rst:496
+#: ../../src/json-structure.rst:514 ../../src/json-structure.rst:533
+msgid "_id (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:63 ../../src/json-structure.rst:95
+#: ../../src/json-structure.rst:212 ../../src/json-structure.rst:498
+#: ../../src/json-structure.rst:516 ../../src/json-structure.rst:535
+msgid "_rev (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:63 ../../src/json-structure.rst:95
+#: ../../src/json-structure.rst:212 ../../src/json-structure.rst:498
+#: ../../src/json-structure.rst:516 ../../src/json-structure.rst:535
+msgid "Revision ID (when updating an existing document)"
+msgstr ""
+
+#: ../../src/json-structure.rst:66
+msgid "_deleted (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:66
+msgid "Whether the document should be deleted"
+msgstr ""
+
+#: ../../src/json-structure.rst:70
+msgid "Changes information for a database"
+msgstr ""
+
+#: ../../src/json-structure.rst:75
+msgid "last_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:75
+msgid "Last change sequence number"
+msgstr ""
+
+#: ../../src/json-structure.rst:77
+msgid "results [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:77
+msgid "Changes made to a database"
+msgstr ""
+
+#: ../../src/json-structure.rst:79
+msgid "seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:79
+msgid "Update sequence number"
+msgstr ""
+
+#: ../../src/json-structure.rst:83
+msgid "changes [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:83
+msgid "List of changes, field-by-field, for this document"
+msgstr ""
+
+#: ../../src/json-structure.rst:88
+msgid "CouchDB Document"
+msgstr ""
+
+#: ../../src/json-structure.rst:100
+msgid "CouchDB Error Status"
+msgstr ""
+
+#: ../../src/json-structure.rst:115
+msgid "CouchDB database information object"
+msgstr ""
+
+#: ../../src/json-structure.rst:120
+msgid "db_name"
+msgstr ""
+
+#: ../../src/json-structure.rst:120
+msgid "The name of the database."
+msgstr ""
+
+#: ../../src/json-structure.rst:122
+msgid "committed_update_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:122
+msgid "The number of committed update."
+msgstr ""
+
+#: ../../src/json-structure.rst:124
+msgid "doc_count"
+msgstr ""
+
+#: ../../src/json-structure.rst:124
+msgid "A count of the documents in the specified database."
+msgstr ""
+
+#: ../../src/json-structure.rst:127
+msgid "doc_del_count"
+msgstr ""
+
+#: ../../src/json-structure.rst:127
+msgid "Number of deleted documents"
+msgstr ""
+
+#: ../../src/json-structure.rst:129 ../../src/json-structure.rst:178
+msgid "compact_running"
+msgstr ""
+
+#: ../../src/json-structure.rst:129
+msgid ""
+"Set to true if the database compaction routine is operating on this "
+"database."
+msgstr ""
+
+#: ../../src/json-structure.rst:132
+msgid "disk_format_version"
+msgstr ""
+
+#: ../../src/json-structure.rst:132
+msgid ""
+"The version of the physical format used for the data when it is stored on "
+"disk."
+msgstr ""
+
+#: ../../src/json-structure.rst:135 ../../src/json-structure.rst:181
+msgid "disk_size"
+msgstr ""
+
+#: ../../src/json-structure.rst:135
+msgid ""
+"Size in bytes of the data as stored on the disk. Views indexes are not "
+"included in the calculation."
+msgstr ""
+
+#: ../../src/json-structure.rst:139
+msgid "instance_start_time"
+msgstr ""
+
+#: ../../src/json-structure.rst:139
+msgid ""
+"Timestamp of when the database was opened, expressed in microseconds since "
+"the epoch."
+msgstr ""
+
+#: ../../src/json-structure.rst:142 ../../src/json-structure.rst:185
+msgid "purge_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:142
+msgid "The number of purge operations on the database."
+msgstr ""
+
+#: ../../src/json-structure.rst:145 ../../src/json-structure.rst:190
+msgid "update_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:145
+msgid "The current number of updates to the database."
+msgstr ""
+
+#: ../../src/json-structure.rst:150
+msgid "Design Document"
+msgstr ""
+
+#: ../../src/json-structure.rst:155
+msgid "_id"
+msgstr ""
+
+#: ../../src/json-structure.rst:155
+msgid "Design Document ID"
+msgstr ""
+
+#: ../../src/json-structure.rst:157
+msgid "_rev"
+msgstr ""
+
+#: ../../src/json-structure.rst:157
+msgid "Design Document Revision"
+msgstr ""
+
+#: ../../src/json-structure.rst:159
+msgid "views"
+msgstr ""
+
+#: ../../src/json-structure.rst:159
+msgid "View"
+msgstr ""
+
+#: ../../src/json-structure.rst:161
+msgid "viewname"
+msgstr ""
+
+#: ../../src/json-structure.rst:161
+msgid "View Definition"
+msgstr ""
+
+#: ../../src/json-structure.rst:163
+msgid "map"
+msgstr ""
+
+#: ../../src/json-structure.rst:163
+msgid "Map Function for View"
+msgstr ""
+
+#: ../../src/json-structure.rst:165
+msgid "reduce (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:165
+msgid "Reduce Function for View"
+msgstr ""
+
+#: ../../src/json-structure.rst:169
+msgid "Design Document Information"
+msgstr ""
+
+#: ../../src/json-structure.rst:174 ../../src/json-structure.rst:602
+msgid "name"
+msgstr ""
+
+#: ../../src/json-structure.rst:174
+msgid "Name/ID of Design Document"
+msgstr ""
+
+#: ../../src/json-structure.rst:176
+msgid "view_index"
+msgstr ""
+
+#: ../../src/json-structure.rst:176
+msgid "View Index"
+msgstr ""
+
+#: ../../src/json-structure.rst:178
+msgid ""
+"Indicates whether a compaction routine is currently running on the view"
+msgstr ""
+
+#: ../../src/json-structure.rst:181
+msgid "Size in bytes of the view as stored on disk"
+msgstr ""
+
+#: ../../src/json-structure.rst:183
+msgid "language"
+msgstr ""
+
+#: ../../src/json-structure.rst:183
+msgid "Language for the defined views"
+msgstr ""
+
+#: ../../src/json-structure.rst:185
+msgid "The purge sequence that has been processed"
+msgstr ""
+
+#: ../../src/json-structure.rst:187
+msgid "signature"
+msgstr ""
+
+#: ../../src/json-structure.rst:187
+msgid "MD5 signature of the views for the design document"
+msgstr ""
+
+#: ../../src/json-structure.rst:190
+msgid ""
+"The update sequence of the corresponding database that has been indexed"
+msgstr ""
+
+#: ../../src/json-structure.rst:193
+msgid "updater_running"
+msgstr ""
+
+#: ../../src/json-structure.rst:193
+msgid "Indicates if the view is currently being updated"
+msgstr ""
+
+#: ../../src/json-structure.rst:196
+msgid "waiting_clients"
+msgstr ""
+
+#: ../../src/json-structure.rst:196
+msgid "Number of clients waiting on views from this design document"
+msgstr ""
+
+#: ../../src/json-structure.rst:199
+msgid "waiting_commit"
+msgstr ""
+
+#: ../../src/json-structure.rst:199
+msgid ""
+"Indicates if there are outstanding commits to the underlying database that "
+"need to processed"
+msgstr ""
+
+#: ../../src/json-structure.rst:205
+msgid "Document with Attachments"
+msgstr ""
+
+#: ../../src/json-structure.rst:215 ../../src/json-structure.rst:538
+msgid "_attachments (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:215 ../../src/json-structure.rst:538
+msgid "Document Attachment"
+msgstr ""
+
+#: ../../src/json-structure.rst:217 ../../src/json-structure.rst:540
+msgid "filename"
+msgstr ""
+
+#: ../../src/json-structure.rst:217
+msgid "Attachment information"
+msgstr ""
+
+#: ../../src/json-structure.rst:219 ../../src/json-structure.rst:544
+msgid "content_type"
+msgstr ""
+
+#: ../../src/json-structure.rst:219 ../../src/json-structure.rst:544
+msgid "MIME Content type string"
+msgstr ""
+
+#: ../../src/json-structure.rst:221
+msgid "data"
+msgstr ""
+
+#: ../../src/json-structure.rst:221
+msgid "File attachment content, Base64 encoded"
+msgstr ""
+
+#: ../../src/json-structure.rst:225
+msgid "List of Active Tasks"
+msgstr ""
+
+#: ../../src/json-structure.rst:230
+msgid "tasks [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:230
+msgid "Active Task"
+msgstr ""
+
+#: ../../src/json-structure.rst:232
+msgid "pid"
+msgstr ""
+
+#: ../../src/json-structure.rst:232
+msgid "Process ID"
+msgstr ""
+
+#: ../../src/json-structure.rst:234 ../../src/json-structure.rst:505
+msgid "status"
+msgstr ""
+
+#: ../../src/json-structure.rst:234
+msgid "Task status message"
+msgstr ""
+
+#: ../../src/json-structure.rst:236
+msgid "task"
+msgstr ""
+
+#: ../../src/json-structure.rst:236
+msgid "Task name"
+msgstr ""
+
+#: ../../src/json-structure.rst:238
+msgid "type"
+msgstr ""
+
+#: ../../src/json-structure.rst:238
+msgid "Operation Type"
+msgstr ""
+
+#: ../../src/json-structure.rst:244
+msgid "Replication Settings"
+msgstr ""
+
+#: ../../src/json-structure.rst:249
+msgid "source"
+msgstr ""
+
+#: ../../src/json-structure.rst:249
+msgid "Source database name or URL"
+msgstr ""
+
+#: ../../src/json-structure.rst:251
+msgid "target"
+msgstr ""
+
+#: ../../src/json-structure.rst:251
+msgid "Target database name or URL"
+msgstr ""
+
+#: ../../src/json-structure.rst:253
+msgid "create_target (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:253
+msgid "Creates the target database"
+msgstr ""
+
+#: ../../src/json-structure.rst:255
+msgid "continuous (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:255
+msgid "Configure the replication to be continuous"
+msgstr ""
+
+#: ../../src/json-structure.rst:257
+msgid "cancel (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:257
+msgid "Cancels the replication"
+msgstr ""
+
+#: ../../src/json-structure.rst:259
+msgid "doc_ids (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:259
+msgid "Array of document IDs to be synchronized"
+msgstr ""
+
+#: ../../src/json-structure.rst:261
+msgid "proxy (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:261
+msgid "Address of a proxy server through which replication should occur"
+msgstr ""
+
+#: ../../src/json-structure.rst:264
+msgid "since_seq (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:264
+msgid "Sequence from which the replication should start"
+msgstr ""
+
+#: ../../src/json-structure.rst:267
+msgid "filter (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:267
+msgid "name of the filter function in the form of ddoc/myfilter"
+msgstr ""
+
+#: ../../src/json-structure.rst:270
+msgid "query_params (optional)"
+msgstr ""
+
+#: ../../src/json-structure.rst:270
+msgid ""
+"query parameter that are passed to the filter function; value should be a "
+"document containing parameters as members"
+msgstr ""
+
+#: ../../src/json-structure.rst:278
+msgid "Replication Status"
+msgstr ""
+
+#: ../../src/json-structure.rst:283
+msgid "ok"
+msgstr ""
+
+#: ../../src/json-structure.rst:283
+msgid "Replication status"
+msgstr ""
+
+#: ../../src/json-structure.rst:285 ../../src/json-structure.rst:292
+msgid "session_id"
+msgstr ""
+
+#: ../../src/json-structure.rst:285
+msgid "Unique session ID"
+msgstr ""
+
+#: ../../src/json-structure.rst:287
+msgid "source_last_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:287
+msgid "Last sequence number read from source database"
+msgstr ""
+
+#: ../../src/json-structure.rst:290
+msgid "history [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:290
+msgid "Replication History"
+msgstr ""
+
+#: ../../src/json-structure.rst:292
+msgid "Session ID for this replication operation"
+msgstr ""
+
+#: ../../src/json-structure.rst:294
+msgid "recorded_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:294
+msgid "Last recorded sequence number"
+msgstr ""
+
+#: ../../src/json-structure.rst:296
+msgid "docs_read"
+msgstr ""
+
+#: ../../src/json-structure.rst:296
+msgid "Number of documents read"
+msgstr ""
+
+#: ../../src/json-structure.rst:298
+msgid "docs_written"
+msgstr ""
+
+#: ../../src/json-structure.rst:298
+msgid "Number of documents written to target"
+msgstr ""
+
+#: ../../src/json-structure.rst:300
+msgid "doc_write_failures"
+msgstr ""
+
+#: ../../src/json-structure.rst:300
+msgid "Number of document write failures"
+msgstr ""
+
+#: ../../src/json-structure.rst:302
+msgid "start_time"
+msgstr ""
+
+#: ../../src/json-structure.rst:302
+msgid "Date/Time replication operation started"
+msgstr ""
+
+#: ../../src/json-structure.rst:304
+msgid "start_last_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:304
+msgid "First sequence number in changes stream"
+msgstr ""
+
+#: ../../src/json-structure.rst:306
+msgid "end_time"
+msgstr ""
+
+#: ../../src/json-structure.rst:306
+msgid "Date/Time replication operation completed"
+msgstr ""
+
+#: ../../src/json-structure.rst:308
+msgid "end_last_seq"
+msgstr ""
+
+#: ../../src/json-structure.rst:308
+msgid "Last sequence number in changes stream"
+msgstr ""
+
+#: ../../src/json-structure.rst:310
+msgid "missing_checked"
+msgstr ""
+
+#: ../../src/json-structure.rst:310
+msgid "Number of missing documents checked"
+msgstr ""
+
+#: ../../src/json-structure.rst:312
+msgid "missing_found"
+msgstr ""
+
+#: ../../src/json-structure.rst:312
+msgid "Number of missing documents found"
+msgstr ""
+
+#: ../../src/json-structure.rst:318
+msgid "Request object"
+msgstr ""
+
+#: ../../src/json-structure.rst:323 ../../src/json-structure.rst:462
+msgid "body"
+msgstr ""
+
+#: ../../src/json-structure.rst:323
+msgid ""
+"Request body data as `string`. If request method is `GET` method contains "
+"this field contains ``\"undefined\"`` value, while if `DELETE` or `HEAD` "
+"value is ``\"\"`` (empty string)"
+msgstr ""
+
+#: ../../src/json-structure.rst:329
+msgid "cookie"
+msgstr ""
+
+#: ../../src/json-structure.rst:329
+msgid "Cookies `object`."
+msgstr ""
+
+#: ../../src/json-structure.rst:331
+msgid "form"
+msgstr ""
+
+#: ../../src/json-structure.rst:331
+msgid ""
+"Form data `object`. Contains decoded body as key-value pairs if `Content-"
+"Type` header was ``application/x-www-form-urlencoded``."
+msgstr ""
+
+#: ../../src/json-structure.rst:336 ../../src/json-structure.rst:470
+msgid "headers"
+msgstr ""
+
+#: ../../src/json-structure.rst:336
+msgid "Request headers `object`."
+msgstr ""
+
+#: ../../src/json-structure.rst:338
+msgid ""
+"Requested document id `string` if it was specified or ``null`` otherwise."
+msgstr ""
+
+#: ../../src/json-structure.rst:341
+msgid "info"
+msgstr ""
+
+#: ../../src/json-structure.rst:341
+msgid ":ref:`Database information <dbinfo_object>`"
+msgstr ""
+
+#: ../../src/json-structure.rst:343
+msgid "method"
+msgstr ""
+
+#: ../../src/json-structure.rst:343
+msgid ""
+"Request method as `string` or `array`. String value is method is one of: "
+"`HEAD`, `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`, and `TRACE`, otherwise it"
+" will be represented as array of char codes."
+msgstr ""
+
+#: ../../src/json-structure.rst:349
+msgid "path"
+msgstr ""
+
+#: ../../src/json-structure.rst:349
+msgid "List of requested path sections."
+msgstr ""
+
+#: ../../src/json-structure.rst:351
+msgid "peer"
+msgstr ""
+
+#: ../../src/json-structure.rst:351
+msgid "Request source IP address."
+msgstr ""
+
+#: ../../src/json-structure.rst:353
+msgid "query"
+msgstr ""
+
+#: ../../src/json-structure.rst:353
+msgid ""
+"URL query parameters `object`. Note that multiple keys not supported and "
+"last key value suppress others."
+msgstr ""
+
+#: ../../src/json-structure.rst:357
+msgid "requested_path"
+msgstr ""
+
+#: ../../src/json-structure.rst:357
+msgid "List of actual requested path section."
+msgstr ""
+
+#: ../../src/json-structure.rst:359
+msgid "raw_path"
+msgstr ""
+
+#: ../../src/json-structure.rst:359
+msgid "Raw requested path `string`."
+msgstr ""
+
+#: ../../src/json-structure.rst:361
+msgid "secObj"
+msgstr ""
+
+#: ../../src/json-structure.rst:361
+msgid ":ref:`security_object`."
+msgstr ""
+
+#: ../../src/json-structure.rst:363
+msgid "userCtx"
+msgstr ""
+
+#: ../../src/json-structure.rst:363
+msgid ":ref:`userctx_object`."
+msgstr ""
+
+#: ../../src/json-structure.rst:365
+msgid "uuid"
+msgstr ""
+
+#: ../../src/json-structure.rst:365
+msgid "Generated UUID by specified algorithm in config file."
+msgstr ""
+
+#: ../../src/json-structure.rst:451
+msgid "Response object"
+msgstr ""
+
+#: ../../src/json-structure.rst:456
+msgid "code"
+msgstr ""
+
+#: ../../src/json-structure.rst:456
+msgid "HTTP status code `number`."
+msgstr ""
+
+#: ../../src/json-structure.rst:458
+msgid "json"
+msgstr ""
+
+#: ../../src/json-structure.rst:458
+msgid ""
+"JSON encodable `object`. Implicitly sets `Content-Type` header as "
+"``application/json``."
+msgstr ""
+
+#: ../../src/json-structure.rst:462
+msgid ""
+"Raw response text `string`. Implicitly sets `Content-Type` header as "
+"``text/html; charset=utf-8``."
+msgstr ""
+
+#: ../../src/json-structure.rst:466
+msgid "base64"
+msgstr ""
+
+#: ../../src/json-structure.rst:466
+msgid ""
+"Base64 encoded `string`. Implicitly sets `Content-Type` header as "
+"``application/binary``."
+msgstr ""
+
+#: ../../src/json-structure.rst:470
+msgid ""
+"Response headers `object`. `Content-Type` header from this object overrides "
+"any implicitly assigned one."
+msgstr ""
+
+#: ../../src/json-structure.rst:474
+msgid "stop"
+msgstr ""
+
+#: ../../src/json-structure.rst:474
+msgid ""
+"`boolean` signal to stop iteration over view result rows (for list functions"
+" only)"
+msgstr ""
+
+#: ../../src/json-structure.rst:479
+msgid ""
+"``body``, ``base64`` and ``json`` object keys are overlaps each other and "
+"the last wins. Since most realizations of key-value objects doesn't preserve"
+" key order mixing them may create confusing situation. Try to use only one "
+"of them."
+msgstr ""
+
+#: ../../src/json-structure.rst:485
+msgid ""
+"Any custom property makes CouchDB raise internal exception. Also `Response "
+"object` could be a simple string value which would be implicitly wrapped "
+"into ``{\"body\": ...}`` object."
+msgstr ""
+
+#: ../../src/json-structure.rst:491
+msgid "Returned CouchDB Document with Detailed Revision Info"
+msgstr ""
+
+#: ../../src/json-structure.rst:501
+msgid "_revs_info [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:501
+msgid "CouchDB Document Extended Revision Info"
+msgstr ""
+
+#: ../../src/json-structure.rst:503
+msgid "rev"
+msgstr ""
+
+#: ../../src/json-structure.rst:503
+msgid "Full revision string"
+msgstr ""
+
+#: ../../src/json-structure.rst:505
+msgid "Status of the revision"
+msgstr ""
+
+#: ../../src/json-structure.rst:509
+msgid "Returned CouchDB Document with Revision Info"
+msgstr ""
+
+#: ../../src/json-structure.rst:519
+msgid "_revisions"
+msgstr ""
+
+#: ../../src/json-structure.rst:519
+msgid "CouchDB Document Revisions"
+msgstr ""
+
+#: ../../src/json-structure.rst:521
+msgid "ids [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:521
+msgid "Array of valid revision IDs, in reverse order (latest first)"
+msgstr ""
+
+#: ../../src/json-structure.rst:524
+msgid "start"
+msgstr ""
+
+#: ../../src/json-structure.rst:524
+msgid "Prefix number for the latest revision"
+msgstr ""
+
+#: ../../src/json-structure.rst:528
+msgid "Returned Document with Attachments"
+msgstr ""
+
+#: ../../src/json-structure.rst:540
+msgid "Attachment"
+msgstr ""
+
+#: ../../src/json-structure.rst:542
+msgid "stub"
+msgstr ""
+
+#: ../../src/json-structure.rst:542
+msgid "Indicates whether the attachment is a stub"
+msgstr ""
+
+#: ../../src/json-structure.rst:546
+msgid "length"
+msgstr ""
+
+#: ../../src/json-structure.rst:546
+msgid "Length (bytes) of the attachment data"
+msgstr ""
+
+#: ../../src/json-structure.rst:548
+msgid "revpos"
+msgstr ""
+
+#: ../../src/json-structure.rst:548
+msgid "Revision where this attachment exists"
+msgstr ""
+
+#: ../../src/json-structure.rst:554
+msgid "Security Object"
+msgstr ""
+
+#: ../../src/json-structure.rst:559
+msgid "admins"
+msgstr ""
+
+#: ../../src/json-structure.rst:559
+msgid "Roles/Users with admin privileges"
+msgstr ""
+
+#: ../../src/json-structure.rst:561 ../../src/json-structure.rst:567
+msgid "roles [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:561 ../../src/json-structure.rst:567
+msgid "List of roles with parent privilege"
+msgstr ""
+
+#: ../../src/json-structure.rst:563 ../../src/json-structure.rst:569
+msgid "users [array]"
+msgstr ""
+
+#: ../../src/json-structure.rst:563 ../../src/json-structure.rst:569
+msgid "List of users with parent privilege"
+msgstr ""
+
+#: ../../src/json-structure.rst:565
+msgid "readers"
+msgstr ""
+
+#: ../../src/json-structure.rst:565
+msgid "Roles/Users with reader privileges"
+msgstr ""
+
+#: ../../src/json-structure.rst:594
+msgid "User Context Object"
+msgstr ""
+
+#: ../../src/json-structure.rst:599
+msgid "db"
+msgstr ""
+
+#: ../../src/json-structure.rst:599
+msgid "Database name in context of provided operation."
+msgstr ""
+
+#: ../../src/json-structure.rst:602
+msgid "User name."
+msgstr ""
+
+#: ../../src/json-structure.rst:604
+msgid "roles"
+msgstr ""
+
+#: ../../src/json-structure.rst:604
+msgid "List of user roles."
+msgstr ""
+
+#: ../../src/json-structure.rst:621
+msgid "View Head Information"
+msgstr ""
+
+#: ../../src/json-structure.rst:626
+msgid "Number of documents in the view"
+msgstr ""

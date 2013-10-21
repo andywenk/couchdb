@@ -1,0 +1,264 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/ddoc/common.rst:17
+msgid "``/db/_design/design-doc``"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:21
+msgid ""
+"Returns the HTTP Headers containing a minimal amount of information about "
+"the specified design document."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:26
+msgid ":head:`/{db}/{docid}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:31
+msgid ""
+"Returns design document with the specified design document` from the "
+"specified database. Unless you request a specific revision, the latest "
+"revision of the document will always be returned."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:37
+msgid ":get:`/{db}/{docid}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:42
+msgid ""
+"The :method:`PUT` method creates a new named design document, or creates a "
+"new revision of the existing design document."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:45
+msgid ""
+"The design documents have some agreement upon their fields and structure. "
+"Currently it is the next:"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:48
+msgid ""
+"**language** (*string*): Defines :ref:`Query Server <query-server>` "
+":config:section:`key <query_servers>` to process design document functions"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:50
+msgid "**options** (*object*): View's default options"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:51
+msgid "**filters** (*object*): :ref:`Filter functions <filterfun>` definition"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:52
+msgid "**lists** (*object*): :ref:`List functions <listfun>` definition"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:53
+msgid "**rewrites** (*array*): Rewrite rules definition"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:54
+msgid "**shows** (*object*): :ref:`Show functions <showfun>` definition"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:55
+msgid "**updates** (*object*): :ref:`Update functions <updatefun>` definition"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:56
+msgid ""
+"**validate_doc_update** (*string*): :ref:`Validate document update <vdufun>`"
+" function source"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:58
+msgid "**views** (*object*): :ref:`View functions <viewfun>` definition."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:60
+msgid ""
+"Note, that for ``filters``, ``lists``, ``shows`` and ``updates`` fields "
+"objects are mapping of function name to string function source code. For "
+"``views`` mapping is the same except that values are objects with ``map`` "
+"and ``reduce`` (optional) keys which also contains functions source code."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:67
+msgid ":put:`/{db}/{docid}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:72
+msgid ""
+"Deletes the specified document from the database. You must supply the "
+"current (latest) revision, either by using the ``rev`` parameter to specify "
+"the revision."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:78
+msgid ":delete:`/{db}/{docid}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:82
+msgid ""
+"The :method:`COPY` (which is non-standard HTTP) copies an existing design "
+"document to a new or existing one."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:86
+msgid ""
+"Copying a design document does automatically reconstruct the view indexes. "
+"These will be recreated, as with other views, the first time the new view is"
+" accessed."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:92
+msgid ":copy:`/{db}/{docid}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:98
+msgid "``/db/_design/design-doc/attachment``"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:102
+msgid ""
+"Returns the HTTP headers containing a minimal amount of information about "
+"the specified attachment."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:107
+msgid ":head:`/{db}/{docid}/{attname}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:111
+msgid ""
+"Returns the file attachment associated with the design document. The raw "
+"data of the associated attachment is returned (just as if you were accessing"
+" a static file."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:117
+msgid ":get:`/{db}/{docid}/{attname}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:121
+msgid ""
+"Uploads the supplied content as an attachment to the specified design "
+"document. The attachment name provided must be a URL encoded string."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:126
+msgid ":put:`/{db}/{docid}/{attname}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:130
+msgid "Deletes the attachment of the specified design document."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:134
+msgid ":delete:`/{db}/{docid}/{attname}`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:140
+msgid "``/db/_design/design-doc/_info``"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:144
+msgid ""
+"Obtains information about the specified design document, including the "
+"index, index size and current status of the design document and associated "
+"index information."
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:150 ../../src/api/ddoc/common.rst:152
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:151
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:153
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:158
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:166
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:197
+msgid "View Index Information"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:199
+msgid ""
+"The response from :get:`/{db}/_design/{ddoc}/_info` contains ``view_index`` "
+"(*object*) field with the next structure:"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:202
+msgid ""
+"**compact_running** (*boolean*):  Indicates whether a compaction routine is "
+"currently running on the view"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:204
+msgid "**data_size** (*number*): Actual size in bytes of the view"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:205
+msgid "**disk_size** (*number*): Size in bytes of the view as stored on disk"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:206
+msgid "**language** (*string*): Language for the defined views"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:207
+msgid "**purge_seq** (*number*): The purge sequence that has been processed"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:208
+msgid ""
+"**signature** (*string*): MD5 signature of the views for the design document"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:209
+msgid ""
+"**update_seq** (*number*): The update sequence of the corresponding database"
+" that has been indexed"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:211
+msgid ""
+"**updater_running** (*boolean*): Indicates if the view is currently being "
+"updated"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:213
+msgid ""
+"**waiting_clients** (*number*): Number of clients waiting on views from this"
+" design document"
+msgstr ""
+
+#: ../../src/api/ddoc/common.rst:215
+msgid ""
+"**waiting_commit** (*boolean*): Indicates if there are outstanding commits "
+"to the underlying database that need to processed"
+msgstr ""

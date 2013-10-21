@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/experimental.rst:17
+# 81e872efe6024b47bd82a865d21b2fe8
+msgid "Experimental Features"
+msgstr ""
+
+#: ../../src/experimental.rst:19
+# 0ad82801253e414ca32b0be879816266
+msgid "This is a list of experimental features in CouchDB. They are included in a release because the development team is requesting feedback from the larger developer community. As such, please play around with these features and send us feedback, thanks!"
+msgstr ""
+
+#: ../../src/experimental.rst:24
+# 9112b09f9e5b4c57b6467a151f1c99cf
+msgid "Use at your own risk! Do not rely on these features for critical applications."
+msgstr ""
+
+#: ../../src/experimental.rst:28
+# 7edb5340343c47af9e3286fafbd98bb4
+msgid "NodeJS Query Server"
+msgstr ""
+
+#: ../../src/experimental.rst:30
+# 2666f07d82ef4c6da89ae06a55abda3b
+msgid "The NodeJS Query Server is an alternative runtime environment for the default JavaScript Query Server that runs on top of Node.JS and not SpiderMonkey like the default Query Server."
+msgstr ""
+
+#: ../../src/experimental.rst:36
+# c0b0d67772b443fc865fb66af61ded26
+msgid "Setup"
+msgstr ""
+
+#: ../../src/experimental.rst:38
+# 6213c855212c4607a4283c3a5b5d548f
+msgid "You will need to install Node.JS version 0.10.0 or later. See `Node.JS Downloads <http://nodejs.org/download/>`_ for options."
+msgstr ""
+
+#: ../../src/experimental.rst:41
+# 2447cddd152d4be0983fe220da997f91
+msgid "Install the `couchjs-node` binary. Either from the CouchDB sources::"
+msgstr ""
+
+#: ../../src/experimental.rst:46
+# f0b6e2f5de19448d8c40859f45272e4a
+msgid "Or via NPM::"
+msgstr ""
+
+#: ../../src/experimental.rst:50
+# 4dc66fff44034ee799a9089ba7c29092
+msgid "**NPM in non-standard locations**"
+msgstr ""
+
+#: ../../src/experimental.rst:52
+# e4c270307dbe4e46b787234dd33157b7
+msgid "If your Node.JS installation doesn’t store binaries in `/usr/local/bin` you will need to adjust CouchDB’s configuration. Add this to your `local.ini` file:"
+msgstr ""
+
+#: ../../src/experimental.rst:61
+# d8c7cca78c7f4013bc3c1333452db86d
+msgid "And then restart your CouchDB instance."
+msgstr ""
+
+#: ../../src/experimental.rst:63
+# 14e21c794ab34c978b3c50c7d4eab890
+msgid "2. Done. Now you can create design documents with the `language` parameter set to `nodejs` and all JavaScript functions in this design document will be processed by the Node.JS query server."
+msgstr ""
+
+#: ../../src/experimental.rst:67
+# b2d83787b13f46709388721855e6fe12
+msgid "Enjoy!"
+msgstr ""
+
+#: ../../src/experimental.rst:71
+# e939f34081b34623a1856592209536c9
+msgid "Differences from the SpiderMonkey Query Server"
+msgstr ""
+
+#: ../../src/experimental.rst:73
+# 954038016010469795b3856c6459f796
+msgid "V8 and SpiderMonkey roughly behave similar, but there might be engine- specific differences that make or break a JavaScript function in one or the other server."
+msgstr ""
+
+#: ../../src/experimental.rst:79
+# ae4ed9af1d714d1ba1287311f752619d
+msgid "Plugins"
+msgstr ""
+
+#: ../../src/experimental.rst:81
+# c679029ce3d945558debd25d203db0ce
+msgid "See `src/couch_plugins/README.md`."
+msgstr ""
+

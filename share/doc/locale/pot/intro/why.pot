@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/intro/why.rst:18
+# 148cf8ca84404de5bf020e18fe63a629
+msgid "Why CouchDB?"
+msgstr ""
+
+#: ../../src/intro/why.rst:20
+# c72f3610c78f489fb6e76ba941af4bde
+msgid "Apache CouchDB is one of a new breed of database management systems. This chapter explains why there's a need for new systems as well as the motivations behind building CouchDB."
+msgstr ""
+
+#: ../../src/intro/why.rst:24
+# 13d3646ecce64a64923d6f2c049292f4
+msgid "As CouchDB developers, we're naturally very excited to be using CouchDB. In this chapter we'll share with you the reasons for our enthusiasm. We'll show you how CouchDB's schema-free document model is a better fit for common applications, how the built-in query engine is a powerful way to use and process your data, and how CouchDB's design lends itself to modularization and scalability."
+msgstr ""
+
+#: ../../src/intro/why.rst:33
+# 6d979d3f55b840a98a7f13dcafb8223a
+msgid "Relax"
+msgstr ""
+
+#: ../../src/intro/why.rst:35
+# fb0086d421f24233b56da144280f295d
+msgid "If there's one word to describe CouchDB, it is *relax*. It is in the title of this book, it is the byline to CouchDB's official logo, and when you start CouchDB, you see::"
+msgstr ""
+
+#: ../../src/intro/why.rst:41
+# 8b247824f4254a4181351e83f969296d
+msgid "Why is relaxation important? Developer productivity roughly doubled in the last five years. The chief reason for the boost is more powerful tools that are easier to use. Take Ruby on Rails as an example. It is an infinitely complex framework, but it's easy to get started with. Rails is a success story because of the core design focus on ease of use. This is one reason why CouchDB is relaxing: learning CouchDB and understanding its core concepts should feel natural to most everybody who has been doing any work on the Web. And it is still pretty easy to explain to non-technical people."
+msgstr ""
+
+#: ../../src/intro/why.rst:50
+# a82e78f1bcf44b259620061e7df39b42
+msgid "Getting out of the way when creative people try to build specialized solutions is in itself a core feature and one thing that CouchDB aims to get right. We found existing tools too cumbersome to work with during development or in production, and decided to focus on making CouchDB easy, even a pleasure, to use."
+msgstr ""
+
+#: ../../src/intro/why.rst:56
+# f6e97e409603435ea81243b4ef5e1f04
+msgid "Another area of relaxation for CouchDB users is the production setting. If you have a live running application, CouchDB again goes out of its way to avoid troubling you. Its internal architecture is fault-tolerant, and failures occur in a controlled environment and are dealt with gracefully. Single problems do not cascade through an entire server system but stay isolated in single requests."
+msgstr ""
+
+#: ../../src/intro/why.rst:63
+# 7a11563237604fecb139bbf236e3baeb
+msgid "CouchDB's core concepts are simple (yet powerful) and well understood. Operations teams (if you have a team; otherwise, that's you) do not have to fear random behavior and untraceable errors. If anything should go wrong, you can easily find out what the problem is, but these situations are rare."
+msgstr ""
+
+#: ../../src/intro/why.rst:68
+# 3c8e6a77cb3149cebfa23d2222005c70
+msgid "CouchDB is also designed to handle varying traffic gracefully. For instance, if a website is experiencing a sudden spike in traffic, CouchDB will generally absorb a lot of concurrent requests without falling over. It may take a little more time for each request, but they all get answered. When the spike is over, CouchDB will work with regular speed again."
+msgstr ""
+
+#: ../../src/intro/why.rst:74
+# b681ce1bf8cb402b986d05eb5433ccc4
+msgid "The third area of relaxation is growing and shrinking the underlying hardware of your application. This is commonly referred to as scaling. CouchDB enforces a set of limits on the programmer. On first look, CouchDB might seem inflexible, but some features are left out by design for the simple reason that if CouchDB supported them, it would allow a programmer to create applications that couldn't deal with scaling up or down."
+msgstr ""
+
+#: ../../src/intro/why.rst:82
+# 93e8eccffa1c40f4a28aedba85e36f39
+msgid "CouchDB doesn't let you do things that would get you in trouble later on. This sometimes means you'll have to unlearn best practices you might have picked up in your current or past work."
+msgstr ""
+
+#: ../../src/intro/why.rst:88
+# d7d3aa4ebbec4a1e9c6410f00040f5f5
+msgid "A Different Way to Model Your Data"
+msgstr ""
+
+#: ../../src/intro/why.rst:90
+# 29b7d80a6e174e0c9c2702b3a68e9fe7
+msgid "We believe that CouchDB will drastically change the way you build document-based applications. CouchDB combines an intuitive document storage model with a powerful query engine in a way that's so simple you'll probably be tempted to ask, “Why has no one built something like this before?”"
+msgstr ""
+
+#: ../../src/intro/why.rst:95
+# d79c960530034cb4a394c4c107327b62
+msgid "Django may be built for the Web, but CouchDB is built of the Web. I've never seen software that so completely embraces the philosophies behind HTTP. CouchDB makes Django look old-school in the same way that Django makes ASP look outdated."
+msgstr ""
+
+#: ../../src/intro/why.rst:106
+# 72019a83299d4f4385ab4f4138efed06
+msgid "Jacob Kaplan-Moss, Django developer"
+msgstr ""
+
+#: ../../src/intro/why.rst:102
+# f4f99c8ad85e48a7ba04bd2d08f961cf
+msgid "CouchDB's design borrows heavily from web architecture and the concepts of resources, methods, and representations. It augments this with powerful ways to query, map, combine, and filter your data. Add fault tolerance, extreme scalability, and incremental replication, and CouchDB defines a sweet spot for document databases."
+msgstr ""
+
+#: ../../src/intro/why.rst:110
+# 8a8cb9a9d2ef44a28af1f83a76ceb731
+msgid "A Better Fit for Common Applications"
+msgstr ""
+
+#: ../../src/intro/why.rst:112
+# ea9ac7ebb88a4f959388b6f62819d9d1
+msgid "We write software to improve our lives and the lives of others. Usually this involves taking some mundane information such as contacts, invoices, or receipts and manipulating it using a computer application. CouchDB is a great fit for common applications like this because it embraces the natural idea of evolving, self-contained documents as the very core of its data model."
+msgstr ""
+
+#: ../../src/intro/why.rst:120
+# 62c8e52a300147eeb28407632baba0d1
+msgid "Self-Contained Data"
+msgstr ""
+
+#: ../../src/intro/why.rst:122
+# f33e55c38132472d9ca078f094f66bc3
+msgid "An invoice contains all the pertinent information about a single transaction the seller, the buyer, the date, and a list of the items or services sold. As shown in :ref:`intro/why-01`, there's no abstract reference on this piece of paper that points to some other piece of paper with the seller's name and address. Accountants appreciate the simplicity of having everything in one place. And given the choice, programmers appreciate that, too."
+msgstr ""
+
+#: ../../src/intro/why.rst:136
+# a4f6d00a6f5444bdbcdc6c7f7d319c4b
+msgid "Figure 1. Self-contained documents"
+msgstr ""
+
+#: ../../src/intro/why.rst:139
+# f67d6665eb8944ad89971d554322e77c
+msgid "Yet using references is exactly how we model our data in a relational database! Each invoice is stored in a table as a row that refers to other rows in other tables one row for seller information, one for the buyer, one row for each item billed, and more rows still to describe the item details, manufacturer details, and so on and so forth."
+msgstr ""
+
+#: ../../src/intro/why.rst:145
+# bc5ece8cd6ad473c80e74a06056b2286
+msgid "This isn't meant as a detraction of the relational model, which is widely applicable and extremely useful for a number of reasons. Hopefully, though, it illustrates the point that sometimes your model may not “fit” your data in the way it occurs in the real world."
+msgstr ""
+
+#: ../../src/intro/why.rst:150
+# f1e961c64a5546f7b7ca54ac1a904bdd
+msgid "Let's take a look at the humble contact database to illustrate a different way of modeling data, one that more closely “fits” its real-world counterpart -- a pile of business cards. Much like our invoice example, a business card contains all the important information, right there on the cardstock. We call this “self-contained” data, and it's an important concept in understanding document databases like CouchDB."
+msgstr ""
+
+#: ../../src/intro/why.rst:159
+# 1f2a6dbe28634f39a1aa837c5fd96a42
+msgid "Syntax and Semantics"
+msgstr ""
+
+#: ../../src/intro/why.rst:161
+# def900a1d40c4cbab0a89221599311b2
+msgid "Most business cards contain roughly the same information -- someone's identity, an affiliation, and some contact information. While the exact form of this information can vary between business cards, the general information being conveyed remains the same, and we're easily able to recognize it as a business card. In this sense, we can describe a business card as a *real-world document*."
+msgstr ""
+
+#: ../../src/intro/why.rst:168
+# f5503be6d9254e5d89be18509ff2254d
+msgid "Jan's business card might contain a phone number but no fax number, whereas J. Chris's business card contains both a phone and a fax number. Jan does not have to make his lack of a fax machine explicit by writing something as ridiculous as “Fax: None” on the business card. Instead, simply omitting a fax number implies that he doesn't have one."
+msgstr ""
+
+#: ../../src/intro/why.rst:174
+# 18162aaac5d44e11a8522cd5879b049c
+msgid "We can see that real-world documents of the same type, such as business cards, tend to be very similar in *semantics* -- the sort of information they carry, but can vary hugely in *syntax*, or how that information is structured. As human beings, we're naturally comfortable dealing with this kind of variation."
+msgstr ""
+
+#: ../../src/intro/why.rst:179
+# d1caf837adee47c2b5ea4209496cef3a
+msgid "While a traditional relational database requires you to model your data *up front*, CouchDB's schema-free design unburdens you with a powerful way to aggregate your data *after the fact*, just like we do with real-world documents. We'll look in depth at how to design applications with this underlying storage paradigm."
+msgstr ""
+
+#: ../../src/intro/why.rst:187
+# 832e635d52d34cb18b1c77e9e5eeaec8
+msgid "Building Blocks for Larger Systems"
+msgstr ""
+
+#: ../../src/intro/why.rst:189
+# c2d2d0d26d5045a9aba2eae376bc6874
+msgid "CouchDB is a storage system useful on its own. You can build many applications with the tools CouchDB gives you. But CouchDB is designed with a bigger picture in mind. Its components can be used as building blocks that solve storage problems in slightly different ways for larger and more complex systems."
+msgstr ""
+
+#: ../../src/intro/why.rst:194
+# eeb3f4922f5a49ebb736626da9538a9c
+msgid "Whether you need a system that's crazy fast but isn't too concerned with reliability (think logging), or one that guarantees storage in two or more physically separated locations for reliability, but you're willing to take a performance hit, CouchDB lets you build these systems."
+msgstr ""
+
+#: ../../src/intro/why.rst:199
+# 9c97e68907074cedaaa2e5ed41b78f22
+msgid "There are a multitude of knobs you could turn to make a system work better in one area, but you'll affect another area when doing so. One example would be the CAP theorem discussed in the next chapter. To give you an idea of other things that affect storage systems, see :ref:`Figure 2 <intro/why-figure-02>` and :ref:`Figure 3 <intro/why-figure-03>`."
+msgstr ""
+
+#: ../../src/intro/why.rst:205
+# 3cce0dab07de47329b6173900de0a8ab
+msgid "By reducing latency for a given system (and that is true not only for storage systems), you affect concurrency and throughput capabilities."
+msgstr ""
+
+#: ../../src/intro/why.rst:215
+# 70bebc9879874dc092105d2c01f5474f
+msgid "Figure 2. Throughput, latency, or concurrency"
+msgstr ""
+
+#: ../../src/intro/why.rst:224
+# 09b13dd60a92468ebf59fa21bf5d0064
+msgid "Figure 3. Scaling: read requests, write requests, or data"
+msgstr ""
+
+#: ../../src/intro/why.rst:227
+# 83f57d4ba7c44ceb9d56a11a409dd04c
+msgid "When you want to scale out, there are three distinct issues to deal with: scaling read requests, write requests, and data. Orthogonal to all three and to the items shown in :ref:`Figure 2 <intro/why-figure-02>` and :ref:`Figure 3 <intro/why-figure-03>` are many more attributes like reliability or simplicity. You can draw many of these graphs that show how different features or attributes pull into different directions and thus shape the system they describe."
+msgstr ""
+
+#: ../../src/intro/why.rst:234
+# 69432829e0f14372bc662ec27f9838f2
+msgid "CouchDB is very flexible and gives you enough building blocks to create a system shaped to suit your exact problem. That's not saying that CouchDB can be bent to solve any problem -- CouchDB is no silver bullet -- but in the area of data storage, it can get you a long way."
+msgstr ""
+
+#: ../../src/intro/why.rst:241
+# f3ccdbacad8c48b4bb67daaa272d3fe3
+msgid "CouchDB Replication"
+msgstr ""
+
+#: ../../src/intro/why.rst:243
+# 99b13d180ee94eb89492f62af9fd8782
+msgid "CouchDB replication is one of these building blocks. Its fundamental function is to synchronize two or more CouchDB databases. This may sound simple, but the simplicity is key to allowing replication to solve a number of problems: reliably synchronize databases between multiple machines for redundant data storage; distribute data to a cluster of CouchDB instances that share a subset of the total number of requests that hit the cluster (load balancing); and distribute data between physically distant locations, such as one office in New York and another in Tokyo."
+msgstr ""
+
+#: ../../src/intro/why.rst:252
+# 7dea402effbd478d817b4bb32367afa5
+msgid "CouchDB replication uses the same REST API all clients use. HTTP is ubiquitous and well understood. Replication works incrementally; that is, if during replication anything goes wrong, like dropping your network connection, it will pick up where it left off the next time it runs. It also only transfers data that is needed to synchronize databases."
+msgstr ""
+
+#: ../../src/intro/why.rst:258
+# 909567fe2f274651b22dab9d0d0ed2eb
+msgid "A core assumption CouchDB makes is that things can go wrong, like network connection troubles, and it is designed for graceful error recovery instead of assuming all will be well. The replication system's incremental design shows that best. The ideas behind “things that can go wrong” are embodied in the `Fallacies of Distributed Computing`_:"
+msgstr ""
+
+#: ../../src/intro/why.rst:264
+# 02d2dcfdceb74189941cae506072b1a8
+msgid "The network is reliable."
+msgstr ""
+
+#: ../../src/intro/why.rst:265
+# fe486ecad2ce40d0a46ce803e6211c4a
+msgid "Latency is zero."
+msgstr ""
+
+#: ../../src/intro/why.rst:266
+# 85c1f4c2d313468c9044f13f3ddcc433
+msgid "Bandwidth is infinite."
+msgstr ""
+
+#: ../../src/intro/why.rst:267
+# b360bd5403b14e79b15aa94bfbddd453
+msgid "The network is secure."
+msgstr ""
+
+#: ../../src/intro/why.rst:268
+# 52848f7d53354990af948c177fcbe9d0
+msgid "Topology doesn't change."
+msgstr ""
+
+#: ../../src/intro/why.rst:269
+# e8773dfcf00748b7b47147d37afbd6b4
+msgid "There is one administrator."
+msgstr ""
+
+#: ../../src/intro/why.rst:270
+# 0f9a81ce8046411f953507fac62ce5bf
+msgid "Transport cost is zero."
+msgstr ""
+
+#: ../../src/intro/why.rst:271
+# 5c231a462550481bb96a1594a2b47618
+msgid "The network is homogeneous."
+msgstr ""
+
+#: ../../src/intro/why.rst:273
+# e3c0c540eb3c497bb61d2708be241b93
+msgid "Existing tools often try to hide the fact that there is a network and that any or all of the previous conditions don't exist for a particular system. This usually results in fatal error scenarios when something finally goes wrong. In contrast, CouchDB doesn't try to hide the network; it just handles errors gracefully and lets you know when actions on your end are required."
+msgstr ""
+
+#: ../../src/intro/why.rst:283
+# eaabbf08b9b848129e8ed81494317dd1
+msgid "Local Data Is King"
+msgstr ""
+
+#: ../../src/intro/why.rst:285
+# 85009ec3052c4def949825271690a367
+msgid "CouchDB takes quite a few lessons learned from the Web, but there is one thing that could be improved about the Web: latency. Whenever you have to wait for an application to respond or a website to render, you almost always wait for a network connection that isn't as fast as you want it at that point. Waiting a few seconds instead of milliseconds greatly affects user experience and thus user satisfaction."
+msgstr ""
+
+#: ../../src/intro/why.rst:292
+# 11b8d14f30a4442cbdf17c7f38f10ce1
+msgid "What do you do when you are offline? This happens all the time -- your DSL or cable provider has issues, or your iPhone, G1, or Blackberry has no bars, and no connectivity means no way to get to your data."
+msgstr ""
+
+#: ../../src/intro/why.rst:296
+# b86249e9d1f442c59399ebdcdf73d09b
+msgid "CouchDB can solve this scenario as well, and this is where scaling is important again. This time it is scaling down. Imagine CouchDB installed on phones and other mobile devices that can synchronize data with centrally hosted CouchDBs when they are on a network. The synchronization is not bound by user interface constraints like subsecond response times. It is easier to tune for high bandwidth and higher latency than for low bandwidth and very low latency. Mobile applications can then use the local CouchDB to fetch data, and since no remote networking is required for that, latency is low by default."
+msgstr ""
+
+#: ../../src/intro/why.rst:306
+# e3abced357664a91a5bbe241bb8cc817
+msgid "Can you really use CouchDB on a phone? Erlang, CouchDB's implementation language has been designed to run on embedded devices magnitudes smaller and less powerful than today's phones."
+msgstr ""
+
+#: ../../src/intro/why.rst:312
+# 7f520338f04546f1a16c32e437fc5dfd
+msgid "Wrapping Up"
+msgstr ""
+
+#: ../../src/intro/why.rst:314
+# 1011d2c02f4a4e5b967b82405774c81a
+msgid "The next chapter further explores the distributed nature of CouchDB. We should have given you enough bites to whet your interest. Let's go!"
+msgstr ""
+

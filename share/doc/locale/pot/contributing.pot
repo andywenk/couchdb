@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/contributing.rst:17
+# 44200d1598104859b7d35445f354333f
+msgid "Contributing to this Documentation"
+msgstr ""
+
+#: ../../src/contributing.rst:19
+# 6de8ef10ce2e4574a04850b7fe0ad86e
+msgid "The documentation lives in the CouchDB source tree. We'll start by forking and closing the CouchDB GitHub mirror. That will allow us to send the contribution to CouchDB with a pull request."
+msgstr ""
+
+#: ../../src/contributing.rst:23
+# 1b79d8415a1a49c8adcf76ab925bd57a
+msgid "If you don't have a GitHub account yet, it is a good time to get one, they are free. If you don't want to use GitHub, there are alternate ways to contributing back, that we'll cover next time."
+msgstr ""
+
+#: ../../src/contributing.rst:27
+# 5d3de67b233b46429c478915f6245c5f
+msgid "Go to https://github.com/apache/couchdb and click the \"fork\" button in the top right. This will create a fork of CouchDB in your GitHub account. Mine is `janl`, so my fork lives at https://github.com/janl/couchdb. In the header, it tells me me my \"GitHub Clone URL\". We need to copy that and start a terminal:"
+msgstr ""
+
+#: ../../src/contributing.rst:38
+# 315b49f0628d4ced990fb6b8050fdc13
+msgid "I'm opening the whole CouchDB source tree in my favourite editor. It gives me the usual directory listing:"
+msgstr ""
+
+#: ../../src/contributing.rst:73
+# 5ee1559724c3476786fd01eebad5d15d
+msgid "The documentation sources live in `share/doc/src`, you can safely ignore all the other files and directories."
+msgstr ""
+
+#: ../../src/contributing.rst:76
+# f5efd6121d364fe9a070d5d84c42d5c1
+msgid "First we should determine where we want to document this inside the documentation. We can look through http://docs.couchdb.org/en/latest/ for inspiration. The `JSON Structure Reference`_ looks like a fine place to write this up."
+msgstr ""
+
+#: ../../src/contributing.rst:82
+# 10891a7ccc6c44dbb2c5d7c21fbf5f36
+msgid "The current state includes mostly tables describing the JSON structure (after all, that's the title of this chapter), but some prose about the number representation can't hurt. For future reference, since the topic in the thread includes views and different encoding in views (as opposed to the storage engine), we should remember to make a note in the views documentation as well, but we'll leave this for later."
+msgstr ""
+
+#: ../../src/contributing.rst:89
+# cabd33dca9c14649b1188a0c09842025
+msgid "Let's try and find the source file that builds the file http://docs.couchdb.org/en/latest/json-structure.html -- we are in luck, under `share/doc/src` we find the file `json-structure.rst`. That looks promising. `.rst` stands for ReStructured Text (see http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html for a markup reference), which is an ascii format for writing documents, documentation in this case. Let's have a look and open it."
+msgstr ""
+
+#: ../../src/contributing.rst:97
+# f1af5605f723450b870a909e96cc6da3
+msgid "We see ascii tables with some additional formatting, all looking like the final HTML. So far so easy. For now, let's just add to the bottom of this. We can worry about organising this better later."
+msgstr ""
+
+#: ../../src/contributing.rst:101
+# 8c81003e09ce48e8920688f3a5dfcd21
+msgid "We start by adding a new headline::"
+msgstr ""
+
+#: ../../src/contributing.rst:106
+# ad8a4582502d423eafeb43abc31f2cdc
+msgid "Now we paste in the rest of the main email of the thread. It is mostly text, but it includes some code listings. Let's mark them up. We'll turn::"
+msgstr ""
+
+#: ../../src/contributing.rst:112
+# ec2b0a41a33c4386854ef914d55125c3
+msgid "Into::"
+msgstr ""
+
+#: ../../src/contributing.rst:119
+# 8fab375495b54a399f4924c9bdac3079
+msgid "And we follow along with the other code samples. We turn::"
+msgstr ""
+
+#: ../../src/contributing.rst:132
+# 0c426813aa3943a08f2b9137c804ebf6
+msgid "into::"
+msgstr ""
+
+#: ../../src/contributing.rst:145
+# 43b03e37da6743d89b62c326380a5aa6
+msgid "And then follow all the other ones."
+msgstr ""
+
+#: ../../src/contributing.rst:147
+# 428e9729b5e242728f2944979ddefb9c
+msgid "I cleaned up the text a little but to make it sound more like a documentation entry as opposed to a post on a mailing list."
+msgstr ""
+
+#: ../../src/contributing.rst:150
+# 24706c5236f14a17822b03fbaa4ce05f
+msgid "The next step would be to validate that we got all the markup right. I'll leave this for later. For now we'll contribute our change back to CouchDB."
+msgstr ""
+
+#: ../../src/contributing.rst:153
+# 8af264ab2b994820aa5fa3061e61602e
+msgid "First, we commit our changes::"
+msgstr ""
+
+#: ../../src/contributing.rst:159
+# 17b2045da45348be8a06a1fa44ad640d
+msgid "Then we push the commit to our CouchDB fork::"
+msgstr ""
+
+#: ../../src/contributing.rst:163
+# 441c656e6a7b42468ca44e9669d14891
+msgid "Next, we go back to our GitHub page https://github.com/janl/couchdb and click the \"Pull Request\" button. Fill in the description with something useful and hit the \"Send Pull Request\" button."
+msgstr ""
+
+#: ../../src/contributing.rst:167
+# be73429b828f406994bef4c5124b2647
+msgid "And we're done!"
+msgstr ""
+

@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/intro/index.rst:18
+# a9bdb944c94f45d9be643b096595c4e5
+msgid "Introduction"
+msgstr ""
+
+#: ../../src/intro/index.rst:20
+# 00f184cc5e454989818673344da636b3
+msgid "CouchDB is a database that completely embraces the web. Store your data with JSON documents. Access your documents with your web browser, :ref:`via HTTP <api/basics>`. :ref:`Query <api/doc>`, :ref:`combine <views>`, and :ref:`transform <listfun>` your documents with :ref:`JavaScript <query-server/js>`. CouchDB works well with modern web and mobile apps. You can even serve web apps directly out of CouchDB. And you can distribute your data, or your apps, efficiently using CouchDB’s :ref:`incremental replication <replication/intro>`. CouchDB supports master-master setups with :ref:`automatic conflict <replication/conflicts>` detection."
+msgstr ""
+
+#: ../../src/intro/index.rst:30
+# c2169844400b4405a4f34015a20f5037
+msgid "CouchDB comes with a suite of features, such as on-the-fly document transformation and real-time :ref:`change notifications <changes>`, that makes :ref:`web app <couchapp>` development a breeze. It even comes with an easy to use :ref:`web administration console <intro/futon>`. You guessed it, served up directly out of CouchDB! We care a lot about `distributed scaling`_. CouchDB is highly available and partition tolerant, but is also :ref:`eventually consistent <intro/consistency>`. And we care *a lot* about your data. CouchDB has a fault-tolerant storage engine that puts the safety of your data first."
+msgstr ""
+
+#: ../../src/intro/index.rst:40
+# 584bfdc1b38f48caa3fc0c169286a9b6
+msgid "In this section you'll learn about every basic bit of CouchDB, see upon what conceptions and technologies it built and walk through short tutorial that teach how to use CouchDB."
+msgstr ""
+

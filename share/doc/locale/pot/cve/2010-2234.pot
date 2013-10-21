@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/cve/2010-2234.rst:18
+# aee086f1117441e18343c8198b378880
+msgid "CVE-2010-2234: Apache CouchDB Cross Site Request Forgery Attack"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:20
+# 3ee7faf8180c4182a086d4f3f85a9da9
+msgid "21.02.2010"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:22
+# 7e329cc5559a429895319ac2d185b654
+msgid "Apache CouchDB 0.8.0 to 0.11.1"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:24
+# 7d8e584b4af74154a3d8202b3ade0fa7
+msgid "Important"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:26
+# e8d0faa5752b4f98ace6bad055db8f59
+msgid "The Apache Software Foundation"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:30
+# 61d294088d65421796d15407f6f31d1e
+msgid "Description"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:32
+# 8179fa93dd0f429b99ec44ea69817fa0
+msgid "Apache CouchDB versions prior to version :ref:`0.11.1 <release/0.11.1>` are vulnerable to `Cross Site Request Forgery`_ (CSRF) attacks."
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:38
+# 195ead89aff54a469e24df9a02d32edb
+msgid "Mitigation"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:40
+# 7f2a86889060404a94307bebb57e0ed6
+msgid "All users should upgrade to CouchDB :ref:`0.11.2 <release/0.11.2>` or :ref:`1.0.1 <release/1.0.1>`."
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:43
+# 393240088eb347d5a248cd7069698665
+msgid "Upgrades from the :ref:`0.11.x <release/0.11.x>` and :ref:`0.10.x <release/0.10.x>` series should be seamless."
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:46
+# 32504ec09641413ea39e265ae97c73c4
+msgid "Users on earlier versions should consult with upgrade notes."
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:49
+# d0458945815d489db4db967eb3afef50
+msgid "Example"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:51
+# 28694dbe7a864b3fa51498d42ef4d2c8
+msgid "A malicious website can `POST` arbitrary JavaScript code to well known CouchDB installation URLs (like http://localhost:5984/) and make the browser execute the injected JavaScript in the security context of CouchDB's admin interface Futon."
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:56
+# ea1dea1b58b244ec94412ab9c5fb25eb
+msgid "Unrelated, but in addition the JSONP API has been turned off by default to avoid potential information leakage."
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:60
+# 082ea67a4f384f5ab649bdb9a3e50984
+msgid "Credit"
+msgstr ""
+
+#: ../../src/cve/2010-2234.rst:62
+# 45285dce2b20429f98f0c364419eb300
+msgid "This CSRF issue was discovered by a source that wishes to stay anonymous."
+msgstr ""
+

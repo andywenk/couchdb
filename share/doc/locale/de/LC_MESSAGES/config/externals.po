@@ -1,0 +1,170 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/externals.rst:19
+msgid "External Processes"
+msgstr ""
+
+#: ../../src/config/externals.rst:24
+msgid "OS Daemons"
+msgstr ""
+
+#: ../../src/config/externals.rst:28
+msgid ""
+"This is a simple feature that allows users to configure CouchDB so that it "
+"maintains a given OS level process alive. If the process dies for any "
+"reason, CouchDB will restart it. If the process restarts too often, then "
+"CouchDB will mark it has halted and not attempt to restart it. The default "
+"max restart rate is ``3`` times in the last ``5`` seconds. These parameters "
+"are :section:`adjustable <os_daemon_settings>`."
+msgstr ""
+
+#: ../../src/config/externals.rst:35
+msgid ""
+"Commands that are started in this manner will have access to a simple API "
+"over stdio to request configuration parameters or to add log statements to "
+"CouchDB's logs."
+msgstr ""
+
+#: ../../src/config/externals.rst:39
+msgid ""
+"To configure an OS process as a CouchDB os_daemon, create a section in your "
+"`local.ini` like such::"
+msgstr ""
+
+#: ../../src/config/externals.rst:45
+msgid ""
+"This will make CouchDB bring up the command and attempt to keep it alive. To"
+" request a configuration parameter, an `os_daemon` can write a simple JSON "
+"message to stdout like such::"
+msgstr ""
+
+#: ../../src/config/externals.rst:51 ../../src/config/externals.rst:59
+msgid "which would return::"
+msgstr ""
+
+#: ../../src/config/externals.rst:55
+msgid "Or::"
+msgstr ""
+
+#: ../../src/config/externals.rst:63
+msgid ""
+"There's no restriction on what configuration variables are visible. There's "
+"also no method for altering the configuration."
+msgstr ""
+
+#: ../../src/config/externals.rst:66
+msgid ""
+"If you would like your OS daemon to be restarted in the event that the "
+"configuration changes, you can send the following messages::"
+msgstr ""
+
+#: ../../src/config/externals.rst:71
+msgid ""
+"When anything in that section changes, your OS process will be rebooted so "
+"it can pick up the new configuration settings. If you want to listen for "
+"changes on a specific key, you can send something like::"
+msgstr ""
+
+#: ../../src/config/externals.rst:78
+msgid ""
+"In this case, CouchDB will only restart your daemon if that exact "
+"section/key pair changes, instead of anything in that entire section."
+msgstr ""
+
+#: ../../src/config/externals.rst:81
+msgid "Logging commands look like::"
+msgstr ""
+
+#: ../../src/config/externals.rst:85
+msgid ""
+"Where ``$(JSON_MESSAGE)`` is arbitrary JSON data. These messages are logged "
+"at the 'info' level. If you want to log at a different level you can pass "
+"messages like such::"
+msgstr ""
+
+#: ../../src/config/externals.rst:91
+msgid "Where ``$(LEVEL)`` is one of \"debug\", \"info\", or \"error\"."
+msgstr ""
+
+#: ../../src/config/externals.rst:93
+msgid ""
+"When implementing a daemon process to be managed by CouchDB you should "
+"remember to use a method like checking the parent process id or if stdin has"
+" been closed. These flags can tell you if your daemon process has been "
+"orphaned so you can exit cleanly."
+msgstr ""
+
+#: ../../src/config/externals.rst:98
+msgid ""
+"There is no interactivity between CouchDB and the running process, but you "
+"can use the OS Daemons service to create new HTTP servers and responders and"
+" then use the new proxy service to redirect requests and output to the "
+"CouchDB managed service. For more information on proxying, see :ref:`http-"
+"proxying`. For further background on the OS Daemon service, see "
+":ref:`externals`."
+msgstr ""
+
+#: ../../src/config/externals.rst:109
+msgid "OS Daemons settings"
+msgstr ""
+
+#: ../../src/config/externals.rst:116
+msgid ""
+"Specifies maximum attempts to run :section:`os_daemons` before mark them "
+"halted::"
+msgstr ""
+
+#: ../../src/config/externals.rst:125
+msgid "Delay in seconds between :section:`os_daemons` restarts::"
+msgstr ""
+
+#: ../../src/config/externals.rst:135
+msgid "Update notifications"
+msgstr ""
+
+#: ../../src/config/externals.rst:139
+msgid ""
+"CouchDB is able to spawn OS processes to notify them about recent databases "
+"updates. The notifications are in form of JSON messages sent as a line of "
+"text, terminated by ``CR`` (``\\n``) character, to the OS processes through "
+"`stdout`::"
+msgstr ""
+
+#: ../../src/config/externals.rst:148
+msgid "The update notification messages are depend upon of event type:"
+msgstr ""
+
+#: ../../src/config/externals.rst:150
+msgid "**Database created**:"
+msgstr ""
+
+#: ../../src/config/externals.rst:157
+msgid ""
+"**Database updated**:  this event raises when any document gets updated for "
+"specified database:"
+msgstr ""
+
+#: ../../src/config/externals.rst:165
+msgid ""
+"**Design document updated**: for design document updates there is special "
+"event raised in additional to regular db update one:"
+msgstr ""
+
+#: ../../src/config/externals.rst:173
+msgid "**Database deleted**:"
+msgstr ""
+
+#: ../../src/config/externals.rst:179
+msgid "New line (``\\n``) trailing character was removed from examples."
+msgstr ""

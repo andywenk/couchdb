@@ -1,0 +1,468 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/document/common.rst:17
+# ce32cd357be04b5da3f24c838a18cf17
+msgid "``/db/doc``"
+msgstr ""
+
+#: ../../src/api/document/common.rst:21
+# 41c27a2a2e784c0ca6aae35452eb025d
+msgid "Returns the HTTP Headers containing a minimal amount of information about the specified document. The method supports the same query arguments as the :get:`/{db}/{docid}` method, but only the header information (including document size, and the revision as an ETag), is returned."
+msgstr ""
+
+#: ../../src/api/document/common.rst:27
+# 55fb02dbe8cd40438f83c02c5373e93c
+msgid "The :header:`ETag` header shows the current revision for the requested document, and the :header:`Content-Length` specifies the length of the data, if the document were requested in full."
+msgstr ""
+
+#: ../../src/api/document/common.rst:31
+# 8af1c3dd65ed4ed7947e44ed19e4a1c5
+msgid "Adding any of the query arguments (see :get:`/{db}/{docid}`), then the resulting HTTP Headers will correspond to what would be returned."
+msgstr ""
+
+#: ../../src/api/document/common.rst:44
+#: ../../src/api/document/common.rst:135
+#: ../../src/api/document/common.rst:199
+#: ../../src/api/document/common.rst:274
+#: ../../src/api/document/common.rst:348
+#: ../../src/api/document/common.rst:414
+#: ../../src/api/document/common.rst:476
+#: ../../src/api/document/common.rst:518
+#: ../../src/api/document/common.rst:584
+#: ../../src/api/document/common.rst:632
+#: ../../src/api/document/common.rst:731
+#: ../../src/api/document/common.rst:795
+#: ../../src/api/document/common.rst:855
+#: ../../src/api/document/common.rst:943
+#: ../../src/api/document/common.rst:983
+#: ../../src/api/document/common.rst:1010
+#: ../../src/api/document/common.rst:1043
+#: ../../src/api/document/common.rst:1115
+#: ../../src/api/document/common.rst:1152
+# 62752b600c444a0aa3b82caed2a44a92
+# 8027523a22c8441898c33d96deaf7e9f
+# 875328b7b108400a84ce948253bb0668
+# d4fd9c00d1564b529b864a8b80b4234b
+# 3774a9fccbe74b8bbd8c22a0f45059fc
+# d75a20e16bc54e86a274a1f1b63ecfff
+# 9030109246e84dcb9719ede6f662fff9
+# 558f4057211a456499dc307019304c3d
+# 8b6c6892b3544dd284c23c10ad566067
+# f9ea0cbf5c564e2fae382265bb6567e2
+# 64ad88f2b912460c8616bccd3bae4db1
+# a0c7509c1dfc4ef2984b2e5c2319276a
+# b2428aa0918841e0849c458525afea27
+# 82bf241d85374c2bb0ff6aabbcb1f432
+# 6a9f3e9252a54eb09b1c640da8a3d9d7
+# ea0d52531c3a42bc83992408b9597d06
+# cf5900ae1d664a3e9248256b91643780
+# 47e8f70636d7457d8c0c8de020f0925e
+# 87cb8c1958244a60bfb5ba9c2dcc93ec
+msgid "**Request**:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:52
+#: ../../src/api/document/common.rst:143
+#: ../../src/api/document/common.rst:219
+#: ../../src/api/document/common.rst:292
+#: ../../src/api/document/common.rst:357
+#: ../../src/api/document/common.rst:422
+#: ../../src/api/document/common.rst:484
+#: ../../src/api/document/common.rst:526
+#: ../../src/api/document/common.rst:592
+#: ../../src/api/document/common.rst:640
+#: ../../src/api/document/common.rst:769
+#: ../../src/api/document/common.rst:803
+#: ../../src/api/document/common.rst:863
+#: ../../src/api/document/common.rst:951
+#: ../../src/api/document/common.rst:991
+#: ../../src/api/document/common.rst:1018
+#: ../../src/api/document/common.rst:1089
+#: ../../src/api/document/common.rst:1125
+#: ../../src/api/document/common.rst:1161
+# 73aaa9d278e84f21904a3857595776df
+# 623a5b7ca5f64dabad7aaf0b8b269428
+# fb4c65ccdf8d421aa31de2615bdab5df
+# 9ec55a0209eb46749a910b58ac442c41
+# bc9110482dc04e66ac7c1841759547fe
+# c73174a51dfb4ddb87af740c240515c4
+# 6b0784d888ca4413825276284aa07029
+# 9d96aed410d64c6d93bba17459b7af4e
+# 273df4fc31fe4b038714211503a4c534
+# 2575f754724640ee8e5f28882229d1ba
+# b64491f484f443139e6a200e3f861f9d
+# 76c3a368660d488494268a8570a47664
+# 94a070e0799c447b89ca23f63c1fdbe5
+# a4af1882586b41498b14fe5b191e8670
+# 6baa01b3addf48f8a503e8f5948ddc9b
+# 28fb81a91bcd43d4b7eb732e641b256a
+# a62e28c0d42545b19b92250548d99d60
+# 6b7260e8f71c4a95b685f40cdc3c6db9
+# 8ea861e7d2f64c5bb4d8517ada57de7a
+msgid "**Response**:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:67
+# bab53ab1ca2e4310918b2d7b504a9ced
+msgid "Returns document by the specified ``docid`` from the specified ``db``. Unless you request a specific revision, the latest revision of the document will always be returned."
+msgstr ""
+
+#: ../../src/api/document/common.rst:74
+#: ../../src/api/document/common.rst:104
+#: ../../src/api/document/common.rst:175
+#: ../../src/api/document/common.rst:184
+#: ../../src/api/document/common.rst:252
+#: ../../src/api/document/common.rst:261
+#: ../../src/api/document/common.rst:322
+#: ../../src/api/document/common.rst:333
+# 8a99f41326724b1faa49ee1cf383f819
+# 7c8025a2f885417483ee3e8bc6bfa4c9
+# 36da45b78d5847a78d4e68b17eb9f611
+# 0076469417354e968cdb711645828495
+# 800ae4a66d9d4bacb095b1141979c0da
+# 1d283fdd23da4bc8b0f53edf2f1327b3
+# 75b6d97ea1494c279590220d4badd04e
+# dded3690ad2e41afbafcd76ecd7caeb3
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../src/api/document/common.rst:75
+#: ../../src/api/document/common.rst:105
+# a3fa2f445ebb40b49542a5d6ca51b1e5
+# 39c38109739f41e0bb9280fe2fae7d40
+msgid ":mimetype:`multipart/mixed`"
+msgstr ""
+
+#: ../../src/api/document/common.rst:76
+#: ../../src/api/document/common.rst:176
+#: ../../src/api/document/common.rst:253
+#: ../../src/api/document/common.rst:323
+# 972394df7eaa484e8a13b360ada94489
+# 32d965b8c6ba460099ad5f5b83349faa
+# d496c867f3404de79d65b5bcbd5b5ae5
+# 5a6d50a168504960a04adc5c41546027
+msgid ":mimetype:`text/plain`"
+msgstr ""
+
+#: ../../src/api/document/common.rst:106
+#: ../../src/api/document/common.rst:185
+#: ../../src/api/document/common.rst:262
+#: ../../src/api/document/common.rst:334
+# 43a2ad5ace4d48a09676bb36a19b797d
+# 66ec0ff0244440bbb4eb648143faa1f7
+# 2d5a56dd016b4eb2b3a9b38194fb68bc
+# 9dd0ca6866254d5ab06684137056a581
+msgid ":mimetype:`text/plain; charset=utf-8`"
+msgstr ""
+
+#: ../../src/api/document/common.rst:169
+# 58ac90f05fc047278d38f97dbb23c2aa
+msgid "The :method:`PUT` method creates a new named document, or creates a new revision of the existing document. Unlike the :post:`/{db}`, you must specify the document ID in the request URL."
+msgstr ""
+
+#: ../../src/api/document/common.rst:241
+# d2b5259b4c46494bacf5d93ad92ccca8
+msgid "Deletes the specified document from the database. You must supply the current (latest) revision, either by using the ``rev`` parameter to specify the revision."
+msgstr ""
+
+#: ../../src/api/document/common.rst:246
+# f9b2dd6f9e864b1fb41e4ea632b4ef46
+msgid "Note that deletion of a record increments the revision number. The use of a revision for deletion of the record allows replication of the database to correctly track the deletion in synchronized copies."
+msgstr ""
+
+#: ../../src/api/document/common.rst:282
+# 283abccbdd364287b05d04425b9fa261
+msgid "Alternatively, instead of ``rev`` query parameter you may use :header:`If-Match` header:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:313
+# 9870f1b08f964e1c9bafe92185db69b6
+msgid "The :method:`COPY` (which is non-standard HTTP) copies an existing document to a new or existing document."
+msgstr ""
+
+#: ../../src/api/document/common.rst:316
+# d098e34be65a419d8984cb213175582c
+msgid "The source document is specified on the request line, with the :header:`Destination` header of the request specifying the target document."
+msgstr ""
+
+#: ../../src/api/document/common.rst:380
+# 9a0e1f1adfdb4d9e922f40187366ed11
+msgid "Attachments"
+msgstr ""
+
+#: ../../src/api/document/common.rst:382
+# 9c3b812cb6354f47b527aa27f09623b7
+msgid "If the document includes attachments, then the returned structure will contain a summary of the attachments associated with the document, but not the attachment data itself."
+msgstr ""
+
+#: ../../src/api/document/common.rst:386
+# 293c9bfe7fe24d6eb6faa8e18ade3fd0
+msgid "The JSON for the returned document will include the ``_attachments`` field, with one or more attachment definitions."
+msgstr ""
+
+#: ../../src/api/document/common.rst:389
+# 46f0329fb0464b349d378ef758c60572
+msgid "The ``_attachments`` object keys are attachments names while values are information objects with next structure:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:392
+# f4e22e256ad144f394048c9bc3774df7
+msgid "**content_type** (*string*): Attachment MIME type"
+msgstr ""
+
+#: ../../src/api/document/common.rst:393
+# 7e24a7ed83944288b89669fdbbfc2173
+msgid "**data** (*string*): Base64-encoded content. Available if attachment content requested by using ``attachments=true`` or ``atts_since`` query parameters"
+msgstr ""
+
+#: ../../src/api/document/common.rst:395
+# 421c3a469a7844ef846c0b6a0062c9ad
+msgid "**digest** (*string*): Content hash digest. It starts with prefix which announce hash type (``md5-``) and continues with Base64-encoded hash digest"
+msgstr ""
+
+#: ../../src/api/document/common.rst:398
+# d7e7f73bdbb94d5986b40a750049a818
+msgid "**encoded_length** (*number*): Compressed attachment size in bytes Available when query parameter ``att_encoding_info=true`` was specified and ``content_type`` is in :config:option:`list of compressiable types <attachments/compressible_types>`"
+msgstr ""
+
+#: ../../src/api/document/common.rst:402
+# baafc8915914483d97bf06fe9f3faa86
+msgid "**encoding** (*string*): Compression codec. Available when query parameter ``att_encoding_info=true`` was specified"
+msgstr ""
+
+#: ../../src/api/document/common.rst:404
+# c3ac0ae4cdaf4b9297bf65592d10eb0f
+msgid "**length** (*number*): Real attachment size in bytes. Not available if attachment content requested"
+msgstr ""
+
+#: ../../src/api/document/common.rst:406
+# 3aeaf971b09143c4b34031d342ba4c8f
+msgid "**revpos** (*number*): Revision *number* when attachment was added"
+msgstr ""
+
+#: ../../src/api/document/common.rst:407
+# b4e289d3e49646729b4014c25fe004dd
+msgid "**stub** (*boolean*): Has ``true`` value if object contains stub info and no content. Otherwise omitted in response"
+msgstr ""
+
+#: ../../src/api/document/common.rst:412
+# 296b9a6277304606b17083aa51a9b79f
+msgid "Basic Attachments Info"
+msgstr ""
+
+#: ../../src/api/document/common.rst:471
+# e74547fadf1343df92d5d20d02a3403d
+msgid "Retrieving Attachments Content"
+msgstr ""
+
+#: ../../src/api/document/common.rst:473
+# 6bd56cabb6154017aab37699cbdb744e
+msgid "It's possible to retrieve document with all attached files content by using ``attachements=true`` query parameter:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:515
+# 69c9ef63a11a49d485a605fc3e649fe3
+msgid "Or retrieve attached files content since specific revision using ``atts_since`` query parameter:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:574
+# a9483988769e4467aa8a9b998c09920c
+msgid "Efficient Multiple Attachments Retrieving"
+msgstr ""
+
+#: ../../src/api/document/common.rst:576
+# 0105afa09d7d4406b952c03a93a07e38
+msgid "As you had noted above, retrieving document with ``attachements=true`` returns large JSON object where all attachments are included.  While you document and files are smaller it's ok, but if you have attached something bigger like media files (audio/video), parsing such response might be very expensive."
+msgstr ""
+
+#: ../../src/api/document/common.rst:581
+# aa5c9a09eff945be8b93869de862d192
+msgid "To solve this problem, CouchDB allows to get documents in :mimetype:`multipart/related` format:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:620
+# dfa584fa67f9464ba1d1e2a89e429fad
+msgid "In this response the document contains only attachments stub information and quite short while all attachments goes as separate entities which reduces memory footprint and processing overhead (you'd noticed, that attachment content goes as raw data, not in base64 encoding, right?)."
+msgstr ""
+
+#: ../../src/api/document/common.rst:627
+# 08564ca478644fad99275b37c7fa57a4
+msgid "Retrieving Attachments Encoding Info"
+msgstr ""
+
+#: ../../src/api/document/common.rst:629
+# 6401a9652e9b46fd843ab92178e3b03e
+msgid "By using ``att_encoding_info=true`` query parameter you may retrieve information about compressed attachments size and used codec."
+msgstr ""
+
+#: ../../src/api/document/common.rst:693
+# 8209011cbb334eb78ad195d79b27f4ed
+msgid "Creating Multiple Attachments"
+msgstr ""
+
+#: ../../src/api/document/common.rst:695
+# d175620283f34a8594e05ff738a93b17
+msgid "To create a document with multiple attachments with single request you need just inline base64 encoded attachments data into the document body:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:718
+# 1157fe8424b9413fa2d5ad4d1b039af9
+msgid "Alternatively, you can upload a document with attachments more efficiently in :mimetype:`multipart/related` format. This avoids having to Base64-encode the attachments, saving CPU and bandwidth. To do this, set the :header:`Content-Type` header of the :put:`/{db}/{docid}` request to :mimetype:`multipart/related`."
+msgstr ""
+
+#: ../../src/api/document/common.rst:724
+# 76725f9665034abbb1201259663dd714
+msgid "The first MIME body is the document itself, which should have its own :header:`Content-Type` of :mimetype:`application/json\"`. It also should include  an ``_attachments`` metadata object in which each attachment object has a key ``follows`` with value ``true``."
+msgstr ""
+
+#: ../../src/api/document/common.rst:729
+# 7c38aa1358e647fe9a85052ee2e6a879
+msgid "The subsequent MIME bodies are the attachments."
+msgstr ""
+
+#: ../../src/api/document/common.rst:790
+# cb648b4d48e04a0abc13f1bc488fdefd
+msgid "Getting a List of Revisions"
+msgstr ""
+
+#: ../../src/api/document/common.rst:792
+# 8c4098e7a74641439bcb29cde7f947b6
+msgid "You can obtain a list of the revisions for a given document by adding the ``revs=true`` parameter to the request URL:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:841
+# 58cc0b83016d49b0a000496132010608
+msgid "The returned JSON structure includes the original document, including a ``_revisions`` structure that includes the revision information in next form:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:844
+# 889f4cca4c0149649e0acd70166d94a5
+msgid "**ids** (*array*): Array of valid revision IDs, in reverse order"
+msgstr ""
+
+#: ../../src/api/document/common.rst:845
+# 1c235b6625c949dcab70896b842dc312
+msgid "(latest first)"
+msgstr ""
+
+#: ../../src/api/document/common.rst:846
+# 367b00fa13c94c59917e3af25b8ea7e8
+msgid "**start** (*number*): Prefix number for the latest revision"
+msgstr ""
+
+#: ../../src/api/document/common.rst:850
+# addb81618dde4a9c8dc485ad4db786c5
+msgid "Obtaining an Extended Revision History"
+msgstr ""
+
+#: ../../src/api/document/common.rst:852
+# bec7c70d34a54d3ca17f5e1124d29dea
+msgid "You can get additional information about the revisions for a given document by supplying the ``revs_info`` argument to the query:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:921
+# 8fa771fd646f44f8bdb7bda6bb3c8674
+msgid "The returned document contains ``_rev_info`` field with extended revision information, including the availability and status of each revision. This array field contains objects with following structure:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:925
+# c987b05ca041468e95d65b6d9560938d
+msgid "**rev** (*string*): Full revision string"
+msgstr ""
+
+#: ../../src/api/document/common.rst:926
+# 9079edf7ff47431386d649507cfe837b
+msgid "**status** (*string*): Status of the revision. Maybe one of:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:929
+# b3fb7bf9d0e34cd8ba49ccdcdb8a94fe
+msgid "``available``: Revision is available for retrieving with `rev` query parameter"
+msgstr ""
+
+#: ../../src/api/document/common.rst:931
+# 9326e8f47b0a44bebaf7baebca3e0afc
+msgid "``missing``: Revision is not available"
+msgstr ""
+
+#: ../../src/api/document/common.rst:932
+# 000b79baf6ff4b10b4bf2517bc9cbc90
+msgid "``deleted``: Revision belongs to deleted document"
+msgstr ""
+
+#: ../../src/api/document/common.rst:936
+# c665739545de428987cab3605e896669
+msgid "Obtaining a Specific Revision"
+msgstr ""
+
+#: ../../src/api/document/common.rst:938
+# 9bac847bfa8148709ca9a4775188454e
+msgid "To get a specific revision, use the ``rev`` argument to the request, and specify the full revision number. The specified revision of the document will be returned, including a ``_rev`` field specifying the revision that was requested."
+msgstr ""
+
+#: ../../src/api/document/common.rst:976
+# 7a47346210f44dbf9f9511f4575f463b
+msgid "Retrieving Deleted Documents"
+msgstr ""
+
+#: ../../src/api/document/common.rst:978
+# 9169c5e035fc4a1793ccfca74843b49e
+msgid "CouchDB doesn't actually deletes documents via :delete:`/{db}/{docid}`. Instead of this, it leaves tombstone with very basic information about document. If you just :get:`/{db}/{docid}` CouchDB returns :statuscode:`404` response:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:1007
+# 7aacc983946b4b42af0042b6b5c9fb9f
+msgid "However, you may retrieve document's tombstone by using ``rev`` query parameter with :get:`/{db}/{docid}` request:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:1038
+# 636b7f3be0c2463d9d6d3084391d0e80
+msgid "Updating an Existing Document"
+msgstr ""
+
+#: ../../src/api/document/common.rst:1040
+# e5dcd33e30b347728425751e96a7d21f
+msgid "To update an existing document you must specify the current revision number within the ``_rev`` parameter."
+msgstr ""
+
+#: ../../src/api/document/common.rst:1065
+# de84a297e5a6444ab6b7cccc9702179c
+msgid "Alternatively, you can supply the current revision number in the ``If-Match`` HTTP header of the request:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:1110
+# b9c66fe0474c489f9c136ae1a270a065
+msgid "Copying from a Specific Revision"
+msgstr ""
+
+#: ../../src/api/document/common.rst:1112
+# 512aa4845b914cd7a8fef15f8ca10d56
+msgid "To copy *from* a specific version, use the ``rev`` argument to the query string or :header:`If-Match`:"
+msgstr ""
+
+#: ../../src/api/document/common.rst:1146
+# 797aab4abf8c47b985266a1230cea221
+msgid "Copying to an Existing Document"
+msgstr ""
+
+#: ../../src/api/document/common.rst:1148
+# f4b580137984479298a82ec4494271f0
+msgid "To copy to an existing document, you must specify the current revision string for the target document by appending the ``rev`` parameter to the :header:`Destination` header string."
+msgstr ""
+

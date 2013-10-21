@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/intro/tour.rst:18
+# b129704efc0d425fbe5e467b9e4584f0
+msgid "Getting Started"
+msgstr ""
+
+#: ../../src/intro/tour.rst:20
+# fbaaed0f7c1b4b3ab60891e9d1e322a0
+msgid "In this chapter, we'll take a quick tour of CouchDB's features, familiarizing ourselves with Futon, the built-in administration interface. We'll create our first document and experiment with CouchDB views."
+msgstr ""
+
+#: ../../src/intro/tour.rst:26
+# 1c11057244d74970ace13487d1f39d49
+msgid "All Systems Are Go!"
+msgstr ""
+
+#: ../../src/intro/tour.rst:28
+# 338b39f279544adc874b8f3f9c4bcd3f
+msgid "We'll have a very quick look at CouchDB's bare-bones Application Programming Interface (API) by using the command-line utility curl. Please note that this is not the only way of talking to CouchDB. We will show you plenty more throughout the rest of the book. What's interesting about curl is that it gives you control over raw HTTP requests, and you can see exactly what is going on \"underneath the hood\" of your database."
+msgstr ""
+
+#: ../../src/intro/tour.rst:35
+# 97ae0b2dd8894947827f6b24c2334e22
+msgid "Make sure CouchDB is still running, and then do::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:39
+# fa95de12c67147c09a4bb4510fecda78
+msgid "This issues a GET request to your newly installed CouchDB instance."
+msgstr ""
+
+#: ../../src/intro/tour.rst:41
+# 41778c0b95834da6b9f09306a919946e
+msgid "The reply should look something like:"
+msgstr ""
+
+#: ../../src/intro/tour.rst:55
+# 9b8b130c5b234ecaaef01dc16f88858a
+msgid "Not all that spectacular. CouchDB is saying \"hello\" with the running version number."
+msgstr ""
+
+#: ../../src/intro/tour.rst:58
+# 0dba1e63259a49a0b85398594e94614f
+msgid "Next, we can get a list of databases::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:62
+# 6e83978cebf848579fa95d4b7471863d
+msgid "All we added to the previous request is the _all_dbs string."
+msgstr ""
+
+#: ../../src/intro/tour.rst:64
+# fe9f19cf307e463c9b16562a1c9bb38f
+msgid "The response should look like::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:68
+# f850dceaad6a46229f1c54686ddee0ce
+msgid "Oh, that's right, we didn't create any databases yet! All we see is an empty list."
+msgstr ""
+
+#: ../../src/intro/tour.rst:73
+# d285ed0b92c944e1aacf9389564d5284
+msgid "The curl command issues GET requests by default. You can issue POST requests using ``curl -X POST``. To make it easy to work with our terminal history, we usually use the ``-X`` option even when issuing GET requests. If we want to send a POST next time, all we have to change is the method."
+msgstr ""
+
+#: ../../src/intro/tour.rst:78
+# 368fb44d67d74344aba4d274afcce46c
+msgid "HTTP does a bit more under the hood than you can see in the examples here. If you're interested in every last detail that goes over the wire, pass in the ``-v`` option (e.g., ``curl -vX GET``), which will show you the server curl tries to connect to, the request headers it sends, and response headers it receives back. Great for debugging!"
+msgstr ""
+
+#: ../../src/intro/tour.rst:84
+# 943aed11a9e64a17aa580b7a8fd95de6
+msgid "Let's create a database::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:88
+#: ../../src/intro/tour.rst:117
+#: ../../src/intro/tour.rst:127
+#: ../../src/intro/tour.rst:143
+# a58e875dab4a41598d307e25abc1dbb4
+# 8deaf05dd1ea416f88f5e383f9fee8f9
+# 3477f0e861a8481d9a68644d82fb87d3
+# 88948039b9c948df8b398698cbaab3ca
+msgid "CouchDB will reply with::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:92
+# 365a768e0e814aae9c4b591ae84ec443
+msgid "Retrieving the list of databases again shows some useful results this time::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:102
+# fca29bc4bdc04c95b69d4176cb214255
+msgid "We should mention JavaScript Object Notation (JSON) here, the data format CouchDB speaks. JSON is a lightweight data interchange format based on JavaScript syntax. Because JSON is natively compatible with JavaScript, your web browser is an ideal client for CouchDB."
+msgstr ""
+
+#: ../../src/intro/tour.rst:107
+# 649bd96891fe4504955a9c088f9f4f94
+msgid "Brackets (``[]``) represent ordered lists, and curly braces (``{}``) represent key/value dictionaries. Keys must be strings, delimited by quotes (``\"``), and values can be strings, numbers, booleans, lists, or key/value dictionaries. For a more detailed description of JSON, see Appendix E, JSON Primer."
+msgstr ""
+
+#: ../../src/intro/tour.rst:113
+# 79c2ba40f85840cea7b6810bc60b18bb
+msgid "Let's create another database::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:122
+# 025e1ee37f994c43864ec5f242babc9d
+msgid "We already have a database with that name, so CouchDB will respond with an error. Let's try again with a different database name::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:131
+# bcffeeddb3ad42d999f8a7117fb1a2dd
+msgid "Retrieving the list of databases yet again shows some useful results::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:135
+#: ../../src/intro/tour.rst:151
+# 13381e8e8e004f9ca1e28b18c0be81ae
+# 2dd269e07bf447ed8d8775128dee0dd5
+msgid "CouchDB will respond with::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:139
+# 1c6f5d99370a4f4793e6fa822701230f
+msgid "To round things off, let's delete the second database::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:147
+# ec58d8c9e5954a629aae66371c376476
+msgid "The list of databases is now the same as it was before::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:155
+# 429600d20fd14528ba18828b59f0fad9
+msgid "For brevity, we'll skip working with documents, as the next section covers a different and potentially easier way of working with CouchDB that should provide experience with this. As we work through the example, keep in mind that \"under the hood\" everything is being done by the application exactly as you have been doing here manually. Everything is done using GET, PUT, POST, and DELETE with a URI."
+msgstr ""
+
+#: ../../src/intro/tour.rst:164
+# c1d28fa426604a238b7483980ee85a2f
+msgid "Welcome to Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:166
+# e5b922385b82415f8706059298da3a71
+msgid "After having seen CouchDB's raw API, let's get our feet wet by playing with Futon, the built-in administration interface. Futon provides full access to all of CouchDB's features and makes it easy to work with some of the more complex ideas involved. With Futon we can create and destroy databases; view and edit documents; compose and run MapReduce views; and trigger replication between databases."
+msgstr ""
+
+#: ../../src/intro/tour.rst:173
+# b283ca5ce726491c824c24adcd6eee4f
+msgid "To load Futon in your browser, visit::"
+msgstr ""
+
+#: ../../src/intro/tour.rst:177
+# a409a35f22d74ae0af99c4d560ab1620
+msgid "If you're running version 0.9 or later, you should see something similar to :ref:`intro/tour-01`. In later chapters, we'll focus on using CouchDB from server-side languages such as Ruby and Python. As such, this chapter is a great opportunity to showcase an example of natively serving up a dynamic web application using nothing more than CouchDB's integrated web server, something you may wish to do with your own applications."
+msgstr ""
+
+#: ../../src/intro/tour.rst:184
+# e94914fe795746d6b7a34af26ae438ad
+msgid "The first thing we should do with a fresh installation of CouchDB is run the test suite to verify that everything is working properly. This assures us that any problems we may run into aren't due to bothersome issues with our setup. By the same token, failures in the Futon test suite are a red flag, telling us to double-check our installation before attempting to use a potentially broken database server, saving us the confusion when nothing seems to be working quite like we expect!"
+msgstr ""
+
+#: ../../src/intro/tour.rst:199
+# 9e1cf7511d9044bd9dac3228d6f06dac
+msgid "Figure 1. The Futon welcome screen"
+msgstr ""
+
+#: ../../src/intro/tour.rst:202
+# c5c410f567504792b5b86cf1650fc107
+msgid "Some common network configurations cause the replication test to fail when accessed via the localhost address. You can fix this by accessing CouchDB via 127.0.0.1, e.g. http://127.0.0.1:5984/_utils/."
+msgstr ""
+
+#: ../../src/intro/tour.rst:206
+# eb91d4bf98ee4bb6afac4c72bb4eb3fc
+msgid "Navigate to the test suite by clicking \"Test Suite\" on the Futon sidebar, then click \"run all\" at the top to kick things off. :ref:`intro/tour-02` shows the Futon test suite running some tests."
+msgstr ""
+
+#: ../../src/intro/tour.rst:217
+# bcf5ccab50f144e2aa1ee48461aa2d75
+msgid "Figure 2. The Futon test suite running some tests"
+msgstr ""
+
+#: ../../src/intro/tour.rst:220
+# a775529fdb424323b317eee4269e6827
+msgid "Because the test suite is run from the browser, not only does it test that CouchDB is functioning properly, it also verifies that your browser's connection to the database is properly configured, which can be very handy for diagnosing misbehaving proxies or other HTTP middleware."
+msgstr ""
+
+#: ../../src/intro/tour.rst:225
+# 672eb4da73784c30828342068f1f82b8
+msgid "If the test suite has an inordinate number of failures, you'll need to see the troubleshooting section in Appendix D, Installing from Source for the next steps to fix your installation."
+msgstr ""
+
+#: ../../src/intro/tour.rst:229
+# c136f876cfd5440ab42a8f6f1f478185
+msgid "Now that the test suite is finished, you've verified that your CouchDB installation is successful and you're ready to see what else Futon has to offer."
+msgstr ""
+
+#: ../../src/intro/tour.rst:234
+# 22e9197444904d05aec51f82a0b985cf
+msgid "Your First Database and Document"
+msgstr ""
+
+#: ../../src/intro/tour.rst:236
+# 18c82273220c408ca52b31880944377c
+msgid "Creating a database in Futon is simple. From the overview page, click \"Create Database.\" When asked for a name, enter hello-world and click the Create button."
+msgstr ""
+
+#: ../../src/intro/tour.rst:240
+# 58782f61c3f34967aa8ce5af015c073c
+msgid "After your database has been created, Futon will display a list of all its documents. This list will start out empty (:ref:`intro/tour-03`), so let's create our first document. Click the \"New Document\" link and then the Create button in the pop up. Make sure to leave the document ID blank, and CouchDB will generate a UUID for you."
+msgstr ""
+
+#: ../../src/intro/tour.rst:246
+# 2f981775bd9d4c7aad28a489d43494b6
+msgid "For demoing purposes, having CouchDB assign a UUID is fine. When you write your first programs, we recommend assigning your own UUIDs. If your rely on the server to generate the UUID and you end up making two POST requests because the first POST request bombed out, you might generate two docs and never find out about the first one because only the second one will be reported back. Generating your own UUIDs makes sure that you'll never end up with duplicate documents."
+msgstr ""
+
+#: ../../src/intro/tour.rst:254
+# 9af5204ed4014b9e97315823d3b37a9f
+msgid "Futon will display the newly created document, with its _id and _rev as the only fields. To create a new field, click the \"Add Field\" button. We'll call the new field hello. Click the green check icon (or hit the Enter key) to finalize creating the hello field. Double-click the hello field's value (default null) to edit it."
+msgstr ""
+
+#: ../../src/intro/tour.rst:260
+# 6dbec59a6e3d436fb43a92ad662df6e3
+msgid "You can experiment with other JSON values; e.g., ``[1, 2, \"c\"]`` or ``{\"foo\": \"bar\"}``. Once you've entered your values into the document, make a note of its ``_rev`` attribute and click \"Save Document.\" The result should look like :ref:`intro/tour-04` document in Futon\"."
+msgstr ""
+
+#: ../../src/intro/tour.rst:272
+# e141e1b0ac80481ab1dc5924484dd465
+msgid "Figure 3. An empty database in Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:281
+# 1873cb594462408fa80034f3929c1dba
+msgid "Figure 4. A \"hello world\" document in Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:284
+# 4f6b5444adfe4e77ae58a546dc79913f
+msgid "You'll notice that the document's _rev has changed. We'll go into more detail about this in later chapters, but for now, the important thing to note is that _rev acts like a safety feature when saving a document. As long as you and CouchDB agree on the most recent _rev of a document, you can successfully save your changes."
+msgstr ""
+
+#: ../../src/intro/tour.rst:290
+# 963f5c7da1054473b850bbd7775904bb
+msgid "Futon also provides a way to display the underlying JSON data, which can be more compact and easier to read, depending on what sort of data you are dealing with. To see the JSON version of our \"hello world\" document, click the Source tab. The result should look like :ref:`intro/tour-05`."
+msgstr ""
+
+#: ../../src/intro/tour.rst:302
+# 484bcc54b8c04184a8964fe2528d8d19
+msgid "Figure 5. The JSON source of a \"hello world\" document in Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:306
+# c9aa47cba64f47c1ad636108ed4572b9
+msgid "Running a Query Using MapReduce"
+msgstr ""
+
+#: ../../src/intro/tour.rst:308
+# 2de299ec3d0a4bdd8e40d1960b71afa2
+msgid "Traditional relational databases allow you to run any queries you like as long as your data is structured correctly. In contrast, CouchDB uses predefined map and reduce functions in a style known as MapReduce. These functions provide great flexibility because they can adapt to variations in document structure, and indexes for each document can be computed independently and in parallel. The combination of a map and a reduce function is called a view in CouchDB terminology."
+msgstr ""
+
+#: ../../src/intro/tour.rst:316
+# b9c29cdcc154472a81160ca6bb9efe88
+msgid "For experienced relational database programmers, MapReduce can take some getting used to. Rather than declaring which rows from which tables to include in a result set and depending on the database to determine the most efficient way to run the query, reduce queries are based on simple range requests against the indexes generated by your map functions."
+msgstr ""
+
+#: ../../src/intro/tour.rst:322
+# e7b050e60d064df0bcd106f91f1c4486
+msgid "Map functions are called once with each document as the argument. The function can choose to skip the document altogether or emit one or more view rows as key/value pairs. Map functions may not depend on any information outside of the document. This independence is what allows CouchDB views to be generated incrementally and in parallel."
+msgstr ""
+
+#: ../../src/intro/tour.rst:328
+# 4579611c131c4a138f0883bc8a413eee
+msgid "CouchDB views are stored as rows that are kept sorted by key. This makes retrieving data from a range of keys efficient even when there are thousands or millions of rows. When writing CouchDB map functions, your primary goal is to build an index that stores related data under nearby keys."
+msgstr ""
+
+#: ../../src/intro/tour.rst:334
+# f7be3dfda836446c8072b7846380e474
+msgid "Before we can run an example MapReduce view, we'll need some data to run it on. We'll create documents carrying the price of various supermarket items as found at different shops. Let's create documents for apples, oranges, and bananas. (Allow CouchDB to generate the _id and _rev fields.) Use Futon to create documents that have a final JSON structure that looks like this:"
+msgstr ""
+
+#: ../../src/intro/tour.rst:353
+# 27a7568ad86a41da8d743716a231b7be
+msgid "This document should look like :ref:`intro/tour-06` when entered into Futon."
+msgstr ""
+
+#: ../../src/intro/tour.rst:362
+# bf26b52e1ec445e29142c62a926b1da2
+msgid "Figure 6. An example document with apple prices in Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:365
+# d02e57d4c4564a209622431872bff63d
+msgid "OK, now that that's done, let's create the document for oranges:"
+msgstr ""
+
+#: ../../src/intro/tour.rst:380
+# 92d4f2ae2ae8463ab4bbf1838f9bdce3
+msgid "And finally, the document for bananas:"
+msgstr ""
+
+#: ../../src/intro/tour.rst:395
+# 3d0ce5a9090742c09512cd81bc5e6dd0
+msgid "Imagine we're catering a big luncheon, but the client is very price-sensitive. To find the lowest prices, we're going to create our first view, which shows each fruit sorted by price. Click \"hello-world\" to return to the hello-world overview, and then from the \"select view\" menu choose \"Temporary view…\" to create a new view."
+msgstr ""
+
+#: ../../src/intro/tour.rst:406
+# c2b023e5318740a4825e32c958fee087
+msgid "Figure 7. A temporary view in Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:409
+# 8fa4bff3806a44b5a7eeabfe747d5102
+msgid "Edit the map function, on the left, so that it looks like the following:"
+msgstr ""
+
+#: ../../src/intro/tour.rst:424
+# 91c43c01e0304f70bbb9d916d946dbd2
+msgid "This is a JavaScript function that CouchDB runs for each of our documents as it computes the view. We'll leave the reduce function blank for the time being."
+msgstr ""
+
+#: ../../src/intro/tour.rst:427
+# ceec3d2dd233492bb52af85babd20e1a
+msgid "Click \"Run\" and you should see result rows like in :ref:`intro/tour-08`, with the various items sorted by price. This map function could be even more useful if it grouped the items by type so that all the prices for bananas were next to each other in the result set. CouchDB's key sorting system allows any valid JSON object as a key. In this case, we'll emit an array of [item, price] so that CouchDB groups by item type and price."
+msgstr ""
+
+#: ../../src/intro/tour.rst:441
+# 4891708da36643dd87a7aa66780e0a36
+msgid "Figure 8. The results of running a view in Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:444
+# f00f697ba68d4b5fb3783eb2746a9abe
+msgid "Let's modify the view function so that it looks like this:"
+msgstr ""
+
+#: ../../src/intro/tour.rst:459
+# 47141c0a37a64219a56ad4da5e02a391
+msgid "Here, we first check that the document has the fields we want to use. CouchDB recovers gracefully from a few isolated map function failures, but when a map function fails regularly (due to a missing required field or other JavaScript exception), CouchDB shuts off its indexing to prevent any further resource usage. For this reason, it's important to check for the existence of any fields before you use them. In this case, our map function will skip the first \"hello world\" document we created without emitting any rows or encountering any errors. The result of this query should look like :ref:`intro/tour-09`."
+msgstr ""
+
+#: ../../src/intro/tour.rst:476
+# c648a02cf5b24e2eb74d3227efb01f59
+msgid "Figure 9. The results of running a view after grouping by item type and price"
+msgstr ""
+
+#: ../../src/intro/tour.rst:479
+# e8737e2b88ef40f7a49c9881d1b19e13
+msgid "Once we know we've got a document with an item type and some prices, we iterate over the item's prices and emit key/values pairs. The key is an array of the item and the price, and forms the basis for CouchDB's sorted index. In this case, the value is the name of the shop where the item can be found for the listed price."
+msgstr ""
+
+#: ../../src/intro/tour.rst:485
+# 62534f94e2d741b89be3b9a7e2a9df93
+msgid "View rows are sorted by their keys -- in this example, first by item, then by price. This method of complex sorting is at the heart of creating useful indexes with CouchDB."
+msgstr ""
+
+#: ../../src/intro/tour.rst:489
+# 141a17a21a974319874667ad3ff6aeab
+msgid "MapReduce can be challenging, especially if you've spent years working with relational databases. The important things to keep in mind are that map functions give you an opportunity to sort your data using any key you choose, and that CouchDB's design is focused on providing fast, efficient access to data within a range of keys."
+msgstr ""
+
+#: ../../src/intro/tour.rst:497
+# 4257539cfd034e40877b14785308b60e
+msgid "Triggering Replication"
+msgstr ""
+
+#: ../../src/intro/tour.rst:499
+# 7083934e171b422c95cad7f168d0c4d7
+msgid "Futon can trigger replication between two local databases, between a local and remote database, or even between two remote databases. We'll show you how to replicate data from one local database to another, which is a simple way of making backups of your databases as we're working through the examples."
+msgstr ""
+
+#: ../../src/intro/tour.rst:505
+# d20d16d461c444559aeb6cbc2cad9d93
+msgid "First we'll need to create an empty database to be the target of replication. Return to the overview and create a database called hello-replication. Now click \"Replicator\" in the sidebar and choose hello-world as the source and hello-replication as the target. Click \"Replicate\" to replicate your database. The result should look something like :ref:`intro/tour-10`."
+msgstr ""
+
+#: ../../src/intro/tour.rst:518
+# 0a559707fb3b4b13b6f081ccb2fa32b9
+msgid "Figure 10. Running database replication in Futon"
+msgstr ""
+
+#: ../../src/intro/tour.rst:523
+# 9dd61c8c9323457a9742431213f0a40e
+msgid "For larger databases, replication can take much longer. It is important to leave the browser window open while replication is taking place. As an alternative, you can trigger replication via curl or some other HTTP client that can handle long-running connections. If your client closes the connection before replication finishes, you'll have to retrigger it. Luckily, CouchDB's replication can take over from where it left off instead of starting from scratch."
+msgstr ""
+
+#: ../../src/intro/tour.rst:533
+# 6fccdc6ab21d4b22aa79713324798280
+msgid "Wrapping Up"
+msgstr ""
+
+#: ../../src/intro/tour.rst:535
+# ec4673066289410db33bd8115bdd8064
+msgid "Now that you've seen most of Futon's features, you'll be prepared to dive in and inspect your data as we build our example application in the next few chapters. Futon's pure JavaScript approach to managing CouchDB shows how it's possible to build a fully featured web application using only CouchDB's HTTP API and integrated web server."
+msgstr ""
+
+#: ../../src/intro/tour.rst:541
+# 618685f2c624430680ac249bef80f2c7
+msgid "But before we get there, we'll have another look at CouchDB's HTTP API -- now with a magnifying glass. Let's curl up on the couch and relax."
+msgstr ""
+

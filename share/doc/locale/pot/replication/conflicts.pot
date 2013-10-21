@@ -1,0 +1,643 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/replication/conflicts.rst:18
+# a80a66aa2bfe4cc4a77cbd5a23037bc5
+msgid "Replication and conflict model"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:20
+# 9039adea21d4478fa06e293b5c4e3990
+msgid "Let's take the following example to illustrate replication and conflict handling."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:22
+# a891597cd2a64abe841568f144a10ae5
+msgid "Alice has a document containing Bob's business card;"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:23
+# 92e2cda72ce7460ba5efe246254e7328
+msgid "She synchronizes it between her desktop PC and her laptop;"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:24
+# 181d5c0151e44014a7c653f0d1c9f8b5
+msgid "On the desktop PC, she updates Bob's E-mail address; Without syncing again, she updates Bob's mobile number on the laptop;"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:26
+# 255225e07caf44ccb6f7f7747d308508
+msgid "Then she replicates the two to each other again."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:28
+# 2d00ea715a9a4ead96cba6f2070403cf
+msgid "So on the desktop the document has Bob's new E-mail address and his old mobile number, and on the laptop it has his old E-mail address and his new mobile number."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:32
+# fbfda1c9a09b4a61a435b61a8cd1ae4a
+msgid "The question is, what happens to these conflicting updated documents?"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:35
+# 07abec19789843d3954a6e8bf2d137ab
+msgid "CouchDB replication"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:37
+# d16860882db94a0bad723cd3886d75ab
+msgid "CouchDB works with JSON documents inside databases. Replication of databases takes place over HTTP, and can be either a \"pull\" or a \"push\", but is unidirectional. So the easiest way to perform a full sync is to do a \"push\" followed by a \"pull\" (or vice versa)."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:42
+# e28d4c0db04a4cc1869fef6ecfd700f4
+msgid "So, Alice creates v1 and sync it. She updates to v2a on one side and v2b on the other, and then replicates. What happens?"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:45
+# b56ae174d0574381a7e3143f6aa275d6
+msgid "The answer is simple: both versions exist on both sides!"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:77
+# 0c046a80b23a4aa9b93d926163be66fc
+msgid "After all, this is not a filesystem, so there's no restriction that only one document can exist with the name /db/bob. These are just \"conflicting\" revisions under the same name."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:81
+# 15e34f55fa5f4cc8b0b6567e2b8f7e61
+msgid "Because the changes are always replicated, the data is safe. Both machines have identical copies of both documents, so failure of a hard drive on either side won't lose any of the changes."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:85
+# 34faeb0a815b4762ac78e9b4ca354b2b
+msgid "Another thing to notice is that peers do not have to be configured or tracked. You can do regular replications to peers, or you can do one-off, ad-hoc pushes or pulls. After the replication has taken place, there is no record kept of which peer any particular document or revision came from."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:90
+# 028b4064358d4bbea9f8f4f491154ab0
+msgid "So the question now is: what happens when you try to read /db/bob? By default, CouchDB picks one arbitrary revision as the \"winner\", using a deterministic algorithm so that the same choice will be made on all peers. The same happens with views: the deterministically-chosen winner is the only revision fed into your map function."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:96
+# d80781c329e44df59678dd7b2bb9069a
+msgid "Let's say that the winner is v2a. On the desktop, if Alice reads the document she'll see v2a, which is what she saved there. But on the laptop, after replication, she'll also see only v2a. It could look as if the changes she made there have been lost - but of course they have not, they have just been hidden away as a conflicting revision. But eventually she'll need these changes merged into Bob's business card, otherwise they will effectively have been lost."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:103
+# c9278863611b4bd8a9a55cdaa092ccf9
+msgid "Any sensible business-card application will, at minimum, have to present the conflicting versions to Alice and allow her to create a new version incorporating information from them all. Ideally it would merge the updates itself."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:109
+# b96ab1080a5e49b78635bc2b2432e853
+msgid "Conflict avoidance"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:111
+# fd2518b13d7a4c25ae934661dcff6d37
+msgid "When working on a single node, CouchDB will avoid creating conflicting revisions by returning a :statuscode:`409` error. This is because, when you PUT a new version of a document, you must give the ``_rev`` of the previous version. If that ``_rev`` has already been superseded, the update is rejected with a  :statuscode:`409` response."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:117
+# 54303f733c93409a863423695209c60b
+msgid "So imagine two users on the same node are fetching Bob's business card, updating it concurrently, and writing it back:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:134
+# 1c10c87c4b514c2e88e51900acf4d7b6
+msgid "User2's changes are rejected, so it's up to the app to fetch /db/bob again, and either:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:137
+# e178c4d9d07a4600aa7bcfc12d00222e
+msgid "apply the same changes as were applied to the earlier revision, and submit a new PUT"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:139
+# cbda7f40393a4245a0dd4ed1e5469263
+msgid "redisplay the document so the user has to edit it again"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:140
+# 29d338919f504ef29508a94a0435e106
+msgid "just overwrite it with the document being saved before (which is not advisable, as user1's changes will be silently lost)"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:143
+# 278cac8c6e7d454a9e238604468317a1
+msgid "So when working in this mode, your application still has to be able to handle these conflicts and have a suitable retry strategy, but these conflicts never end up inside the database itself."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:148
+# 6260709578bd4926ba8db9503fd8ff3d
+msgid "Conflicts in batches"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:150
+# e2d64628cee94209b714f8f5c31e3d84
+msgid "There are two different ways that conflicts can end up in the database:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:152
+# 16e905d582c24574b0a97664cc3d49de
+msgid "Conflicting changes made on different databases, which are replicated to each other, as shown earlier."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:154
+# 492fd082b6e74c8490b7c027a7868411
+msgid "Changes are written to the database using ``_bulk_docs`` and all_or_nothing, which bypasses the 409 mechanism."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:157
+# e5e79cf187d34522b7e6090b124f7918
+msgid "The :ref:`_bulk_docs API <api/db/bulk_docs>` lets you submit multiple updates (and/or deletes) in a single HTTP POST. Normally, these are treated as independent updates; some in the batch may fail because the `_rev` is stale (just like a 409 from a PUT) whilst others are written successfully. The response from ``_bulk_docs`` lists the success/fail separately for each document in the batch."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:164
+# bf1d9c777bf54834970c07d3ab5ae31e
+msgid "However there is another mode of working, whereby you specify ``{\"all_or_nothing\":true}`` as part of the request. This is CouchDB's nearest equivalent of a \"transaction\", but it's not the same as a database transaction which can fail and roll back. Rather, it means that all of the changes in the request will be forcibly applied to the database, even if that introduces conflicts. The only guarantee you are given is that they will either all be applied to the database, or none of them (e.g. if the power is pulled out before the update is finished writing to disk)."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:173
+# 2fae1e1c095c4be69d76a7cc8266a484
+msgid "So this gives you a way to introduce conflicts within a single database instance. If you choose to do this instead of PUT, it means you don't have to write any code for the possibility of getting a 409 response, because you will never get one. Rather, you have to deal with conflicts appearing later in the database, which is what you'd have to do in a multi-master application anyway."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:195
+# 3174b011fd304991ab7dd3c7156ad908
+msgid "Revision tree"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:197
+# 70290aca2662487a98013591d374c16d
+msgid "When you update a document in CouchDB, it keeps a list of the previous revisions. In the case where conflicting updates are introduced, this history branches into a tree, where the current conflicting revisions for this document form the tips (leaf nodes) of this tree:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:208
+# 263a6ba4023c4c36ac1b7042fb7d77ee
+msgid "Each branch can then extend its history - for example if you read revision r2b and then PUT with ?rev=r2b then you will make a new revision along that particular branch."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:218
+# da809b526fd74880b91be715f65770fc
+msgid "Here, (r4a, r3b, r3c) are the set of conflicting revisions. The way you resolve a conflict is to delete the leaf nodes along the other branches. So when you combine (r4a+r3b+r3c) into a single merged document, you would replace r4a and delete r3b and r3c."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:229
+# 2f281796a9d14c568f08cf16bf55c623
+msgid "Note that r4b and r4c still exist as leaf nodes in the history tree, but as deleted docs. You can retrieve them but they will be marked ``\"_deleted\":true``."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:232
+# 1725f70b208042b793c3edf0c35c7128
+msgid "When you compact a database, the bodies of all the non-leaf documents are discarded. However, the list of historical _revs is retained, for the benefit of later conflict resolution in case you meet any old replicas of the database at some time in future. There is \"revision pruning\" to stop this getting arbitrarily large."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:239
+# 41b46d14170b4fb9b1f2588c0ae99a57
+msgid "Working with conflicting documents"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:241
+# dc983cb6c6f8496ca6f198b336ab5231
+msgid "The basic :get:`/{doc}/{docid}` operation will not show you any information about conflicts. You see only the deterministically-chosen winner, and get no indication as to whether other conflicting revisions exist or not:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:253
+# 07df92a47aad4b3cb34d64ef8d86c3f3
+msgid "If you do ``GET /db/bob?conflicts=true``, and the document is in a conflict state, then you will get the winner plus a _conflicts member containing an array of the revs of the other, conflicting revision(s). You can then fetch them individually using subsequent ``GET /db/bob?rev=xxxx`` operations:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:270
+# b3f3bc07d13941908c534aafe9d5fa4f
+msgid "If you do ``GET /db/bob?open_revs=all`` then you will get all the leaf nodes of the revision tree. This will give you all the current conflicts, but will also give you leaf nodes which have been deleted (i.e. parts of the conflict history which have since been resolved). You can remove these by filtering out documents with ``\"_deleted\":true``:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:284
+# 1b4c179ab8e1495f8b5c52afa642e964
+msgid "The ``\"ok\"`` tag is an artifact of ``open_revs``, which also lets you list explicit revisions as a JSON array, e.g. ``open_revs=[rev1,rev2,rev3]``. In this form, it would be possible to request a revision which is now missing, because the database has been compacted."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:290
+# 873d7831cf4348109ae6063577e6eae7
+msgid "The order of revisions returned by ``open_revs=all`` is **NOT** related to the deterministic \"winning\" algorithm. In the above example, the winning revision is 2-b91b... and happens to be returned last, but in other cases it can be returned in a different position."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:295
+# ddb99801c64444d8986d972a21958d6c
+msgid "Once you have retrieved all the conflicting revisions, your application can then choose to display them all to the user. Or it could attempt to merge them, write back the merged version, and delete the conflicting versions - that is, to resolve the conflict permanently."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:300
+# 9349c375233e4f209aa1b870af8b8aec
+msgid "As described above, you need to update one revision and delete all the conflicting revisions explicitly. This can be done using a single `POST` to ``_bulk_docs``, setting ``\"_deleted\":true`` on those revisions you wish to delete."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:306
+# d36fce10425c460f9a86809bd355248d
+msgid "Multiple document API"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:308
+# 7f9cfdbab1134627ac38044522934285
+msgid "You can fetch multiple documents at once using ``include_docs=true`` on a view. However, a ``conflicts=true`` request is ignored; the \"doc\" part of the value never includes a ``_conflicts`` member. Hence you would need to do another query to determine for each document whether it is in a conflicting state:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:353
+# ea38980604594bfc98c3e81acee05385
+msgid "View map functions"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:355
+# 5b0e90fb4b304eef9c6add39742d64b0
+msgid "Views only get the winning revision of a document. However they do also get a ``_conflicts`` member if there are any conflicting revisions. This means you can write a view whose job is specifically to locate documents with conflicts. Here is a simple map function which achieves this:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:368
+# a2955a6e828e453cbbe509b8ea49f279
+msgid "which gives the following output:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:388
+# 77c276ad464b4f5db0cc21ead7b22c0a
+msgid "If you do this, you can have a separate \"sweep\" process which periodically scans your database, looks for documents which have conflicts, fetches the conflicting revisions, and resolves them."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:392
+# f53a8ded033a49d19c73bd603e5f1e8c
+msgid "Whilst this keeps the main application simple, the problem with this approach is that there will be a window between a conflict being introduced and it being resolved. From a user's viewpoint, this may appear that the document they just saved successfully may suddenly lose their changes, only to be resurrected some time later. This may or may not be acceptable."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:398
+# 1a14e3e05db54e778881a4d0c35a7efb
+msgid "Also, it's easy to forget to start the sweeper, or not to implement it properly, and this will introduce odd behaviour which will be hard to track down."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:401
+# c30191e3411448418cf06be354cb6aed
+msgid "CouchDB's \"winning\" revision algorithm may mean that information drops out of a view until a conflict has been resolved. Consider Bob's business card again; suppose Alice has a view which emits mobile numbers, so that her telephony application can display the caller's name based on caller ID. If there are conflicting documents with Bob's old and new mobile numbers, and they happen to be resolved in favour of Bob's old number, then the view won't be able to recognise his new one. In this particular case, the application might have preferred to put information from both the conflicting documents into the view, but this currently isn't possible."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:411
+# e0a35eb634074161888a5920b96b313b
+msgid "Suggested algorithm to fetch a document with conflict resolution:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:413
+# 87b50c96e7414de9963bf744ddf58a33
+msgid "Get document via ``GET docid?conflicts=true`` request;"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:414
+# 78ea32aca46b46d7ae9f8476e9535f80
+msgid "For each member in the ``_conflicts`` array call ``GET docid?rev=xxx``. If any errors occur at this stage, restart from step 1. (There could be a race where someone else has already resolved this conflict and deleted that rev)"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:418
+# 0af6cedeb82b4e4fa7f63bde71656a53
+msgid "Perform application-specific merging"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:419
+# efd244f55649490eb7d39f9be194f439
+msgid "Write ``_bulk_docs`` with an update to the first rev and deletes of the other revs."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:422
+# 8390f335a74743f185e0d09503335c3b
+msgid "This could either be done on every read (in which case you could replace all calls to GET in your application with calls to a library which does the above), or as part of your sweeper code."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:426
+# 915c41212b1e45c2b2a65966d096b89a
+msgid "And here is an example of this in Ruby using the low-level `RestClient`_:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:500
+# 69f6e3dda3a6473c97c1e2b0de6b3df4
+msgid "An application written this way never has to deal with a ``PUT 409``, and is automatically multi-master capable."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:503
+# b85b804473024aa5b20b02b8ff357ccf
+msgid "You can see that it's straightforward enough when you know what you're doing. It's just that CouchDB doesn't currently provide a convenient HTTP API for \"fetch all conflicting revisions\", nor \"PUT to supersede these N revisions\", so you need to wrap these yourself. I also don't know of any client-side libraries which provide support for this."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:510
+# 8b1c3f43ee4648dea179f8e8675c2397
+msgid "Merging and revision history"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:512
+# dd07a46042e84455a7db92fbaae080bb
+msgid "Actually performing the merge is an application-specific function. It depends on the structure of your data. Sometimes it will be easy: e.g. if a document contains a list which is only ever appended to, then you can perform a union of the two list versions."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:517
+# a537d99dab654396a4c33bf926c1f9ba
+msgid "Some merge strategies look at the changes made to an object, compared to its previous version. This is how git's merge function works."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:520
+# 09e3d630cef64998b96f54c39a7e5cc9
+msgid "For example, to merge Bob's business card versions v2a and v2b, you could look at the differences between v1 and v2b, and then apply these changes to v2a as well."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:524
+# a289bd1a13e24d3e99b2866d17a2bec7
+msgid "With CouchDB, you can sometimes get hold of old revisions of a document. For example, if you fetch ``/db/bob?rev=v2b&revs_info=true`` you'll get a list of the previous revision ids which ended up with revision v2b. Doing the same for v2a you can find their common ancestor revision. However if the database has been compacted, the content of that document revision will have been lost. ``revs_info`` will still show that v1 was an ancestor, but report it as \"missing\"::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:538
+# 707288e9bd994f31811687b72f6957cb
+msgid "So if you want to work with diffs, the recommended way is to store those diffs within the new revision itself. That is: when you replace v1 with v2a, include an extra field or attachment in v2a which says which fields were changed from v1 to v2a. This unfortunately does mean additional book-keeping for your application."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:545
+# 962081860ce043cc8d5c02b27bc8b535
+msgid "Comparison with other replicating data stores"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:547
+# 65809cf0efc241a19bd0d04e9a4315b3
+msgid "The same issues arise with other replicating systems, so it can be instructive to look at these and see how they compare with CouchDB. Please feel free to add other examples."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:552
+# c550fb3a88c24bcb8196ca668c265a9a
+msgid "Unison"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:554
+# c09955b078434534a479108ad98dd353
+msgid "`Unison`_ is a bi-directional file synchronisation tool. In this case, the business card would be a file, say `bob.vcf`."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:559
+# c617cc4128744a5ab7c4fa8aec3f91ed
+msgid "When you run unison, changes propagate both ways. If a file has changed on one side but not the other, the new replaces the old. Unison maintains a local state file so that it knows whether a file has changed since the last successful replication."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:564
+# 8122226cd83d4be0bb4e7ef8005717bf
+msgid "In our example it has changed on both sides. Only one file called `bob.vcf` can exist within the filesystem. Unison solves the problem by simply ducking out: the user can choose to replace the remote version with the local version, or vice versa (both of which would lose data), but the default action is to leave both sides unchanged."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:570
+# 0b6f237335ea4ebeae1aaf6ddd592bcb
+msgid "From Alice's point of view, at least this is a simple solution. Whenever she's on the desktop she'll see the version she last edited on the desktop, and whenever she's on the laptop she'll see the version she last edited there."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:574
+# 980668b9d7de4a80b72e5e0f45dd43d9
+msgid "But because no replication has actually taken place, the data is not protected. If her laptop hard drive dies, she'll lose all her changes made on the laptop; ditto if her desktop hard drive dies."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:578
+# 111bdf6497d74ad3b9100674adb8c8b8
+msgid "It's up to her to copy across one of the versions manually (under a different filename), merge the two, and then finally push the merged version to the other side."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:582
+# e6cb7e226af84868ba85ed7484c94aba
+msgid "Note also that the original file (version v1) has been lost by this point. So it's not going to be known from inspection alone which of v2a and v2b has the most up-to-date E-mail address for Bob, and which has the most up-to-date mobile number. Alice has to remember which she entered last."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:589
+# 866a93aa2f084cf691c74dfd0292da1e
+msgid "Git"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:591
+# 2c0bc6023d55419c832a651e122ff1f5
+msgid "`Git`_ is a well-known distributed source control system. Like Unison, git deals with files. However, git considers the state of a whole set of files as a single object, the \"tree\". Whenever you save an update, you create a \"commit\" which points to both the updated tree and the previous commit(s), which in turn point to the previous tree(s). You therefore have a full history of all the states of the files. This forms a branch, and a pointer is kept to the tip of the branch, from which you can work backwards to any previous state. The \"pointer\" is actually an SHA1 hash of the tip commit."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:602
+# 66deddf5bc094e8da3ec16dca4b6656c
+msgid "If you are replicating with one or more peers, a separate branch is made for each of the peers. For example, you might have::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:609
+# a91c8fc9a6e746858e072279e5ea2718
+msgid "In the normal way of working, replication is a \"pull\", importing changes from a remote peer into the local repository. A \"pull\" does two things: first \"fetch\" the state of the peer into the remote tracking branch for that peer; and then attempt to \"merge\" those changes into the local branch."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:614
+# d836cd6c8bea40b191d06010e9264114
+msgid "Now let's consider the business card. Alice has created a git repo containing ``bob.vcf``, and cloned it across to the other machine. The branches look like this, where ``AAAAAAAA`` is the SHA1 of the commit::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:622
+# d03739051d1d422f8bb690ab59d5fb2c
+msgid "Now she makes a change on the desktop, and commits it into the desktop repo; then she makes a different change on the laptop, and commits it into the laptop repo::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:630
+# ccbb39ba82234e849750c77677455266
+msgid "Now on the desktop she does ``git pull laptop``. Firstly, the remote objects are copied across into the local repo and the remote tracking branch is updated::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:639
+# 854c25c8cc5d433ea74dfcfdb363118b
+msgid "repo still contains AAAAAAAA because commits BBBBBBBB and CCCCCCCC point to it"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:641
+# 66244143df03441a9721ad52b7e0e912
+msgid "Then git will attempt to merge the changes in. It can do this because it knows the parent commit to ``CCCCCCCC`` is ``AAAAAAAA``, so it takes a diff between ``AAAAAAAA`` and ``CCCCCCCC`` and tries to apply it to ``BBBBBBBB``."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:645
+# b9dcb4a2dd7f4a4d909d490974785a9f
+msgid "If this is successful, then you'll get a new version with a merge commit::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:651
+# 1c60bcda730a432b8d520cbf55082a07
+msgid "Then Alice has to logon to the laptop and run ``git pull desktop``. A similar process occurs. The remote tracking branch is updated::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:658
+# 454aae068d3d432e9a104c7cde572141
+msgid "Then a merge takes place. This is a special-case: ``CCCCCCCC`` one of the parent commits of ``DDDDDDDD``, so the laptop can `fast forward` update from ``CCCCCCCC`` to ``DDDDDDDD`` directly without having to do any complex merging. This leaves the final state as::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:667
+# 2b7cfc55bdaf4f99b1ea8779e77d16ed
+msgid "Now this is all and good, but you may wonder how this is relevant when thinking about CouchDB."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:670
+# a1f72e10c0044fd388f74830535ca2f9
+msgid "Firstly, note what happens in the case when the merge algorithm fails. The changes are still propagated from the remote repo into the local one, and are available in the remote tracking branch; so unlike Unison, you know the data is protected. It's just that the local working copy may fail to update, or may diverge from the remote version. It's up to you to create and commit the combined version yourself, but you are guaranteed to have all the history you might need to do this."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:678
+# a738c69292714cebb331990aa49ab3f4
+msgid "Note that whilst it's possible to build new merge algorithms into Git, the standard ones are focused on line-based changes to source code. They don't work well for XML or JSON if it's presented without any line breaks."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:682
+# ba9ac35f025e42208ba11ea480659ac6
+msgid "The other interesting consideration is multiple peers. In this case you have multiple remote tracking branches, some of which may match your local branch, some of which may be behind you, and some of which may be ahead of you (i.e. contain changes that you haven't yet merged)::"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:692
+# ae0d65cc12654d819553ffa019499dda
+msgid "Note that each peer is explicitly tracked, and therefore has to be explicitly created. If a peer becomes stale or is no longer needed, it's up to you to remove it from your configuration and delete the remote tracking branch. This is different to CouchDB, which doesn't keep any peer state in the database."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:697
+# c6f7f6602f864d00a186c842f7ae9ee5
+msgid "Another difference with git is that it maintains all history back to time zero - git compaction keeps diffs between all those versions in order to reduce size, but CouchDB discards them. If you are constantly updating a document, the size of a git repo would grow forever. It is possible (with some effort) to use \"history rewriting\" to make git forget commits earlier than a particular one."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:708
+# d6e8782baff34db08f236500806a71d0
+msgid "What is the CouchDB replication protocol? Is it like Git?"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:710
+# c5e905cecc894257866e44d8f6057031
+msgid "Jason Smith"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:711
+# 0e30a8489f684c1dae815145a9aff019
+msgid "2011-01-29"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:712
+# 251ba68f4070489c90802caf3d92bc1d
+msgid "http://stackoverflow.com/questions/4766391/what-is-the-couchdb-replication-protocol-is-it-like-git"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:714
+# f430e38b09d345bb9c01d61520766538
+msgid "**Key points**"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:716
+# b0cdefd350e5439eb4e53614040f0518
+msgid "**If you know Git, then you know how Couch replication works.** Replicating is *very* similar to pushing or pulling with distributed source managers like Git."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:719
+# 7372be8a9b1b4135bf43079ed9d129bd
+msgid "**CouchDB replication does not have its own protocol.** A replicator simply connects to two DBs as a client, then reads from one and writes to the other. Push replication is reading the local data and updating the remote DB; pull replication is vice versa."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:724
+# b4a13479ebdd49deb3fb0e1d18b319df
+msgid "**Fun fact 1**: The replicator is actually an independent Erlang application, in its own process. It connects to both couches, then reads records from one and writes them to the other."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:727
+# 692557a6df01441a93ae934dde2f4e0d
+msgid "**Fun fact 2**: CouchDB has no way of knowing who is a normal client and who is a replicator (let alone whether the replication is push or pull). It all looks like client connections. Some of them read records. Some of them write records."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:732
+# 75631654db0747a785f9448ab72ab95b
+msgid "**Everything flows from the data model**"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:734
+# d54efdfa0766406d8a39e648b235654e
+msgid "The replication algorithm is trivial, uninteresting. A trained monkey could design it. It's simple because the cleverness is the data model, which has these useful characteristics:"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:738
+# 9b699441fb5e4ac8a51dbf434f356baf
+msgid "Every record in CouchDB is completely independent of all others. That sucks if you want to do a JOIN or a transaction, but it's awesome if you want to write a replicator. Just figure out how to replicate one record, and then repeat that for each record."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:742
+# 5e051de498834484bdb89fb623cd1c2b
+msgid "Like Git, records have a linked-list revision history. A record's revision ID is the checksum of its own data. Subsequent revision IDs are checksums of: the new data, plus the revision ID of the previous."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:746
+# f7a10868e18b42a988394f55a1cb7b64
+msgid "In addition to application data (``{\"name\": \"Jason\", \"awesome\": true}``), every record stores the evolutionary timeline of all previous revision IDs leading up to itself."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:750
+# bbf613b9eaf74613a809490bbe6cc76f
+msgid "Exercise: Take a moment of quiet reflection. Consider any two different records, A and B. If A's revision ID appears in B's timeline, then B definitely evolved from A. Now consider Git's fast-forward merges. Do you hear that? That is the sound of your mind being blown."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:755
+# a7baae3a04d84271b7a89f3977b91581
+msgid "Git isn't really a linear list. It has forks, when one parent has multiple children. CouchDB has that too."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:758
+# 7c04e4c9091b4d01a3f6be4d5648765e
+msgid "Exercise: Compare two different records, A and B. A's revision ID does not appear in B's timeline; however, one revision ID, C, is in both A's and B's timeline. Thus A didn't evolve from B. B didn't evolve from A. But rather, A and B have a common ancestor C. In Git, that is a \"fork.\" In CouchDB, it's a \"conflict.\""
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:764
+# d754ad3ab698448493f5132a85c0b290
+msgid "In Git, if both children go on to develop their timelines independently, that's cool. Forks totally support that."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:766
+# ed4f9277ddb047f6ba5cabf2785ccb3b
+msgid "In CouchDB, if both children go on to develop their timelines independently, that cool too. Conflicts totally support that."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:768
+# 223295fa041440bb9db8d067f020207c
+msgid "**Fun fact 3**: CouchDB \"conflicts\" do not correspond to Git \"conflicts.\" A Couch conflict is a divergent revision history, what Git calls a \"fork.\" For this reason the CouchDB community pronounces \"conflict\" with a silent `n`: \"co-flicked.\""
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:773
+# 7de5801f828e442ca2a7abefccc874ad
+msgid "Git also has merges, when one child has multiple parents. CouchDB *sort* of has that too."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:776
+# 2abbeb35c7974f19a044d5f0dc64866b
+msgid "**In the data model, there is no merge.** The client simply marks one timeline as deleted and continues to work with the only extant timeline."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:778
+# 78e25a416c3f49b0ab9ed05738bc12ef
+msgid "**In the application, it feels like a merge.** Typically, the client merges the *data* from each timeline in an application-specific way. Then it writes the new data to the timeline. In Git, this is like copying and pasting the changes from branch A into branch B, then commiting to branch B and deleting branch A. The data was merged, but there was no `git merge`."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:784
+# f75f545f6e8c400eb73fd0f983a3b1d1
+msgid "These behaviors are different because, in Git, the timeline itself is important; but in CouchDB, the data is important and the timeline is incidental—it's just there to support replication. That is one reason why CouchDB's built-in revisioning is inappropriate for storing revision data like a wiki page."
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:790
+# 93f8e0a590ee4e09a455a5c1e5a7b02e
+msgid "**Final notes**"
+msgstr ""
+
+#: ../../src/replication/conflicts.rst:792
+# a45992b2527d4a10a507f1e396fa34b2
+msgid "At least one sentence in this writeup (possibly this one) is complete BS."
+msgstr ""
+

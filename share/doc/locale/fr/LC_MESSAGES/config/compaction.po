@@ -1,0 +1,183 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/compaction.rst:19
+msgid "Compaction Configuration"
+msgstr ""
+
+#: ../../src/config/compaction.rst:24
+msgid "Database Compaction Options"
+msgstr ""
+
+#: ../../src/config/compaction.rst:30
+msgid "Specifies the copy buffer's maximum size in bytes::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:38
+msgid ""
+"Triggers a checkpoint after the specified amount of bytes were successfully "
+"copied to the compacted database::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:48
+msgid "Compaction Daemon Rules"
+msgstr ""
+
+#: ../../src/config/compaction.rst:52
+msgid ""
+"A list of rules to determine when to run automatic compaction. The "
+":option:`daemons/compaction_daemon` compacts databases and their respective "
+"view groups when all the condition parameters are satisfied. Configuration "
+"can be per-database or global, and it has the following format::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:62
+msgid "For example::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:67
+msgid ""
+"``db_fragmentation``: If the ratio of legacy data, including metadata, to "
+"current data in the database file size is equal to or greater than this "
+"value, this condition is satisfied. The percentage is expressed as an "
+"integer percentage. This value is computed as::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:74
+msgid ""
+"The data_size and file_size values can be obtained when querying "
+":http:get:`/{db}`."
+msgstr ""
+
+#: ../../src/config/compaction.rst:77
+msgid ""
+"``view_fragmentation``: If the ratio of legacy data, including metadata, to "
+"current data in a view index file size is equal to or greater then this "
+"value, this database compaction condition is satisfied. The percentage is "
+"expressed as an integer percentage. This value is computed as::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:84
+msgid ""
+"The data_size and file_size values can be obtained when querying a "
+":ref:`view group's information URI <api/ddoc/info>`."
+msgstr ""
+
+#: ../../src/config/compaction.rst:87
+msgid ""
+"``from`` and ``to``: The period for which a database (and its view group) "
+"compaction is allowed. The value for these parameters must obey the format::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:92
+msgid ""
+"``strict_window``: If a compaction is still running after the end of the "
+"allowed period, it will be canceled if this parameter is set to `true`. It "
+"defaults to `false` and is meaningful only if the *period* parameter is also"
+" specified."
+msgstr ""
+
+#: ../../src/config/compaction.rst:97
+msgid ""
+"``parallel_view_compaction``: If set to `true`, the database and its views "
+"are compacted in parallel. This is only useful on certain setups, like for "
+"example when the database and view index directories point to different "
+"disks. It defaults to `false`."
+msgstr ""
+
+#: ../../src/config/compaction.rst:102
+msgid ""
+"Before a compaction is triggered, an estimation of how much free disk space "
+"is needed is computed. This estimation corresponds to two times the data "
+"size of the database or view index. When there's not enough free disk space "
+"to compact a particular database or view index, a warning message is logged."
+msgstr ""
+
+#: ../../src/config/compaction.rst:107
+msgid "Examples:"
+msgstr ""
+
+#: ../../src/config/compaction.rst:109
+msgid "``[{db_fragmentation, \"70%\"}, {view_fragmentation, \"60%\"}]``"
+msgstr ""
+
+#: ../../src/config/compaction.rst:111
+msgid ""
+"The `foo` database is compacted if its fragmentation is 70% or more. Any "
+"view index of this database is compacted only if its fragmentation is 60% or"
+" more."
+msgstr ""
+
+#: ../../src/config/compaction.rst:115
+msgid ""
+"``[{db_fragmentation, \"70%\"}, {view_fragmentation, \"60%\"}, {from, "
+"\"00:00\"}, {to, \"04:00\"}]``"
+msgstr ""
+
+#: ../../src/config/compaction.rst:117
+msgid ""
+"Similar to the preceding example but a compaction (database or view index) "
+"is only triggered if the current time is between midnight and 4 AM."
+msgstr ""
+
+#: ../../src/config/compaction.rst:120
+msgid ""
+"``[{db_fragmentation, \"70%\"}, {view_fragmentation, \"60%\"}, {from, "
+"\"00:00\"}, {to, \"04:00\"}, {strict_window, true}]``"
+msgstr ""
+
+#: ../../src/config/compaction.rst:122
+msgid ""
+"Similar to the preceding example - a compaction (database or view index) is "
+"only triggered if the current time is between midnight and 4 AM. If at 4 AM "
+"the database or one of its views is still compacting, the compaction process"
+" will be canceled."
+msgstr ""
+
+#: ../../src/config/compaction.rst:127
+msgid ""
+"``[{db_fragmentation, \"70%\"}, {view_fragmentation, \"60%\"}, {from, "
+"\"00:00\"}, {to, \"04:00\"}, {strict_window, true}, "
+"{parallel_view_compaction, true}]``"
+msgstr ""
+
+#: ../../src/config/compaction.rst:129
+msgid ""
+"Similar to the preceding example, but a database and its views can be "
+"compacted in parallel."
+msgstr ""
+
+#: ../../src/config/compaction.rst:136
+msgid "Configuration of Compaction Daemon"
+msgstr ""
+
+#: ../../src/config/compaction.rst:142
+msgid ""
+"The delay, in seconds, between each check for which database and view "
+"indexes need to be compacted::"
+msgstr ""
+
+#: ../../src/config/compaction.rst:151
+msgid ""
+"If a database or view index file is smaller than this value (in bytes), "
+"compaction will not happen. Very small files always have high fragmentation,"
+" so compacting them is inefficient."
+msgstr ""
+
+#: ../../src/config/compaction.rst:164
+msgid "Views Compaction Options"
+msgstr ""
+
+#: ../../src/config/compaction.rst:171
+msgid "Specifies maximum copy buffer size in bytes used during compaction::"
+msgstr ""

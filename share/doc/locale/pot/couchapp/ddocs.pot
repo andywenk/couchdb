@@ -1,0 +1,457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/couchapp/ddocs.rst:19
+# c7312a5d3ce14e0bae246baff5bf1d46
+msgid "Design Functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:21
+# 7636458bc5ee41e1b2ac15abc0c0c979
+msgid "In this section we'll show how to write design documents, using the built-in :ref:`JavaScript Query Server <query-server/js>`."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:24
+# d2c3350e19ac422db021834280a2c8f4
+msgid "But before we start to write our first function, let's take a look at the list of common objects that will be used during our code journey - we'll be using them extensively within each function:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:28
+# b3ca78bc150a44feb1ce0a58a0a21c87
+msgid ":ref:`Database information object <dbinfo_object>`"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:29
+# 93ed72db5a93413ca5819543c95c68de
+msgid ":ref:`Request object <request_object>`"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:30
+# db1da3fd3b8a4a34a752ef857aecd83e
+msgid ":ref:`Response object <response_object>`"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:31
+# 4bab9046d39f42319d74a0d061df422f
+msgid ":ref:`UserCtx object <userctx_object>`"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:32
+# 047b92d8fcfa481a939512d738ff1065
+msgid ":ref:`Database Security object <security_object>`"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:33
+# 325e4b841d2748e498fd015773a95e02
+msgid ":ref:`Guide to JavaScript Query Server <query-server/js>`"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:38
+# dae6ede83def4ba0a8be12dcdc419051
+msgid "View functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:40
+# 0a71024161a44db89a345925dc4982dc
+msgid "Views are the primary tool used for querying and reporting on CouchDB databases."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:45
+# 35445a3024274e1b9de7a07c48ddec9c
+msgid "Map functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:51
+# b124600cab664d199e625f73880f3279
+msgid "Map functions accept a single document as the argument and (optionally) :func:`emit` key/value pairs that are stored in a view."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:64
+# fa87c90551ca43f68678f43d9df13a07
+msgid "In this example a key/value pair is emitted for each value in the `tags` array of a document with a `type` of \"post\". Note that :func:`emit` may be called many times for a single document, so the same document may be available by several different keys."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:69
+# 24cdaf42491940f6889b85cbc9083f61
+msgid "Also keep in mind that each document is *sealed* to prevent situation when one map function changes document state and the other one received a modified version."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:73
+# 81f81d0940e24be08db70da10a6104ab
+msgid "For efficiency reasons, documents are passed to a group of map functions - each document is processed by group of map functions from all views of related design document. This means that if you trigger index update for one view in ddoc, all others will get updated too."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:78
+# 99e3eaa8676346b29b067337a62c2cea
+msgid "Since `1.1.0` release `map` function supports :ref:`CommonJS <commonjs>` modules and access to :func:`require` function."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:84
+# 0e5dbd9eae2042a18db28e7e2fb93f54
+msgid "Reduce and rereduce functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:95
+# 32c43a9771874c0ea64cf5ceed4362f6
+msgid "Reduce functions takes two required arguments of keys and values lists - the result of the related map function - and optional third one which indicates if `rereduce` mode is active or not. `Rereduce` is using for additional reduce values list, so when it is ``true`` there is no information about related `keys` (first argument is ``null``)."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:101
+# 83cbaf35c4e04f98aa3e73d4bb563048
+msgid "Note, that if produced result by `reduce` function is longer than initial values list then a Query Server error will be raised. However, this behavior could be disabled by setting ``reduce_limit`` config option to ``false``:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:110
+# 7b0ef880d1624bac9dd6c87b9a4a41a3
+msgid "While disabling ``reduce_limit`` might be useful for debug proposes, remember, that main task of reduce functions is to *reduce* mapped result, not to make it even bigger. Generally, your reduce function should converge rapidly to a single value - which could be an array or similar object."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:119
+# 537a16d544a747a88540cab9e56a1a8c
+msgid "Builtin reduce functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:121
+# 14d633a0a9c34c1499a72496ed054bcd
+msgid "Additionally, CouchDB has three built-in reduce functions. These are implemented in Erlang and runs inside CouchDB, so they are much faster than the equivalent JavaScript functions: ``_sum``, ``_count`` and ``_stats``. Their equivalents in JavaScript below:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:161
+# a8f25bbdd4d44989ae755ccfc19fd467
+msgid "**Why don't reduce functions support CommonJS modules?**"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:163
+# 3cfb296fd2ca407c9dd8ca1f74a08890
+msgid "While `map` functions have limited access to stored modules through :func:`require` function there is no such feature for `reduce` functions. The reason lies deep inside in mechanism how `map` and `reduce` functions are processed by Query Server. Let's take a look on `map` functions first:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:168
+# 7e7ea46a2219438e82323fbc48628c55
+msgid "CouchDB sends all `map` functions for processed design document to Query Server."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:170
+# 4d93beaa62da4e0e8184faba009bc662
+msgid "Query Server handles them one by one, compiles and puts them onto an internal stack."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:172
+# f1f161100eb74fa2b0e78ecffd960067
+msgid "After all `map` functions had been processed, CouchDB will send the remaining documents to index one by one."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:174
+# a6e9fcab441240b4937e887decf33856
+msgid "The Query Server receives the document object and applies it to every function from the stack. The emitted results are then joined into a single array and sent back to CouchDB."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:178
+# cc45b9c7f40749e3941bf71031b09e43
+msgid "Now let's see how `reduce` functions are handled:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:180
+# ae1f2a7266c042a1b5f6331b0b17215f
+msgid "CouchDB sends *as single command* list of available `reduce` functions with result list of key-value pairs that was previously received as result of `map` functions work."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:183
+# 95ba7e3f9fde47409ce5ed6f12307b9a
+msgid "Query Server compiles reduce functions and applies them to key-value lists. Reduced result sends back to CouchDB."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:186
+# 7c86bc16281948de8d3629943528f4aa
+msgid "As you may note, `reduce` functions been applied in single shot while `map` ones are applied in an iterative way per each document. This means that it's possible for `map` functions to precompile CommonJS libraries and use them during the entire view processing, but for `reduce` functions it will be compiled again and again for each view result reduction, which will lead to performance degradation (`reduce` function are already does hard work to make large result smaller)."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:198
+# 5bac2a32c58b44ef93bb791b14f07654
+msgid "Show functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:208
+# d58d88554f2645b0b80083466ede5db8
+msgid "Show functions are used to represent documents in various formats, commonly as HTML page with nicer formatting. They can also be used to run server-side functions without requiring a pre-existing document."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:212
+# c5060f79027547428684f543e3765264
+msgid "Basic example of show function could be:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:224
+# 428273ca65a54dcebdcd8826492f7cec
+msgid "Also, there is more simple way to return json encoded data:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:238
+# 8e53f1bb71364b93a0e657b7ac82d231
+msgid "and even files (this one is CouchDB logo):"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:260
+# 9ad140b9b20c48eb994997ee9951dacd
+msgid "But what if you need to represent data in different formats via a single function? Functions :func:`registerType` and :func:`provides` are your the best friends in that question:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:309
+# bcf4696bef854b76a0943b32c4c94674
+msgid "This function may return `html`, `json` , `xml` or our custom `text json` format representation of same document object with same processing rules. Probably, the `xml` provider in our function needs more care to handle nested objects correctly, and keys with invalid characters, but you've got the idea!"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:317
+#: ../../src/couchapp/ddocs.rst:371
+#: ../../src/couchapp/ddocs.rst:426
+#: ../../src/couchapp/ddocs.rst:569
+#: ../../src/couchapp/ddocs.rst:758
+# 1716fe22f4154256a4e70b013dea77d0
+# 3b0fd429c0c648e58155dbd5ef19d99a
+# 586e19db61f542d2a43a4e693f9660fa
+# 73d42ac9efea4c7d8589498be9d910a6
+# 5ced1c44aab644538313695ca8e1ceb9
+msgid "CouchDB Wiki:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:317
+# 181283e4c239414eacb79db43daa3da4
+msgid "`Showing Documents <http://wiki.apache.org/couchdb/Formatting_with_Show_and_List#Showing_Documents>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:319
+#: ../../src/couchapp/ddocs.rst:373
+#: ../../src/couchapp/ddocs.rst:567
+#: ../../src/couchapp/ddocs.rst:756
+# a5427e351dd74bc8a8fb4e6368c77fd7
+# c2471662c14b4141b4ece31f5b29d93c
+# 283a953004854e26a25c7ef9a004f158
+# a14fc496e358462abe98e8d0c91f9f8b
+msgid "CouchDB Guide:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:320
+# b19a0d9d5f5540c8b1ff3b8ea9eb8ca1
+msgid "`Show Functions <http://guide.couchdb.org/editions/1/en/show.html>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:326
+# b9f79f0425b048f48e0fadf514dc6b0e
+msgid "List functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:336
+# 2c40fe3a0aaa4a799d113921bdc88933
+msgid "While :ref:`showfun` are used to customize document presentation, :ref:`listfun` are used for same purpose, but against :ref:`viewfun` results."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:339
+# 014d9f55217c40409b39c5f4fc099b5f
+msgid "The next list function formats view and represents it as a very simple HTML page:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:363
+# 8e33c2ba27b94ed8b35ae841cb9ebd29
+msgid "Templates and styles could obviously be used to present data in a nicer fashion, but this is an excellent starting point. Note that you may also use :func:`registerType` and :func:`provides` functions in the same way as for :ref:`showfun`!"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:371
+# 455f76dddfd740e792c9ffb4202f6095
+msgid "`Listing Views with CouchDB 0.10 and later <http://wiki.apache.org/couchdb/Formatting_with_Show_and_List#Listing_Views_with_CouchDB_0.10_and_later>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:374
+# 9a915512cfcd437e9f09cbb0437c56fc
+msgid "`Transforming Views with List Functions <http://guide.couchdb.org/draft/transforming.html>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:380
+# 5b91e6985c474e389d44cec79f7a3772
+msgid "Update functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:396
+# aed0138c91404be8b194e97bd9cfe6ea
+msgid "Update handlers are functions that clients can request to invoke server-side logic that will create or update a document. This feature allows a range of use cases such as providing a server-side last modified timestamp, updating individual fields in a document without first getting the latest revision, etc."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:401
+# 10e7cdb58c164706ba2e08a06bb5d865
+msgid "When the request to an update handler includes a document ID in the URL, the server will provide the function with the most recent version of that document. You can provide any other values needed by the update handler function via the ``POST``/``PUT`` entity body or query string parameters of the request."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:406
+# 211cef69e88e4c538a3fdb3115595344
+msgid "The basic example that demonstrates all use-cases of update handlers below:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:427
+# 755bb03225c749649feeb42cb776e164
+msgid "`Document Update Handlers <http://wiki.apache.org/couchdb/Document_Update_Handlers>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:433
+# 51838cebe17e4e5bbb24d5e23f1cc392
+msgid "Filter functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:442
+# 93586643f3db4f19a6908a92805afa1b
+msgid "Filter functions are mostly acts like :ref:`showfun` and :ref:`listfun`: they formats, but more correctly to say, they *filters* :ref:`changes feed<changes>`."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:446
+# 61e03e3ebafe4dc08b225fc917df0c00
+msgid "Classic filters"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:448
+# ddfce63bbf56463b90acb148a8a1f946
+msgid "By default the changes feed emits all database documents changes. But if you're waiting for some special changes, processing all documents is inefficient."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:451
+# 40d58cefa04f497cb00ca1eab7d2f67e
+msgid "Filters are special design document functions that allows changes feed to emit only specific documents that pass filter rules."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:454
+# 02fec97f441344ef9c86c7116cae1299
+msgid "Lets assume that our database is a mailbox and we need to to handle only new mails (documents with status `new`) events. Assuming that, our filter function will looks like next one:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:472
+# ac185d42d56045f380751dd2c7aa3759
+msgid "Filter functions must return ``true`` in fact if document passed all defined rules. Now, if you apply this function to changes feed it will emit only changes about \"new mails\"::"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:486
+# 739ea5988cb54cc085a3647be2325eab
+msgid "Note, that ``last_seq`` number is 27, but we'd received only two records. Seems like any other changes was about documents that hasn't passed our filter."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:489
+# dd6cef761e114fb7b31ba5c957bc6be4
+msgid "Probably, we also need to filter changes feed of our mailbox not only by single status value: we're also interested in statuses like \"spam\" to update spam-filter heuristic rules, \"outgoing\" to let mail daemon actually send mails and so on. Creating a lot of similar functions that actually does similar work isn't good idea - so we need dynamic filter to go."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:495
+# c953656650654db997357b00c5e36e60
+msgid "If you have noted, filter functions takes second argument as :ref:`request <request_object>` object - it allows to create dynamic filters based on query parameters, :ref:`user context <userctx_object>` and more."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:499
+# 78d8b83123c34c58b8e1a00afddd639c
+msgid "The dynamic version of our filter now will be next:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:515
+# fce3d92c63314abb8c78dec5d9e50632
+msgid "and now we have pass `status` query parameter in request to let filter match only required documents::"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:528
+# 98156880fce141538d721fa5fd5c6d88
+msgid "and we can change filter behavior with easy::"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:540
+# c63773a996df4115aaa4d8637dc46296
+msgid "Combining filters with `continuous` feed allows to create powerful event-driven systems."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:546
+# bf999eb67855496ea4b6db02c1797f7b
+msgid "View filters"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:548
+# 248475e8ea5a4b14b2bc723fb83194bf
+msgid "View filters are the same as above, with one small difference: they use views `map` function instead to `filter` one to process the changes feed. Each time when a key-value pair could be emitted, a change is returned. This allows to avoid creating filter functions that are mostly does same works as views."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:553
+# aa4488a136f6457bbad25afce740954b
+msgid "To use them just specify `_view` value for ``filter`` parameter and `designdoc/viewname` for ``view`` one::"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:560
+# 09dd540e315a451aa8e07b0f5d74bf3b
+msgid "Since view filters uses `map` functions as filters, they can't show any dynamic behavior since :ref:`request object<request_object>` is not available."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:567
+# 2dafa9c82f174854bfa7fad0279ff051
+msgid "`Guide to filter change notification <http://guide.couchdb.org/draft/notifications.html#filters>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:570
+# 427e01afa6b046c0b6ee2fbe5631f55c
+msgid "`Filtered replication <http://wiki.apache.org/couchdb/Replication#Filtered_Replication>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:576
+# 5f78c9134c824a5b84d83e3c6726b327
+msgid "Validate document update functions"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:585
+# 5d6bbbc14772411d86678a91ee6042d5
+msgid "``forbidden`` error to gracefully prevent document storing."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:586
+# acaeadd3cce34543bbc5536773f07989
+msgid "``unauthorized`` error to prevent storage and allow the user to re-auth."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:589
+# 63a47507dc9343388c5617ac0f53461d
+msgid "A design document may contain a function named `validate_doc_update` which can be used to prevent invalid or unauthorized document update requests from being stored.  The function is passed the new document from the update request, the current document stored in the database, a :ref:`userctx_object` containing information about the user writing the document (if present), and a :ref:`security_object` with lists of database security roles."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:596
+# f4a74999cb3b46ada7bff49f27973607
+msgid "Validation functions typically examine the structure of the new document to ensure that required fields are present and to verify that the requesting user should be allowed to make changes to the document properties.  For example, an application may require that a user must be authenticated in order to create a new document or that specific document fields be present when a document is updated. The validation function can abort the pending document write by throwing one of two error objects:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:612
+# 4a849ef12e494b97b846e392f00d75ac
+msgid "Document validation is optional, and each design document in the database may have at most one validation function.  When a write request is received for a given database, the validation function in each design document in that database is called in an unspecified order.  If any of the validation functions throw an error, the write will not succeed."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:618
+# b71451b7f0ae43c692278a1a252038d5
+msgid "**Example**: The ``_design/_auth`` ddoc from `_users` database uses a validation function to ensure that documents contain some required fields and are only modified by a user with the ``_admin`` role:"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:750
+# 848eaeb752e04736b9f01a067f60e4df
+msgid "The ``return`` statement used only for function, it has no impact on the validation process."
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:756
+# e4c4e4d6e3584e989c393e28df2b4ccd
+msgid "`Validation Functions <http://guide.couchdb.org/editions/1/en/validation.html>`_"
+msgstr ""
+
+#: ../../src/couchapp/ddocs.rst:759
+# 2b75523e2b7e48a788d573cd3000c2e3
+msgid "`Document Update Validation <http://wiki.apache.org/couchdb/Document_Update_Validation>`_"
+msgstr ""
+

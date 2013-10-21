@@ -1,0 +1,25 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 22:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/couchapp/index.rst:17
+msgid "CouchApp"
+msgstr ""
+
+#: ../../src/couchapp/index.rst:19
+msgid ""
+"`CouchApps`_ are web applications served directly from CouchDB, mostly "
+"driven by JavaScript and HTML5. If you can fit your application into those "
+"constraints, then you get CouchDB's scalability and flexibility \"for free\""
+" (and deploying your app is as simple as replicating it to the production "
+"server)."
+msgstr ""

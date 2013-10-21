@@ -64,6 +64,10 @@ copyright = '%d, %s' % (
     _info['LOCAL_PACKAGE_AUTHOR_NAME']
 )
 
+locale_dirs = ["../locale/"]
+
+gettext_compact = False
+
 highlight_language = "json"
 
 primary_domain = "http"

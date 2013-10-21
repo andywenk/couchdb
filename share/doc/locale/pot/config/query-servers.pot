@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/config/query-servers.rst:17
+# 74a6f2001eb64029868d1b39350fe6fb
+msgid "Query Servers"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:22
+# 0247020d51564651820ea4fd450721fc
+msgid "Query Servers Definition"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:28
+# 85271e21d2b044ff9b24bc3cc3f2e7a1
+msgid "CouchDB delegates computation of :ref:`design documents <ddocs>` functions to external query servers. The external query server is a special OS process which communicates with CouchDB over standard input/output using a very simple line-based protocol with JSON messages."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:33
+# 854f108d63e04d64886482a4a6e38b20
+msgid "The external query server may be defined in configuration file following next pattern::"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:39
+# 9abf61224db84d229677094c39c4bec8
+msgid "Where:"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:41
+# 6c5be40632d847a58d14277b6d2309cb
+msgid "``LANGUAGE``: is a programming language which code this query server may execute. For instance, there are `python`, `ruby`, `clojure` and other query servers in wild. This value is also used for `ddoc` field ``language`` to determine query server that will process his functions."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:46
+# 8ec376e503184c93841a1888f7140702
+msgid "Note, that you may setup multiple query servers for the same programming language, but you have to name them different (like `python-dev` etc.)."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:49
+# 0e53a2b320a4437da77fad29342e5cb2
+msgid "``PATH``: is a system path to the executable binary program that runs the query server."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:52
+# 311e690cee544ad892cfa25bec256e25
+msgid "``ARGS``: optionally, you may specify additional command line arguments for the executable ``PATH``."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:55
+# 193c54e9bcbf4071968be1eff27ddf6c
+msgid "The default query server is written in :ref:`JavaScript <query-server/js>`, running via `Mozilla SpiderMonkey`_::"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:74
+# 0039298207614502bae6326c869a9e04
+msgid "Query Servers Configuration"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:81
+# bb8db2050ac84095a1820e5ff91761d9
+msgid "Specifies the delay in seconds before view index changes are committed to disk. The default value is ``5``::"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:90
+# 892dcba1a211478794eba55a84bc5ee6
+msgid "Amount of time in seconds that the Query Server may process CouchDB command::"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:95
+# 4e94eafcddd149d39db31a000a47edfc
+msgid "CouchDB will raise `os_process_timeout` error and kill the process in case the Query Server doesn't return any result within this limit."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:101
+# 6a124f248c414aa999fd7c86e9522fff
+msgid "Controls `Reduce overflow` error that raises when output of :ref:`reduce functions <reducefun>` is too big::"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:107
+# fefcd16775fa4133b21c5a523e82188b
+msgid "Normally, you don't have to disable (by setting ``false`` value) this option since main propose of `reduce` functions is to *reduce* the input."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:114
+# 78c10c4f7a1b4c6eaca1a756bb2c913e
+msgid "Native Erlang Query Server"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:120
+# d8a3b08f3df5416196a697ef6b7afbc8
+msgid "Due to security restrictions, the Erlang query server is disabled by default."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:123
+# 31226b6421aa4a45831df81821f03fa1
+msgid "Unlike the JavaScript query server, the Erlang one does not runs in a sandbox mode. This means that Erlang code has full access to your OS, filesystem and network, which may lead to security issues. While Erlang functions are faster than JavaScript ones, you need to be careful about running them, especially if they were written by someone else."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:129
+# fb2dbf9ec744444b8ed19d0d2c66aadc
+msgid "CouchDB has a native Erlang query server, allowing you to write your map/reduce functions in Erlang."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:132
+# a5c49fd8cda043ce8e4ce2611cb6ff27
+msgid "First, you'll need to edit your `local.ini` to include a ``[native_query_servers]`` section::"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:138
+# 8c6c4191e1a34f23b25e2185fc6a7768
+msgid "To see these changes you will also need to restart the server. To test out using :ref:`Erlang views <query-server/erlang>`, visit the `Futon` admin interface, create a new database and open a temporary view. You should now be able to select ``erlang`` from the language drop-down."
+msgstr ""
+
+#: ../../src/config/query-servers.rst:143
+# 788b54d1945b4c1ba21dd611f9dd60e2
+msgid "Let's try an example of map/reduce functions which count the total documents at each number of revisions (there are x many documents at version \"1\", and y documents at \"2\"... etc). Add a few documents to the database, then enter the following functions as a temporary view:"
+msgstr ""
+
+#: ../../src/config/query-servers.rst:160
+# 8f340cba92e74c01857626f1f6b73f7c
+msgid "If all has gone well, after running the view you should see a list of the total number of documents at each revision number."
+msgstr ""
+

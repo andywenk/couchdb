@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, The Apache Software Foundation
+# This file is distributed under the same license as the Apache CouchDB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Apache CouchDB 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-21 23:32\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/api/database/index.rst:17
+# d9dea857cce146afac35bd840a587208
+msgid "Databases"
+msgstr ""
+
+#: ../../src/api/database/index.rst:19
+# ae476608bba5412f83fc5a4aabbd6e05
+msgid "The Database endpoint provides an interface to an entire database with in CouchDB. These are database-level, rather than document-level requests."
+msgstr ""
+
+#: ../../src/api/database/index.rst:22
+# dd37c0fbe077441d882fe1d7ca71c84a
+msgid "For all these requests, the database name within the URL path should be the database name that you wish to perform the operation on. For example, to obtain the meta information for the database ``recipes``, you would use the HTTP request:"
+msgstr ""
+
+#: ../../src/api/database/index.rst:31
+# 6f26b46eb7ed4807b92bb3341ff87638
+msgid "For clarity, the form below is used in the URL paths:"
+msgstr ""
+
+#: ../../src/api/database/index.rst:37
+# c1f61c7adc5c46fdab2b87969fc61890
+msgid "Where ``db`` is the name of any database."
+msgstr ""
+
